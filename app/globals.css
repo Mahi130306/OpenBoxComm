@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Syne:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* ── Dark theme (default) ──────────────────────────────────────────────────── */
+@layer base {
+  :root,
+  .dark {
+    --background: 0 0% 4%;        /* #0a0a0a */
+    --foreground: 0 0% 96%;       /* #f5f5f5 */
+
+    --card: 0 0% 7%;              /* #111111 */
+    --card-foreground: 0 0% 96%;
+
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 96%;
+
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 4%;
+
+    --secondary: 0 0% 13%;        /* #212121 */
+    --secondary-foreground: 0 0% 96%;
+
+    --muted: 0 0% 13%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 0 0% 13%;
+    --accent-foreground: 0 0% 96%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 96%;
+
+    --border: 0 0% 12%;           /* #1f1f1f */
+    --input: 0 0% 12%;
+    --ring: 0 0% 100%;
+
+    --radius: 0.5rem;
+
+    --surface: #111111;
+  }
+}
+
+/* ── Light theme ────────────────────────────────────────────────────────────── */
+@layer base {
+  .light {
+    --background: 0 0% 98%;       /* #fafafa */
+    --foreground: 0 0% 8%;        /* #141414 */
+
+    --card: 0 0% 100%;            /* #ffffff */
+    --card-foreground: 0 0% 8%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 8%;
+
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 94%;        /* #f0f0f0 */
+    --secondary-foreground: 0 0% 8%;
+
+    --muted: 0 0% 94%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 0 0% 94%;
+    --accent-foreground: 0 0% 8%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 88%;           /* #e0e0e0 */
+    --input: 0 0% 88%;
+    --ring: 0 0% 9%;
+
+    --surface: #ffffff;
+  }
+}
+
+/* ── Base styles ────────────────────────────────────────────────────────────── */
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  /* Smooth theme transitions */
+  html {
+    transition: color 0.25s ease, background-color 0.25s ease;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+
+  .dark body {
+    background:
+      linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0) 240px),
+      hsl(var(--background));
+  }
+
+  .light body {
+    background:
+      linear-gradient(180deg, rgba(0,0,0,0.015), rgba(0,0,0,0) 240px),
+      hsl(var(--background));
+  }
+
+  h1 {
+    @apply font-heading text-5xl font-extrabold leading-tight tracking-normal sm:text-6xl;
+  }
+  h2 {
+    @apply font-heading text-4xl font-bold leading-tight tracking-normal;
+  }
+  h3 {
+    @apply font-heading text-2xl font-bold leading-tight tracking-normal;
+  }
+
+  /* Surface utility (used in Navbar/Footer bg) */
+  .bg-surface {
+    background-color: var(--surface);
+  }
+}
+@keyframes pet-walk {
+  from { transform: rotate(-8deg) translateY(0px); }
+  to   { transform: rotate(8deg) translateY(-3px); }
+}
