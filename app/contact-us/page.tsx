@@ -106,10 +106,15 @@ export default function ContactUsPage() {
                 className="w-full resize-none rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground/60 outline-none transition focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 dark:focus:border-indigo-400 dark:focus:ring-indigo-400/20"
               />
             </div>
-            <Button type="submit" className="w-full sm:w-auto" id="contact-submit">
-              <Send className="mr-2 h-4 w-4" />
-              Send Message
-            </Button>
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+              <Button type="submit" className="w-full sm:w-auto" id="contact-submit">
+                <Send className="mr-2 h-4 w-4" />
+                Send Message
+              </Button>
+              <p className="text-xs text-muted-foreground italic">
+                * Opens your default email client
+              </p>
+            </div>
           </form>
         </div>
 

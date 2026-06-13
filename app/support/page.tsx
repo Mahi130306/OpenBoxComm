@@ -37,8 +37,9 @@ const tiers = [
     price: '$8/mo',
     icon: Crown,
     description: 'The highest tier. You are literally holding OpenBox up.',
-perks: ['Everything in GOAT', 'Priority consideration for staff recruitment', 'Direct line to core team via private channel', 'Name in OpenBox credits on supporter page for one month*', <a href="/privacy">* Privacy Policy</a>],
-  },]
+    perks: ['Everything in GOAT', 'Priority consideration for staff recruitment', 'Direct line to core team via private channel', 'Name in OpenBox credits on supporter page for one month*', <a href="/privacy" className="underline">* Privacy Policy</a>],
+  },
+]
 
 const supporters = [
   // { name: 'Alex Chen', tier: 'Patron' },
@@ -90,8 +91,8 @@ export default function SupportPage() {
                   <Badge variant="secondary">{tier.price}</Badge>
                 </div>
                 <ul className="space-y-2 text-sm text-muted-foreground">
-                  {tier.perks.map((perk) => (
-                    <li key={perk}>{perk}</li>
+                  {tier.perks.map((perk, i) => (
+                    <li key={i}>{perk}</li>
                   ))}
                 </ul>
               </div>
