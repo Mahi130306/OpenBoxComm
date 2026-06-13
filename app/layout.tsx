@@ -4,7 +4,6 @@ import { Footer } from '@/components/Footer'
 import { ThemeProvider } from '@/components/ThemeProvider'
 import { LoadingScreen } from '@/components/LoadingScreen'
 import { ScrollToTop } from '@/components/ScrollToTop'
-import { Pet } from '@/components/Pet'
 import './globals.css'
 
 const BASE_URL = 'https://openboxcomm.in'
@@ -90,7 +89,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <LoadingScreen />
           <Navbar />
           <main className="pt-16 min-h-screen">{children}</main>
-          <Pet />
           <Footer />
         </ThemeProvider>
       </body>

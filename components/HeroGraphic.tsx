@@ -1,79 +1,106 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef } from 'react'
+import * as THREE from 'three'
+import { gsap } from 'gsap'
 
 export function HeroGraphic() {
-  const [mounted, setMounted] = useState(false)
-  const [speedMultiplier, setSpeedMultiplier] = useState(1)
+  const containerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    setMounted(true)
+    if (!containerRef.current) return
+
+    // Scene setup
+    const scene = new THREE.Scene()
+    const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000)
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
+    renderer.setSize(400, 400)
+    renderer.setPixelRatio(window.devicePixelRatio)
+    containerRef.current.appendChild(renderer.domElement)
+
+    // Geometry
+    const geometry = new THREE.IcosahedronGeometry(1.5, 1)
+    const material = new THREE.MeshPhongMaterial({
+      color: 0x22d3ee,
+      wireframe: true,
+      transparent: true,
+      opacity: 0.8,
+    })
+    const icosahedron = new THREE.Mesh(geometry, material)
+    scene.add(icosahedron)
+
+    const coreGeometry = new THREE.IcosahedronGeometry(0.8, 0)
+    const coreMaterial = new THREE.MeshPhongMaterial({
+      color: 0xd946ef,
+      emissive: 0xd946ef,
+      emissiveIntensity: 0.5,
+    })
+    const core = new THREE.Mesh(coreGeometry, coreMaterial)
+    scene.add(core)
+
+    // Lights
+    const light = new THREE.DirectionalLight(0xffffff, 1)
+    light.position.set(5, 5, 5)
+    scene.add(light)
+    const ambientLight = new THREE.AmbientLight(0x404040)
+    scene.add(ambientLight)
+
+    camera.position.z = 4
+
+    // GSAP Animation
+    gsap.to(icosahedron.rotation, {
+      y: Math.PI * 2,
+      duration: 10,
+      repeat: -1,
+      ease: "none",
+    })
+
+    gsap.to(icosahedron.scale, {
+      x: 1.2,
+      y: 1.2,
+      z: 1.2,
+      duration: 2,
+      repeat: -1,
+      yoyo: true,
+      ease: "power1.inOut",
+    })
+
+    // Render loop
+    const animate = () => {
+      requestAnimationFrame(animate)
+      core.rotation.x += 0.01
+      core.rotation.z += 0.01
+      renderer.render(scene, camera)
+    }
+    animate()
+
+    // Handle Resize
+    const handleResize = () => {
+      if (!containerRef.current) return
+      renderer.setSize(400, 400)
+      camera.aspect = 1
+      camera.updateProjectionMatrix()
+    }
+    window.addEventListener('resize', handleResize)
+
+    return () => {
+      window.removeEventListener('resize', handleResize)
+      if (containerRef.current) {
+        containerRef.current.removeChild(renderer.domElement)
+      }
+      geometry.dispose()
+      material.dispose()
+      coreGeometry.dispose()
+      coreMaterial.dispose()
+      renderer.dispose()
+    }
   }, [])
 
-  // Avoid hydration mismatch for animations
-  if (!mounted) return <div className="h-full min-h-[400px] w-full opacity-0" />
-
-  const handleWarpSpeed = () => {
-    setSpeedMultiplier(0.1) // 10x faster
-    setTimeout(() => setSpeedMultiplier(1), 3000)
-  }
-
   return (
-    <div className="relative flex h-full min-h-[400px] w-full items-center justify-center lg:min-h-[500px]">
-      {/* Background ambient glow */}
+    <div className="relative flex h-[400px] w-[400px] items-center justify-center">
+      <div ref={containerRef} className="z-10" />
       <div className="absolute inset-0 z-0 flex items-center justify-center">
-        <div className="h-[250px] w-[250px] animate-pulse rounded-full bg-cyan-500/20 blur-[80px]" style={{ animationDuration: '4s' }} />
-        <div className="absolute h-[200px] w-[200px] animate-pulse rounded-full bg-fuchsia-500/20 blur-[70px]" style={{ animationDuration: '5s', animationDelay: '1s' }} />
-      </div>
-
-      {/* Main Container */}
-      <div 
-        className="relative z-10 flex h-[300px] w-[300px] cursor-pointer items-center justify-center transition-transform hover:scale-105 active:scale-95"
-        onClick={handleWarpSpeed}
-        title="Activate Warp Speed"
-      >
-        {/* Orbital Rings */}
-        <div 
-          className="absolute inset-0 animate-spin rounded-full border border-cyan-500/20 border-t-cyan-400/80 border-b-cyan-400/10 transition-all duration-500"
-          style={{ animationDuration: `${20 * speedMultiplier}s` }} 
-        />
-        <div 
-          className="absolute inset-4 animate-spin rounded-full border border-fuchsia-500/20 border-b-fuchsia-400/80 border-t-fuchsia-400/10 transition-all duration-500"
-          style={{ animationDuration: `${15 * speedMultiplier}s`, animationDirection: 'reverse' }} 
-        />
-        <div 
-          className="absolute inset-8 animate-spin rounded-full border border-indigo-500/20 border-r-indigo-400/80 border-l-indigo-400/10 transition-all duration-500"
-          style={{ animationDuration: `${10 * speedMultiplier}s` }} 
-        />
-        
-        {/* The Core "World" */}
-        <div className="absolute flex h-36 w-36 items-center justify-center">
-          {/* Core Glow */}
-          <div 
-            className="absolute inset-0 animate-pulse rounded-full bg-gradient-to-tr from-cyan-400 via-indigo-500 to-fuchsia-500 opacity-60 blur-2xl"
-            style={{ animationDuration: '3s' }}
-          />
-          {/* Glass Sphere */}
-          <div className="relative h-full w-full overflow-hidden rounded-full border border-white/20 bg-gradient-to-tr from-cyan-500/20 via-indigo-500/20 to-fuchsia-500/20 shadow-2xl backdrop-blur-md">
-            {/* Glossy reflection */}
-            <div className="absolute -left-1/2 -top-1/2 h-full w-full rotate-45 bg-white/10 blur-[15px]" />
-            <div className="absolute bottom-0 right-0 h-2/3 w-2/3 rounded-full bg-cyan-300/30 blur-[20px]" />
-          </div>
-        </div>
-
-        {/* Orbiting sub-communities / Nodes */}
-        <div 
-          className="absolute top-2 left-6 h-6 w-6 animate-bounce rounded-full bg-gradient-to-br from-green-400 to-emerald-600 shadow-[0_0_20px_rgba(52,211,153,0.5)]" 
-          style={{ animationDuration: '3s' }} 
-        />
-        <div 
-          className="absolute bottom-6 right-6 h-8 w-8 animate-bounce rounded-full bg-gradient-to-br from-rose-500 to-amber-400 shadow-[0_0_20px_rgba(244,63,94,0.5)]" 
-          style={{ animationDuration: '4s', animationDelay: '0.5s' }} 
-        />
-        <div 
-          className="absolute bottom-24 -left-4 h-4 w-4 animate-bounce rounded-full bg-gradient-to-br from-violet-400 to-fuchsia-500 shadow-[0_0_15px_rgba(167,139,250,0.5)]" 
-          style={{ animationDuration: '2.5s', animationDelay: '1s' }} 
-        />
+        <div className="h-[250px] w-[250px] animate-pulse rounded-full bg-cyan-500/10 blur-[80px]" />
       </div>
     </div>
   )

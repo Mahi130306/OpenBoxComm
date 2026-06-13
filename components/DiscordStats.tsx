@@ -12,16 +12,16 @@ export function DiscordStats() {
   return (
     <div className="flex flex-col gap-3">
       {liveServers.map(server => (
-        <div key={server.slug} className="flex items-center justify-between rounded-xl border border-white/10 bg-white/5 p-4 transition-colors hover:bg-white/10">
+        <div key={server.slug} className="flex items-center justify-between rounded-xl border border-border bg-card p-4 transition-colors hover:bg-accent/50">
           <div className="flex flex-col">
-            <span className="text-sm font-semibold text-white">{server.name}</span>
-            <span className="text-xs text-white/50 capitalize">{server.tags[0] || 'Community'}</span>
+            <span className="text-sm font-semibold text-foreground">{server.name}</span>
+            <span className="text-xs text-muted-foreground capitalize">{server.tags[0] || 'Community'}</span>
           </div>
           <div className="flex items-center gap-1.5">
-            <span className="text-lg font-bold text-[#6EE87A]">
+            <span className="text-lg font-bold text-emerald-500">
               {(memberCounts[server.slug] || server.memberCount).toLocaleString()}
             </span>
-            <span className="text-xs text-[#6EE87A]/70">members</span>
+            <span className="text-xs text-emerald-500/70">members</span>
           </div>
         </div>
       ))}

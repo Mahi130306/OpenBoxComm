@@ -90,8 +90,8 @@ export default function SupportPage() {
                   <Badge variant="secondary">{tier.price}</Badge>
                 </div>
                 <ul className="space-y-2 text-sm text-muted-foreground">
-                  {tier.perks.map((perk) => (
-                    <li key={perk}>{perk}</li>
+                  {tier.perks.map((perk, i) => (
+                    <li key={i}>{perk}</li>
                   ))}
                 </ul>
               </div>

@@ -43,15 +43,7 @@ export default function PrivacyPage() {
         </li>
       </ul>
 
-      <div
-        style={{
-          border: '1px solid #333',
-          borderRadius: '8px',
-          padding: '12px 16px',
-          marginBottom: '24px',
-          background: 'rgba(100,200,100,0.05)',
-        }}
-      >
+      <div className="rounded-lg border border-border bg-green-500/5 p-4 mb-6">
         <strong>ℹ️ Scope note:</strong> This policy covers data collected directly by Open Box through our
         website and services. Data processed by Discord, YouTube, X, Instagram, Patreon, and other
         third-party platforms is governed by their own privacy policies. We do not control how third-party
@@ -99,31 +91,33 @@ export default function PrivacyPage() {
       </p>
 
       <h2>3. Purpose &amp; Legal Basis for Processing</h2>
-      <table style={{ width: '100%', borderCollapse: 'collapse' }}>
-        <thead>
-          <tr>
-            <th style={{ textAlign: 'left', padding: '8px 4px', borderBottom: '1px solid #333' }}>Purpose</th>
-            <th style={{ textAlign: 'left', padding: '8px 4px', borderBottom: '1px solid #333' }}>Legal Basis</th>
-          </tr>
-        </thead>
-        <tbody>
-          {[
-            ['Providing and operating the Platform', 'Consent / Legitimate interest'],
-            ['Authentication via Discord OAuth', 'Consent'],
-            ['Sending service notifications (email, Discord)', 'Legitimate interest'],
-            ['Analytics and Platform improvement', 'Legitimate interest'],
-            ['Legal compliance', 'Legal obligation'],
-            ['Processing donations and payments', 'Contract'],
-            ['Event management and communications', 'Consent / Contract'],
-            ['Moderating community spaces (Discord, social media)', 'Legitimate interest / Legal obligation'],
-          ].map(([purpose, basis]) => (
-            <tr key={purpose}>
-              <td style={{ padding: '6px 4px', borderBottom: '1px solid #222' }}>{purpose}</td>
-              <td style={{ padding: '6px 4px', borderBottom: '1px solid #222', color: 'var(--muted-foreground)' }}>{basis}</td>
+      <div className="overflow-x-auto">
+        <table className="w-full border-collapse">
+          <thead>
+            <tr className="border-b border-border">
+              <th className="text-left py-2 px-1">Purpose</th>
+              <th className="text-left py-2 px-1">Legal Basis</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {[
+              ['Providing and operating the Platform', 'Consent / Legitimate interest'],
+              ['Authentication via Discord OAuth', 'Consent'],
+              ['Sending service notifications (email, Discord)', 'Legitimate interest'],
+              ['Analytics and Platform improvement', 'Legitimate interest'],
+              ['Legal compliance', 'Legal obligation'],
+              ['Processing donations and payments', 'Contract'],
+              ['Event management and communications', 'Consent / Contract'],
+              ['Moderating community spaces (Discord, social media)', 'Legitimate interest / Legal obligation'],
+            ].map(([purpose, basis]) => (
+              <tr key={purpose} className="border-b border-border/50">
+                <td className="py-2 px-1 text-sm">{purpose}</td>
+                <td className="py-2 px-1 text-sm text-muted-foreground">{basis}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
 
       <h2>4. Data Sharing &amp; Transfers</h2>
       <p>We do <strong>not</strong> sell your personal data. We may share data with:</p>
