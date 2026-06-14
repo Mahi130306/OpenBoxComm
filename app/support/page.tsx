@@ -37,8 +37,9 @@ const tiers = [
     price: '$8/mo',
     icon: Crown,
     description: 'The highest tier. You are literally holding OpenBox up.',
-perks: ['Everything in GOAT', 'Priority consideration for staff recruitment', 'Direct line to core team via private channel', 'Name in OpenBox credits on supporter page for one month*', <a href="/privacy">* Privacy Policy</a>],
-  },]
+    perks: ['Everything in GOAT', 'Priority consideration for staff recruitment', 'Direct line to core team via private channel', 'Name in OpenBox credits on supporter page for one month*', <a href="/privacy" className="underline">* Privacy Policy</a>],
+  },
+]
 
 export default function SupportPage() {
   return (

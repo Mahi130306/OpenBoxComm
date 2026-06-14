@@ -67,7 +67,7 @@ export default function ContactUsPage() {
               {emails.map(({ label, address }) => (
                 <li key={address} className="flex items-center justify-between gap-2 text-sm">
                   <span className="text-muted-foreground">{label}</span>
-                  <a
+                  
                     href={`mailto:${address}`}
                     className="inline-flex items-center gap-1 font-medium text-indigo-600 transition-colors hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300"
                   >
@@ -90,7 +90,7 @@ export default function ContactUsPage() {
               <code className="rounded bg-muted px-1 text-xs">#help</code> channel.
             </p>
             <Button asChild size="sm" className="w-full" id="contact-discord">
-              <a
+              
                 href={process.env.NEXT_PUBLIC_DISCORD_INVITE_MAIN || '#'}
                 target="_blank"
                 rel="noopener noreferrer"
