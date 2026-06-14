@@ -40,13 +40,6 @@ const tiers = [
 perks: ['Everything in GOAT', 'Priority consideration for staff recruitment', 'Direct line to core team via private channel', 'Name in OpenBox credits on supporter page for one month*', <a href="/privacy">* Privacy Policy</a>],
   },]
 
-const supporters = [
-  // { name: 'Alex Chen', tier: 'Patron' },
-  // { name: 'Jordan Taylor', tier: 'Supporter' },
-  // { name: 'Sam Rivera', tier: 'Patron' },
-  // { name: 'Casey Kim', tier: 'Builder' },
-]
-
 export default function SupportPage() {
   return (
     <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
@@ -101,18 +94,6 @@ export default function SupportPage() {
         </div>
       </section>
 
-      <section className="rounded-lg border border-border bg-surface p-8">
-        <h2 className="mb-6 text-center text-3xl">Current Supporters</h2>
-        <div className="mx-auto grid max-w-3xl gap-3 sm:grid-cols-2">
-          {supporters.map((supporter) => (
-            <div key={supporter.name} className="flex items-center justify-between rounded-lg border border-border bg-background/60 p-4">
-              <span>{supporter.name}</span>
-              <Badge variant="outline">{supporter.tier}</Badge>
-            </div>
-          ))}
-        </div>
-        <p className="mt-6 text-center text-sm text-muted-foreground">Thank you for keeping this community alive.</p>
-      </section>
     </div>
   )
 }

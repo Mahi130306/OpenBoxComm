@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { Mail, MessageSquare, ExternalLink, Send } from 'lucide-react'
+import { Mail, MessageSquare, ExternalLink } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { ContactForm } from '@/components/ContactForm'
 
 export const metadata: Metadata = {
   title: 'Contact Us — Open Box',
@@ -47,70 +48,7 @@ export default function ContactUsPage() {
           <p className="mb-6 text-sm text-muted-foreground">
             We aim to respond within 3–5 working days.
           </p>
-          <form
-            action="mailto:hello@openboxcomm.in"
-            method="get"
-            encType="text/plain"
-            className="space-y-5"
-          >
-            <div className="grid gap-5 sm:grid-cols-2">
-              <div>
-                <label htmlFor="contact-name" className="mb-1.5 block text-sm font-medium text-foreground">
-                  Name
-                </label>
-                <input
-                  id="contact-name"
-                  name="name"
-                  type="text"
-                  required
-                  placeholder="Your name"
-                  className="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground/60 outline-none transition focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 dark:focus:border-indigo-400 dark:focus:ring-indigo-400/20"
-                />
-              </div>
-              <div>
-                <label htmlFor="contact-email" className="mb-1.5 block text-sm font-medium text-foreground">
-                  Email
-                </label>
-                <input
-                  id="contact-email"
-                  name="email"
-                  type="email"
-                  required
-                  placeholder="you@example.com"
-                  className="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground/60 outline-none transition focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 dark:focus:border-indigo-400 dark:focus:ring-indigo-400/20"
-                />
-              </div>
-            </div>
-            <div>
-              <label htmlFor="contact-subject" className="mb-1.5 block text-sm font-medium text-foreground">
-                Subject
-              </label>
-              <input
-                id="contact-subject"
-                name="subject"
-                type="text"
-                placeholder="What is this about?"
-                className="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground/60 outline-none transition focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 dark:focus:border-indigo-400 dark:focus:ring-indigo-400/20"
-              />
-            </div>
-            <div>
-              <label htmlFor="contact-message" className="mb-1.5 block text-sm font-medium text-foreground">
-                Message
-              </label>
-              <textarea
-                id="contact-message"
-                name="body"
-                required
-                rows={5}
-                placeholder="Tell us how we can help..."
-                className="w-full resize-none rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground/60 outline-none transition focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 dark:focus:border-indigo-400 dark:focus:ring-indigo-400/20"
-              />
-            </div>
-            <Button type="submit" className="w-full sm:w-auto" id="contact-submit">
-              <Send className="mr-2 h-4 w-4" />
-              Send Message
-            </Button>
-          </form>
+          <ContactForm />
         </div>
 
         {/* Right column: Email + Discord */}

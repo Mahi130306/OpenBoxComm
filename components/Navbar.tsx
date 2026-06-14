@@ -3,10 +3,9 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { useRouter, usePathname } from 'next/navigation'
-import { Heart, Menu, X, LogIn, Sun, Moon } from 'lucide-react'
+import { usePathname } from 'next/navigation'
+import { Heart, Menu, X, Sun, Moon } from 'lucide-react'
 import { useTheme } from 'next-themes'
-import { Button } from '@/components/ui/button'
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -15,14 +14,6 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-} from '@/components/ui/dialog'
-import { logger } from '@/lib/logger'
 
 const servers = {
   live: [
@@ -49,28 +40,23 @@ function ThemeToggle() {
 
   const handleToggle = () => {
     if (isDark) {
-      // going dark -> light: show the "bro are you sure?" prompt instead
       setTease(true)
       return
     }
-    // going light -> dark: just do it with a fun toast
     setTheme('dark')
     setDarkToast(true)
     setTimeout(() => setDarkToast(false), 2500)
-    logger.info('Theme toggled', { from: theme, to: 'dark' })
   }
 
   const handleYes = () => {
-  setTease(false)
-  setTheme('light')
-  // flashbang
-  const flash = document.createElement('div')
-  flash.style.cssText = 'position:fixed;inset:0;background:white;z-index:9999;pointer-events:none;transition:opacity 0.6s ease'
-  document.body.appendChild(flash)
-  setTimeout(() => { flash.style.opacity = '0' }, 50)
-  setTimeout(() => { flash.removeChild && document.body.removeChild(flash) }, 700)
-  logger.info('Theme toggled', { from: 'dark', to: 'light' })
-}
+    setTease(false)
+    setTheme('light')
+    const flash = document.createElement('div')
+    flash.style.cssText = 'position:fixed;inset:0;background:white;z-index:9999;pointer-events:none;transition:opacity 0.6s ease'
+    document.body.appendChild(flash)
+    setTimeout(() => { flash.style.opacity = '0' }, 50)
+    setTimeout(() => { flash.parentNode && flash.parentNode.removeChild(flash) }, 700)
+  }
 
   const handleNo = () => {
     setTease(false)
@@ -91,7 +77,6 @@ function ThemeToggle() {
         )}
       </button>
 
-      {/* Dark -> Light tease popup */}
       {tease && (
         <div className="absolute top-12 right-0 z-50 w-64 animate-in fade-in slide-in-from-top-2 duration-300 bg-background border border-border rounded-xl shadow-xl p-4">
           <p className="text-3xl mb-1">🙃</p>
@@ -114,7 +99,6 @@ function ThemeToggle() {
         </div>
       )}
 
-      {/* Light -> Dark toast */}
       {darkToast && (
         <div className="absolute top-12 right-0 z-50 whitespace-nowrap animate-in fade-in slide-in-from-top-2 duration-300 bg-background border border-border px-3 py-2 rounded-lg shadow-md">
           <span className="text-sm font-bold text-foreground">welcome back to the dark side 😈</span>
@@ -124,23 +108,10 @@ function ThemeToggle() {
   )
 }
 
-const loginExcuses = [
-  "Login is coming soon. Our lead dev went for coffee and hasn't returned since Tuesday.",
-  "The database is currently taking a nap. Shhh. 😴",
-  "We spent the entire authentication budget on the dark mode gradient.",
-  "We forgot the admin password. It was 'password123', right?",
-  "Still figuring out how to exit Vim. Be right with you.",
-  "Authentication is hard. Join Discord while we cry in the corner."
-]
-
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [loginDialogOpen, setLoginDialogOpen] = useState(false)
-  const [loginExcuse, setLoginExcuse] = useState(loginExcuses[0])
   const [scrolled, setScrolled] = useState(false)
-  const router = useRouter()
   const pathname = usePathname()
-  const isLoginEnabled = process.env.NEXT_PUBLIC_LOGIN_ENABLED === 'true'
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 8)
@@ -151,17 +122,6 @@ export function Navbar() {
   useEffect(() => {
     setMobileMenuOpen(false)
   }, [pathname])
-
-  const handleLoginClick = () => {
-    if (!isLoginEnabled) {
-      setLoginExcuse(loginExcuses[Math.floor(Math.random() * loginExcuses.length)])
-      setLoginDialogOpen(true)
-      logger.info('Login dialog opened — login not yet enabled')
-    } else {
-      logger.info('Navigating to login')
-      router.push('/login')
-    }
-  }
 
   return (
     <>
@@ -175,7 +135,6 @@ export function Navbar() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
 
-            {/* Logo */}
             <div className="flex-shrink-0">
               <Link href="/" className="flex items-center gap-2 group">
                 <div className="relative h-8 w-8 overflow-hidden rounded-lg transition-transform duration-200 group-hover:scale-105">
@@ -188,13 +147,12 @@ export function Navbar() {
                     priority
                   />
                 </div>
-                <span className="text-lg font-heading font-bold tracking-tight">
+                <span className="text-lg font-heading font-bold tracking-tight text-foreground">
                   Open Box
                 </span>
               </Link>
             </div>
 
-            {/* Desktop Center Links */}
             <div className="hidden md:flex md:items-center md:space-x-8">
               <Link href="/" className="text-sm font-medium hover:text-muted-foreground transition-colors">
                 Home
@@ -244,7 +202,6 @@ export function Navbar() {
               </Link>
             </div>
 
-            {/* Desktop Right Side */}
             <div className="hidden md:flex md:items-center md:space-x-2">
               <Link
                 href="/support"
@@ -256,14 +213,8 @@ export function Navbar() {
                 Help
               </Link>
               <ThemeToggle />
-
-              <Button variant="outline" size="sm" onClick={handleLoginClick}>
-                <LogIn className="mr-2 h-4 w-4" />
-                Login
-              </Button>
             </div>
 
-            {/* Mobile: theme + hamburger */}
             <div className="flex md:hidden items-center gap-2">
               <ThemeToggle />
               <button
@@ -277,7 +228,6 @@ export function Navbar() {
           </div>
         </div>
 
-        {/* Mobile menu */}
         {mobileMenuOpen && (
           <div className="md:hidden border-t border-border bg-surface animate-fade-in">
             <div className="space-y-1 px-4 pb-3 pt-2">
@@ -306,31 +256,10 @@ export function Navbar() {
               <Link href="/doc" className="block py-2 text-sm font-medium hover:text-muted-foreground">Docs</Link>
               <Link href="/support" className="block py-2 text-sm font-medium hover:text-muted-foreground">Support</Link>
               <Link href="/help" className="block py-2 text-sm font-medium hover:text-muted-foreground">Help</Link>
-              <Button variant="outline" size="sm" className="w-full mt-2" onClick={handleLoginClick}>
-                <LogIn className="mr-2 h-4 w-4" />
-                Login
-              </Button>
             </div>
           </div>
         )}
       </nav>
-
-      {/* Login Coming Soon Dialog */}
-      <Dialog open={loginDialogOpen} onOpenChange={setLoginDialogOpen}>
-        <DialogContent className="bg-surface border-border">
-          <DialogHeader>
-            <DialogTitle>Login Coming Soon</DialogTitle>
-            <DialogDescription className="text-muted-foreground mt-2 text-base leading-relaxed">
-              {loginExcuse}
-            </DialogDescription>
-          </DialogHeader>
-          <Button asChild className="mt-4">
-            <a href={process.env.NEXT_PUBLIC_DISCORD_INVITE_MAIN} target="_blank" rel="noopener noreferrer">
-              Join Discord Instead
-            </a>
-          </Button>
-        </DialogContent>
-      </Dialog>
     </>
   )
 }

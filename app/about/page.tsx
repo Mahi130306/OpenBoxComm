@@ -17,12 +17,6 @@ const servers = [
   // { name: 'Classic', status: 'Coming Soon', description: 'Creators Group' },
 ]
 
-// const supporters = [
-//   { name: 'Alex Chen', tier: 'Patron' },
-//   { name: 'Jordan Taylor', tier: 'Supporter' },
-//   { name: 'Sam Rivera', tier: 'Patron' },
-//   { name: 'Casey Kim', tier: 'Builder' },
-// ]
 
 export default function AboutPage() {
   return (
@@ -64,27 +58,6 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* <div className="mt-16">
-          <h2>Our Supporters</h2>
-          <p className="text-muted-foreground mt-2 mb-6">
-            Open Box is community-funded. Thanks to these supporters for keeping the lights on.
-          </p>
-          <div className="grid gap-3 sm:grid-cols-2">
-            {supporters.map((supporter) => (
-              <div key={supporter.name} className="flex items-center justify-between border-b border-border py-2">
-                <span>{supporter.name}</span>
-                <span className="text-xs text-muted-foreground">{supporter.tier}</span>
-              </div>
-            ))}
-          </div>
-          <div className="mt-8 text-center">
-            <Button asChild variant="outline">
-              <a href={process.env.NEXT_PUBLIC_PATREON_URL || '#'} target="_blank" rel="noopener noreferrer">
-                Support us on Patreon
-              </a>
-            </Button>
-          </div>
-        </div> */}
       </div>
     </div>
   )

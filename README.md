@@ -62,7 +62,7 @@ NEXT_PUBLIC_LOGIN_ENABLED=false
 
 # Supabase (only needed if using auth/dashboard features)
 NEXT_PUBLIC_SUPABASE_URL=
-NEXT_PUBLIC_SUPABASE_ANON_KEY=
+NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=
 ```
 
 ### Supabase Setup
