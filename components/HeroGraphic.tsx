@@ -14,7 +14,16 @@ export function HeroGraphic() {
     const scene = new THREE.Scene()
     const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000)
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
-    renderer.setSize(400, 400)
+
+    const updateSize = () => {
+      if (!containerRef.current) return
+      const width = Math.min(window.innerWidth - 32, 400)
+      renderer.setSize(width, width)
+      camera.aspect = 1
+      camera.updateProjectionMatrix()
+    }
+
+    updateSize()
     renderer.setPixelRatio(window.devicePixelRatio)
     containerRef.current.appendChild(renderer.domElement)
 
@@ -75,16 +84,10 @@ export function HeroGraphic() {
     animate()
 
     // Handle Resize
-    const handleResize = () => {
-      if (!containerRef.current) return
-      renderer.setSize(400, 400)
-      camera.aspect = 1
-      camera.updateProjectionMatrix()
-    }
-    window.addEventListener('resize', handleResize)
+    window.addEventListener('resize', updateSize)
 
     return () => {
-      window.removeEventListener('resize', handleResize)
+      window.removeEventListener('resize', updateSize)
       if (containerRef.current) {
         containerRef.current.removeChild(renderer.domElement)
       }
@@ -97,8 +100,8 @@ export function HeroGraphic() {
   }, [])
 
   return (
-    <div className="relative flex h-[400px] w-[400px] items-center justify-center">
-      <div ref={containerRef} className="z-10" />
+    <div className="relative flex h-[320px] w-[320px] items-center justify-center sm:h-[400px] sm:w-[400px]">
+      <div ref={containerRef} className="z-10 h-full w-full" />
       <div className="absolute inset-0 z-0 flex items-center justify-center">
         <div className="h-[250px] w-[250px] animate-pulse rounded-full bg-cyan-500/10 blur-[80px]" />
       </div>

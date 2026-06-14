@@ -34,7 +34,7 @@ export default function Home() {
               Pick Your World.
             </div>
             <h1 className="max-w-3xl text-balance text-5xl font-extrabold tracking-tight lg:text-7xl">
-              Open Doors. Pick Yours.
+              [Open Doors. Pick Yours.]
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
               OpenBox is home to multiple communities across gaming, development, study, networking, and more. Free to join. No gatekeeping. Just find the one that fits and jump in.

@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useRouter, usePathname } from 'next/navigation'
-import { Heart, Menu, X, LogIn, Sun, Moon, User, LogOut } from 'lucide-react'
+import { Heart, Menu, X, LogIn, Sun, Moon } from 'lucide-react'
 import { useTheme } from 'next-themes'
 import { Button } from '@/components/ui/button'
 import {
@@ -23,8 +23,6 @@ import {
   DialogTitle,
 } from '@/components/ui/dialog'
 import { logger } from '@/lib/logger'
-import { createClient } from '@/lib/supabase/client'
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 
 const servers = {
   live: [
@@ -140,41 +138,21 @@ export function Navbar() {
   const [loginDialogOpen, setLoginDialogOpen] = useState(false)
   const [loginExcuse, setLoginExcuse] = useState(loginExcuses[0])
   const [scrolled, setScrolled] = useState(false)
-  const [user, setUser] = useState<any>(null)
   const router = useRouter()
   const pathname = usePathname()
   const isLoginEnabled = process.env.NEXT_PUBLIC_LOGIN_ENABLED === 'true'
-  const supabase = createClient()
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 8)
     window.addEventListener('scroll', handleScroll, { passive: true })
-
-    // Check auth state
-    supabase.auth.getUser().then(({ data }) => {
-      setUser(data.user)
-    })
-
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
-      setUser(session?.user ?? null)
-    })
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-      subscription.unsubscribe()
-    }
-  }, [supabase])
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   useEffect(() => {
     setMobileMenuOpen(false)
   }, [pathname])
 
   const handleLoginClick = () => {
-    if (user) {
-      router.push('/dashboard')
-      return
-    }
-
     if (!isLoginEnabled) {
       setLoginExcuse(loginExcuses[Math.floor(Math.random() * loginExcuses.length)])
       setLoginDialogOpen(true)
@@ -183,11 +161,6 @@ export function Navbar() {
       logger.info('Navigating to login')
       router.push('/login')
     }
-  }
-
-  const handleLogout = async () => {
-    await supabase.auth.signOut()
-    router.refresh()
   }
 
   return (
@@ -284,43 +257,10 @@ export function Navbar() {
               </Link>
               <ThemeToggle />
 
-              {user ? (
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <Button variant="ghost" className="relative h-8 w-8 rounded-full">
-                      <Avatar className="h-8 w-8">
-                        <AvatarImage src={user.user_metadata?.avatar_url} alt={user.user_metadata?.full_name} />
-                        <AvatarFallback>{user.email?.charAt(0).toUpperCase()}</AvatarFallback>
-                      </Avatar>
-                    </Button>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent className="w-56" align="end" forceMount>
-                    <DropdownMenuLabel className="font-normal">
-                      <div className="flex flex-col space-y-1">
-                        <p className="text-sm font-medium leading-none">{user.user_metadata?.full_name}</p>
-                        <p className="text-xs leading-none text-muted-foreground">{user.email}</p>
-                      </div>
-                    </DropdownMenuLabel>
-                    <DropdownMenuSeparator />
-                    <DropdownMenuItem asChild>
-                      <Link href="/dashboard" className="cursor-pointer">
-                        <User className="mr-2 h-4 w-4" />
-                        Dashboard
-                      </Link>
-                    </DropdownMenuItem>
-                    <DropdownMenuSeparator />
-                    <DropdownMenuItem onClick={handleLogout} className="cursor-pointer text-rose-500 focus:text-rose-500">
-                      <LogOut className="mr-2 h-4 w-4" />
-                      Logout
-                    </DropdownMenuItem>
-                  </DropdownMenuContent>
-                </DropdownMenu>
-              ) : (
-                <Button variant="outline" size="sm" onClick={handleLoginClick}>
-                  <LogIn className="mr-2 h-4 w-4" />
-                  Login
-                </Button>
-              )}
+              <Button variant="outline" size="sm" onClick={handleLoginClick}>
+                <LogIn className="mr-2 h-4 w-4" />
+                Login
+              </Button>
             </div>
 
             {/* Mobile: theme + hamburger */}
@@ -366,20 +306,10 @@ export function Navbar() {
               <Link href="/doc" className="block py-2 text-sm font-medium hover:text-muted-foreground">Docs</Link>
               <Link href="/support" className="block py-2 text-sm font-medium hover:text-muted-foreground">Support</Link>
               <Link href="/help" className="block py-2 text-sm font-medium hover:text-muted-foreground">Help</Link>
-              {user ? (
-                <>
-                  <Link href="/dashboard" className="block py-2 text-sm font-medium hover:text-muted-foreground">Dashboard</Link>
-                  <Button variant="outline" size="sm" className="w-full mt-2 text-rose-500" onClick={handleLogout}>
-                    <LogOut className="mr-2 h-4 w-4" />
-                    Logout
-                  </Button>
-                </>
-              ) : (
-                <Button variant="outline" size="sm" className="w-full mt-2" onClick={handleLoginClick}>
-                  <LogIn className="mr-2 h-4 w-4" />
-                  Login
-                </Button>
-              )}
+              <Button variant="outline" size="sm" className="w-full mt-2" onClick={handleLoginClick}>
+                <LogIn className="mr-2 h-4 w-4" />
+                Login
+              </Button>
             </div>
           </div>
         )}
