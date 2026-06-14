@@ -125,7 +125,3 @@
     background-color: var(--surface);
   }
 }
-@keyframes pet-walk {
-  from { transform: rotate(-8deg) translateY(0px); }
-  to   { transform: rotate(8deg) translateY(-3px); }
-}

@@ -58,15 +58,7 @@ export default function RulesPage() {
         </li>
       </ul>
 
-      <div
-        style={{
-          border: '1px solid #333',
-          borderRadius: '8px',
-          padding: '12px 16px',
-          marginBottom: '24px',
-          background: 'rgba(255,200,0,0.06)',
-        }}
-      >
+      <div className="rounded-lg border border-border bg-yellow-500/10 p-4 mb-6">
         <strong>⚠️ Legal Note:</strong> Content that violates Indian law will result in an immediate permanent
         ban from all Open Box platforms and may be reported to the appropriate law enforcement authorities.
       </div>

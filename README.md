@@ -8,6 +8,11 @@ OpenBox is a multi-server Discord community website built with **Next.js 16 (App
 
 | Layer | Technology |
 |---|---|
+| Animation | GSAP |
+| 3D Visuals | Three.js |
+
+| Layer | Technology |
+|---|---|
 | Framework | Next.js 16 (App Router) |
 | Language | TypeScript |
 | Styling | Tailwind CSS v3 + `tailwindcss-animate` |
@@ -57,8 +62,23 @@ NEXT_PUBLIC_LOGIN_ENABLED=false
 
 # Supabase (only needed if using auth/dashboard features)
 NEXT_PUBLIC_SUPABASE_URL=
-NEXT_PUBLIC_SUPABASE_ANON_KEY=
+NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=
 ```
+
+### Supabase Setup
+
+The app is integrated with Supabase for data storage (Contact Form).
+
+1. **Environment Variables**: Add your Supabase URL and Anon Key to `.env.local`.
+2. **Migrations**: Apply the SQL migrations found in `supabase/migrations/` to your project using the Supabase Dashboard or CLI.
+   - `001_initial_schema.sql`: Core tables for servers, events, and blogs.
+   - `002_contact_submissions.sql`: Table for storing contact form submissions.
+
+### GSAP + Three.js
+
+The Hero section uses GSAP for timing and Three.js for rendering the 3D icosahedron.
+- Ensure `gsap` and `three` are installed via npm.
+- The component is located at `components/HeroGraphic.tsx`.
 
 ### 3. Run locally
 

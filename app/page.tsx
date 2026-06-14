@@ -29,12 +29,12 @@ export default function Home() {
         
         <div className="relative mx-auto grid max-w-7xl gap-12 px-4 py-24 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:px-8 lg:py-28">
           <div className="flex flex-col justify-center">
-            <div className="mb-5 inline-flex w-fit items-center gap-2 rounded-full border border-black/10 bg-black/5 px-3 py-1 text-sm text-muted-foreground dark:border-white/10 dark:bg-white/5">
-              <Sparkles className="h-4 w-4 text-cyan-500 dark:text-cyan-300" />
+            <div className="mb-5 inline-flex w-fit items-center gap-2 rounded-full border border-border bg-muted/50 px-3 py-1 text-sm text-muted-foreground">
+              <Sparkles className="h-4 w-4 text-cyan-500" />
               Pick Your World.
             </div>
             <h1 className="max-w-3xl text-balance text-5xl font-extrabold tracking-tight lg:text-7xl">
-              Open Doors. Pick Yours.
+              [Open Doors. Pick Yours.]
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
               OpenBox is home to multiple communities across gaming, development, study, networking, and more. Free to join. No gatekeeping. Just find the one that fits and jump in.
@@ -78,7 +78,7 @@ export default function Home() {
               <p><span className="font-semibold text-foreground">3.</span> Use events, docs, and blog posts to keep moving.</p>
             </div>
           </div>
-          <div className="aspect-video overflow-hidden rounded-lg border border-white/10 bg-surface shadow-2xl shadow-cyan-950/20">
+          <div className="aspect-video overflow-hidden rounded-lg border border-border bg-surface shadow-2xl shadow-cyan-950/20">
             <iframe
               className="h-full w-full"
               //src="https://www.youtube.com/embed/dQw4w9WgXcQ"
