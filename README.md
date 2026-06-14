@@ -19,7 +19,6 @@ OpenBox is a multi-server Discord community website built with **Next.js 16 (App
 | Fonts | Syne (headings) · Inter (body) via Google Fonts |
 | UI Components | Radix UI + shadcn/ui patterns (`components/ui/`) |
 | MDX | `next-mdx-remote` + `gray-matter` (for docs) |
-| Auth / DB | Supabase (`@supabase/ssr`) |
 | Theme | `next-themes` (dark/light toggle) |
 
 ---
@@ -60,19 +59,7 @@ NEXT_PUBLIC_X_URL=https://x.com/openboxcomm
 # Feature flags
 NEXT_PUBLIC_LOGIN_ENABLED=false
 
-# Supabase (only needed if using auth/dashboard features)
-NEXT_PUBLIC_SUPABASE_URL=
-NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=
 ```
-
-### Supabase Setup
-
-The app is integrated with Supabase for data storage (Contact Form).
-
-1. **Environment Variables**: Add your Supabase URL and Anon Key to `.env.local`.
-2. **Migrations**: Apply the SQL migrations found in `supabase/migrations/` to your project using the Supabase Dashboard or CLI.
-   - `001_initial_schema.sql`: Core tables for servers, events, and blogs.
-   - `002_contact_submissions.sql`: Table for storing contact form submissions.
 
 ### GSAP + Three.js
 
@@ -159,8 +146,7 @@ open-box-website-del/
 │   ├── mdx.ts              # MDX file reader for content/docs/
 │   ├── constants.ts        # Shared constants
 │   ├── utils.ts            # cn() utility
-│   ├── logger.ts           # Logging utility
-│   └── supabase/           # Supabase client helpers
+│   └── logger.ts           # Logging utility
 │
 ├── types/                  # TypeScript type definitions
 ├── public/
@@ -323,7 +309,6 @@ export default function YourPolicyPage() {
 This project is deployable to **Vercel** or any Node.js-compatible platform.
 
 - All environment variables prefixed with `NEXT_PUBLIC_` are exposed to the browser
-- Server-only variables (Supabase service key) must NOT be prefixed with `NEXT_PUBLIC_`
 - The `content/docs/` directory is read at build time — add new MDX files and rebuild
 - Discord widget API (`discord.com/api/guilds/.../widget.json`) requires the widget to be **enabled** in each server's settings (Server Settings → Widget → Enable Server Widget)
 - If a Discord widget is disabled, `DiscordStats` will show `—` for that server gracefully

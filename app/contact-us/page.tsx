@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Mail, MessageSquare, ExternalLink } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { ContactForm } from '@/components/ContactForm'
 
 export const metadata: Metadata = {
   title: 'Contact Us — Open Box',
@@ -39,18 +38,8 @@ export default function ContactUsPage() {
         </p>
       </div>
 
-      {/* Contact form + contact info grid */}
-      <div className="grid gap-8 lg:grid-cols-[1fr_320px]">
-
-        {/* Contact Form */}
-        <div className="rounded-xl border border-border bg-surface p-6 sm:p-8">
-          <h2 className="mb-1 text-xl font-bold text-foreground sm:text-2xl">Send us a message</h2>
-          <p className="mb-6 text-sm text-muted-foreground">
-            We aim to respond within 3–5 working days.
-          </p>
-          <ContactForm />
-        </div>
-
+      {/* Contact info */}
+      <div className="grid gap-8 lg:max-w-md lg:mx-auto">
         {/* Right column: Email + Discord */}
         <div className="flex flex-col gap-5">
 
@@ -67,7 +56,7 @@ export default function ContactUsPage() {
               {emails.map(({ label, address }) => (
                 <li key={address} className="flex items-center justify-between gap-2 text-sm">
                   <span className="text-muted-foreground">{label}</span>
-                  
+                  <a
                     href={`mailto:${address}`}
                     className="inline-flex items-center gap-1 font-medium text-indigo-600 transition-colors hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300"
                   >
@@ -90,7 +79,7 @@ export default function ContactUsPage() {
               <code className="rounded bg-muted px-1 text-xs">#help</code> channel.
             </p>
             <Button asChild size="sm" className="w-full" id="contact-discord">
-              
+              <a
                 href={process.env.NEXT_PUBLIC_DISCORD_INVITE_MAIN || '#'}
                 target="_blank"
                 rel="noopener noreferrer"
