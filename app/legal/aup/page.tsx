@@ -49,7 +49,7 @@ export default function AupPage() {
       <ul>
         <li><strong>Website:</strong> openboxcomm.in and all subdomains</li>
         <li>
-          <strong>Discord servers:</strong> JN (general entry), Dev (builders and developers), GG (gaming),
+          <strong>Discord servers:</strong> JN (general entry), Dev (developers), GG (gaming),
           Classic (casual social), Study (study and accountability), Connect (networking and careers), and any
           future servers
         </li>

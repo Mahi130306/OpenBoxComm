@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button'
 
 export const metadata: Metadata = {
   title: 'About',
-  description: 'Learn about Open Box — a people-focused network of communities for builders, gamers, students, and creators. Free and open to everyone.',
+  description: 'Learn about Open Box — a people-focused network of communities for gamers, students, and creators. Free and open to everyone.',
   alternates: { canonical: '/about' },
 }
 
@@ -29,10 +29,10 @@ export default function AboutPage() {
           </p>
           <p className="mt-4">
             We started as a small Discord server for developers sharing side projects. Today, we've growning into a network of
-            multiple communities, each serving different facets of the builder journey from coding to gaming to study groups.
+            multiple communities, each serving different facets of the journey from coding to gaming to study groups.
           </p>
           <p className="mt-4">
-            Our mission is simple: provide a welcoming, high-signal space where builders, gamers, students, profesionals & creaters can find their tribe, share their work,
+            Our mission is simple: provide a welcoming, high-signal space where gamers, students, profesionals & creaters can find their tribe, share their work,
             and grow together. No gatekeeping, no toxicity, just genuine connection and collaboration.
           </p>
         </div>

@@ -76,10 +76,10 @@ export default function TermsPage() {
       </p>
 
       <h2>2. Description of Services</h2>
-      <p>Open Box is a builder-focused umbrella community operating across:</p>
+      <p>Open Box is an umbrella community operating across:</p>
       <ul>
         <li><strong>openboxcomm.in</strong> : the central website with blogs, events, documentation, and community resources</li>
-        <li><strong>Discord servers</strong> : JN (general entry), Dev (builders and developers), GG (gaming), Study (study and accountability), Connect (networking and careers)</li>
+        <li><strong>Discord servers</strong> : JN (general entry), Dev (developers), GG (gaming), Study (study and accountability), Connect (networking and careers)</li>
         <li><strong>Social media</strong> : official accounts on X, Instagram, and YouTube</li>
         <li><strong>Events</strong> : online workshops, IRL meetups, hackathons, and contests</li>
         <li><strong>Future platforms</strong> : any additional services or platforms launched under the Open Box brand</li>

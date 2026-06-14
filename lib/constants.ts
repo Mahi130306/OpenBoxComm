@@ -1,5 +1,5 @@
 export const SITE_NAME = 'Open Box'
-export const SITE_DESCRIPTION = 'A builder-focused tech community with multiple Discord servers. Join us to build, learn, and connect.'
+export const SITE_DESCRIPTION = 'A tech community with multiple Discord servers. Join us to build, learn, and connect.'
 export const SITE_URL = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'
 
 export const DISCORD_INVITE_MAIN = process.env.NEXT_PUBLIC_DISCORD_INVITE_MAIN || 'https://discord.gg/7ZWckKU89J'
@@ -24,7 +24,7 @@ export const NAVIGATION = [
 export const FEATURES = [
   {
     title: 'Build Together',
-    description: 'Join a community of builders focused on creating amazing things.',
+    description: 'Join a community focused on creating amazing things.',
   },
   {
     title: 'Learn & Grow',
@@ -32,7 +32,7 @@ export const FEATURES = [
   },
   {
     title: 'Network',
-    description: 'Connect with like-minded builders and developers worldwide.',
+    description: 'Connect with like-minded developers worldwide.',
   },
   {
     title: 'Events & Resources',

@@ -47,7 +47,7 @@ export default function ServerNodeGraph() {
 
     const servers: Server[] = [
       { label: "Junction", sub: "Hub · Front door",  color: "#1D9E75", r: 34, x: W / 2,    y: H / 2,    vx: 0,     vy: 0,     emoji: "🔗" },
-      { label: "Dev",      sub: "Builders · Code",   color: "#7F77DD", r: 24, x: W * 0.22, y: H * 0.25, vx: 0.28,  vy: 0.22,  emoji: "💻" },
+      { label: "Dev",      sub: "Developers · Code",   color: "#7F77DD", r: 24, x: W * 0.22, y: H * 0.25, vx: 0.28,  vy: 0.22,  emoji: "💻" },
       { label: "GG",       sub: "Gaming · Compete",  color: "#378ADD", r: 24, x: W * 0.76, y: H * 0.20, vx: -0.22, vy: 0.32,  emoji: "🎮" },
       { label: "Study",    sub: "Learn · Grind",     color: "#639922", r: 22, x: W * 0.16, y: H * 0.74, vx: 0.24,  vy: -0.22, emoji: "📚" },
       { label: "Connect",  sub: "Meet · Collab",     color: "#D85A30", r: 22, x: W * 0.80, y: H * 0.76, vx: -0.28, vy: -0.24, emoji: "🌐" },

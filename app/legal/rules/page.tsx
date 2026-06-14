@@ -163,7 +163,7 @@ export default function RulesPage() {
       <p>Each Discord server has its own focus and may have additional rules. These apply on top of these general rules.</p>
       <ul>
         <li><strong>JN (Junction):</strong> General entry server. See #jn-rules on Discord.</li>
-        <li><strong>Dev:</strong> Builders and developers. See #dev-rules on Discord.</li>
+        <li><strong>Dev:</strong> Developers. See #dev-rules on Discord.</li>
         <li><strong>GG:</strong> Gaming. See #gg-rules on Discord.</li>
         {/* <li><strong>Classic:</strong> Casual social. See #classic-rules on Discord.</li> */}
         <li><strong>Study:</strong> Study and accountability. See #study-rules on Discord.</li>

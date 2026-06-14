@@ -9,9 +9,9 @@ import ServerNodeGraph from "@/components/ServerNodeGraph";
 import { ArrowRight, Sparkles } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Open Box — Community for Everyone | Builders, Gamers, Students',
-  description: 'Join Open Box, a free, no-gatekeeping community network for builders, gamers, students, and creators. Explore our Discord servers, attend events, and connect with peers.',
-  keywords: ['Open Box', 'Discord community', 'builders', 'gamers', 'students', 'creators', 'networking', 'open source', 'free community'],
+  title: 'Open Box — Community for Everyone | Gamers, Students',
+  description: 'Join Open Box, a free, no-gatekeeping community network for gamers, students, and creators. Explore our Discord servers, attend events, and connect with peers.',
+  keywords: ['Open Box', 'Discord community', 'gamers', 'students', 'creators', 'networking', 'open source', 'free community'],
   alternates: { canonical: '/' },
   openGraph: {
     title: 'Open Box — The Ultimate Community Network',

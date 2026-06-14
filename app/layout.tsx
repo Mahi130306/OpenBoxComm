@@ -14,8 +14,8 @@ export const metadata: Metadata = {
     default: 'Open Box — Community for Everyone',
     template: '%s — Open Box',
   },
-  description: 'A builder-focused community network with multiple Discord servers. Join Open Box to build, learn, game, and connect — free, no gatekeeping.',
-  keywords: ['Open Box', 'Discord community', 'builders community', 'gaming server', 'developer community', 'study group', 'networking'],
+  description: 'A community network with multiple Discord servers. Join Open Box to build, learn, game, and connect — free, no gatekeeping.',
+  keywords: ['Open Box', 'Discord community', 'gaming server', 'developer community', 'study group', 'networking'],
   authors: [{ name: 'Open Box', url: BASE_URL }],
   creator: 'Open Box',
   icons: {
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Open Box — Community for Everyone',
-    description: 'A builder-focused community network with multiple Discord servers. Free to join.',
+    description: 'A community network with multiple Discord servers. Free to join.',
     url: BASE_URL,
     siteName: 'Open Box',
     images: [{ url: '/og-default.png', width: 1200, height: 630, alt: 'Open Box Community' }],
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Open Box — Community for Everyone',
-    description: 'A builder-focused community network with multiple Discord servers. Free to join.',
+    description: 'A community network with multiple Discord servers. Free to join.',
     images: ['/og-default.png'],
     site: '@Openboxcomm',
   },

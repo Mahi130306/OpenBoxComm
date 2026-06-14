@@ -2,7 +2,7 @@ export const servers = [
   {
     slug: 'jn',
     name: 'Junction (Jn.)',
-    description: 'The main hub for builders, founders, students, and curious people.',
+    description: 'The main hub for founders, students, and curious people.',
     longDescription:
       'Jn. is the friendly front door of Open Box. Bring a rough idea, ask for feedback, share your wins, or find people who want to build alongside you.',
     tags: ['community', 'showcase', 'feedback'],
