@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { getTeamMember } from '@/lib/community-data'
 import { Button } from '@/components/ui/button'
-import { Github, Twitter, ArrowLeft } from 'lucide-react'
+import { Github, Twitter,ArrowLeft, Instagram} from 'lucide-react'
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params

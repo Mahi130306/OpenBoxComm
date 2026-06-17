@@ -304,37 +304,38 @@ export function getBlog(slug: string) {
 }
 
 export const teamMembers = [
+  // {
+  //   slug: 'jules',
+  //   name: 'Jules',
+  //   role: 'Lead Architect',
+  //   bio: 'Jules is the primary architect behind Open Box, focusing on community infrastructure and developer experience. They believe in the power of open collaboration.',
+  //   avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=jules',
+  //   socials: {
+  //     github: 'https://github.com/jules',
+  //     twitter: 'https://x.com/jules',
+  //   }
+  // },
   {
-    slug: 'jules',
-    name: 'Jules',
-    role: 'Lead Architect',
-    bio: 'Jules is the primary architect behind Open Box, focusing on community infrastructure and developer experience. They believe in the power of open collaboration.',
-    avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=jules',
+    slug: 'sachin',
+    name: 'Sachin',
+    role: 'Community Founder',
+    bio: ' Sachin is the Founder of Open Box, a community for developers, builders, gamers, and students. They are passionate about creating spaces where people can connect, learn, and grow together.',
+    avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=sachin',
     socials: {
-      github: 'https://github.com/jules',
-      twitter: 'https://x.com/jules',
+      instagram: 'https://x.com/alex',
+      github: 'https://github.com/alex'
     }
   },
-  {
-    slug: 'alex',
-    name: 'Alex',
-    role: 'Community Manager',
-    bio: 'Alex oversees the daily operations of the Junction and GG servers, ensuring a safe and welcoming environment for all members.',
-    avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=alex',
-    socials: {
-      twitter: 'https://x.com/alex',
-    }
-  },
-  {
-    slug: 'casey',
-    name: 'Casey',
-    role: 'Dev Advocate',
-    bio: 'Casey helps bridge the gap between our development projects and the community, writing docs and hosting technical workshops.',
-    avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=casey',
-    socials: {
-      github: 'https://github.com/casey',
-    }
-  }
+  // {
+  //   slug: 'rohit',
+  //   name: 'Rohit',
+  //   role: 'Dev Advocate',
+  //   bio: 'Rohit helps bridge the gap between our development projects and the community, writing docs and hosting technical workshops.',
+  //   avatar: '#',
+  //   socials: {
+  //     github: 'https://github.com/rohit',
+  //   }
+  // }
 ]
 
 export function getEvent(id: string) {

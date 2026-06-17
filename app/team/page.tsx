@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { teamMembers } from '@/lib/community-data'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Github, Twitter, ArrowRight } from 'lucide-react'
+import { Github, Twitter, ArrowRight, Instagram } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Our Team — Open Box',
@@ -56,6 +56,11 @@ export default function TeamPage() {
                 {member.socials.twitter && (
                   <a href={member.socials.twitter} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
                     <Twitter className="h-5 w-5" />
+                  </a>
+                )}
+                {member.socials.instagram && (
+                  <a href={member.socials.instagram} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+                    <Instagram className="h-5 w-5" />
                   </a>
                 )}
               </div>

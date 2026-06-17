@@ -129,8 +129,8 @@ export function Footer() {
               {[
                 { label: 'Home', href: '/' },
                 { label: 'About', href: '/about' },
-                { label: 'Team', href: '/team' },
-                { label: 'Join', href: '/join' },
+                // { label: 'Team', href: '/team' },
+                // { label: 'Join', href: '/join' },
                 { label: 'Servers', href: '/servers' },
                 { label: 'Events', href: '/events' },
                 { label: 'Blogs', href: '/blogs' },
