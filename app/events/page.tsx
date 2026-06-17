@@ -83,6 +83,8 @@ export default function EventsPage() {
           <h2 className="mb-2 text-3xl">Coming soon</h2>
           <p className="mx-auto max-w-xl text-muted-foreground">
             No events match this view yet. New sessions will appear here once the community calendar is updated.
+             <br />
+                Have an event you'd like to see? <u> <Link href="/help" className="text-cyan-500 hover:underline">Suggest it!</Link></u>
           </p>
         </div>
       ) : (

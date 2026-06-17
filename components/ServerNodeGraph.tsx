@@ -51,6 +51,7 @@ export default function ServerNodeGraph() {
       { label: "GG",       sub: "Gaming · Compete",  color: "#378ADD", r: 24, x: W * 0.76, y: H * 0.20, vx: -0.22, vy: 0.32,  emoji: "🎮" },
       { label: "Study",    sub: "Learn · Grind",     color: "#639922", r: 22, x: W * 0.16, y: H * 0.74, vx: 0.24,  vy: -0.22, emoji: "📚" },
       { label: "Connect",  sub: "Meet · Collab",     color: "#D85A30", r: 22, x: W * 0.80, y: H * 0.76, vx: -0.28, vy: -0.24, emoji: "🌐" },
+      
     ];
 
     const mouse = { x: -999, y: -999 };

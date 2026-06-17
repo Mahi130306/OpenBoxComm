@@ -14,14 +14,60 @@ export default function AupPage() {
       <p className="text-sm text-muted-foreground mb-8">Last updated: {lastUpdated}</p>
 
       <p>
-        This Acceptable Use Policy (&quot;AUP&quot;) governs how you may use any Open Box platform or service — including
-        the website at <strong>openboxcomm.in</strong>, all Discord servers (JN, Dev, GG, Classic, Study,
-        Connect, and any future servers), our official social media accounts on X, Instagram, and YouTube, all
-        events we organise, and any other service operated under the Open Box brand now or in the future
-        (collectively, the &quot;Platform&quot;). This AUP forms part of our{' '}
-        <a href="/legal/terms">Terms &amp; Conditions</a>. By using any part of the Platform, you agree to this
-        policy.
+        This Acceptable Use Policy (&quot;AUP&quot;) governs how you may use any Open Box platform — including the
+        website at <strong>openboxcomm.in</strong>, all Discord servers (JN, Dev, GG, Classic, Study, Connect,
+        and any future servers), official social media accounts on X, Instagram, and YouTube, all events, and
+        any other service operated under the Open Box brand now or in the future. This AUP forms part of our{' '}
+        <a href="/legal/terms">Terms &amp; Conditions</a>.
       </p>
+      <p>This policy is grounded in the following laws:</p>
+      <ul>
+        <li>
+          <a href="https://www.indiacode.nic.in/bitstream/123456789/2263/1/A1860-45.pdf" target="_blank" rel="noopener noreferrer">
+            Indian Penal Code, 1860 (IPC)
+          </a>{' '}
+          — covers criminal offences including defamation, obscenity, hate speech, harassment, and incitement.
+        </li>
+        <li>
+          <a href="https://www.indiacode.nic.in/bitstream/123456789/13116/1/it_act_2000_updated.pdf" target="_blank" rel="noopener noreferrer">
+            Information Technology Act, 2000
+          </a>{' '}
+          — India&apos;s primary cyber law addressing cybercrimes, electronic records, and intermediary liability.
+        </li>
+        <li>
+          <a href="https://www.indiacode.nic.in/bitstream/123456789/20168/1/2023_Act_22_Digital_Personal_Data_Protection_Act.pdf" target="_blank" rel="noopener noreferrer">
+            Digital Personal Data Protection Act, 2023 (DPDP Act)
+          </a>{' '}
+          — India&apos;s data protection law governing how personal data is collected, processed, and safeguarded.
+        </li>
+        <li>
+          <a href="https://www.indiacode.nic.in/bitstream/123456789/1367/1/a1957-14.pdf" target="_blank" rel="noopener noreferrer">
+            Copyright Act, 1957
+          </a>{' '}
+          — protects intellectual property rights in creative works including text, graphics, software, and
+          original content.
+        </li>
+        <li>
+          <a href="https://www.indiacode.nic.in/bitstream/123456789/2362/1/201232.pdf" target="_blank" rel="noopener noreferrer">
+            POCSO Act, 2012
+          </a>{' '}
+          — protects children from sexual offences, abuse, and exploitation.
+        </li>
+        <li>
+          <a href="https://www.indiacode.nic.in/bitstream/123456789/15240/1/constitution_of_india.pdf" target="_blank" rel="noopener noreferrer">
+            Article 19(1)(a) of the Constitution of India
+          </a>{' '}
+          — guarantees freedom of speech and expression, subject to reasonable restrictions under Article
+          19(2) including public order, decency, and national sovereignty.
+        </li>
+        <li>
+          <a href="https://www.indiacode.nic.in/bitstream/123456789/15240/1/constitution_of_india.pdf" target="_blank" rel="noopener noreferrer">
+            Article 21 of the Constitution of India
+          </a>{' '}
+          — guarantees the right to life and personal liberty, including the right to privacy as held in{' '}
+          <em>K.S. Puttaswamy v. Union of India (2017)</em>.
+        </li>
+      </ul>
 
       <div
         style={{
@@ -32,119 +78,106 @@ export default function AupPage() {
           background: 'rgba(255,200,0,0.06)',
         }}
       >
-        <strong>⚠️ Legal Note:</strong> Violations of Indian law — including the{' '}
-        <a href="https://indiacode.nic.in/handle/123456789/1999" target="_blank" rel="noopener noreferrer">IT Act, 2000</a>
-        ,{' '}
-        <a href="https://indiacode.nic.in/handle/123456789/2263" target="_blank" rel="noopener noreferrer">Indian Penal Code, 1860</a>
-        ,{' '}
-        <a href="https://indiankanoon.org/doc/186379044/" target="_blank" rel="noopener noreferrer">DPDP Act, 2023</a>
-        ,{' '}
-        <a href="https://indiacode.nic.in/handle/123456789/2362" target="_blank" rel="noopener noreferrer">POCSO Act, 2012</a>
-        , or any other applicable statute — will result in an immediate permanent ban from all Open Box
-        platforms and may be reported to the appropriate law enforcement authorities.
+        <strong>⚠️ Legal Note:</strong> Violations of Indian law will result in an immediate permanent ban
+        from all Open Box platforms and may be reported to the appropriate law enforcement authorities.
       </div>
 
       <h2>1. Scope</h2>
       <p>This AUP applies across all Open Box platforms and spaces:</p>
       <ul>
         <li><strong>Website:</strong> openboxcomm.in and all subdomains</li>
-        <li>
-          <strong>Discord servers:</strong> JN (general entry), Dev (developers), GG (gaming),
-          Classic (casual social), Study (study and accountability), Connect (networking and careers), and any
-          future servers
-        </li>
-        <li>
-          <strong>Social media:</strong> Official Open Box accounts on X (@openboxcomm or any official handle),
-          Instagram, and YouTube
-        </li>
-        <li>
-          <strong>Events:</strong> All online workshops, IRL meetups, hackathons, contests, and live streams
-        </li>
-        <li>
-          <strong>Future platforms:</strong> Any new service, app, or community space launched under the Open
-          Box brand
-        </li>
+        <li><strong>Discord servers:</strong> JN (general entry), Dev (builders and developers), GG (gaming), Classic (casual social), Study (study and accountability), Connect (networking and careers), and any future servers</li>
+        <li><strong>Social media:</strong> Official Open Box accounts on X, Instagram, and YouTube</li>
+        <li><strong>Events:</strong> All online workshops, IRL meetups, hackathons, contests, and live streams</li>
+        <li><strong>Future platforms:</strong> Any new service, app, or community space launched under the Open Box brand</li>
       </ul>
 
       <h2>2. Permitted Use</h2>
-      <p>You may use the Open Box Platform to:</p>
       <ul>
         <li>Participate in community discussions, servers, and events in good faith</li>
-        <li>Share original content, projects, and resources relevant to development, tech, gaming, or the focus of the specific server or channel</li>
+        <li>Share original content, projects, and resources relevant to the focus of the specific server or channel</li>
         <li>Collaborate with other members on projects, code, and ideas</li>
         <li>Access blogs, documentation, and community resources for personal or professional learning</li>
-        <li>Follow, subscribe to, or share content from Open Box&apos;s official social media accounts for personal, non-commercial purposes</li>
-        <li>Use our tools and services as intended and described in their respective documentation</li>
+        <li>Follow, subscribe to, or share content from Open Box&apos;s official social media accounts with proper attribution</li>
+        <li>Use our tools and services as intended and described in their documentation</li>
       </ul>
 
       <h2>3. Prohibited Use</h2>
 
       <h3>3.1 Illegal or Harmful Content</h3>
-      <p>
-        Across all Open Box platforms — Discord servers, the website, social media comments, and events — you
-        must not:
-      </p>
       <ul>
         <li>Post, share, or distribute content that is illegal under Indian law or the laws of your jurisdiction</li>
-        <li>Share content that threatens, harasses, intimidates, or incites violence against any individual or group</li>
         <li>
-          Distribute child sexual abuse material (CSAM) or any content that exploits or endangers minors,
-          in violation of the{' '}
-          <a href="https://indiacode.nic.in/handle/123456789/2362" target="_blank" rel="noopener noreferrer">
+          Share content that threatens, harasses, or incites violence against any individual or group — an
+          offence under the{' '}
+          <a href="https://www.indiacode.nic.in/bitstream/123456789/2263/1/A1860-45.pdf" target="_blank" rel="noopener noreferrer">
+            IPC, 1860
+          </a>
+        </li>
+        <li>
+          Distribute child sexual abuse material (CSAM) or content that exploits or endangers minors, in
+          violation of the{' '}
+          <a href="https://www.indiacode.nic.in/bitstream/123456789/2362/1/201232.pdf" target="_blank" rel="noopener noreferrer">
             POCSO Act, 2012
           </a>
         </li>
         <li>Promote, glorify, or facilitate terrorism, extremism, or communal violence</li>
         <li>Share content that promotes self-harm, suicide, or eating disorders</li>
-        <li>Post NSFW content (explicit, sexual, violent, or gory material) on any platform or channel</li>
+        <li>
+          Post NSFW content (explicit, sexual, violent, or gory material) — distribution of obscene content
+          is an offence under the{' '}
+          <a href="https://www.indiacode.nic.in/bitstream/123456789/13116/1/it_act_2000_updated.pdf" target="_blank" rel="noopener noreferrer">
+            IT Act, 2000
+          </a>
+        </li>
       </ul>
 
       <h3>3.2 Malicious Technical Activity</h3>
-      <p>On the website, Discord servers, and any other Open Box platform, you must not:</p>
       <ul>
         <li>Introduce or distribute malware, viruses, ransomware, spyware, or any malicious code</li>
-        <li>Attempt to gain unauthorised access to the Platform, its infrastructure, or other users&apos; accounts</li>
+        <li>Attempt to gain unauthorised access to any Open Box platform, its infrastructure, or other users&apos; accounts</li>
         <li>Conduct denial-of-service (DoS) or distributed denial-of-service (DDoS) attacks</li>
         <li>Use automated bots, scrapers, or crawlers to harvest data from any Open Box platform without prior written permission</li>
-        <li>
-          Exploit vulnerabilities in the Platform — if you discover one, report it responsibly to{' '}
-          <strong>admin@openboxcomm.in</strong> (see Section 7 on Responsible Disclosure)
-        </li>
+        <li>Exploit vulnerabilities in any Open Box platform — report them responsibly to <strong>admin@openboxcomm.in</strong> instead (see Section 7)</li>
         <li>Attempt to reverse-engineer, decompile, or disassemble any part of the Platform</li>
       </ul>
 
       <h3>3.3 Spam &amp; Deceptive Practices</h3>
-      <p>Across all platforms — Discord, the website, and social media — you must not:</p>
       <ul>
         <li>Send unsolicited bulk messages, spam, or chain messages to members</li>
         <li>Distribute phishing links, deceptive URLs, or fraudulent content</li>
         <li>Impersonate Open Box, its team, moderators, or any other person or entity on any platform</li>
         <li>Create fake accounts or use alternate accounts to bypass moderation actions on any platform</li>
-        <li>Artificially inflate engagement metrics or manipulate community systems (e.g. fake Discord boosts, vote manipulation)</li>
+        <li>Artificially inflate engagement metrics or manipulate community systems</li>
       </ul>
 
       <h3>3.4 Privacy Violations</h3>
       <ul>
-        <li>Collect, store, or share personal information of other users without their explicit consent on any platform</li>
+        <li>Collect, store, or share personal information of other users without their explicit consent</li>
         <li>
-          Doxx any individual — publishing private information about someone without their consent is a
-          permanent ban offence and may be reported under the{' '}
-          <a href="https://indiankanoon.org/doc/186379044/" target="_blank" rel="noopener noreferrer">
+          Doxx any individual — a violation of{' '}
+          <a href="https://www.indiacode.nic.in/bitstream/123456789/15240/1/constitution_of_india.pdf" target="_blank" rel="noopener noreferrer">
+            Article 21 of the Constitution
+          </a>{' '}
+          and punishable under the{' '}
+          <a href="https://www.indiacode.nic.in/bitstream/123456789/20168/1/2023_Act_22_Digital_Personal_Data_Protection_Act.pdf" target="_blank" rel="noopener noreferrer">
             DPDP Act, 2023
           </a>
         </li>
-        <li>Record, screenshot, or distribute private conversations (from Discord DMs, event calls, or any channel) without the consent of all parties</li>
+        <li>Record, screenshot, or distribute private conversations without the consent of all parties involved</li>
         <li>Use any Open Box platform to conduct unauthorised surveillance or tracking of individuals</li>
       </ul>
 
       <h3>3.5 Intellectual Property Violations</h3>
       <ul>
         <li>Share pirated software, cracked tools, or illegally distributed media on any platform</li>
-        <li>Post copyrighted material without authorisation or proper attribution</li>
         <li>
-          Reproduce, distribute, or create derivative works from Open Box content (see Section 5 for brand
-          usage guidelines)
+          Post copyrighted material without authorisation — an infringement under the{' '}
+          <a href="https://www.indiacode.nic.in/bitstream/123456789/1367/1/a1957-14.pdf" target="_blank" rel="noopener noreferrer">
+            Copyright Act, 1957
+          </a>
         </li>
+        <li>Reproduce, distribute, or create derivative works from Open Box content without written consent (see Section 5 for brand guidelines)</li>
       </ul>
 
       <h3>3.6 Commercial Misuse</h3>
@@ -158,11 +191,9 @@ export default function AupPage() {
 
       <h3>4.1 Discord Servers</h3>
       <p>
-        Each server (JN, Dev, GG, Classic, Study, Connect) has its own focus and may have additional
-        channel-specific rules. Content that is appropriate in one server (e.g. gaming discussion in GG) may
-        not be appropriate in another (e.g. OB Dev). Always check the #rules channel for the server you are in.
-        Cross-server behaviour — such as ban evasion using alternate accounts — may result in removal from all
-        servers simultaneously.
+        Each server (JN, Dev, GG, Classic, Study, Connect) has its own focus and additional channel-specific
+        rules. Always check the #rules channel for the server you are in. Cross-server behaviour — such as ban
+        evasion using alternate accounts — may result in removal from all servers simultaneously.
       </p>
 
       <h3>4.2 Website (openboxcomm.in)</h3>
@@ -175,99 +206,58 @@ export default function AupPage() {
       <h3>4.3 Social Media (X, Instagram, YouTube)</h3>
       <p>
         When interacting with Open Box on X, Instagram, or YouTube — through comments, replies, tags, or
-        direct messages — this AUP applies. Interactions that violate this policy may be removed, and users
-        may be blocked or reported to the respective platform. These platforms also have their own terms of
-        service which apply independently.
+        direct messages — this AUP applies. These platforms also have their own terms of service which apply
+        independently.
       </p>
 
       <h3>4.4 Events</h3>
       <p>
-        All event participants — whether attending online, watching a live stream, or present at an IRL meetup
-        — are bound by this AUP and our <a href="/legal/events">Events Policy</a>. Violations at events may
-        result in removal from the event and from all Open Box platforms.
+        All event participants are bound by this AUP and our <a href="/legal/events">Events Policy</a>.
+        Violations at events may result in removal from the event and from all Open Box platforms.
       </p>
 
       <h2>5. Open Box Brand Usage</h2>
       <p>
-        The Open Box name, logo, server identities (JN, Dev, GG, Classic, Study, Connect), the &quot;OB&quot; abbreviation,
-        and all associated visual assets are protected intellectual property of Open Box under the{' '}
-        <a href="https://indiacode.nic.in/handle/123456789/1367" target="_blank" rel="noopener noreferrer">
+        The Open Box name, logo, server identities (JN, Dev, GG, Classic, Study, Connect), the &quot;OB&quot;
+        abbreviation, and all associated visual assets are protected under the{' '}
+        <a href="https://www.indiacode.nic.in/bitstream/123456789/1367/1/a1957-14.pdf" target="_blank" rel="noopener noreferrer">
           Copyright Act, 1957
         </a>
-        . The following guidelines govern how these assets may and may not be used by anyone outside the Open
-        Box team.
+        . The following guidelines govern how these assets may be used by anyone outside the Open Box team.
       </p>
 
       <h3>5.1 What You Can Do</h3>
       <ul>
-        <li>
-          <strong>Reference us by name</strong> — you may refer to &quot;Open Box&quot; or &quot;OB&quot; in factual, editorial, or
-          informational contexts (e.g. &quot;I am a member of Open Box&quot;, &quot;Open Box hosted this hackathon&quot;)
-        </li>
-        <li>
-          <strong>Share our content</strong> — you may share posts, announcements, and public content from our
-          official social media accounts and website with proper attribution, as long as the content is not
-          altered
-        </li>
-        <li>
-          <strong>Link to us</strong> — you may link to openboxcomm.in or our official social media profiles
-          from your website, portfolio, or content
-        </li>
-        <li>
-          <strong>Credit participation</strong> — you may state that you participated in an Open Box event,
-          are a member of an Open Box server, or hold a role within the community (e.g. &quot;OB Dev member&quot;,
-          &quot;Open Box hackathon participant&quot;) on your portfolio, resume, or social media
-        </li>
+        <li><strong>Reference us by name</strong> — you may refer to &quot;Open Box&quot; or &quot;OB&quot; in factual or informational contexts (e.g. &quot;I am a member of Open Box&quot;, &quot;Open Box hosted this hackathon&quot;)</li>
+        <li><strong>Share our content</strong> — you may share posts and announcements from our official social media accounts and website with proper attribution, without altering the content</li>
+        <li><strong>Link to us</strong> — you may link to openboxcomm.in or our official social media profiles from your website, portfolio, or content</li>
+        <li><strong>Credit participation</strong> — you may state that you participated in an Open Box event or are a member of an Open Box server on your portfolio, resume, or social media</li>
       </ul>
 
       <h3>5.2 What You Cannot Do</h3>
       <ul>
-        <li>
-          <strong>Use our logo or visual assets</strong> — do not use the Open Box logo, any server logo (JN,
-          Dev, GG, Classic, Study, Connect), or any official Open Box visual asset in your own content,
-          projects, merchandise, or materials without prior written permission from{' '}
-          <strong>team@openboxcomm.in</strong>
-        </li>
-        <li>
-          <strong>Imply endorsement or partnership</strong> — do not use the Open Box name, logo, or brand in
-          a way that implies Open Box endorses, sponsors, or is affiliated with your project, product, event,
-          or organisation unless we have explicitly agreed in writing
-        </li>
-        <li>
-          <strong>Create unofficial Open Box content</strong> — do not create social media accounts,
-          communities, Discord servers, websites, merchandise, or any other content that uses the Open Box
-          name, logo, or brand identity without written authorisation
-        </li>
-        <li>
-          <strong>Modify our assets</strong> — do not alter, remix, crop, recolour, or create derivative
-          versions of any Open Box logo or visual asset
-        </li>
-        <li>
-          <strong>Use &quot;OB&quot; or server names commercially</strong> — do not use &quot;Open Box&quot;, &quot;OB&quot;, or the name of
-          any Open Box server (e.g. &quot;OB Dev&quot;, &quot;OB GG&quot;) in a commercial context — including product names,
-          app names, event names, or business names — without written permission
-        </li>
-        <li>
-          <strong>Misrepresent affiliation</strong> — do not claim to represent, speak for, or act on behalf
-          of Open Box unless you are an authorised team member
-        </li>
+        <li><strong>Use our logo or visual assets</strong> — do not use the Open Box logo, any server logo, or any official visual asset without prior written permission from <strong>team@openboxcomm.in</strong></li>
+        <li><strong>Imply endorsement or partnership</strong> — do not use the Open Box name or brand to imply Open Box endorses, sponsors, or is affiliated with your project, product, or organisation without explicit written agreement</li>
+        <li><strong>Create unofficial Open Box content</strong> — do not create social media accounts, communities, Discord servers, websites, or merchandise using the Open Box name, logo, or brand identity without written authorisation</li>
+        <li><strong>Modify our assets</strong> — do not alter, remix, crop, recolour, or create derivative versions of any Open Box logo or visual asset</li>
+        <li><strong>Use &quot;OB&quot; or server names commercially</strong> — do not use &quot;Open Box&quot;, &quot;OB&quot;, or any server name (e.g. &quot;OB Dev&quot;, &quot;OB GG&quot;) in a commercial context without written permission</li>
+        <li><strong>Misrepresent affiliation</strong> — do not claim to represent or speak for Open Box unless you are an authorised team member</li>
       </ul>
 
       <h3>5.3 Requesting Brand Permission</h3>
       <p>
-        If you want to use Open Box branding — for a collab, project, event, fan content, or any other purpose
-        not covered above — reach out to us at <strong>partnerships@openboxcomm.in</strong> with a description
-        of what you intend to use, where, and for what purpose. We review requests on a case-by-case basis.
+        For collabs, projects, events, fan content, or any use not covered above, reach out at{' '}
+        <strong>partnerships@openboxcomm.in</strong> with a description of what you intend to use, where, and
+        for what purpose. We review all requests on a case-by-case basis.
       </p>
 
       <h2>6. Reporting Violations</h2>
-      <p>To report a violation of this AUP:</p>
       <ul>
         <li><strong>#report</strong> channel on any Open Box Discord server</li>
         <li>Discord&apos;s built-in message reporting feature</li>
         <li>Email <strong>admin@openboxcomm.in</strong> for cross-platform, brand misuse, or serious violations</li>
       </ul>
-      <p>For legal violations, report to the appropriate authorities:</p>
+      <p>For legal violations, report to:</p>
       <ul>
         <li>
           <strong>CERT-In:</strong>{' '}
@@ -281,17 +271,12 @@ export default function AupPage() {
 
       <h2>7. Responsible Disclosure</h2>
       <p>
-        If you discover a security vulnerability in any Open Box platform, please report it responsibly. Do not
-        publicly disclose the vulnerability before we have had a reasonable opportunity to address it. Contact
-        us at <strong>admin@openboxcomm.in</strong> with details of the issue. We will acknowledge receipt
-        within 2 business days and work to resolve valid findings promptly.
+        If you discover a security vulnerability in any Open Box platform, report it responsibly to{' '}
+        <strong>admin@openboxcomm.in</strong> before any public disclosure. We will acknowledge receipt within
+        2 business days and work to resolve valid findings promptly.
       </p>
 
       <h2>8. Consequences of Violations</h2>
-      <p>
-        Violations of this AUP may result in one or more of the following, depending on severity and the
-        platform on which the violation occurred:
-      </p>
       <ul>
         <li>Formal warning</li>
         <li>Temporary mute or removal from specific channels or servers</li>
@@ -308,20 +293,17 @@ export default function AupPage() {
 
       <h2>9. Changes to This Policy</h2>
       <p>
-        We may update this AUP from time to time. Changes will be posted here with a revised &quot;Last updated&quot;
-        date and announced via #announcements on Discord, on openboxcomm.in, and on our social media accounts.
-        Continued use of any Open Box platform constitutes acceptance of the updated policy.
+        We may update this AUP from time to time. Changes will be announced via #announcements on Discord, on
+        openboxcomm.in, and on our social media accounts. Continued use of any Open Box platform constitutes
+        acceptance of the updated policy.
       </p>
 
       <h2>10. Contact</h2>
       <p>
-        For questions about this policy: <strong>legal@openboxcomm.in</strong>
-        <br />
-        To report a violation: <strong>admin@openboxcomm.in</strong>
-        <br />
-        For brand / partnership enquiries: <strong>partnerships@openboxcomm.in</strong>
-        <br />
-        To appeal a moderation decision: <strong>appeals@openboxcomm.in</strong>
+        Questions about this policy: <strong>legal@openboxcomm.in</strong><br />
+        Report a violation: <strong>admin@openboxcomm.in</strong><br />
+        Brand / partnership enquiries: <strong>partnerships@openboxcomm.in</strong><br />
+        Appeal a moderation decision: <strong>appeals@openboxcomm.in</strong>
       </p>
     </article>
   )

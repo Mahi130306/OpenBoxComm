@@ -113,33 +113,69 @@ export const events = [
 ]
 
 export const blogs = [
-  // {
-  //   slug: 'how-open-box-works',
-  //   title: 'How Open Box Works',
-  //   server: 'OB JN',
-  //   date: '2026-06-01',
-  //   excerpt: 'A quick tour of the servers, events, docs, and rituals that make the community easy to join.',
-  //   readTime: '4 min read',
-  // },
-  // {
-  //   slug: 'ship-small-with-dev',
-  //   title: 'Ship Small with the Dev Server',
-  //   server: 'Dev',
-  //   date: '2026-05-24',
-  //   excerpt: 'Use build logs, review threads, and tiny weekly goals to move your project forward.',
-  //   readTime: '5 min read',
-  // },
-  // {
-  //   slug: 'how-we-started',
-  //   title: 'How We Started',
-  //   server: 'OB JN',
-  //   date: '2026-05-01',
-  //   excerpt: 'OpenBox started as part of a college club. Then things changed, we split off, and built something of our own. Here is the honest version of that story.',
-  //   readTime: '3 min read',
-  // },
+   {
+    slug: 'where-we-go-from-here',
+    title: 'Where We Go From Here',
+    server: 'OB Team',
+    date: '2026-06-11',
+    excerpt: 'OpenBox has gone from a club side-project to its own independent community. Here is what we are focused on next and what we want to build with you.',
+    readTime: '2 min read',
+  },
+ 
+  {
+    slug: 'ob-gg-gaming-server-beta',
+    title: 'OB GG Is in Beta',
+    server: 'OB GG',
+    date: '2026-06-01',
+    excerpt: 'OB GG is our gaming server. We built it to bring more people into the OpenBox world and give gamers in the community a dedicated home. It is live now in beta.',
+    readTime: '2 min read',
+  },
+ 
+  {
+    slug: 'the-new-website',
+    title: 'The New Website',
+    server: 'Dev Log',
+    date: '2026-05-18',
+    excerpt: 'We rebuilt openboxcomm.in from the ground up on Next.js and Vercel. Here is what it does now and what is coming next, including a dedicated ticketing site with Discord login.',
+    readTime: '2 min read',
+  },
+ 
+  {
+    slug: 'the-first-website-broke',
+    title: 'The First Website Broke',
+    server: 'Dev Log',
+    date: '2026-05-08',
+    excerpt: 'We shipped our first website fast, felt good about it, and then watched it break in production. A build failure we did not catch for way too long.',
+    readTime: '2 min read',
+  },
+ 
+  {
+    slug: 'how-we-started',
+    title: 'How We Started',
+    server: 'Story',
+    date: '2026-05-01',
+    excerpt: 'OpenBox started as part of a college club. Then things changed, we split off, and built something of our own. Here is the honest version of that story.',
+    readTime: '2 min read',
+  },
 ]
 
+// community-data.ts — docs page card metadata
+
 export const docs = [
+
+  // ─── Core ─────────────────────────────────────────────────
+  {
+    slug: 'getting-started',
+    title: 'Getting Started',
+    description: 'New to Open Box? Start here. Everything you need to join, settle in, and find your place.',
+    section: 'Core',
+  },
+  {
+    slug: 'account-setup',
+    title: 'Account Setup & Profile',
+    description: 'How to join our Discord, complete onboarding, get your roles, and set up your profile the right way.',
+    section: 'Core',
+  },
   {
     slug: 'rules',
     title: 'Community Rules',
@@ -147,24 +183,117 @@ export const docs = [
     section: 'Core',
   },
   {
-    slug: 'jn',
+    slug: 'glossary',
+    title: 'Glossary',
+    description: 'Terms, abbreviations, and shorthand used across Open Box servers and the website.',
+    section: 'Core',
+  },
+
+  // ─── Community ────────────────────────────────────────────
+  {
+    slug: 'jn-guide',
     title: 'Jn. Community Guide',
     description: 'Start here for introductions, sharing projects, and community norms.',
     section: 'Community',
   },
   {
-    slug: 'dev',
+    slug: 'dev-handbook',
     title: 'Dev Server Handbook',
     description: 'How to ask for coding help, request reviews, and use project channels.',
-    section: 'Development',
+    section: 'Community',
   },
   {
-    slug: 'gg',
+    slug: 'gg-event-guide',
     title: 'GG Event Guide',
     description: 'Tournament expectations, gaming channels, and collaboration notes.',
-    section: 'Gaming',
+    section: 'Community',
   },
-]
+  {
+    slug: 'groups',
+    title: 'Groups & Sub-Communities',
+    description: 'How the Open Box servers connect — Dev, GG, Study, and Connect as extensions of Junction.',
+    section: 'Community',
+  },
+  {
+    slug: 'content-standards',
+    title: 'Content Standards',
+    description: 'What good content looks like in Open Box — and what crosses the line.',
+    section: 'Community',
+  },
+  {
+    slug: 'privacy-community',
+    title: 'Privacy in the Community',
+    description: 'What to share, what to keep private, display name norms, and how to stay safe in the servers.',
+    section: 'Community',
+  },
+
+  // ─── Platform ─────────────────────────────────────────────
+  {
+    slug: 'features',
+    title: 'Features Overview',
+    description: 'A tour of what Open Box offers — Discord servers, the website, events, and what is coming next.',
+    section: 'Platform',
+  },
+  {
+    slug: 'roles',
+    title: 'Roles & Permissions',
+    description: 'How roles work across Open Box servers, how to earn them, and what they unlock.',
+    section: 'Platform',
+  },
+  {
+    slug: 'events-tickets',
+    title: 'Events & Tickets',
+    description: 'How Open Box events work, how to register, and how to use tickets.openboxcomm.in.',
+    section: 'Platform',
+  },
+  {
+    slug: 'tos-summary',
+    title: 'Terms of Service Summary',
+    description: 'A plain-English summary of the Open Box Terms & Conditions.',
+    section: 'Platform',
+  },
+
+  // ─── Support ──────────────────────────────────────────────
+  {
+    slug: 'moderation-policy',
+    title: 'Moderation Policy',
+    description: 'How moderation works at Open Box — what moderators do, how decisions are made, and how to appeal.',
+    section: 'Support',
+  },
+  {
+    slug: 'reporting',
+    title: 'Reporting & Enforcement',
+    description: 'How to report rule violations, what happens after a report, and how enforcement works.',
+    section: 'Support',
+  },
+  {
+    slug: 'troubleshooting',
+    title: 'Troubleshooting',
+    description: 'Common issues and how to fix them. When in doubt, reach the team at support@openboxcomm.in.',
+    section: 'Support',
+  },
+  {
+    slug: 'faq',
+    title: 'FAQs',
+    description: 'Answers to the most common questions about Open Box, the servers, events, and tiers.',
+    section: 'Support',
+  },
+  {
+    slug: 'contact',
+    title: 'Contact & Support',
+    description: 'Every way to reach the Open Box team — email, Discord, and what to expect when you do.',
+    section: 'Support',
+  },
+
+  // ─── Contributing ─────────────────────────────────────────
+  {
+    slug: 'contributing',
+    title: 'Contributing to the Community',
+    description: 'How to submit suggestions, build tools, contribute bots, and help make Open Box better.',
+    section: 'Contributing',
+  },
+
+];
 
 export function getServer(slug: string) {
   return servers.find((server) => server.slug === slug)

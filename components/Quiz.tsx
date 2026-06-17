@@ -9,7 +9,7 @@ const questions = [
     id: 1,
     text: 'What describes you best?',
     options: [
-      { value: 'creator', label: 'Creator - I make things' },
+      { value: 'developer', label: 'Developer - I make things' },
       { value: 'learner', label: 'Learner - I want to skill up' },
       { value: 'gamer', label: 'Gamer - I love gaming' },
       { value: 'explorer', label: 'Explorer - I want to discover' },
@@ -43,7 +43,7 @@ const recommendations = {
     description: 'The main hub for general building and community discussions.',
     comingSoon: false,
   },
-  creator: {
+  developer: {
     name: 'Dev',
     slug: 'dev',
     description: 'Technical deep dives, coding help, and project showcases.',
@@ -93,7 +93,7 @@ export function Quiz() {
 
   const getRecommendation = () => {
     if (answers[1] === 'gamer') return recommendations.gamer
-    if (answers[1] === 'creator') return recommendations.creator
+    if (answers[1] === 'developer') return recommendations.developer
     if (answers[1] === 'learner') return recommendations.learner
     if (answers[1] === 'explorer') return recommendations.default  // explorer/classic is commented out — fall back to default
     if (answers[2] === 'mentorship') return recommendations.networker

@@ -1,29 +1,47 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Refund Policy — Open Box',
-  description: 'Refund Policy for Open Box — how we handle refund requests for Patreon, UPI, and other payment channels.',
+  title: 'Privacy Policy — Open Box',
+  description: 'Privacy Policy for Open Box — how we collect, use, and protect your personal data under the DPDP Act 2023.',
 }
 
-export default function RefundPage() {
+export default function PrivacyPage() {
   const lastUpdated = '6 June 2025'
 
   return (
     <article>
-      <h1 className="!text-3xl !font-extrabold mb-1">Refund Policy</h1>
+      <h1 className="!text-3xl !font-extrabold mb-1">Privacy Policy</h1>
       <p className="text-sm text-muted-foreground mb-8">Last updated: {lastUpdated}</p>
 
       <p>
-        This Refund Policy applies to any financial contributions or payments made to Open Box across any of
-        our platforms — including Patreon memberships, paid event registrations on{' '}
-        <strong>openboxcomm.in</strong>, UPI payments, and any other payment channels we introduce. It is
-        governed by the{' '}
-        <u><a href="https://www.indiacode.nic.in/bitstream/123456789/15256/1/consumer_protection_act_2019.pdf" target="_blank" rel="noopener noreferrer">
-          Consumer Protection Act, 2019
-        </a></u>:{' '}
-         which ensures consumer rights and provides remedies against unfair trade practices and deficient
-        services — and applicable Indian regulations.
+        Open Box (&quot;we&quot;, &quot;our&quot;, &quot;us&quot;) is committed to protecting your personal data. This Privacy Policy
+        explains how we collect, use, store, and protect your information across the Open Box umbrella —
+        including <strong>openboxcomm.in</strong>, our Discord servers (JN, Dev, GG, Classic, Study, Connect),
+        our social media presence on X, Instagram, and YouTube, and any events or services we operate.
       </p>
+      <p>It is governed by the following laws:</p>
+      <ul>
+        <li>
+          <a href="https://www.indiacode.nic.in/bitstream/123456789/20168/1/2023_Act_22_Digital_Personal_Data_Protection_Act.pdf" target="_blank" rel="noopener noreferrer">
+            Digital Personal Data Protection Act, 2023 (DPDP Act)
+          </a>{' '}
+          — India&apos;s data protection law governing how personal data is collected, processed, and safeguarded.
+        </li>
+        <li>
+          <a href="https://www.indiacode.nic.in/bitstream/123456789/13116/1/it_act_2000_updated.pdf" target="_blank" rel="noopener noreferrer">
+            Information Technology Act, 2000
+          </a>{' '}
+          — India&apos;s primary cyber law covering electronic records, data protection, and intermediary
+          liability.
+        </li>
+        <li>
+          <a href="https://www.indiacode.nic.in/bitstream/123456789/15240/1/constitution_of_india.pdf" target="_blank" rel="noopener noreferrer">
+            Article 21 of the Constitution of India
+          </a>{' '}
+          — guarantees the right to life and personal liberty, which the Supreme Court in{' '}
+          <em>K.S. Puttaswamy v. Union of India (2017)</em> held includes the fundamental right to privacy.
+        </li>
+      </ul>
 
       <div
         style={{
@@ -34,102 +52,163 @@ export default function RefundPage() {
           background: 'rgba(100,200,100,0.05)',
         }}
       >
-        <strong>ℹ️ Nature of Contributions:</strong> Open Box is a free, open community. Payments made via
-        Patreon are voluntary donations or memberships to support the community — they do not constitute
-        payment for a specific product or service. Paid event registrations and supporter tiers, where
-        applicable, are governed by the terms presented at the time of purchase.
+        <strong>ℹ️ Scope note:</strong> This policy covers data collected directly by Open Box through our
+        website and services. Data processed by Discord, YouTube, X, Instagram, Patreon, and other
+        third-party platforms is governed by their own privacy policies. We do not control how third-party
+        platforms handle your data.
       </div>
 
-      <h2>1. General Refund Eligibility</h2>
-      <ul>
-        <li>
-          <strong>Patreon memberships:</strong> Patreon handles billing and processes charges at the start of
-          each billing period. Refunds are governed by{' '}
-          <u><a href="https://support.patreon.com/hc/en-us/articles/204606125" target="_blank" rel="noopener noreferrer">
-            Patreon&apos;s Refund Policy
-          </a></u>
-          . Contact Patreon support directly. We will assist where we can if you reach out to us as well.
-        </li>
-        <li>
-          <strong>One-time donations (Patreon or direct):</strong> We will consider refund requests for
-          donations made in error, within <strong>7 days</strong> of the transaction, subject to review.
-        </li>
-        <li>
-          <strong>UPI and direct payments:</strong> Payments via UPI or any direct channel are considered
-          final at transfer. Refunds are only considered for verified technical errors or duplicate charges,
-          submitted within <strong>7 days</strong>.
-        </li>
-        <li>
-          <strong>Future payment gateways:</strong> As we expand payment options, refund terms for new
-          channels will be published alongside them. Where not explicitly stated, this policy applies.
-        </li>
-      </ul>
-
-      <h2>2. Non-Refundable Situations</h2>
-      <p>Refunds will <strong>not</strong> be issued in the following situations:</p>
-      <ul>
-        <li>Voluntary cancellation after a billing cycle has already completed</li>
-        <li>Dissatisfaction with content that was fully accessible during the membership or subscription period</li>
-        <li>Account suspension or ban from any Open Box platform due to violations of our <a href="/legal/rules">Community Rules</a>, <a href="/legal/aup">Acceptable Use Policy</a>, or <a href="/legal/terms">Terms &amp; Conditions</a></li>
-        <li>Donations or payments made more than 7 days prior to the refund request</li>
-        <li>Change of mind after an event has taken place or event materials have been distributed</li>
-      </ul>
-
-      <h2>3. Event Ticket Refunds</h2>
-      <p>For paid events hosted by Open Box across any of our platforms:</p>
-      <ul>
-        <li>Cancellations more than <strong>7 days</strong> before the event are eligible for a full refund</li>
-        <li>Cancellations within 7 days of the event are not eligible, but we may offer a credit or transfer at our discretion</li>
-        <li>If Open Box cancels or postpones an event, all registered participants receive a full refund or transfer to the rescheduled date</li>
-        <li>Event refunds follow the same 5 to 10 business day processing window</li>
-      </ul>
-
-      <h2>4. How to Request a Refund</h2>
-      <p>Contact us at <strong>support@openboxcomm.in</strong> with:</p>
-      <ol>
-        <li>Your name and email address used for the transaction</li>
-        <li>Transaction ID, Patreon receipt, or UPI reference number</li>
-        <li>The platform or channel through which the payment was made</li>
-        <li>Date of transaction and amount</li>
-        <li>Reason for the refund request</li>
-      </ol>
-      <p>We will respond within <strong>10 business days</strong>.</p>
-
-      <h2>5. Processing Refunds</h2>
+      <h2>1. Data Fiduciary &amp; Contact</h2>
       <p>
-        Approved refunds will be processed to the original payment method within{' '}
-        <strong>5 to 10 business days</strong>. We are not responsible for delays caused by the payment
-        intermediary. UPI refunds may take up to 5 business days depending on your bank.
+        Open Box acts as the <em>Data Fiduciary</em> under the{' '}
+        <a href="https://www.indiacode.nic.in/bitstream/123456789/20168/1/2023_Act_22_Digital_Personal_Data_Protection_Act.pdf" target="_blank" rel="noopener noreferrer">
+          DPDP Act, 2023
+        </a>
+        . For all data-related matters:
+      </p>
+      <ul>
+        <li><strong>Email:</strong> privacy@openboxcomm.in</li>
+        <li><strong>Grievance Officer:</strong> [Grievance Officer Name], reachable at the above email</li>
+        <li><strong>Response time:</strong> Within 30 days of receipt of complaint, as required by law</li>
+      </ul>
+
+      <h2>2. Information We Collect</h2>
+
+      <h3>2.1 Information You Provide</h3>
+      <ul>
+        <li>Account details: username, email address (via Discord OAuth)</li>
+        <li>Content you post: messages, comments, blog contributions, event submissions on the website</li>
+        <li>Support communications sent to any of our contact emails</li>
+        <li>Payment information for Patreon, UPI, or other payment channels (processed by the respective payment provider — we do not store card or UPI details directly)</li>
+        <li>Event registrations: name, email, and any other details required for a specific event</li>
+      </ul>
+
+      <h3>2.2 Automatically Collected Information (Website)</h3>
+      <ul>
+        <li>IP address and approximate location (country/region)</li>
+        <li>Browser type, device type, operating system</li>
+        <li>Pages visited, time spent, referring URLs</li>
+        <li>Cookies and similar technologies (see our <a href="/legal/cookie">Cookie Policy</a>)</li>
+      </ul>
+
+      <h3>2.3 Information from Third-Party Platforms</h3>
+      <p>
+        When you interact with Open Box on Discord, X, Instagram, or YouTube, those platforms may share
+        limited data with us (such as a Discord user ID for authentication). We only use this data to operate
+        our services and do not use it for profiling or advertising.
       </p>
 
-      <h2>6. Consumer Rights</h2>
+      <h2>3. Purpose &amp; Legal Basis for Processing</h2>
+      <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+        <thead>
+          <tr>
+            <th style={{ textAlign: 'left', padding: '8px 4px', borderBottom: '1px solid #333' }}>Purpose</th>
+            <th style={{ textAlign: 'left', padding: '8px 4px', borderBottom: '1px solid #333' }}>Legal Basis</th>
+          </tr>
+        </thead>
+        <tbody>
+          {[
+            ['Providing and operating the Platform', 'Consent / Legitimate interest'],
+            ['Authentication via Discord OAuth', 'Consent'],
+            ['Sending service notifications (email, Discord)', 'Legitimate interest'],
+            ['Analytics and Platform improvement', 'Legitimate interest'],
+            ['Legal compliance', 'Legal obligation'],
+            ['Processing donations and payments', 'Contract'],
+            ['Event management and communications', 'Consent / Contract'],
+            ['Moderating community spaces (Discord, social media)', 'Legitimate interest / Legal obligation'],
+          ].map(([purpose, basis]) => (
+            <tr key={purpose}>
+              <td style={{ padding: '6px 4px', borderBottom: '1px solid #222' }}>{purpose}</td>
+              <td style={{ padding: '6px 4px', borderBottom: '1px solid #222', color: 'var(--muted-foreground)' }}>{basis}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+
+      <h2>4. Data Sharing &amp; Transfers</h2>
+      <p>We do <strong>not</strong> sell your personal data. We may share data with:</p>
+      <ul>
+        <li><strong>Discord Inc.</strong> — authentication and community platform</li>
+        <li><strong>Supabase Inc.</strong> — database and authentication backend</li>
+        <li><strong>Patreon Inc.</strong> — donation processing</li>
+        <li><strong>Other payment processors</strong> — for UPI or future payment channels, as applicable</li>
+        <li><strong>Event co-organisers</strong> — limited data shared only as necessary to run a specific event, disclosed at registration</li>
+        <li><strong>Social media platforms (X, Instagram, YouTube)</strong> — interactions on these platforms are subject to their respective privacy policies; we do not share your data with them beyond what is inherent in operating official accounts</li>
+        <li><strong>Law enforcement</strong> — when required by Indian courts or government authorities under lawful orders</li>
+      </ul>
+      <p>
+        Cross-border data transfers comply with applicable safeguards under the{' '}
+        <a href="https://www.indiacode.nic.in/bitstream/123456789/20168/1/2023_Act_22_Digital_Personal_Data_Protection_Act.pdf" target="_blank" rel="noopener noreferrer">
+          DPDP Act, 2023
+        </a>{' '}
+        and relevant MeitY notifications.
+      </p>
+
+      <h2>5. Your Rights as a Data Principal</h2>
       <p>
         Under the{' '}
-        <u><a href="https://www.indiacode.nic.in/bitstream/123456789/15256/1/consumer_protection_act_2019.pdf" target="_blank" rel="noopener noreferrer">
-          Consumer Protection Act, 2019
-        </a></u>
-        , you have rights regarding unfair trade practices and deficient services. If you believe your
-        consumer rights have been violated, you may approach:
+        <a href="https://www.indiacode.nic.in/bitstream/123456789/20168/1/2023_Act_22_Digital_Personal_Data_Protection_Act.pdf" target="_blank" rel="noopener noreferrer">
+          DPDP Act, 2023
+        </a>{' '}
+        and your fundamental right to privacy under{' '}
+        <a href="https://www.indiacode.nic.in/bitstream/123456789/15240/1/constitution_of_india.pdf" target="_blank" rel="noopener noreferrer">
+          Article 21 of the Constitution of India
+        </a>
+        , you have the right to:
       </p>
       <ul>
-        <li><strong>District Consumer Disputes Redressal Commission</strong> — for claims up to ₹50 lakhs</li>
-        <li><strong>State Consumer Disputes Redressal Commission</strong> — for claims between ₹50 lakhs and ₹2 crores</li>
-        <li><strong>National Consumer Disputes Redressal Commission</strong> — for claims above ₹2 crores</li>
-        <li>
-          <strong>National Consumer Helpline:</strong>{' '}
-          <u><a href="https://consumerhelpline.gov.in" target="_blank" rel="noopener noreferrer">consumerhelpline.gov.in</a></u>{' '}
-           1800-11-4000
-        </li>
+        <li><strong>Access:</strong> Request a copy of your personal data we hold</li>
+        <li><strong>Correction:</strong> Rectify inaccurate or incomplete data</li>
+        <li><strong>Erasure:</strong> Request deletion of your data (subject to legal retention obligations)</li>
+        <li><strong>Grievance Redressal:</strong> File complaints with us or the Data Protection Board of India</li>
+        <li><strong>Withdraw Consent:</strong> Where processing is based on consent, you may withdraw at any time</li>
+        <li><strong>Nomination:</strong> Nominate another individual to exercise your rights in case of death or incapacity</li>
       </ul>
+      <p>To exercise these rights, email <strong>privacy@openboxcomm.in</strong>.</p>
 
-      <h2>7. Changes to This Policy</h2>
+      <h2>6. Data Retention</h2>
       <p>
-        We reserve the right to update this Refund Policy at any time. The updated policy will be posted here
-        with a revised &quot;Last updated&quot; date.
+        We retain your data for as long as your account is active or as needed to provide services. Upon
+        account deletion, data is removed within <strong>90 days</strong> unless retention is required by law.
+        Event-related data may be retained for up to <strong>1 year</strong> for record-keeping and compliance
+        purposes.
       </p>
 
-      <h2>8. Contact</h2>
-      <p>For refund inquiries: <strong><a href="mailto:support@openboxcomm.in">support@openboxcomm.in</a></strong></p>
+      <h2>7. Security</h2>
+      <p>
+        We implement industry-standard security measures including encryption in transit (TLS), access
+        controls, and regular security reviews. No system is completely secure. In the event of a data breach,
+        we will notify affected users and the Data Protection Board as required by the{' '}
+        <a href="https://www.indiacode.nic.in/bitstream/123456789/20168/1/2023_Act_22_Digital_Personal_Data_Protection_Act.pdf" target="_blank" rel="noopener noreferrer">
+          DPDP Act, 2023
+        </a>
+        .
+      </p>
+
+      <h2>8. Children&apos;s Privacy</h2>
+      <p>
+        Our Platform is not directed to children under 13. We do not knowingly collect data from children. If
+        you believe we have collected data from a child, please contact us immediately at{' '}
+        <strong>privacy@openboxcomm.in</strong>.
+      </p>
+
+      <h2>9. Changes to This Policy</h2>
+      <p>
+        We may update this Privacy Policy from time to time. Material changes will be notified via email,
+        prominent notice on the website, and the #announcements channel on our Discord servers. Continued use
+        of any Open Box platform constitutes acceptance of the updated policy.
+      </p>
+
+      <h2>10. Grievance Redressal</h2>
+      <p>
+        If you have concerns about how your data is handled, contact our Grievance Officer at{' '}
+        <strong>privacy@openboxcomm.in</strong>. We will respond within 30 days. You also have the right to
+        approach the <strong>Data Protection Board of India</strong> once constituted under the{' '}
+        <a href="https://www.indiacode.nic.in/bitstream/123456789/20168/1/2023_Act_22_Digital_Personal_Data_Protection_Act.pdf" target="_blank" rel="noopener noreferrer">
+          DPDP Act, 2023
+        </a>
+        .
+      </p>
     </article>
   )
 }

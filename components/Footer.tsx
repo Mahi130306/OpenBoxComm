@@ -75,9 +75,9 @@ export function Footer() {
     { label: 'Privacy Policy', href: '/legal/privacy' },
     { label: 'Cookie Policy', href: '/legal/cookie' },
     { label: 'Community Rules', href: '/legal/rules' },
-    { label: 'Refund Policy', href: '/legal/refund' },
-    { label: 'DMCA / Copyright', href: '/legal/dmca' },
     { label: 'AUP', href: '/legal/aup' },
+    { label: 'DMCA / Copyright', href: '/legal/dmca' },
+    { label: 'Refund Policy', href: '/legal/refund' },    
     { label: 'Event Policy', href: '/legal/event' },
   ]
 
@@ -197,10 +197,14 @@ export function Footer() {
           </p>
 
           <div className="flex flex-wrap justify-center gap-x-4 gap-y-1">
-            <Link href="/legal/terms" className="hover:text-foreground transition-colors">Terms</Link>
+            {/* <Link href="/legal/terms" className="hover:text-foreground transition-colors">Terms</Link>
             <Link href="/legal/privacy" className="hover:text-foreground transition-colors">Privacy</Link>
             <Link href="/legal/cookie" className="hover:text-foreground transition-colors">Cookies</Link>
             <Link href="/legal/rules" className="hover:text-foreground transition-colors">Rules</Link>
+            <Link href="/legal/aup" className="hover:text-foreground transition-colors">AUP</Link>
+            <Link href="/legal/dmca" className="hover:text-foreground transition-colors">DMCA</Link>
+            <Link href="/legal/refund" className="hover:text-foreground transition-colors">Refunds</Link>
+            <Link href="/legal/event" className="hover:text-foreground transition-colors">Events</Link> */}
           </div>
         </div>
       </div>
