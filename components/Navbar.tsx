@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
-import { Heart, Menu, X, Sun, Moon } from 'lucide-react'
+import { Heart, Menu, X, Sun, Moon, ArrowRight } from 'lucide-react'
 import { useTheme } from 'next-themes'
 import {
   DropdownMenu,
@@ -160,6 +160,9 @@ export function Navbar() {
               <Link href="/about" className="text-sm font-medium hover:text-muted-foreground transition-colors">
                 About
               </Link>
+              <Link href="/team" className="text-sm font-medium hover:text-muted-foreground transition-colors">
+                Team
+              </Link>
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <button className="text-sm font-medium hover:text-muted-foreground transition-colors">
@@ -200,6 +203,12 @@ export function Navbar() {
               <Link href="/doc" className="text-sm font-medium hover:text-muted-foreground transition-colors">
                 Docs
               </Link>
+              <Link href="/join" className="group relative inline-flex items-center gap-1.5 overflow-hidden rounded-full bg-foreground px-4 py-1.5 text-sm font-bold text-background transition-all hover:bg-foreground/90 hover:shadow-lg hover:shadow-cyan-500/20 active:scale-95">
+                <span className="relative z-10 flex items-center gap-1">
+                  Join <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5" />
+                </span>
+                <div className="absolute inset-0 z-0 bg-gradient-to-r from-cyan-400 to-blue-500 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+              </Link>
             </div>
 
             <div className="hidden md:flex md:items-center md:space-x-2">
@@ -233,6 +242,7 @@ export function Navbar() {
             <div className="space-y-1 px-4 pb-3 pt-2">
               <Link href="/" className="block py-2 text-sm font-medium hover:text-muted-foreground">Home</Link>
               <Link href="/about" className="block py-2 text-sm font-medium hover:text-muted-foreground">About</Link>
+              <Link href="/team" className="block py-2 text-sm font-medium hover:text-muted-foreground">Team</Link>
               <div className="py-2">
                 <p className="text-sm font-medium text-muted-foreground mb-1">Live Servers</p>
                 {servers.live.map((server) => (
@@ -254,6 +264,7 @@ export function Navbar() {
               <Link href="/events" className="block py-2 text-sm font-medium hover:text-muted-foreground">Events</Link>
               <Link href="/blogs" className="block py-2 text-sm font-medium hover:text-muted-foreground">Blogs</Link>
               <Link href="/doc" className="block py-2 text-sm font-medium hover:text-muted-foreground">Docs</Link>
+              <Link href="/join" className="block py-2 text-sm font-bold text-cyan-500">Join Community</Link>
               <Link href="/support" className="block py-2 text-sm font-medium hover:text-muted-foreground">Support</Link>
               <Link href="/help" className="block py-2 text-sm font-medium hover:text-muted-foreground">Help</Link>
             </div>

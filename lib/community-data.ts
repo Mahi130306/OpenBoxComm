@@ -303,6 +303,44 @@ export function getBlog(slug: string) {
   return blogs.find((blog) => blog.slug === slug)
 }
 
+export const teamMembers = [
+  {
+    slug: 'jules',
+    name: 'Jules',
+    role: 'Lead Architect',
+    bio: 'Jules is the primary architect behind Open Box, focusing on community infrastructure and developer experience. They believe in the power of open collaboration.',
+    avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=jules',
+    socials: {
+      github: 'https://github.com/jules',
+      twitter: 'https://x.com/jules',
+    }
+  },
+  {
+    slug: 'alex',
+    name: 'Alex',
+    role: 'Community Manager',
+    bio: 'Alex oversees the daily operations of the Junction and GG servers, ensuring a safe and welcoming environment for all members.',
+    avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=alex',
+    socials: {
+      twitter: 'https://x.com/alex',
+    }
+  },
+  {
+    slug: 'casey',
+    name: 'Casey',
+    role: 'Dev Advocate',
+    bio: 'Casey helps bridge the gap between our development projects and the community, writing docs and hosting technical workshops.',
+    avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=casey',
+    socials: {
+      github: 'https://github.com/casey',
+    }
+  }
+]
+
 export function getEvent(id: string) {
   return events.find((event) => event.id === id)
+}
+
+export function getTeamMember(slug: string) {
+  return teamMembers.find((member) => member.slug === slug)
 }
