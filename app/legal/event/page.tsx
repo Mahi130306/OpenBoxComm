@@ -18,38 +18,38 @@ export default function EventsPage() {
         platforms — including online events announced on <strong>openboxcomm.in</strong>, across our Discord
         servers (JN, Dev, GG, Classic, Study, Connect), our social media accounts on X, Instagram, and
         YouTube, and any in-person events we run. By registering for or participating in any Open Box event,
-        you agree to this policy, our <u> <a href="/legal/rules">Community Rules</a></u>, our{' '}
-        <u><a href="/legal/aup">Acceptable Use Policy</a></u>, and our{' '}
-        <u><a href="/legal/terms">Terms &amp; Conditions</a></u>.
+        you agree to this policy, our <a href="/legal/rules">Community Rules</a>, our{' '}
+        <a href="/legal/aup">Acceptable Use Policy</a>, and our{' '}
+        <a href="/legal/terms">Terms &amp; Conditions</a>.
       </p>
       <p>This policy is governed by the following laws:</p>
       <ul>
         <li>
-          <u><a href="https://www.indiacode.nic.in/bitstream/123456789/2263/1/A1860-45.pdf" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.indiacode.nic.in/bitstream/123456789/2263/1/A1860-45.pdf" target="_blank" rel="noopener noreferrer">
             Indian Penal Code, 1860 (IPC)
-          </a>:</u>{' '}
-           covers criminal offences including harassment, threatening behaviour, and incitement that may
+          </a>{' '}
+          — covers criminal offences including harassment, threatening behaviour, and incitement that may
           occur at or in connection with events.
         </li>
         <li>
-          <u><a href="https://www.indiacode.nic.in/bitstream/123456789/13116/1/it_act_2000_updated.pdf" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.indiacode.nic.in/bitstream/123456789/13116/1/it_act_2000_updated.pdf" target="_blank" rel="noopener noreferrer">
             Information Technology Act, 2000
-          </a>:</u>{' '}
-           applies to online events and any cybercrimes, harassment, or illegal conduct occurring through
+          </a>{' '}
+          — applies to online events and any cybercrimes, harassment, or illegal conduct occurring through
           digital platforms.
         </li>
         <li>
-          <u><a href="https://www.indiacode.nic.in/bitstream/123456789/1367/1/a1957-14.pdf" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.indiacode.nic.in/bitstream/123456789/1367/1/a1957-14.pdf" target="_blank" rel="noopener noreferrer">
             Copyright Act, 1957
-          </a>:</u>{' '}
-           protects ownership rights in work submitted to hackathons and contests; participants retain
+          </a>{' '}
+          — protects ownership rights in work submitted to hackathons and contests; participants retain
           ownership of their submissions.
         </li>
         <li>
-          <u><a href="https://www.indiacode.nic.in/bitstream/123456789/15256/1/consumer_protection_act_2019.pdf" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.indiacode.nic.in/bitstream/123456789/15256/1/consumer_protection_act_2019.pdf" target="_blank" rel="noopener noreferrer">
             Consumer Protection Act, 2019
-          </a>:</u>{' '}
-           governs refund rights for paid event registrations.
+          </a>{' '}
+          — governs refund rights for paid event registrations.
         </li>
       </ul>
 
@@ -80,13 +80,13 @@ export default function EventsPage() {
         <li>
           Harassment, discrimination, or disruptive behaviour will result in immediate removal and may result
           in a permanent ban from all Open Box platforms. Serious incidents may be reported under the{' '}
-          <u><a href="https://www.indiacode.nic.in/bitstream/123456789/2263/1/A1860-45.pdf" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.indiacode.nic.in/bitstream/123456789/2263/1/A1860-45.pdf" target="_blank" rel="noopener noreferrer">
             IPC, 1860
-          </a></u>
+          </a>{' '}
           or the{' '}
-          <u><a href="https://www.indiacode.nic.in/bitstream/123456789/13116/1/it_act_2000_updated.pdf" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.indiacode.nic.in/bitstream/123456789/13116/1/it_act_2000_updated.pdf" target="_blank" rel="noopener noreferrer">
             IT Act, 2000
-          </a></u>
+          </a>
           .
         </li>
         <li>For IRL events, participants must comply with the venue&apos;s own rules and applicable local regulations.</li>
@@ -106,9 +106,9 @@ export default function EventsPage() {
           Participants grant Open Box a non-exclusive licence to feature their submissions in community
           content across our website, Discord, X, Instagram, and YouTube. Ownership of the work remains with
           the participant under the{' '}
-          <u><a href="https://www.indiacode.nic.in/bitstream/123456789/1367/1/a1957-14.pdf" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.indiacode.nic.in/bitstream/123456789/1367/1/a1957-14.pdf" target="_blank" rel="noopener noreferrer">
             Copyright Act, 1957
-          </a></u>
+          </a>
           .
         </li>
       </ul>
@@ -117,7 +117,7 @@ export default function EventsPage() {
       <ul>
         <li>Open Box reserves the right to cancel, postpone, or change the format of any event at any time.</li>
         <li>Cancellations or significant changes will be announced via #announcements on the relevant Discord server, on openboxcomm.in, and on our social media accounts.</li>
-        <li>If Open Box cancels an event, registered participants are eligible for a full refund as per our <u><a href="/legal/refunds">Refund Policy</a></u>.</li>
+        <li>If Open Box cancels an event, registered participants are eligible for a full refund as per our <a href="/legal/refunds">Refund Policy</a>.</li>
         <li>We are not responsible for any travel, accommodation, or other costs incurred in anticipation of an IRL event.</li>
       </ul>
 
@@ -152,7 +152,7 @@ export default function EventsPage() {
       </p>
 
       <h2>8. Contact</h2>
-      <p>For event questions or media opt-out: <strong><a href="mailto:team@openboxcomm.in">team@openboxcomm.in</a></strong></p>
+      <p>For event questions or media opt-out: <strong>team@openboxcomm.in</strong></p>
     </article>
   )
 }

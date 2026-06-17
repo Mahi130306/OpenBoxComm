@@ -85,7 +85,7 @@ function ThemeToggle() {
           <div className="flex gap-2">
             <button
               onClick={handleYes}
-              className="flex-1 rounded-lg bg-rose-500 hover:bg-rose-600 text-white text-sm font-bold py-1.5 transition-colors"
+              className="flex-1 rounded-lg bg-cyan-500 hover:bg-cyan-600 text-black text-sm font-bold py-1.5 transition-colors"
             >
               yes 💥
             </button>
@@ -101,7 +101,7 @@ function ThemeToggle() {
 
       {darkToast && (
         <div className="absolute top-12 right-0 z-50 whitespace-nowrap animate-in fade-in slide-in-from-top-2 duration-300 bg-background border border-border px-3 py-2 rounded-lg shadow-md">
-          <span className="text-sm font-bold text-foreground">welcome back to the dark side 😈</span>
+          <span className="text-2xl font-bold text-foreground">welcome back to the dark side 👾</span>
         </div>
       )}
     </div>

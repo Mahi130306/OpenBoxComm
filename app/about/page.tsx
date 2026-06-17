@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import { Button } from '@/components/ui/button'
+import { CTASection } from '@/components/CTASection'
+
 
 export const metadata: Metadata = {
   title: 'About',
@@ -58,6 +60,10 @@ export default function AboutPage() {
           </div>
         </div>
 
+        <div className="mt-16 text-center animate-in fade-in slide-in-from-bottom-4 duration-700 fill-mode-both" style={{ animationDelay: '800ms' }}>
+        {/* CTA Banner */}
+        <CTASection />
+        </div>
       </div>
     </div>
   )
