@@ -25,7 +25,9 @@ const nextConfig = {
       { source: '/eventss', destination: '/events', permanent: true },
       { source: '/event', destination: '/events', permanent: true },
       { source: '/docs', destination: '/doc', permanent: true },
-    ]
+      { source: '/docss', destination: '/doc', permanent: true },
+      { source: '/joinus', destination: '/join', permanent: true },
+      { source: '/jion/', destination: '/join', permanent: true },]
   },
 };
 
