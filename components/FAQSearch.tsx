@@ -8,38 +8,63 @@ const faqs = [
   {
     question: 'How do I join Open Box?',
     answer:
-      'Use the Discord invite from the site, then pick the server that fits what you want to do: Jn. for community, Dev for coding, or GG for gaming.',
+      'Go to openboxcomm.in/join and click the invite link. It takes you to OB Junction. Complete the onboarding flow and you are in. From there you can pick the server that fits what you want to do: Jn. for community, Dev for coding, or GG for gaming.',
     tags: ['join', 'discord', 'servers'],
   },
   {
     question: 'Which server should I start with?',
     answer:
-      'Start with Jn. if you are unsure. It is the main community room and people can point you toward Dev, GG, or upcoming spaces.',
+      'Start with Jn. if you are unsure. It is the main community room and people can point you toward Dev, GG, or upcoming spaces. You do not need to join all of them at once.',
     tags: ['servers', 'jn'],
   },
   {
-    question: 'Can I share my project?',
+    question: 'Can I share my project or service?',
     answer:
-      'Yes. Share a short description, a screenshot or link, and the kind of feedback you want. Work in progress is welcome.',
-    tags: ['projects', 'feedback'],
+      'Yes, in the right channels. Share a short description, a screenshot or link, and the kind of feedback you want. Work in progress is welcome. Cold promotion, affiliate links, and dropping unrelated links in general chat is not allowed.',
+    tags: ['projects', 'feedback', 'promotion'],
   },
   {
-    question: 'How do events work?',
+    question: 'How do events work and how do I register?',
     answer:
-      'Events appear on the Events page with time, location, and agenda. Most events happen on Discord voice or stage channels.',
-    tags: ['events', 'calendar'],
+      'Events appear on the Events page with time, location, and agenda. Most events happen on Discord voice or stage channels. Event registration happens at tickets.openboxcomm.in. Log in with Discord, find the event, and claim or buy a ticket.',
+    tags: ['events', 'calendar', 'registration', 'tickets'],
   },
   {
-    question: 'Is support paid?',
+    question: 'Is Open Box free? Is support paid?',
     answer:
-      'Community help is free and volunteer-run. Supporter tiers help keep the community running, but they are not required to participate.',
-    tags: ['support', 'tiers'],
+      'Yes. All Open Box Discord servers are free to join and use. Community help is free and volunteer-run. Supporter tiers (NPC, Rookie, GOAT, Legend) are optional and available through Patreon for people who want to support the community and get additional perks.',
+    tags: ['support', 'tiers', 'free', 'patreon'],
   },
   {
     question: 'Where are the rules?',
     answer:
       'The full community rules live in the documentation at /doc/rules.',
     tags: ['rules', 'docs'],
+  },
+  {
+    question: 'Do I need to join all the servers?',
+    answer: 'No. Start with Junction and join others when you find something relevant to you. You can be in all of them at once or just one.',
+    tags: ['servers', 'junction'],
+  },
+  {
+    question: 'What is OB Study and OB GG?',
+    answer: 'OB Study is a server for learning and accountability (Alpha). OB GG is the gaming server (Beta). Both are open to join but still taking shape.',
+    tags: ['study', 'gg', 'alpha', 'beta'],
+  },
+  {
+    question: 'How do I get a supporter role?',
+    answer: 'Go to openboxcomm.in/tiers, pick a tier on Patreon, and connect your Discord account to Patreon. The role gets assigned automatically.',
+    tags: ['supporter', 'tiers', 'patreon', 'roles'],
+  },
+  {
+    question: 'I got muted or banned. What do I do?',
+    answer: 'If you think it was a mistake, email appeals@openboxcomm.in with your Discord username, the server, and what happened.',
+    tags: ['moderation', 'ban', 'mute', 'appeal'],
+  },
+  {
+    question: 'How do I contact the team?',
+    answer: 'For general questions: hello@openboxcomm.in. For support issues: support@openboxcomm.in. For moderation appeals: appeals@openboxcomm.in. For partnerships: partnerships@openboxcomm.in.',
+    tags: ['contact', 'team', 'email', 'support'],
   },
 ]
 
@@ -48,7 +73,7 @@ export function FAQSearch() {
   const [debouncedQuery, setDebouncedQuery] = useState('')
 
   useEffect(() => {
-    const handle = window.setTimeout(() => setDebouncedQuery(query.trim().toLowerCase()), 250)
+    const handle = window.setTimeout(() => setDebouncedQuery(query.trim().toLowerCase()), 300)
     return () => window.clearTimeout(handle)
   }, [query])
 

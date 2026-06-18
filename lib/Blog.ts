@@ -54,6 +54,15 @@ export const blogContents: Record<string, string[]> = {
     'If you are here now, you are part of whatever this becomes next. That has always been the point.',
   ],
 
+  'dbw-june-week-2': [
+    'Day Before Weekend (dbw) — the weekly Friday update post that goes out across Discord and the blog. Covers what happened that week and what is coming next.',
+    'This week was focused on improving the website user experience. We implemented a new search feature for both the blog and documentation pages to help members find information faster.',
+    'We also consolidated the FAQ pages. Previously, we had FAQs in multiple places, but now they are all centrally located in the Help section at /help/faq.',
+    'The OB GG gaming server is seeing more activity. We are preparing for an expansion of the beta next week with new game-specific channels and our first community tournament of the season.',
+    'On the development side, we are working on the backend for the ticketing system. We expect to have the first version of tickets.openboxcomm.in ready for internal testing by the end of the month.',
+    'That is it for this week. Have a great weekend and see you in the servers!',
+  ],
+
 };
 
 export function getBlogContent(slug: string): string[] | undefined {

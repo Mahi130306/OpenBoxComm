@@ -585,47 +585,6 @@ export const docContents: Record<string, DocData> = {
     ],
   },
 
-  faq: {
-    sections: [
-      {
-        title: 'Is Open Box free?',
-        content: 'Yes. All Open Box Discord servers are free to join and free to use. Supporter tiers (NPC, Rookie, GOAT, Legend) are optional and available through Patreon for people who want to support the community and get additional perks.',
-      },
-      {
-        title: 'How do I join?',
-        content: 'Go to openboxcomm.in/join and click the invite link. It takes you to OB Junction. Complete the onboarding flow and you are in.',
-      },
-      {
-        title: 'Do I need to join all the servers?',
-        content: 'No. Start with Junction and join others when you find something relevant to you. You can be in all of them at once or just one.',
-      },
-      {
-        title: 'What is OB Study and OB GG?',
-        content: 'OB Study is a server for learning and accountability. It is currently in alpha. OB GG is the gaming server, currently in beta. Both are open to join but still taking shape.',
-      },
-      {
-        title: 'How do I get a supporter role?',
-        content: 'Go to openboxcomm.in/tiers, pick a tier on Patreon, and connect your Discord account to Patreon. The role gets assigned automatically.',
-      },
-      {
-        title: 'Can I promote my project or service?',
-        content: 'Yes, in the right channels. There are dedicated channels for sharing projects and work. Cold promotion, affiliate links, and dropping unrelated links in general chat is not allowed.',
-      },
-      {
-        title: 'How do I register for an event?',
-        content: 'Event registration happens at tickets.openboxcomm.in. Log in with Discord, find the event, and claim or buy a ticket.',
-      },
-      {
-        title: 'I got muted or banned. What do I do?',
-        content: 'If you think it was a mistake, email appeals@openboxcomm.in with your Discord username, the server, and what happened.',
-      },
-      {
-        title: 'How do I contact the team?',
-        content: 'For general questions: hello@openboxcomm.in. For support issues: support@openboxcomm.in. For moderation appeals: appeals@openboxcomm.in. For partnerships: partnerships@openboxcomm.in.',
-      },
-    ],
-  },
-
   contact: {
     sections: [
       {
