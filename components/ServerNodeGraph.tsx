@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { useTheme } from "next-themes";
 
 interface Server {
   label: string;
@@ -27,10 +28,17 @@ function hexToRgb(hex: string): string {
 }
 
 export default function ServerNodeGraph() {
+  const { theme, resolvedTheme } = useTheme();
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const tipRef = useRef<HTMLDivElement>(null);
   const tipNameRef = useRef<HTMLSpanElement>(null);
   const tipSubRef = useRef<HTMLSpanElement>(null);
+
+  const themeRef = useRef(resolvedTheme || theme || "dark");
+
+  useEffect(() => {
+    themeRef.current = resolvedTheme || theme || "dark";
+  }, [theme, resolvedTheme]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -177,7 +185,7 @@ export default function ServerNodeGraph() {
 
         // label
         ctx.font = `500 ${i === 0 ? 12 : 10}px system-ui, sans-serif`;
-        ctx.fillStyle = "rgba(255,255,255,0.65)";
+        ctx.fillStyle = themeRef.current === "light" ? "rgba(0,0,0,0.65)" : "rgba(255,255,255,0.65)";
         ctx.fillText(s.label, s.x, s.y + s.r + 14);
       });
 
@@ -210,10 +218,10 @@ export default function ServerNodeGraph() {
       <div
         ref={tipRef}
         style={{ display: "none", position: "fixed", zIndex: 100, pointerEvents: "none" }}
-        className="bg-[#0a0e14ee] border border-white/10 rounded-xl px-3.5 py-2"
+        className="bg-surface/90 backdrop-blur-md border border-border rounded-xl px-3.5 py-2 shadow-xl"
       >
-        <span ref={tipNameRef} className="block text-[13px] font-semibold text-white" />
-        <span ref={tipSubRef}  className="block text-[11px] text-white/45 mt-0.5" />
+        <span ref={tipNameRef} className="block text-[13px] font-semibold text-foreground" />
+        <span ref={tipSubRef}  className="block text-[11px] text-muted-foreground mt-0.5" />
       </div>
     </>
   );
