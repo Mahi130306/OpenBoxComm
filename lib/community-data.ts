@@ -119,7 +119,6 @@ export interface Blog {
   date: string
   excerpt: string
   readTime: string
-  category?: 'dbw'
 }
 
 export const blogs: Blog[] = [
@@ -166,15 +165,6 @@ export const blogs: Blog[] = [
     date: '2026-05-01',
     excerpt: 'OpenBox started as part of a college club. Then things changed, we split off, and built something of our own. Here is the honest version of that story.',
     readTime: '2 min read',
-  },
-  {
-    slug: 'dbw-june-week-2',
-    title: 'DBW: June Week 2 Update',
-    server: 'Weekly Update',
-    date: '2026-06-12',
-    excerpt: 'Day Before Weekend (dbw) — our weekly Friday update. This week we fixed bugs on the website, prepared for the GG beta expansion, and more.',
-    readTime: '3 min read',
-    category: 'dbw',
   },
 ]
 

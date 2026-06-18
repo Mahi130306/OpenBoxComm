@@ -14,7 +14,6 @@ interface Blog {
   date: string
   excerpt: string
   readTime: string
-  category?: string
 }
 
 interface BlogSearchProps {
@@ -58,37 +57,31 @@ export function BlogSearch({ initialBlogs }: BlogSearchProps) {
         </div>
       ) : (
         <div className="grid gap-6 md:grid-cols-3">
-          {filteredBlogs.map((post, i) => {
-            const href = post.category === 'dbw'
-              ? `/blogs/dbw/${post.slug}`
-              : `/blogs/${post.slug}`
-
-            return (
-              <Card
-                key={post.slug}
-                className="flex flex-col border-border bg-surface transition-all hover:-translate-y-1 hover:shadow-lg hover:border-pink-500/30 animate-in fade-in slide-in-from-bottom-4 duration-500 fill-mode-both"
-                style={{ animationDelay: `${100 + i * 50}ms` }}
-              >
-                <CardHeader>
-                  <div className="mb-4 flex items-center justify-between gap-2">
-                    <Badge variant="secondary">{post.server}</Badge>
-                    <span className="text-xs text-muted-foreground">{post.readTime}</span>
-                  </div>
-                  <CardTitle className="text-2xl">{post.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="flex-1">
-                  <p className="text-sm text-muted-foreground">{post.excerpt}</p>
-                  <p className="mt-5 text-xs text-muted-foreground">{post.date}</p>
-                </CardContent>
-                <CardFooter>
-                  <Link href={href} className="inline-flex items-center text-sm font-medium hover:text-cyan-300">
-                    Read post
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </CardFooter>
-              </Card>
-            )
-          })}
+          {filteredBlogs.map((post, i) => (
+            <Card
+              key={post.slug}
+              className="flex flex-col border-border bg-surface transition-all hover:-translate-y-1 hover:shadow-lg hover:border-pink-500/30 animate-in fade-in slide-in-from-bottom-4 duration-500 fill-mode-both"
+              style={{ animationDelay: `${100 + i * 50}ms` }}
+            >
+              <CardHeader>
+                <div className="mb-4 flex items-center justify-between gap-2">
+                  <Badge variant="secondary">{post.server}</Badge>
+                  <span className="text-xs text-muted-foreground">{post.readTime}</span>
+                </div>
+                <CardTitle className="text-2xl">{post.title}</CardTitle>
+              </CardHeader>
+              <CardContent className="flex-1">
+                <p className="text-sm text-muted-foreground">{post.excerpt}</p>
+                <p className="mt-5 text-xs text-muted-foreground">{post.date}</p>
+              </CardContent>
+              <CardFooter>
+                <Link href={`/blogs/${post.slug}`} className="inline-flex items-center text-sm font-medium hover:text-cyan-300">
+                  Read post
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </CardFooter>
+            </Card>
+          ))}
         </div>
       )}
     </div>
