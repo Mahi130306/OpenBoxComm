@@ -43,8 +43,8 @@ export function useDiscordMembers(targetSlug?: string) {
     };
 
     fetchCounts();
-    // Poll every 20 seconds
-    const interval = setInterval(fetchCounts, 20_000);
+    // Poll every 30 seconds
+    const interval = setInterval(fetchCounts, 30_000);
 
     return () => {
       mounted = false;
