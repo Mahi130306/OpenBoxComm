@@ -160,9 +160,9 @@ export function Navbar() {
               <Link href="/about" className="text-sm font-medium hover:text-muted-foreground transition-colors">
                 About
               </Link>
-              {/* <Link href="/team" className="text-sm font-medium hover:text-muted-foreground transition-colors">
+              <Link href="/team" className="text-sm font-medium hover:text-muted-foreground transition-colors">
                 Team
-              </Link> */}
+              </Link>
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <button className="text-sm font-medium hover:text-muted-foreground transition-colors">
@@ -203,12 +203,12 @@ export function Navbar() {
               <Link href="/doc" className="text-sm font-medium hover:text-muted-foreground transition-colors">
                 Docs
               </Link>
-              {/* <Link href="/join" className="group relative inline-flex items-center gap-1.5 overflow-hidden rounded-full bg-foreground px-4 py-1.5 text-sm font-bold text-background transition-all hover:bg-foreground/90 hover:shadow-lg hover:shadow-cyan-500/20 active:scale-95">
+              <Link href="/join" className="group relative inline-flex items-center gap-1.5 overflow-hidden rounded-full bg-foreground px-4 py-1.5 text-sm font-bold text-background transition-all hover:bg-foreground/90 hover:shadow-lg hover:shadow-cyan-500/20 active:scale-95">
                 <span className="relative z-10 flex items-center gap-1">
                   Join <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5" />
                 </span>
                 <div className="absolute inset-0 z-0 bg-gradient-to-r from-cyan-400 to-blue-500 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-              </Link> */}
+              </Link>
             </div>
 
             <div className="hidden md:flex md:items-center md:space-x-2">
