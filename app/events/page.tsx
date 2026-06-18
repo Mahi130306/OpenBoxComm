@@ -99,7 +99,7 @@ export default function EventsPage() {
                 <div className="flex items-start justify-between gap-3">
                   <CardTitle className="text-xl">{event.name}</CardTitle>
                   <Badge variant={event.ticketStatus === 'free' ? 'secondary' : 'default'} className="shrink-0">
-                    {event.ticketStatus === 'free' ? 'Free' : 'Ticketed'}
+                    {event.ticketStatus === 'free' ? 'Free' : event.price}
                   </Badge>
                 </div>
                 <CardDescription className="text-muted-foreground">{formatDate(event.date)}</CardDescription>

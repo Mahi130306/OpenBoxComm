@@ -30,7 +30,9 @@ export default async function EventDetailPage({ params }: { params: Promise<{ id
         <div className="mb-5 flex flex-wrap gap-2">
           <Badge variant="secondary">{event.server}</Badge>
           <Badge variant="outline">{event.isOffline ? 'Offline' : 'Online'}</Badge>
-          <Badge variant="outline">{event.ticketStatus === 'free' ? 'Free' : 'Ticketed'}</Badge>
+          <Badge variant="outline">
+            {event.ticketStatus === 'free' ? 'Free' : `Paid · ${event.price}`}
+          </Badge>
         </div>
         <h1 className="mb-4">{event.name}</h1>
         <p className="max-w-3xl text-lg text-muted-foreground">{event.description}</p>
@@ -69,7 +71,7 @@ export default async function EventDetailPage({ params }: { params: Promise<{ id
             </p>
             <p className="flex gap-3 text-muted-foreground">
               <Ticket className="mt-0.5 h-4 w-4 text-cyan-300" />
-              <span>{event.ticketStatus === 'free' ? 'Free to join' : 'Ticket required'}</span>
+              <span>{event.ticketStatus === 'free' ? 'Free to join' : `Paid event · ${event.price}`}</span>
             </p>
           </div>
           <Button asChild className="mt-6 w-full">
@@ -78,7 +80,7 @@ export default async function EventDetailPage({ params }: { params: Promise<{ id
               target="_blank"
               rel="noopener noreferrer"
             >
-              Visit {event.server} Server
+              {event.ticketStatus === 'free' ? 'Claim Ticket' : 'Book Ticket'}
             </a>
           </Button>
         </aside>
