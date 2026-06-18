@@ -14,6 +14,7 @@ interface Blog {
   date: string
   excerpt: string
   readTime: string
+  category?: string
 }
 
 interface BlogSearchProps {
@@ -30,8 +31,9 @@ export function BlogSearch({ initialBlogs }: BlogSearchProps) {
   }, [query])
 
   const filteredBlogs = useMemo(() => {
-    if (!debouncedQuery) return initialBlogs
-    return initialBlogs.filter((blog) => {
+    const activeBlogs = initialBlogs.filter((blog) => blog.category !== 'dbw')
+    if (!debouncedQuery) return activeBlogs
+    return activeBlogs.filter((blog) => {
       const haystack = `${blog.title} ${blog.server} ${blog.excerpt}`.toLowerCase()
       return haystack.includes(debouncedQuery)
     })
