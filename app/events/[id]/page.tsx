@@ -73,7 +73,13 @@ export default async function EventDetailPage({ params }: { params: Promise<{ id
             </p>
           </div>
           <Button asChild className="mt-6 w-full">
-            <Link href={`/servers/${event.serverSlug}`}>Visit {event.server} Server</Link>
+            <a
+              href={`https://tickets.openboxcomm.in/event/${event.id}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Visit {event.server} Server
+            </a>
           </Button>
         </aside>
       </div>

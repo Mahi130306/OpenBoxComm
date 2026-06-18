@@ -74,18 +74,18 @@ export const servers = [
 ]
 
 export const events = [
-  // {
-  //   id: 'open-build-night',
-  //   name: 'Open Build Night',
-  //   server: 'Dev',
-  //   serverSlug: 'dev',
-  //   date: '2026-07-18T19:00:00+05:30',
-  //   description: 'Bring a half-built project, get momentum, and leave with a tiny shipped improvement.',
-  //   ticketStatus: 'free',
-  //   isOffline: false,
-  //   location: 'Discord voice stage',
-  //   agenda: ['Quick intros', '45 minute build sprint', 'Feedback rounds', 'Show-and-tell'],
-  // },
+  {
+    id: 'open-build-night',
+    name: 'Open Build Night',
+    server: 'Dev',
+    serverSlug: 'dev',
+    date: '2026-07-18T19:00:00+05:30',
+    description: 'Bring a half-built project, get momentum, and leave with a tiny shipped improvement.',
+    ticketStatus: 'free',
+    isOffline: false,
+    location: 'Discord voice stage',
+    agenda: ['Quick intros', '45 minute build sprint', 'Feedback rounds', 'Show-and-tell'],
+  },
   // {
   //   id: 'gg-community-cup',
   //   name: 'GG Community Cup',
