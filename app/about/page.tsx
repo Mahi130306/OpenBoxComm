@@ -1,69 +1,127 @@
 import type { Metadata } from 'next'
-import { Button } from '@/components/ui/button'
 import { CTASection } from '@/components/CTASection'
-
+import { Info, Users, Zap, Heart, CheckCircle2, ArrowUpRight } from 'lucide-react'
+import { Badge } from '@/components/ui/badge'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'About',
+  title: 'About Open Box',
   description: 'Learn about Open Box — a people-focused network of communities for gamers, students, and creators. Free and open to everyone.',
   alternates: { canonical: '/about' },
 }
 
-
 const servers = [
-  { name: 'Jn.', status: 'Live', description: 'Main community hub' },
-  { name: 'Dev', status: 'Live', description: 'Development & coding' },
-  { name: 'GG', status: 'Live', description: 'Gaming' },
-  { name: 'Study', status: 'Coming Soon', description: 'Learning & study groups' },
-  { name: 'Connect', status: 'Coming Soon', description: 'Networking & careers' },
-  // { name: 'Classic', status: 'Coming Soon', description: 'Creators Group' },
+  { name: 'Jn.', status: 'Live', description: 'Main community hub and entry point.', color: 'bg-green-500' },
+  { name: 'Dev', status: 'Live', description: 'Development, coding, and building things.', color: 'bg-purple-500' },
+  { name: 'GG', status: 'Live', description: 'Gaming, competitions, and community play.', color: 'bg-blue-500' },
+  { name: 'Study', status: 'Coming Soon', description: 'Learning, accountability, and study groups.', color: 'bg-orange-500' },
+  { name: 'Connect', status: 'Coming Soon', description: 'Professional networking and career growth.', color: 'bg-cyan-500' },
 ]
-
 
 export default function AboutPage() {
   return (
     <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-      <div className="max-w-3xl mx-auto">
-        <h1 className="mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700">About Open Box</h1>
-        <div className="prose prose-invert max-w-none animate-in fade-in slide-in-from-bottom-4 duration-700 fill-mode-both" style={{ animationDelay: '150ms' }}>
-          <p className="text-lg text-muted-foreground">
-            Open Box is a People-focused gpoup of communities founded on the belief that great things happen when people come together.
-          </p>
-          <p className="mt-4">
-            We started as a small Discord server for developers sharing side projects. Today, we've growning into a network of
-            multiple communities, each serving different facets of the journey from coding to gaming to study groups.
-          </p>
-          <p className="mt-4">
-            Our mission is simple: provide a welcoming, high-signal space where gamers, students, profesionals & creaters can find their tribe, share their work,
-            and grow together. No gatekeeping, no toxicity, just genuine connection and collaboration.
-          </p>
+      {/* Hero Section */}
+      <div className="mb-16 rounded-3xl border border-black/10 bg-gradient-to-br from-black/[0.04] to-violet-400/[0.08] p-8 shadow-sm dark:border-white/10 dark:from-white/[0.08] dark:to-violet-400/[0.05] sm:p-12 lg:p-16">
+        <div className="flex items-center gap-3 mb-6">
+            <Info className="h-8 w-8 text-violet-500" />
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-violet-600 dark:text-violet-300">About Open Box</p>
+        </div>
+        <h1 className="mb-6 text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl lg:text-6xl max-w-4xl">
+          A people-focused network of communities.
+        </h1>
+        <p className="max-w-3xl text-xl text-muted-foreground/90 leading-relaxed">
+          Open Box was founded on a simple belief: great things happen when people come together. We provide welcoming, high-signal spaces where creators can find their tribe.
+        </p>
+      </div>
+
+      <div className="grid gap-16 lg:grid-cols-5">
+        {/* Main Content */}
+        <div className="lg:col-span-3 space-y-12">
+          <section>
+            <h2 className="text-3xl font-bold mb-6">Our Story</h2>
+            <div className="prose prose-invert max-w-none space-y-6">
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                We started as a small Discord server for developers sharing side projects. Today, we&apos;ve grown into a network of multiple communities, each serving different facets of the journey from coding to gaming to study groups.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Our mission is simple: provide a welcoming, high-signal space where gamers, students, professionals, and creators can find their tribe, share their work, and grow together. No gatekeeping, no toxicity, just genuine connection and collaboration.
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-3xl font-bold mb-8">The Server Lineup</h2>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {servers.map((server, i) => (
+                <Link
+                  key={server.name}
+                  href="/join"
+                  className="group relative overflow-hidden rounded-2xl border border-border bg-surface/50 p-6 transition-all hover:-translate-y-1 hover:border-violet-500/50 hover:shadow-xl"
+                >
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center gap-3">
+                      <div className={`h-2.5 w-2.5 rounded-full ${server.color} shadow-[0_0_8px_rgba(0,0,0,0.2)]`} />
+                      <h3 className="text-2xl font-bold">{server.name}</h3>
+                    </div>
+                    <Badge variant={server.status === 'Live' ? 'secondary' : 'outline'} className={server.status === 'Live' ? 'bg-green-500/10 text-green-600 dark:text-green-400 border-none' : ''}>
+                      {server.status}
+                    </Badge>
+                  </div>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {server.description}
+                  </p>
+                  <div className="mt-4 flex items-center gap-1 text-sm font-bold text-violet-500 opacity-0 transition-all group-hover:opacity-100">
+                    Learn more <ArrowUpRight className="h-4 w-4" />
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </section>
         </div>
 
-        <div className="mt-16 animate-in fade-in slide-in-from-bottom-4 duration-700 fill-mode-both" style={{ animationDelay: '300ms' }}>
-          <h2>The Server Lineup</h2>
-          <div className="grid gap-4 mt-6 sm:grid-cols-2">
-            {servers.map((server, i) => (
-              <div 
-                key={server.name} 
-                className="border border-border rounded-lg p-4 bg-surface transition-all hover:-translate-y-1 hover:shadow-lg hover:border-cyan-500/50 animate-in fade-in zoom-in-95 duration-500 fill-mode-both"
-                style={{ animationDelay: `${400 + i * 100}ms` }}
-              >
-                <div className="flex items-center justify-between mb-2">
-                  <h3 className="text-xl font-bold">{server.name}</h3>
-                  <span className={`text-xs px-2 py-1 rounded ${server.status === 'Live' ? 'bg-foreground text-background' : 'bg-muted text-muted-foreground'}`}>
-                    {server.status}
-                  </span>
-                </div>
-                <p className="text-sm text-muted-foreground">{server.description}</p>
+        {/* Sidebar: Values */}
+        <aside className="lg:col-span-2">
+          <div className="sticky top-24 space-y-8">
+            <div className="rounded-3xl border border-border bg-surface p-8 shadow-sm">
+              <h2 className="text-2xl font-bold mb-8">Our Values</h2>
+              <div className="space-y-8">
+                {[
+                  { icon: Users, title: "Inclusivity", desc: "Open to everyone, regardless of skill level or background. No gatekeeping allowed." },
+                  { icon: Zap, title: "High Signal", desc: "Focus on quality interactions and meaningful content over noise and spam." },
+                  { icon: Heart, title: "Community First", desc: "Every decision we make is guided by what's best for the people who call Open Box home." },
+                  { icon: CheckCircle2, title: "Respect", desc: "A safe, respectful environment where everyone can express themselves freely." }
+                ].map((value, i) => (
+                  <div key={i} className="flex gap-4">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-violet-500/10">
+                      <value.icon className="h-5 w-5 text-violet-500" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold mb-1">{value.title}</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{value.desc}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-        </div>
+            </div>
 
-        <div className="mt-16 text-center animate-in fade-in slide-in-from-bottom-4 duration-700 fill-mode-both" style={{ animationDelay: '800ms' }}>
-        {/* CTA Banner */}
+            <div className="rounded-3xl bg-violet-600 p-8 text-white shadow-xl shadow-violet-600/20">
+                <h3 className="text-xl font-bold mb-3">Join our journey</h3>
+                <p className="text-violet-100 mb-6 text-sm leading-relaxed">
+                    Open Box is more than just a set of servers — it&apos;s a collective of passionate people building together.
+                </p>
+                <Link href="/join">
+                    <button className="w-full rounded-xl bg-white px-4 py-3 text-sm font-bold text-violet-600 transition-transform hover:scale-[1.02] active:scale-[0.98]">
+                        Pick Your World
+                    </button>
+                </Link>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <div className="mt-24">
         <CTASection />
-        </div>
       </div>
     </div>
   )

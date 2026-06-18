@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { getTeamMember } from '@/lib/community-data'
 import { Button } from '@/components/ui/button'
-import { Github, Twitter, ArrowLeft, Instagram, ChevronLeft, Globe, Mail } from 'lucide-react'
+import { Github, Twitter, Instagram, ChevronLeft, Globe, Mail } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
