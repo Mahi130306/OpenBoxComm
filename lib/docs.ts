@@ -140,10 +140,6 @@ export const docContents: Record<string, DocData> = {
         content: 'OB Kernel — the private staff server. Not publicly accessible.',
       },
       {
-        title: 'DBW',
-        content: 'Day Before Weekend — the weekly Friday update post that goes out across Discord and the blog. Covers what happened that week and what is coming next.',
-      },
-      {
         title: 'Tiers',
         content: 'The supporter tier system: NPC, Rookie, GOAT, and Legend. Higher tiers come with perks and are available through Patreon.',
       },

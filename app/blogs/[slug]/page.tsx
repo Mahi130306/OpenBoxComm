@@ -8,7 +8,9 @@ import { blogs, getBlog } from '@/lib/community-data'
 import { getBlogContent } from '@/lib/Blog'
 
 export function generateStaticParams() {
-  return blogs.map((blog) => ({ slug: blog.slug }))
+  return blogs
+    .filter((blog: any) => blog.category !== 'dbw')
+    .map((blog) => ({ slug: blog.slug }))
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
@@ -32,7 +34,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ slu
   const post = getBlog(slug)
   const content = getBlogContent(slug)
   
-  if (!post) notFound()
+  if (!post || (post as any).category === 'dbw') notFound()
 
   return (
     <article className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">

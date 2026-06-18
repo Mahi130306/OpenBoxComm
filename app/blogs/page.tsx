@@ -12,9 +12,12 @@ export const metadata: Metadata = {
 export default async function BlogsPage({ searchParams }: { searchParams: Promise<{ server?: string }> }) {
   const { server: serverQuery } = await searchParams
   const serverFilter = serverQuery?.toLowerCase()
+
+  const activeBlogs = blogs.filter((blog: any) => blog.category !== 'dbw')
+
   const filteredBlogs = serverFilter
-    ? blogs.filter((blog) => blog.server.toLowerCase() === serverFilter)
-    : blogs
+    ? activeBlogs.filter((blog) => blog.server.toLowerCase() === serverFilter)
+    : activeBlogs
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
