@@ -14,7 +14,6 @@ interface Blog {
   date: string
   excerpt: string
   readTime: string
-  category?: string
 }
 
 interface BlogSearchProps {
@@ -59,9 +58,7 @@ export function BlogSearch({ initialBlogs }: BlogSearchProps) {
       ) : (
         <div className="grid gap-6 md:grid-cols-3">
           {filteredBlogs.map((post, i) => {
-            const href = post.category === 'dbw'
-              ? `/blogs/dbw/${post.slug}`
-              : `/blogs/${post.slug}`
+            const href = `/blogs/${post.slug}`
 
             return (
               <Card
