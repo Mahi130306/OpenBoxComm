@@ -45,18 +45,23 @@ export default function ServerNodeGraph() {
     const W = canvas.width;
     const H = canvas.height;
 
+    const rnd = (min: number, max: number) => Math.random() * (max - min) + min;
+    const vRnd = () => (Math.random() - 0.5) * 0.65;
+
     const servers: Server[] = [
       { label: "Junction", sub: "Hub · Front door",  color: "#1D9E75", r: 34, x: W / 2,    y: H / 2,    vx: 0,     vy: 0,     emoji: "🔗" },
-      { label: "Dev",      sub: "Developers · Code",   color: "#7F77DD", r: 24, x: W * 0.22, y: H * 0.25, vx: 0.28,  vy: 0.22,  emoji: "💻" },
-      { label: "GG",       sub: "Gaming · Compete",  color: "#378ADD", r: 24, x: W * 0.76, y: H * 0.20, vx: -0.22, vy: 0.32,  emoji: "🎮" },
-      { label: "Study",    sub: "Learn · Grind",     color: "#639922", r: 22, x: W * 0.16, y: H * 0.74, vx: 0.24,  vy: -0.22, emoji: "📚" },
-      { label: "Connect",  sub: "Meet · Collab",     color: "#D85A30", r: 22, x: W * 0.80, y: H * 0.76, vx: -0.28, vy: -0.24, emoji: "🌐" },
-      
+      { label: "Dev",      sub: "Developers · Code",   color: "#7F77DD", r: 24, x: rnd(50, W-50), y: rnd(50, H-50), vx: vRnd(), vy: vRnd(), emoji: "💻" },
+      { label: "GG",       sub: "Gaming · Compete",  color: "#378ADD", r: 24, x: rnd(50, W-50), y: rnd(50, H-50), vx: vRnd(), vy: vRnd(), emoji: "🎮" },
+      { label: "Study",    sub: "Learn · Grind",     color: "#639922", r: 22, x: rnd(50, W-50), y: rnd(50, H-50), vx: vRnd(), vy: vRnd(), emoji: "📚" },
+      { label: "Connect",  sub: "Meet · Collab",     color: "#D85A30", r: 22, x: rnd(50, W-50), y: rnd(50, H-50), vx: vRnd(), vy: vRnd(), emoji: "🌐" },
     ];
 
     const mouse = { x: -999, y: -999 };
     let hovered: Server | null = null;
     let t = 0;
+    const hubOffX = Math.random() * 10;
+    const hubOffY = Math.random() * 10;
+    const edgeOffsets = EDGES.map(() => Math.random());
     let rafId: number;
 
     const onMouseMove = (e: MouseEvent) => {
@@ -99,11 +104,11 @@ export default function ServerNodeGraph() {
       });
 
       // hub gentle drift
-      servers[0].x = W / 2 + Math.sin(t * 0.5) * 7;
-      servers[0].y = H / 2 + Math.cos(t * 0.4) * 5;
+      servers[0].x = W / 2 + Math.sin(t * 0.5 + hubOffX) * 7;
+      servers[0].y = H / 2 + Math.cos(t * 0.4 + hubOffY) * 5;
 
       // edges + pulse dots
-      EDGES.forEach(([a, b]) => {
+      EDGES.forEach(([a, b], idx) => {
         const sa = servers[a];
         const sb = servers[b];
         const dx = sb.x - sa.x;
@@ -121,7 +126,7 @@ export default function ServerNodeGraph() {
         ctx.lineWidth = 1.2;
         ctx.stroke();
 
-        const pulse = (t * 0.55 + a * 0.8 + b * 0.4) % 1;
+        const pulse = (t * 0.55 + edgeOffsets[idx]) % 1;
         const px = sa.x + dx * pulse;
         const py = sa.y + dy * pulse;
         ctx.beginPath();
