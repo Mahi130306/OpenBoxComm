@@ -112,7 +112,17 @@ export const events = [
   // },
 ]
 
-export const blogs = [
+export interface Blog {
+  slug: string
+  title: string
+  server: string
+  date: string
+  excerpt: string
+  readTime: string
+  category?: 'dbw'
+}
+
+export const blogs: Blog[] = [
    {
     slug: 'where-we-go-from-here',
     title: 'Where We Go From Here',
@@ -156,6 +166,15 @@ export const blogs = [
     date: '2026-05-01',
     excerpt: 'OpenBox started as part of a college club. Then things changed, we split off, and built something of our own. Here is the honest version of that story.',
     readTime: '2 min read',
+  },
+  {
+    slug: 'dbw-june-week-2',
+    title: 'DBW: June Week 2 Update',
+    server: 'Weekly Update',
+    date: '2026-06-12',
+    excerpt: 'Day Before Weekend (dbw) — our weekly Friday update. This week we fixed bugs on the website, prepared for the GG beta expansion, and more.',
+    readTime: '3 min read',
+    category: 'dbw',
   },
 ]
 
@@ -273,12 +292,6 @@ export const docs = [
     section: 'Support',
   },
   {
-    slug: 'faq',
-    title: 'FAQs',
-    description: 'Answers to the most common questions about Open Box, the servers, events, and tiers.',
-    section: 'Support',
-  },
-  {
     slug: 'contact',
     title: 'Contact & Support',
     description: 'Every way to reach the Open Box team — email, Discord, and what to expect when you do.',
@@ -323,7 +336,8 @@ export const teamMembers = [
     avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=sachin',
     socials: {
       instagram: 'https://x.com/alex',
-      github: 'https://github.com/alex'
+      github: 'https://github.com/alex',
+      twitter: 'https://x.com/alex',
     }
   },
   // {
