@@ -33,6 +33,11 @@ const nextConfig = {
       { source: '/teem', destination: '/team', permanent: true },
       { source: '/supprt', destination: '/support', permanent: true },
       { source: '/suport', destination: '/support', permanent: true },
+      { source: '/bolg', destination: '/blogs', permanent: true },
+      { source: '/hepl', destination: '/help', permanent: true },
+      { source: '/hlpe', destination: '/help', permanent: true },
+      { source: '/legl', destination: '/legal', permanent: true },
+      { source: '/leagal', destination: '/legal', permanent: true },
     ]
   },
 };
