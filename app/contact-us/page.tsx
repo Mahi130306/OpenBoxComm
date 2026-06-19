@@ -101,9 +101,9 @@ export default function ContactUsPage() {
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
-                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-indigo-500 to-violet-600 shadow-lg shadow-indigo-500/20">
+                {/* <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-indigo-500 to-violet-600 shadow-lg shadow-indigo-500/20">
                     <MessageSquare className="h-8 w-8 text-white" />
-                </div>
+                </div> */}
                 <p className="text-sm text-muted-foreground leading-relaxed">
                     Drop a message in the <code className="rounded bg-muted px-1.5 py-0.5 text-xs font-mono font-bold text-foreground">#help</code> channel. Our staff and community members are active throughout the day.
                 </p>

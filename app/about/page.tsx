@@ -54,8 +54,8 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold mb-8">The Server Lineup</h2>
             <div className="grid gap-4 sm:grid-cols-2">
               {servers.map((server, i) => (
-                <Link
-                  key={server.name}
+                <Link 
+                  key={server.name} 
                   href="/join"
                   className="group relative overflow-hidden rounded-2xl border border-border bg-surface/50 p-6 transition-all hover:-translate-y-1 hover:border-violet-500/50 hover:shadow-xl"
                 >
