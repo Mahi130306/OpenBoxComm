@@ -6,12 +6,12 @@ import { Button } from '@/components/ui/button'
 import { events, getEvent, getServer } from '@/lib/community-data'
 
 export function generateStaticParams() {
-  return events.map((event) => ({ id: event.id }))
+  return events.map((event) => ({ slug: event.slug }))
 }
 
-export default async function EventDetailPage({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = await params
-  const event = getEvent(id)
+export default async function EventDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const event = getEvent(slug)
   if (!event) notFound()
 
   const server = getServer(event.serverSlug)
@@ -140,7 +140,7 @@ export default async function EventDetailPage({ params }: { params: Promise<{ id
 
                 <Button asChild size="lg" className="w-full font-bold shadow-lg shadow-cyan-500/20">
                   <a
-                    href={`https://tickets.openboxcomm.in/event/${event.id}`}
+                    href={`https://tickets.openboxcomm.in/event/${event.slug}`}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -163,7 +163,7 @@ export default async function EventDetailPage({ params }: { params: Promise<{ id
                   This event is hosted in the {event.server} server. Join our community to stay updated.
                 </p>
                 <Button asChild variant="outline" size="sm" className="w-full">
-                  <Link href={`/servers/${event.serverSlug}`}>
+                  <Link href={`/community/${event.serverSlug}`}>
                     Visit Server
                   </Link>
                 </Button>

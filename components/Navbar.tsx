@@ -126,23 +126,23 @@ export function Navbar() {
   return (
     <>
       <nav
-        className={`fixed top-0 z-50 w-full border-b transition-all duration-300 ${
+        className={`fixed top-0 z-50 w-full border-b transition-all duration-500 ${
           scrolled
-            ? 'bg-background/98 shadow-sm backdrop-blur-lg'
-            : 'bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60'
-        } border-border`}
+            ? 'glass shadow-lg border-white/10 py-1'
+            : 'bg-transparent border-transparent py-2'
+        }`}
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
 
             <div className="flex-shrink-0">
-              <Link href="/" className="flex items-center gap-2 group">
-                <div className="relative h-8 w-8 overflow-hidden rounded-lg transition-transform duration-200 group-hover:scale-105">
+              <Link href="/" className="flex items-center gap-2 group transition-all duration-300 hover:opacity-80">
+                <div className="relative h-9 w-9 overflow-hidden rounded-xl transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3 shadow-2xl">
                   <Image
                     src="/images/OB.png"
                     alt="Open Box logo"
                     fill
-                    sizes="32px"
+                    sizes="36px"
                     className="object-cover"
                     priority
                   />
@@ -154,72 +154,63 @@ export function Navbar() {
             </div>
 
             <div className="hidden md:flex md:items-center md:space-x-8">
-              <Link href="/" className="text-sm font-medium hover:text-muted-foreground transition-colors">
+              <Link href="/" className="text-sm font-semibold hover:text-cyan-400 transition-colors">
                 Home
               </Link>
-              <Link href="/about" className="text-sm font-medium hover:text-muted-foreground transition-colors">
+              <Link href="/about" className="text-sm font-semibold hover:text-cyan-400 transition-colors">
                 About
               </Link>
-              {/* <Link href="/team" className="text-sm font-medium hover:text-muted-foreground transition-colors">
-                Team
-              </Link> */}
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <button className="text-sm font-medium hover:text-muted-foreground transition-colors">
-                    Servers
+                  <button className="text-sm font-semibold hover:text-cyan-400 transition-colors">
+                    Community
                   </button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent className="w-56 bg-surface border-border">
-                  <DropdownMenuLabel>Live</DropdownMenuLabel>
+                <DropdownMenuContent className="w-56 glass-card mt-2">
+                  <DropdownMenuLabel className="text-xs uppercase tracking-widest opacity-50">Live Servers</DropdownMenuLabel>
                   {servers.live.map((server) => (
-                    <DropdownMenuItem key={server.slug} asChild>
-                      <Link href={`/servers/${server.slug}`} className="cursor-pointer">
+                    <DropdownMenuItem key={server.slug} asChild className="focus:bg-cyan-500/20 focus:text-cyan-400">
+                      <Link href={`/community/${server.slug}`} className="cursor-pointer font-medium">
                         {server.name}
                       </Link>
                     </DropdownMenuItem>
                   ))}
-                  <DropdownMenuSeparator />
-                  <DropdownMenuLabel>Coming Soon</DropdownMenuLabel>
+                  <DropdownMenuSeparator className="opacity-10" />
+                  <DropdownMenuLabel className="text-xs uppercase tracking-widest opacity-50">Coming Soon</DropdownMenuLabel>
                   {servers.comingSoon.map((server) => (
                     <DropdownMenuItem
                       key={server.slug}
                       disabled
-                      className="text-muted-foreground"
+                      className="text-muted-foreground/50"
                     >
                       <span className="flex items-center justify-between w-full">
                         {server.name}
-                        <span className="text-xs bg-muted px-1.5 py-0.5 rounded">Soon</span>
+                        <span className="text-[10px] bg-muted px-1.5 py-0.5 rounded uppercase font-bold tracking-tighter">Soon</span>
                       </span>
                     </DropdownMenuItem>
                   ))}
                 </DropdownMenuContent>
               </DropdownMenu>
-              <Link href="/events" className="text-sm font-medium hover:text-muted-foreground transition-colors">
+              <Link href="/events" className="text-sm font-semibold hover:text-cyan-400 transition-colors">
                 Events
               </Link>
-              <Link href="/blogs" className="text-sm font-medium hover:text-muted-foreground transition-colors">
-                Blogs
+              <Link href="/blog" className="text-sm font-semibold hover:text-cyan-400 transition-colors">
+                Blog
               </Link>
-              <Link href="/doc" className="text-sm font-medium hover:text-muted-foreground transition-colors">
+              <Link href="/docs" className="text-sm font-semibold hover:text-cyan-400 transition-colors">
                 Docs
               </Link>
-              {/* <Link href="/join" className="group relative inline-flex items-center gap-1.5 overflow-hidden rounded-full bg-foreground px-4 py-1.5 text-sm font-bold text-background transition-all hover:bg-foreground/90 hover:shadow-lg hover:shadow-cyan-500/20 active:scale-95">
-                <span className="relative z-10 flex items-center gap-1">
-                  Join <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5" />
-                </span>
-                <div className="absolute inset-0 z-0 bg-gradient-to-r from-cyan-400 to-blue-500 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-              </Link> */}
             </div>
 
             <div className="hidden md:flex md:items-center md:space-x-2">
               <Link
-                href="/support"
-                className="text-sm font-medium hover:text-muted-foreground flex items-center gap-1 px-2 py-1 transition-colors"
+                href="/sponsor"
+                className="text-sm font-semibold hover:text-pink-400 flex items-center gap-1 px-2 py-1 transition-colors group"
               >
-                <Heart className="h-4 w-4" /> Support
+                <Heart className="h-4 w-4 transition-transform group-hover:scale-125" /> Sponsor
               </Link>
-              <Link href="/help" className="text-sm font-medium hover:text-muted-foreground px-2 py-1 transition-colors">
-                Help
+              <Link href="/contact" className="text-sm font-semibold hover:text-cyan-400 px-2 py-1 transition-colors">
+                Contact
               </Link>
               <ThemeToggle />
             </div>
@@ -238,35 +229,31 @@ export function Navbar() {
         </div>
 
         {mobileMenuOpen && (
-          <div className="md:hidden border-t border-border bg-surface animate-fade-in">
-            <div className="space-y-1 px-4 pb-3 pt-2">
-              <Link href="/" className="block py-2 text-sm font-medium hover:text-muted-foreground">Home</Link>
-              <Link href="/about" className="block py-2 text-sm font-medium hover:text-muted-foreground">About</Link>
-              <Link href="/team" className="block py-2 text-sm font-medium hover:text-muted-foreground">Team</Link>
-              <div className="py-2">
-                <p className="text-sm font-medium text-muted-foreground mb-1">Live Servers</p>
+          <div className="md:hidden border-t border-border glass animate-in slide-in-from-top-4 duration-300">
+            <div className="space-y-1 px-4 pb-6 pt-4">
+              <Link href="/" className="block py-2 text-base font-semibold hover:text-cyan-400">Home</Link>
+              <Link href="/about" className="block py-2 text-base font-semibold hover:text-cyan-400">About</Link>
+              <div className="py-2 border-y border-white/5 my-2">
+                <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest mb-2">Community</p>
                 {servers.live.map((server) => (
                   <Link
                     key={server.slug}
-                    href={`/servers/${server.slug}`}
-                    className="block py-1 pl-2 text-sm hover:text-muted-foreground"
+                    href={`/community/${server.slug}`}
+                    className="block py-2 pl-2 text-sm font-medium hover:text-cyan-400"
                   >
                     {server.name}
                   </Link>
                 ))}
-                <p className="text-sm font-medium text-muted-foreground mt-2 mb-1">Coming Soon</p>
-                {servers.comingSoon.map((server) => (
-                  <span key={server.slug} className="block py-1 pl-2 text-sm text-muted-foreground opacity-50">
-                    {server.name} (Soon)
-                  </span>
-                ))}
               </div>
-              <Link href="/events" className="block py-2 text-sm font-medium hover:text-muted-foreground">Events</Link>
-              <Link href="/blogs" className="block py-2 text-sm font-medium hover:text-muted-foreground">Blogs</Link>
-              <Link href="/doc" className="block py-2 text-sm font-medium hover:text-muted-foreground">Docs</Link>
-              <Link href="/join" className="block py-2 text-sm font-bold text-cyan-500">Join Community</Link>
-              <Link href="/support" className="block py-2 text-sm font-medium hover:text-muted-foreground">Support</Link>
-              <Link href="/help" className="block py-2 text-sm font-medium hover:text-muted-foreground">Help</Link>
+              <Link href="/events" className="block py-2 text-base font-semibold hover:text-cyan-400">Events</Link>
+              <Link href="/blog" className="block py-2 text-base font-semibold hover:text-cyan-400">Blog</Link>
+              <Link href="/docs" className="block py-2 text-base font-semibold hover:text-cyan-400">Docs</Link>
+              <div className="pt-4 space-y-2">
+                <Link href="/sponsor" className="flex items-center gap-2 py-3 px-4 rounded-xl bg-pink-500/10 text-pink-400 text-sm font-bold">
+                  <Heart className="h-4 w-4 fill-current" /> Sponsor Open Box
+                </Link>
+                <Link href="/contact" className="block py-2 text-center text-sm font-medium text-muted-foreground">Contact & Support</Link>
+              </div>
             </div>
           </div>
         )}

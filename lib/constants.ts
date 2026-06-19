@@ -14,11 +14,11 @@ export const X_URL = process.env.NEXT_PUBLIC_X_URL || 'https://x.com/Openboxcomm
 
 export const NAVIGATION = [
   { label: 'Home', href: '/' },
-  { label: 'Blogs', href: '/blogs' },
+  { label: 'Blogs', href: '/blog' },
   { label: 'Events', href: '/events' },
-  { label: 'Docs', href: '/doc' },
+  { label: 'Docs', href: '/docs' },
   { label: 'Help', href: '/help' },
-  { label: 'Support Us', href: '/support' },
+  { label: 'Support Us', href: '/sponsor' },
 ]
 
 export const FEATURES = [

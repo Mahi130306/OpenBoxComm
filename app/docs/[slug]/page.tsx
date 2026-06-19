@@ -37,7 +37,7 @@ export default async function DocPage({ params }: { params: Promise<{ slug: stri
     <div className="mx-auto max-w-7xl px-4 py-10 sm:py-16 sm:px-6 lg:px-8">
       <div className="mb-6">
         <Button asChild variant="outline" className="group">
-          <Link href="/doc">
+          <Link href="/docs">
             <ChevronLeft className="mr-2 h-4 w-4 transition-transform group-hover:-translate-x-1" />
             Back to Docs
           </Link>
@@ -80,7 +80,7 @@ export default async function DocPage({ params }: { params: Promise<{ slug: stri
 
           <div className="mt-12 border-t border-border/50 pt-8">
             <Button asChild variant="outline" className="group">
-              <Link href="/doc">
+              <Link href="/docs">
                 <ChevronLeft className="mr-2 h-4 w-4 transition-transform group-hover:-translate-x-1" />
                 Back to Docs
               </Link>

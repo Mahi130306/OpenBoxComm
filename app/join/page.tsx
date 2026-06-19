@@ -49,7 +49,7 @@ export default function JoinPage() {
         <div className="grid gap-6">
           {/* Featured Card */}
           <Link
-            href={`/servers/${featured.slug}`}
+            href={`/community/${featured.slug}`}
             className="group relative flex flex-col items-center justify-between gap-8 overflow-hidden rounded-2xl border border-border bg-surface p-8 transition-all hover:-translate-y-1 hover:border-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/10 md:flex-row md:p-10"
           >
             <div className={`absolute left-0 top-0 h-full w-1.5 bg-gradient-to-b ${featured.accent}`} />
@@ -110,7 +110,7 @@ export default function JoinPage() {
                 </CardContent>
                 <CardFooter>
                   <Button asChild variant="ghost" className="w-full justify-between group/btn text-cyan-500 hover:text-cyan-500 hover:bg-cyan-500/5">
-                    <Link href={`/servers/${server.slug}`}>
+                    <Link href={`/community/${server.slug}`}>
                       Join server
                       <ArrowRight className="h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
                     </Link>
@@ -127,11 +127,11 @@ export default function JoinPage() {
         <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
           <p className="text-center text-sm text-muted-foreground md:text-left">
             Not sure where to start? Join{' '}
-            <Link href={`/servers/${featured.slug}`} className="font-medium text-cyan-500 hover:underline">
+            <Link href={`/community/${featured.slug}`} className="font-medium text-cyan-500 hover:underline">
               {featured.name}
             </Link>{' '}
             first. Or{' '}
-            <Link href="/doc/getting-started" className="font-medium text-cyan-500 hover:underline">
+            <Link href="/docs/getting-started" className="font-medium text-cyan-500 hover:underline">
               read the getting started guide.
             </Link>
           </p>

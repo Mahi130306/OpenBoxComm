@@ -74,7 +74,7 @@ export function DocSearch({ initialDocs }: DocSearchProps) {
                 <p className="text-sm text-muted-foreground">{doc.description}</p>
               </CardContent>
               <CardFooter>
-                <Link href={`/doc/${doc.slug}`} className="inline-flex items-center text-sm font-medium text-lime-600 hover:text-lime-500 dark:text-lime-300 dark:hover:text-lime-200 transition-colors">
+                <Link href={`/docs/${doc.slug}`} className="inline-flex items-center text-sm font-medium text-lime-600 hover:text-lime-500 dark:text-lime-300 dark:hover:text-lime-200 transition-colors">
                   Open guide
                   <ChevronRight className="ml-1 h-4 w-4" />
                 </Link>

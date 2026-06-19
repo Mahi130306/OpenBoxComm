@@ -28,7 +28,7 @@ export function MasterCalendar() {
           )}
           {events.map((event) => (
             <div
-              key={event.id}
+              key={event.slug}
               className="flex flex-col justify-between rounded-lg border border-border bg-surface p-4 transition-colors hover:border-cyan-300/50 sm:flex-row sm:items-center"
             >
               <div>
@@ -41,7 +41,7 @@ export function MasterCalendar() {
                 </div>
               </div>
               <Button variant="outline" size="sm" asChild className="mt-3 sm:mt-0">
-                <Link href={`/events/${event.id}`}>Details</Link>
+                <Link href={`/events/${event.slug}`}>Details</Link>
               </Button>
             </div>
           ))}

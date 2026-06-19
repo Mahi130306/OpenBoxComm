@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button'
 export const metadata: Metadata = {
   title: 'FAQ — Help Centre',
   description: 'Frequently asked questions about Open Box communities, Discord servers, and more.',
-  alternates: { canonical: '/help/faq' },
+  alternates: { canonical: '/faq' },
 }
 
 export default function FAQPage() {
@@ -27,7 +27,7 @@ export default function FAQPage() {
           <Link href="/help">Back to Help</Link>
         </Button>
         <Button asChild variant="outline">
-          <Link href="/doc/rules">Read Rules</Link>
+          <Link href="/docs/rules">Read Rules</Link>
         </Button>
       </div>
     </div>

@@ -67,7 +67,7 @@ export const docContents: Record<string, DocData> = {
       },
       {
         title: 'Joining Other Servers',
-        content: 'Each Open Box server has its own invite link. You can find them all at openboxcomm.in/servers or in the #server-links channel in Junction. Joining multiple servers uses the same Discord account — no separate signup needed.',
+        content: 'Each Open Box server has its own invite link. You can find them all at openboxcomm.in/community or in the #server-links channel in Junction. Joining multiple servers uses the same Discord account — no separate signup needed.',
       },
     ],
   },
