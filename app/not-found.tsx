@@ -32,7 +32,7 @@ export default function NotFound() {
           Go Home
         </Link>
         <Link
-          href="/community"
+          href="/servers"
           className="inline-flex items-center gap-2 rounded-lg border border-border bg-surface px-5 py-2.5 text-sm font-semibold transition-colors hover:border-white/20"
         >
           Browse Servers

@@ -10,7 +10,7 @@ interface BlogCardProps {
 
 export function BlogCard({ title, description, date, slug, author }: BlogCardProps) {
   return (
-    <Link href={`/blog/${slug}`}>
+    <Link href={`/blogs/${slug}`}>
       <article className="group rounded-lg border border-border bg-card p-6 hover:shadow-md transition-shadow">
         <div className="flex flex-col gap-2">
           <h3 className="text-lg font-semibold group-hover:text-primary transition-colors">{title}</h3>

@@ -74,43 +74,43 @@ export const servers = [
 ]
 
 export const events = [
-  {
-    slug: 'open-build-night',
-    name: 'Open Build Night',
-    server: 'Dev',
-    serverSlug: 'dev',
-    date: '2026-07-18T19:00:00+05:30',
-    description: 'Bring a half-built project, get momentum, and leave with a tiny shipped improvement.',
-    ticketStatus: 'free',
-    isOffline: false,
-    location: 'Discord voice stage',
-    agenda: ['Quick intros', '45 minute build sprint', 'Feedback rounds', 'Show-and-tell'],
-  },
-  {
-    slug: 'gg-community-cup',
-    name: 'GG Community Cup',
-    server: 'GG',
-    serverSlug: 'gg',
-    date: '2026-08-02T18:00:00+05:30',
-    description: 'A friendly tournament night with squads, brackets, and post-match hangout rooms.',
-    ticketStatus: 'paid',
-    price: '₹299',
-    isOffline: false,
-    location: 'GG Discord tournament channels',
-    agenda: ['Check-in', 'Qualifier matches', 'Final lobby', 'Highlights and prizes'],
-  },
-  {
-    slug: 'jn-town-hall',
-    name: 'JN Town Hall',
-    server: 'JN',
-    serverSlug: 'jn',
-    date: '2026-08-16T17:00:00+05:30',
-    description: 'Community updates, open questions, and a look at what Open Box is building next.',
-    ticketStatus: 'free',
-    isOffline: false,
-    location: 'Main Discord stage',
-    agenda: ['Roadmap update', 'Community questions', 'Server spotlight', 'Open mic'],
-  },
+  // {
+  //   id: 'open-build-night',
+  //   name: 'Open Build Night',
+  //   server: 'Dev',
+  //   serverSlug: 'dev',
+  //   date: '2026-07-18T19:00:00+05:30',
+  //   description: 'Bring a half-built project, get momentum, and leave with a tiny shipped improvement.',
+  //   ticketStatus: 'free',
+  //   isOffline: false,
+  //   location: 'Discord voice stage',
+  //   agenda: ['Quick intros', '45 minute build sprint', 'Feedback rounds', 'Show-and-tell'],
+  // },
+  // {
+  //   id: 'gg-community-cup',
+  //   name: 'GG Community Cup',
+  //   server: 'GG',
+  //   serverSlug: 'gg',
+  //   date: '2026-08-02T18:00:00+05:30',
+  //   description: 'A friendly tournament night with squads, brackets, and post-match hangout rooms.',
+  //   ticketStatus: 'paid',
+  //   price: '₹299',
+  //   isOffline: false,
+  //   location: 'GG Discord tournament channels',
+  //   agenda: ['Check-in', 'Qualifier matches', 'Final lobby', 'Highlights and prizes'],
+  // },
+  // {
+  //   id: 'jn-town-hall',
+  //   name: 'JN Town Hall',
+  //   server: 'JN',
+  //   serverSlug: 'jn',
+  //   date: '2026-08-16T17:00:00+05:30',
+  //   description: 'Community updates, open questions, and a look at what Open Box is building next.',
+  //   ticketStatus: 'free',
+  //   isOffline: false,
+  //   location: 'Main Discord stage',
+  //   agenda: ['Roadmap update', 'Community questions', 'Server spotlight', 'Open mic'],
+  // },
 ]
 
 export interface Blog {
@@ -353,8 +353,8 @@ export const teamMembers = [
   // }
 ]
 
-export function getEvent(slug: string) {
-  return events.find((event) => event.slug === slug)
+export function getEvent(id: string) {
+  return events.find((event) => event.id === id)
 }
 
 export function getTeamMember(slug: string) {

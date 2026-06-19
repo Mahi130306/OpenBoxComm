@@ -131,11 +131,11 @@ export function Footer() {
                 { label: 'About', href: '/about' },
                 // { label: 'Team', href: '/team' },
                 // { label: 'Join', href: '/join' },
-                { label: 'Servers', href: '/community' },
+                { label: 'Servers', href: '/servers' },
                 { label: 'Events', href: '/events' },
-                { label: 'Blogs', href: '/blog' },
-                { label: 'Docs', href: '/docs' },
-                { label: 'Contact Us', href: '/contact' },
+                { label: 'Blogs', href: '/blogs' },
+                { label: 'Docs', href: '/doc' },
+                { label: 'Contact Us', href: '/contact-us' },
               ].map((l) => (
                 <li key={l.href}>
                   <Link href={l.href} className="text-muted-foreground hover:text-foreground transition-colors">
@@ -151,11 +151,11 @@ export function Footer() {
             <h3 className="text-sm font-semibold mb-4 text-foreground">Community</h3>
             <ul className="space-y-2 text-sm">
               {[
-                { label: 'Support Us', href: '/sponsor' },
+                { label: 'Support Us', href: '/support' },
                 { label: 'Help Centre', href: '/help' },
-                { label: 'Jn. Server', href: '/community/jn' },
-                { label: 'Dev Server', href: '/community/dev' },
-                { label: 'GG Server', href: '/community/gg' },
+                { label: 'Jn. Server', href: '/servers/jn' },
+                { label: 'Dev Server', href: '/servers/dev' },
+                { label: 'GG Server', href: '/servers/gg' },
               ].map((l) => (
                 <li key={l.href}>
                   <Link href={l.href} className="text-muted-foreground hover:text-foreground transition-colors">
