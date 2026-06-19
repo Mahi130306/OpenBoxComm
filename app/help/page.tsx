@@ -25,13 +25,13 @@ export default function HelpPage() {
         </p>
         <div className="mt-8 flex flex-wrap gap-4">
           <Button asChild size="lg" className="rounded-full shadow-lg shadow-cyan-500/20">
-            <Link href="/faq">
+            <Link href="/help/faq">
               <Search className="mr-2 h-4 w-4" />
               Search FAQ
             </Link>
           </Button>
           <Button asChild variant="outline" size="lg" className="rounded-full">
-            <Link href="/docs/rules">
+            <Link href="/doc/rules">
               <Shield className="mr-2 h-4 w-4" />
               Community Rules
             </Link>
@@ -126,7 +126,7 @@ export default function HelpPage() {
               </div>
 
               <Button asChild variant="outline" className="w-full">
-                <Link href="/contact">
+                <Link href="/contact-us">
                   View All Contact Options
                 </Link>
               </Button>

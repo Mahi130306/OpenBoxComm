@@ -60,7 +60,7 @@ export function BlogSearch({ initialBlogs }: BlogSearchProps) {
       ) : (
         <div className="grid gap-6 md:grid-cols-3">
           {filteredBlogs.map((post, i) => {
-            const href = `/blog/${post.slug}`
+            const href = `/blogs/${post.slug}`
 
             return (
               <Card

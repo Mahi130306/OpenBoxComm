@@ -45,7 +45,7 @@ export default function RefundPage() {
         <li>
           <strong>Patreon memberships:</strong> Patreon handles billing and processes charges at the start of
           each billing period. Refunds are governed by{' '}
-          <a href="https://sponsor.patreon.com/hc/en-us/articles/204606125" target="_blank" rel="noopener noreferrer">
+          <a href="https://support.patreon.com/hc/en-us/articles/204606125" target="_blank" rel="noopener noreferrer">
             Patreon&apos;s Refund Policy
           </a>
           . Contact Patreon support directly. We will assist where we can if you reach out to us as well.

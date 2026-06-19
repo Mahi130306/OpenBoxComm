@@ -76,7 +76,7 @@ export function DirectorySearch() {
               <CardFooter>
                 {server.isLive ? (
                   <Button asChild className="w-full">
-                    <Link href={`/community/${server.slug}`}>
+                    <Link href={`/servers/${server.slug}`}>
                       Visit Server
                     </Link>
                   </Button>

@@ -91,7 +91,7 @@ export default function EventsPage() {
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {filteredEvents.map((event, i) => (
             <Card 
-              key={event.slug}
+              key={event.id} 
               className="flex flex-col border-border bg-surface transition-all hover:-translate-y-1 hover:shadow-lg animate-in fade-in slide-in-from-bottom-4 duration-500 fill-mode-both"
               style={{ animationDelay: `${100 + i * 50}ms` }}
             >
@@ -113,7 +113,7 @@ export default function EventsPage() {
               </CardContent>
               <CardFooter>
                 <Button asChild className="w-full">
-                  <Link href={`/events/${event.slug}`}>View Details</Link>
+                  <Link href={`/events/${event.id}`}>View Details</Link>
                 </Button>
               </CardFooter>
             </Card>
