@@ -27,13 +27,7 @@ const nextConfig = {
       { source: '/docs', destination: '/doc', permanent: true },
       { source: '/docss', destination: '/doc', permanent: true },
       { source: '/joinus', destination: '/join', permanent: true },
-      { source: '/jion', destination: '/join', permanent: true },
-      { source: '/jio', destination: '/join', permanent: true },
-      { source: '/teams', destination: '/team', permanent: true },
-      { source: '/teem', destination: '/team', permanent: true },
-      { source: '/supprt', destination: '/support', permanent: true },
-      { source: '/suport', destination: '/support', permanent: true },
-    ]
+      { source: '/jion/', destination: '/join', permanent: true },]
   },
 };
 
