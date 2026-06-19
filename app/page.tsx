@@ -39,44 +39,42 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className="flex flex-col">
-      <section className="relative overflow-hidden border-b border-border bg-background">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(34,211,238,0.1),transparent_32%),radial-gradient(circle_at_85%_15%,rgba(244,114,182,0.1),transparent_30%),linear-gradient(135deg,rgba(255,255,255,1),rgba(245,245,250,1))] dark:hidden" />
-        <div className="absolute inset-0 hidden dark:block bg-[radial-gradient(circle_at_15%_20%,rgba(34,211,238,0.18),transparent_32%),radial-gradient(circle_at_85%_15%,rgba(244,114,182,0.16),transparent_30%),linear-gradient(135deg,rgba(17,17,17,0.2),rgba(10,10,10,1))]" />
+      <section className="relative min-h-[90vh] overflow-hidden border-b border-border bg-background flex items-center">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 z-0">
+          <div className="absolute top-1/4 left-1/4 h-96 w-96 rounded-full bg-cyan-500/10 blur-[120px] animate-pulse" />
+          <div className="absolute bottom-1/4 right-1/4 h-96 w-96 rounded-full bg-pink-500/10 blur-[120px] animate-pulse" style={{ animationDelay: '2s' }} />
+        </div>
 
-        <div className="relative mx-auto grid max-w-7xl gap-12 px-4 py-24 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:px-8 lg:py-28">
-          <div className="flex flex-col justify-center">
-            <div className="mb-5 inline-flex w-fit items-center gap-2 rounded-full border border-border bg-muted/50 px-3 py-1 text-sm text-muted-foreground">
-              <Sparkles className="h-4 w-4 text-cyan-500" />
-              Pick Your World.
+        <div className="relative z-10 mx-auto grid max-w-7xl gap-16 px-4 py-24 sm:px-6 lg:grid-cols-[1fr_0.8fr] lg:px-8 lg:py-32">
+          <div className="flex flex-col justify-center items-start">
+            <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-cyan-500/20 bg-cyan-500/5 px-4 py-1.5 text-sm font-bold text-cyan-400 backdrop-blur-sm animate-in fade-in slide-in-from-top-4 duration-700">
+              <Sparkles className="h-4 w-4" />
+              Community Network 2.0
             </div>
-            <h1 className="max-w-3xl text-balance text-5xl font-extrabold tracking-tight lg:text-7xl">
-              Open Doors. Pick Yours.
+            <h1 className="max-w-4xl text-balance text-6xl font-black tracking-tighter sm:text-7xl lg:text-8xl leading-[0.9] mb-8 animate-in fade-in slide-in-from-left-8 duration-1000 fill-mode-both">
+              Pick Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">World.</span>
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-              OpenBox is home to multiple communities across gaming, development, study, networking, and more. Free to join. No gatekeeping. Just find the one that fits and jump in.
+            <p className="max-w-2xl text-xl leading-relaxed text-muted-foreground/80 mb-10 animate-in fade-in slide-in-from-left-12 duration-1000 delay-200 fill-mode-both">
+              OpenBox is a multi-server network for builders, gamers, and students. No gatekeeping. Just join the server that fits your vibe and start doing.
             </p>
-            <div className="mt-10 flex flex-wrap items-center gap-3">
-              {/* <Button asChild size="lg">
-                <a href={process.env.NEXT_PUBLIC_DISCORD_INVITE_MAIN} target="_blank" rel="noopener noreferrer">
-                  Join the Community
-                </a>
-              </Button> */}
-              <Button asChild variant="secondary" size="lg">
-                <Link href="/servers">
-                  Explore Servers
-                  <ArrowRight className="ml-2 h-4 w-4" />
+            <div className="flex flex-wrap items-center gap-4 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-500 fill-mode-both">
+              <Button asChild variant="glow" size="lg" className="rounded-2xl h-14 px-10 text-lg">
+                <Link href="/community">
+                  Explore Community
+                  <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg">
-                <Link href="/events">Explore Events</Link>
+              <Button asChild variant="outline" size="lg" className="rounded-2xl h-14 px-10 text-lg glass-card">
+                <Link href="/events">Browse Events</Link>
               </Button>
             </div>
           </div>
 
-          {/* Hero Abstract Graphic — right column */}
-          <div className="flex items-center justify-center lg:justify-end">
-            <div className="flex items-center justify-center w-full h-full">
-              <ServerNodeGraph />
+          <div className="flex items-center justify-center lg:justify-end animate-in fade-in zoom-in-75 duration-1000 delay-300 fill-mode-both">
+            <div className="relative w-full aspect-square max-w-[500px]">
+               <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-[80px] opacity-50" />
+               <ServerNodeGraph />
             </div>
           </div>
         </div>

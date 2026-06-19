@@ -25,7 +25,7 @@ export function useDiscordMembers(targetSlug?: string) {
       await Promise.allSettled(
         serversToFetch.map(async (server) => {
           try {
-            const res = await fetch(`/api/discord-members?code=${server.inviteCode}`);
+            const res = await fetch(`/api/v1/stats/discord?code=${server.inviteCode}`);
             if (res.ok) {
               const data = await res.json();
               if (data.approximate_member_count !== undefined && mounted) {

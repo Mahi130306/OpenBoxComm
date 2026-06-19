@@ -40,7 +40,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ slu
     <article className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
       <div className="mb-8">
         <Button asChild variant="outline" className="group">
-          <Link href="/blogs">
+          <Link href="/blog">
             <ChevronLeft className="mr-2 h-4 w-4 transition-transform group-hover:-translate-x-1" />
             Back to Blogs
           </Link>
@@ -75,7 +75,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ slu
 
       <div className="mt-16 border-t border-border/50 pt-8">
         <Button asChild variant="outline" className="group">
-          <Link href="/blogs">
+          <Link href="/blog">
             <ChevronLeft className="mr-2 h-4 w-4 transition-transform group-hover:-translate-x-1" />
             Back to Blogs
           </Link>

@@ -146,8 +146,8 @@ export default async function ServerPage({
                 <div className="space-y-3">
                   {serverEvents.map((event) => (
                     <Link
-                      key={event.id}
-                      href={`/events/${event.id}`}
+                      key={event.slug}
+                      href={`/events/${event.slug}`}
                       className="flex items-center gap-3 rounded-xl border border-border bg-surface p-4 transition-all hover:border-white/20 hover:shadow-md"
                     >
                       <Calendar className="h-4 w-4 flex-shrink-0 text-muted-foreground" />
@@ -174,13 +174,13 @@ export default async function ServerPage({
 
               <div className="mt-5 space-y-2 border-t border-border pt-5">
                 <Button asChild variant="ghost" className="w-full justify-start gap-2">
-                  <Link href={`/doc/${slug}`}>
+                  <Link href={`/docs/${slug}`}>
                     <BookOpen className="h-4 w-4" />
                     Server Documentation
                   </Link>
                 </Button>
                 <Button asChild variant="ghost" className="w-full justify-start gap-2">
-                  <Link href={`/blogs?server=${slug}`}>
+                  <Link href={`/blog?server=${slug}`}>
                     <FileText className="h-4 w-4" />
                     Server Blogs
                   </Link>
@@ -205,7 +205,7 @@ export default async function ServerPage({
                   .map((s) => (
                     <Link
                       key={s.slug}
-                      href={`/servers/${s.slug}`}
+                      href={`/community/${s.slug}`}
                       className="flex items-center gap-3 rounded-lg p-2 transition-colors hover:bg-accent"
                     >
                       {SERVER_LOGOS[s.slug] ? (

@@ -120,7 +120,7 @@ const FAQ_CATEGORIES = [
     items: [
       {
         question: 'Where are the rules?',
-        answer: 'The full community rules live in the documentation at /doc/rules.',
+        answer: 'The full community rules live in the documentation at /docs/rules.',
         tags: ['rules', 'docs'],
       },
       {
