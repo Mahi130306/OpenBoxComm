@@ -1,78 +1,151 @@
 import type { Metadata } from 'next'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
+import { HelpCircle, Search, Shield, MessageSquare, Info, Mail, ArrowRight } from 'lucide-react'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 
 export const metadata: Metadata = {
-  title: 'Help Centre',
+  title: 'Help Centre — Open Box',
   description: 'Get help with Open Box communities. Find answers in our FAQ, read community rules, or contact the team directly.',
   alternates: { canonical: '/help' },
 }
 
 export default function HelpPage() {
   return (
-    <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
-      <h1 className="mb-6">Need Help?</h1>
-      <div className="mb-8 flex flex-wrap gap-3">
-        <Button asChild variant="outline">
-          <Link href="/help/faq">Search FAQ</Link>
-        </Button>
-        <Button asChild variant="outline">
-          <Link href="/doc/rules">Community Rules</Link>
-        </Button>
-      </div>
-      <div className="space-y-8">
-        <div className="bg-surface border border-border rounded-lg p-6">
-          <h2 className="text-2xl mb-4">How to ask a question to team</h2>
-          <ol className="list-decimal list-inside space-y-3 text-muted-foreground">
-            <li>Join the server using the link below</li>
-            <li>Go to the <code className="bg-muted px-1 rounded">#help</code> channel</li>
-            <li>Describe your problem clearly: include context, what you tried, and what happened</li>
-            <li>Be patient and respectful — everyone volunteers their time</li>
-            <li>Mark as resolved when your question is answered</li>
-          </ol>
-          <div className="mt-6">
-            <Button asChild>
-              <a href={process.env.NEXT_PUBLIC_DISCORD_INVITE_MAIN} target="_blank" rel="noopener noreferrer">
-                Join the Server
-              </a>
-            </Button>
-          </div>
+    <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      {/* Hero Section */}
+      <div className="mb-12 rounded-2xl border border-black/10 bg-gradient-to-br from-black/[0.04] to-cyan-400/[0.08] p-8 shadow-sm dark:border-white/10 dark:from-white/[0.08] dark:to-cyan-400/[0.05] sm:p-12">
+        <div className="flex items-center gap-3 mb-4">
+            <HelpCircle className="h-8 w-8 text-cyan-500" />
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-cyan-600 dark:text-cyan-300">Help Centre</p>
         </div>
-
-        <div className="bg-surface border border-border rounded-lg p-6">
-          <h2 className="text-2xl mb-2">Community-driven support</h2>
-          <p className="text-muted-foreground">
-            Help is provided by community members, not a formal support team. Be specific about your question,
-            and help others when you can. That&apos;s how we build together.
-          </p>
-        </div>
-
-        {/* Contact section */}
-        <div className="bg-surface border border-border rounded-lg p-6">
-          <h2 className="text-2xl mb-2">Contact Us</h2>
-          <p className="text-muted-foreground mb-4">
-            For non-community queries, reach us directly by email or visit the contact page.
-          </p>
-          <div className="flex flex-col gap-1 text-sm mb-5">
-            <a
-              href="mailto:hello@openboxcomm.in"
-              className="text-indigo-400 hover:text-indigo-300 transition-colors"
-            >
-              hello@openboxcomm.in
-            </a>
-            {/* <a
-              href="mailto:legal@openboxcomm.in"
-              className="text-indigo-400 hover:text-indigo-300 transition-colors"
-            >
-              legal@openboxcomm.in
-            </a> */}
-          </div>
-          <Button asChild variant="outline">
-            <Link href="/contact-us">Contact Page</Link>
+        <h1 className="mb-4 text-4xl font-extrabold tracking-tight text-foreground lg:text-5xl">How can we help?</h1>
+        <p className="max-w-2xl text-lg text-muted-foreground/90">
+          Find answers to common questions, learn about our community standards, or connect with our support team on Discord.
+        </p>
+        <div className="mt-8 flex flex-wrap gap-4">
+          <Button asChild size="lg" className="rounded-full shadow-lg shadow-cyan-500/20">
+            <Link href="/help/faq">
+              <Search className="mr-2 h-4 w-4" />
+              Search FAQ
+            </Link>
+          </Button>
+          <Button asChild variant="outline" size="lg" className="rounded-full">
+            <Link href="/doc/rules">
+              <Shield className="mr-2 h-4 w-4" />
+              Community Rules
+            </Link>
           </Button>
         </div>
+      </div>
+
+      <div className="grid gap-8 lg:grid-cols-3">
+        <div className="lg:col-span-2 space-y-8">
+          {/* How to ask a question */}
+          <Card className="border-border bg-surface/50 shadow-sm overflow-hidden">
+            <CardHeader className="bg-muted/30 pb-6">
+              <CardTitle className="flex items-center gap-2">
+                <MessageSquare className="h-5 w-5 text-cyan-500" />
+                How to ask a question to the team
+              </CardTitle>
+              <CardDescription>
+                Follow these steps for the fastest and most helpful response.
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="pt-6">
+              <ol className="space-y-6">
+                {[
+                  { step: "1", title: "Join the Server", desc: "Use the main invite link to join the Open Box Junction server." },
+                  { step: "2", title: "Go to #help", desc: "Head over to the help channel dedicated to community support." },
+                  { step: "3", title: "Describe Clearly", desc: "Include context, what you tried, and what actually happened." },
+                  { step: "4", title: "Be Patient", desc: "Everyone volunteers their time. We'll get back to you as soon as we can." }
+                ].map((item, i) => (
+                  <li key={i} className="flex gap-4">
+                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-cyan-500/10 text-sm font-bold text-cyan-600 dark:text-cyan-400">
+                      {item.step}
+                    </span>
+                    <div>
+                      <p className="font-bold text-foreground">{item.title}</p>
+                      <p className="text-sm text-muted-foreground mt-0.5">{item.desc}</p>
+                    </div>
+                  </li>
+                ))}
+              </ol>
+              <div className="mt-8">
+                <Button asChild className="w-full sm:w-auto">
+                  <a href={process.env.NEXT_PUBLIC_DISCORD_INVITE_MAIN} target="_blank" rel="noopener noreferrer">
+                    Join the Junction Server
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </a>
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Community support info */}
+          <Card className="border-border bg-surface/50 shadow-sm border-l-4 border-l-cyan-500">
+            <CardContent className="pt-6 flex gap-4">
+              <Info className="h-6 w-6 text-cyan-500 shrink-0" />
+              <div>
+                <h3 className="font-bold mb-1">Community-driven support</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Help is provided by community members, not a formal support team. Be specific about your question,
+                  and help others when you can. That&apos;s how we build together.
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Sidebar: Contact Info */}
+        <aside className="space-y-6">
+          <Card className="border-border bg-surface shadow-md">
+            <CardHeader>
+              <CardTitle className="text-xl">Direct Contact</CardTitle>
+              <CardDescription>
+                For non-community or formal queries.
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              <div className="flex items-center gap-4">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-cyan-500/10">
+                  <Mail className="h-5 w-5 text-cyan-500" />
+                </div>
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">General Email</p>
+                  <a href="mailto:hello@openboxcomm.in" className="font-medium hover:text-cyan-500 transition-colors">
+                    hello@openboxcomm.in
+                  </a>
+                </div>
+              </div>
+
+              <div className="rounded-xl bg-muted/40 p-4">
+                <p className="text-xs text-muted-foreground leading-relaxed">
+                  We usually respond to emails within 2-3 business days. For faster support, please use Discord.
+                </p>
+              </div>
+
+              <Button asChild variant="outline" className="w-full">
+                <Link href="/contact-us">
+                  View All Contact Options
+                </Link>
+              </Button>
+            </CardContent>
+          </Card>
+
+          <Card className="border-border bg-surface shadow-sm">
+            <CardHeader className="pb-3">
+              <CardTitle className="text-lg">Legal Matters</CardTitle>
+            </CardHeader>
+            <CardContent className="text-sm text-muted-foreground">
+              For DMCA notices, legal inquiries, or formal reports, please visit our legal center.
+              <Button asChild variant="link" className="px-0 h-auto mt-2 text-cyan-600 dark:text-cyan-400">
+                <Link href="/legal">Legal Centre</Link>
+              </Button>
+            </CardContent>
+          </Card>
+        </aside>
       </div>
     </div>
   )
 }
-
