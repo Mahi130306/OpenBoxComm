@@ -49,7 +49,7 @@ const nextConfig = {
               "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com",
               "font-src 'self' https://fonts.gstatic.com",
               "img-src 'self' data: blob: https://api.dicebear.com https://cdn.discordapp.com",
-              "connect-src 'self' https://discord.com https://discordapp.com",
+              "connect-src 'self' https://discord.com https://discordapp.com ws: wss: http://localhost:* http://127.0.0.1:*",
               "frame-ancestors 'none'",
               "base-uri 'self'",
               "form-action 'self'",

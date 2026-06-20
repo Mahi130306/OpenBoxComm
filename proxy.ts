@@ -62,8 +62,14 @@ export async function proxy(request: NextRequest) {
     return new NextResponse(null, { status: 404, statusText: 'Not Found' })
   }
 
-  // ── Attach security headers ───────────────────────────────────────────────
   const response = NextResponse.next()
+
+  // ── Skip security headers in development to allow HMR and devtools ────────
+  if (process.env.NODE_ENV === 'development') {
+    return response
+  }
+
+  // ── Attach security headers in production ────────────────────────────────
   for (const [key, value] of Object.entries(buildSecurityHeaders())) {
     response.headers.set(key, value)
   }
@@ -73,6 +79,6 @@ export async function proxy(request: NextRequest) {
 
 export const config = {
   matcher: [
-    '/((?!_next/static|_next/image|favicon.ico).*)',
+    '/((?!_next/static|_next/image|favicon.ico|public).*)',
   ],
 }
