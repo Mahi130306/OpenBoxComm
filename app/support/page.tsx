@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Gift, Heart, Crown, Trophy, Bot, Flame, CheckCircle2, Sparkles, Star } from 'lucide-react'
+import { Gift, Sparkles, Crown, Trophy, Bot, Flame, CheckCircle2, Star } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 
@@ -38,7 +38,7 @@ const tiers = [
     price: '$2/mo',
     icon: Flame,
     description: 'You are playing for real now. Expanded perks with a 7-days trial.',
-    perks: ['Everything in NPC', 'Monthly supporter shoutout', 'Members-only behind the scenes'],
+    perks: ['Everything in NPC (All 3)', 'Monthly supporter shoutout', 'Members-only behind the scenes'],
     badge: '7-Day Free Trial',
     theme: {
       border: 'border-orange-500/20 dark:border-orange-500/10 hover:border-orange-500/40',
@@ -62,7 +62,7 @@ const tiers = [
     icon: Trophy,
     description: 'Reserved for the ones who go above and beyond. Exclusive access.',
     perks: [
-      'Everything in Rookie',
+      'Everything in Rookie (All 5)',
       'Voting rights on community decisions',
       'Direct feedback channel with admins',
       'Early access to OpenBox events',
@@ -80,7 +80,7 @@ const tiers = [
       buttonVariant: 'default' as const,
       buttonStyle: {
         background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
-        color: '#022c22',
+        color: '#000000',
         boxShadow: '0 4px 20px rgba(16,185,129,0.3)'
       }
     }
@@ -91,26 +91,26 @@ const tiers = [
     icon: Crown,
     description: 'The highest tier. You are literally holding OpenBox up.',
     perks: [
-      'Everything in GOAT',
+      'Everything in GOAT (All 9)',
       'Priority consideration for staff recruitment',
       'Direct line to core team via private channel',
       'Name in OpenBox credits on supporter page*'
     ],
     badge: 'Elite Supporter',
     theme: {
-      border: 'border-fuchsia-500/40 dark:border-fuchsia-500/25 hover:border-fuchsia-500/80',
-      bg: 'bg-gradient-to-b from-fuchsia-950/25 via-zinc-950/30 to-black/50 backdrop-blur-lg',
-      glow: 'hover:shadow-[0_0_50px_-5px_rgba(217,70,239,0.5)]',
-      title: 'bg-gradient-to-r from-fuchsia-400 via-pink-400 to-amber-300 bg-clip-text text-transparent font-black tracking-wide',
-      iconColor: 'text-fuchsia-400',
-      iconBg: 'bg-fuchsia-500/20',
-      badgeClass: 'bg-gradient-to-r from-fuchsia-500/30 to-pink-500/30 text-fuchsia-200 border-fuchsia-500/50 font-extrabold tracking-wider uppercase text-[10px]',
+      border: 'border-amber-500/40 dark:border-amber-500/25 hover:border-amber-500/80',
+      bg: 'bg-gradient-to-b from-amber-950/25 via-zinc-950/30 to-black/50 backdrop-blur-lg',
+      glow: 'hover:shadow-[0_0_50px_-5px_rgba(245,158,11,0.45)]',
+      title: 'bg-gradient-to-r from-yellow-400 via-amber-400 to-orange-400 bg-clip-text text-transparent font-black tracking-wide',
+      iconColor: 'text-amber-400',
+      iconBg: 'bg-amber-500/20',
+      badgeClass: 'bg-gradient-to-r from-yellow-500/30 to-amber-500/30 text-yellow-200 border-yellow-500/50 font-extrabold tracking-wider uppercase text-[10px]',
       buttonVariant: 'default' as const,
       buttonStyle: {
-        background: 'linear-gradient(135deg, #d946ef 0%, #ec4899 50%, #f59e0b 100%)',
-        color: '#ffffff',
+        background: 'linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #b45309 100%)',
+        color: '#000000',
         fontWeight: 'bold',
-        boxShadow: '0 4px 25px rgba(217,70,239,0.4)',
+        boxShadow: '0 4px 25px rgba(245,158,11,0.4)',
         border: 'none'
       }
     }
@@ -121,7 +121,7 @@ export default function SupportPage() {
   return (
     <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
       {/* Hero Banner Section */}
-      <div 
+      <div
         className="relative mb-16 rounded-3xl border overflow-hidden p-8 sm:p-12 lg:p-16"
         style={{
           background: 'linear-gradient(135deg, rgba(10,10,10,0.8) 0%, rgba(20,20,20,0.9) 100%)',
@@ -130,31 +130,31 @@ export default function SupportPage() {
         }}
       >
         {/* Dynamic backdrop accent */}
-        <div 
+        <div
           className="absolute -right-24 -top-24 w-96 h-96 rounded-full pointer-events-none opacity-20 filter blur-[80px]"
           style={{
-            background: 'radial-gradient(circle, rgba(236,72,153,0.4) 0%, rgba(217,70,239,0.1) 70%)'
+            background: 'radial-gradient(circle, rgba(245,158,11,0.3) 0%, rgba(217,119,6,0.05) 70%)'
           }}
         />
 
         <div className="flex items-center gap-3 mb-6 relative z-10">
-          <Heart className="h-8 w-8 text-pink-500 animate-pulse" />
-          <p className="text-xs font-bold uppercase tracking-[0.25em] text-pink-500">Support Us</p>
+          <Sparkles className="h-8 w-8 text-amber-500 animate-pulse" />
+          <p className="text-xs font-bold uppercase tracking-[0.25em] text-amber-500">Support Us</p>
         </div>
-        
+
         <h1 className="mb-6 text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl max-w-4xl relative z-10">
-          Support <span className="bg-gradient-to-r from-pink-500 via-fuchsia-500 to-violet-500 bg-clip-text text-transparent">Open Box</span>.
+          Support <span className="bg-gradient-to-r from-yellow-300 via-amber-400 to-orange-400 bg-clip-text text-transparent">Open Box</span>.
         </h1>
-        
+
         <p className="max-w-3xl text-lg text-zinc-300 leading-relaxed mb-8 relative z-10">
           Open Box is community-run and free for everyone. Supporter tiers help keep our servers running, events happening, and documentation growing.
         </p>
 
         <div className="relative z-10">
-          <Button 
-            asChild 
-            size="lg" 
-            className="bg-gradient-to-r from-pink-600 to-fuchsia-600 hover:from-pink-700 hover:to-fuchsia-700 text-white font-bold rounded-xl shadow-xl shadow-pink-500/20 border-none transition-all duration-200 hover:scale-[1.02]"
+          <Button
+            asChild
+            size="lg"
+            className="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-bold rounded-xl shadow-xl shadow-amber-500/20 border-none transition-all duration-200 hover:scale-[1.02]"
           >
             <a href={process.env.NEXT_PUBLIC_PATREON_URL || 'https://patreon.com/OpenBoxComm'} target="_blank" rel="noopener noreferrer">
               Support on Patreon
@@ -166,7 +166,7 @@ export default function SupportPage() {
       <section className="mb-16">
         <div className="mb-8 flex items-center justify-between gap-4 border-b border-zinc-800 pb-4">
           <div className="flex items-center gap-2.5">
-            <Gift className="h-6 w-6 text-pink-500" />
+            <Gift className="h-6 w-6 text-amber-500" />
             <h2 className="text-2xl font-extrabold text-white tracking-tight">Supporter Tiers</h2>
           </div>
           <div className="flex items-center gap-1.5 text-xs text-zinc-400 font-medium">
@@ -174,7 +174,7 @@ export default function SupportPage() {
             Patreon Powered
           </div>
         </div>
-        
+
         <p className="mb-10 text-zinc-400 text-base max-w-2xl leading-relaxed">
           Your supporter role will be assigned based on your contribution inside the OpenBox Jn. server.
         </p>
@@ -184,10 +184,10 @@ export default function SupportPage() {
             const Icon = tier.icon
             const isLegend = tier.name === 'Legend'
             const isGoat = tier.name === 'GOAT'
-            
+
             return (
-              <div 
-                key={tier.name} 
+              <div
+                key={tier.name}
                 className={`
                   group relative overflow-hidden rounded-2xl border p-6
                   transition-all duration-300 hover:-translate-y-1.5
@@ -195,16 +195,16 @@ export default function SupportPage() {
                   ${tier.theme.border} ${tier.theme.bg} ${tier.theme.glow}
                 `}
                 style={{
-                  boxShadow: isLegend ? '0 10px 30px -10px rgba(217,70,239,0.1)' : 'none'
+                  boxShadow: isLegend ? '0 10px 30px -10px rgba(245,158,11,0.15)' : 'none'
                 }}
               >
                 {/* Background ambient spotlight for high tiers */}
                 {(isLegend || isGoat) && (
-                  <div 
+                  <div
                     className="absolute -right-16 -top-16 w-36 h-36 rounded-full pointer-events-none opacity-20 filter blur-2xl group-hover:opacity-40 transition-opacity"
                     style={{
-                      background: isLegend 
-                        ? 'radial-gradient(circle, rgba(217,70,239,0.6) 0%, transparent 70%)' 
+                      background: isLegend
+                        ? 'radial-gradient(circle, rgba(245,158,11,0.5) 0%, transparent 70%)'
                         : 'radial-gradient(circle, rgba(16,185,129,0.5) 0%, transparent 70%)'
                     }}
                   />
@@ -254,14 +254,14 @@ export default function SupportPage() {
 
                 {/* Exclusive Action Button */}
                 <div className="mt-auto">
-                  <Button 
-                    asChild 
+                  <Button
+                    asChild
                     className="w-full rounded-xl text-xs font-bold transition-all duration-200 hover:scale-[1.01]"
                     variant={tier.theme.buttonVariant}
                     style={tier.theme.buttonStyle}
                   >
                     <a href={process.env.NEXT_PUBLIC_PATREON_URL || 'https://patreon.com/OpenBoxComm'} target="_blank" rel="noopener noreferrer">
-                      Get {tier.name} {isLegend && <Sparkles size={12} className="ml-1 text-yellow-300 animate-pulse" />}
+                      Get {tier.name} {isLegend && <Sparkles size={12} className="ml-1 text-black-500 animate-pulse" />}
                     </a>
                   </Button>
                 </div>
