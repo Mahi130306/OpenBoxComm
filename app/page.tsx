@@ -39,7 +39,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className="flex flex-col">
-      <section className="relative overflow-hidden border-b border-border bg-background">
+      <section id="herosection" className="relative overflow-hidden border-b border-border bg-background">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(34,211,238,0.1),transparent_32%),radial-gradient(circle_at_85%_15%,rgba(244,114,182,0.1),transparent_30%),linear-gradient(135deg,rgba(255,255,255,1),rgba(245,245,250,1))] dark:hidden" />
         <div className="absolute inset-0 hidden dark:block bg-[radial-gradient(circle_at_15%_20%,rgba(34,211,238,0.18),transparent_32%),radial-gradient(circle_at_85%_15%,rgba(244,114,182,0.16),transparent_30%),linear-gradient(135deg,rgba(17,17,17,0.2),rgba(10,10,10,1))]" />
 
@@ -57,9 +57,9 @@ export default function Home() {
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-3">
               {/* <Button asChild size="lg">
-                <a href={process.env.NEXT_PUBLIC_DISCORD_INVITE_MAIN} target="_blank" rel="noopener noreferrer">
+                <Link href="/join">
                   Join the Community
-                </a>
+                </Link>
               </Button> */}
               <Button asChild variant="secondary" size="lg">
                 <Link href="/servers">
@@ -82,7 +82,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-b border-border py-24">
+      {/* <section className="border-b border-border py-24">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.85fr_1.15fr] lg:px-8">
           <div className="flex flex-col justify-center">
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-cyan-300">How it works</p>
@@ -106,7 +106,7 @@ export default function Home() {
             />
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Find Your Fit - Quiz */}
       <Quiz />

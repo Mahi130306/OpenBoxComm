@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ChevronLeft } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { Badge } from '@/components/ui/badge'
 import { getDocContent } from '@/lib/docs'
 import { docs } from '@/lib/community-data'
 import { TableOfContents } from '@/components/TableOfContents'
@@ -53,12 +54,17 @@ export default async function DocPage({ params }: { params: Promise<{ slug: stri
         </aside>
 
         <article className="order-1 min-w-0 lg:order-2">
-          <div className="mb-8 rounded-xl border border-black/10 bg-gradient-to-br from-black/[0.04] to-lime-400/[0.08] p-5 shadow-sm sm:p-8 dark:border-white/10 dark:from-white/[0.08] dark:to-lime-400/[0.06]">
-            <h1 className="mb-3 text-2xl font-extrabold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
+          <div className="mb-8 rounded-3xl border border-black/10 bg-gradient-to-br from-black/[0.04] to-lime-400/[0.08] p-8 shadow-sm dark:border-white/10 dark:from-white/[0.08] dark:to-lime-400/[0.05] sm:p-10">
+            {docMeta.section && (
+              <Badge variant="secondary" className="mb-4 bg-lime-500/10 text-lime-600 dark:text-lime-400 border-none font-bold">
+                {docMeta.section}
+              </Badge>
+            )}
+            <h1 className="mb-4 text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
               {docMeta.title}
             </h1>
             {docMeta.description && (
-              <p className="text-base text-muted-foreground/90 sm:text-xl">{docMeta.description}</p>
+              <p className="text-base text-muted-foreground/90 sm:text-lg leading-relaxed">{docMeta.description}</p>
             )}
           </div>
 

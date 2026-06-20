@@ -5,7 +5,7 @@
 
 import { useMemo, useState } from 'react'
 import Link from 'next/link'
-import { CalendarClock } from 'lucide-react'
+import { CalendarClock, Calendar } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
@@ -41,10 +41,16 @@ export default function EventsPage() {
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-      <div className="mb-10 rounded-xl border border-black/10 bg-gradient-to-br from-black/[0.04] to-cyan-400/[0.08] p-8 shadow-sm dark:border-white/10 dark:from-white/[0.08] dark:to-cyan-400/[0.05]">
-        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-cyan-600 dark:text-cyan-300">Community calendar</p>
-        <h1 className="mb-4 text-4xl font-extrabold tracking-tight text-foreground lg:text-5xl">Events</h1>
-        <p className="max-w-2xl text-lg text-muted-foreground/90">
+      {/* Premium Hero Banner */}
+      <div className="mb-16 rounded-3xl border border-black/10 bg-gradient-to-br from-black/[0.04] to-cyan-400/[0.08] p-8 shadow-sm dark:border-white/10 dark:from-white/[0.08] dark:to-cyan-400/[0.05] sm:p-12 lg:p-16">
+        <div className="flex items-center gap-3 mb-6">
+            <Calendar className="h-8 w-8 text-cyan-500" />
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-cyan-600 dark:text-cyan-300">Community calendar</p>
+        </div>
+        <h1 className="mb-6 text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl lg:text-6xl max-w-4xl">
+          Events
+        </h1>
+        <p className="max-w-3xl text-xl text-muted-foreground/90 leading-relaxed">
           Join workshops, tournaments, build nights, and community gatherings across all Open Box servers.
         </p>
       </div>

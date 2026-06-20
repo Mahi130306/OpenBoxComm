@@ -1,135 +1,168 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Refund Policy — Open Box',
-  description: 'Refund Policy for Open Box — how we handle refund requests for Patreon, UPI, and other payment channels.',
+  title: 'DMCA & Copyright Policy — Open Box',
+  description: 'How Open Box handles copyright infringement claims under Indian law and the DMCA.',
 }
 
-export default function RefundPage() {
+export default function DmcaPage() {
   const lastUpdated = '6 June 2025'
 
   return (
     <article>
-      <h1 className="!text-3xl !font-extrabold mb-1">Refund Policy</h1>
+      <h1 className="!text-3xl !font-extrabold mb-1">DMCA &amp; Copyright Policy</h1>
       <p className="text-sm text-muted-foreground mb-8">Last updated: {lastUpdated}</p>
 
       <p>
-        This Refund Policy applies to any financial contributions or payments made to Open Box across any of
-        our platforms — including Patreon memberships, paid event registrations on{' '}
-        <strong>openboxcomm.in</strong>, UPI payments, and any other payment channels we introduce. It is
-        governed by the{' '}
-        <a href="https://www.indiacode.nic.in/bitstream/123456789/15256/1/consumer_protection_act_2019.pdf" target="_blank" rel="noopener noreferrer">
-          Consumer Protection Act, 2019
-        </a>{' '}
-        — which ensures consumer rights and provides remedies against unfair trade practices and deficient
-        services — and applicable Indian regulations.
+        Open Box respects intellectual property rights and expects all users and community members to do the
+        same. This policy applies across the entire Open Box umbrella — including <strong>openboxcomm.in</strong>,
+        all Discord servers (JN, Dev, GG, Classic, Study, Connect, and any future servers), our social media
+        accounts on X, Instagram, and YouTube, and any other platforms we operate now or in the future.
       </p>
-
-      <div
-        style={{
-          border: '1px solid #333',
-          borderRadius: '8px',
-          padding: '12px 16px',
-          marginBottom: '24px',
-          background: 'rgba(100,200,100,0.05)',
-        }}
-      >
-        <strong>ℹ️ Nature of Contributions:</strong> Open Box is a free, open community. Payments made via
-        Patreon are voluntary donations or memberships to support the community — they do not constitute
-        payment for a specific product or service. Paid event registrations and supporter tiers, where
-        applicable, are governed by the terms presented at the time of purchase.
-      </div>
-
-      <h2>1. General Refund Eligibility</h2>
+      <p>It is governed by the following laws:</p>
       <ul>
         <li>
-          <strong>Patreon memberships:</strong> Patreon handles billing and processes charges at the start of
-          each billing period. Refunds are governed by{' '}
-          <a href="https://support.patreon.com/hc/en-us/articles/204606125" target="_blank" rel="noopener noreferrer">
-            Patreon&apos;s Refund Policy
+          <a href="https://www.indiacode.nic.in/bitstream/123456789/1367/1/a1957-14.pdf" target="_blank" rel="noopener noreferrer">
+            Copyright Act, 1957
+          </a>{' '}
+          — protects intellectual property rights in creative works including text, graphics, software, and
+          original content.
+        </li>
+        <li>
+          <a href="https://www.indiacode.nic.in/bitstream/123456789/13116/1/it_act_2000_updated.pdf" target="_blank" rel="noopener noreferrer">
+            Information Technology Act, 2000
+          </a>{' '}
+          — India&apos;s primary cyber law; specifically{' '}
+          <a href="https://indiankanoon.org/doc/10190353/" target="_blank" rel="noopener noreferrer">
+            Section 79
+          </a>{' '}
+          provides safe harbour protection for intermediaries who act with due diligence.
+        </li>
+        <li>
+          <a href="https://www.copyright.gov/legislation/dmca.pdf" target="_blank" rel="noopener noreferrer">
+            Digital Millennium Copyright Act (DMCA)
+          </a>{' '}
+          — US law providing a framework for copyright takedown notices and safe harbour for online platforms
+          under{' '}
+          <a href="https://www.copyright.gov/title17/92chap5.html#512" target="_blank" rel="noopener noreferrer">
+            Section 512
           </a>
-          . Contact Patreon support directly. We will assist where we can if you reach out to us as well.
-        </li>
-        <li>
-          <strong>One-time donations (Patreon or direct):</strong> We will consider refund requests for
-          donations made in error, within <strong>7 days</strong> of the transaction, subject to review.
-        </li>
-        <li>
-          <strong>UPI and direct payments:</strong> Payments via UPI or any direct channel are considered
-          final at transfer. Refunds are only considered for verified technical errors or duplicate charges,
-          submitted within <strong>7 days</strong>.
-        </li>
-        <li>
-          <strong>Future payment gateways:</strong> As we expand payment options, refund terms for new
-          channels will be published alongside them. Where not explicitly stated, this policy applies.
+          .
         </li>
       </ul>
 
-      <h2>2. Non-Refundable Situations</h2>
-      <p>Refunds will <strong>not</strong> be issued in the following situations:</p>
+      <h2>1. Scope</h2>
+      <p>This policy covers content posted, shared, or distributed across:</p>
       <ul>
-        <li>Voluntary cancellation after a billing cycle has already completed</li>
-        <li>Dissatisfaction with content that was fully accessible during the membership or subscription period</li>
-        <li>Account suspension or ban from any Open Box platform due to violations of our <a href="/legal/rules">Community Rules</a>, <a href="/legal/aup">Acceptable Use Policy</a>, or <a href="/legal/terms">Terms &amp; Conditions</a></li>
-        <li>Donations or payments made more than 7 days prior to the refund request</li>
-        <li>Change of mind after an event has taken place or event materials have been distributed</li>
+        <li>The Open Box website at <strong>openboxcomm.in</strong> and all subdomains</li>
+        <li>All Open Box Discord servers: JN, Dev, GG, Classic, Study, Connect, and any future servers</li>
+        <li>Open Box official accounts on X, Instagram, and YouTube</li>
+        <li>Any other platform or service operated under the Open Box brand now or in the future</li>
       </ul>
 
-      <h2>3. Event Ticket Refunds</h2>
-      <p>For paid events hosted by Open Box across any of our platforms:</p>
-      <ul>
-        <li>Cancellations more than <strong>7 days</strong> before the event are eligible for a full refund</li>
-        <li>Cancellations within 7 days of the event are not eligible, but we may offer a credit or transfer at our discretion</li>
-        <li>If Open Box cancels or postpones an event, all registered participants receive a full refund or transfer to the rescheduled date</li>
-        <li>Event refunds follow the same 5 to 10 business day processing window</li>
-      </ul>
-
-      <h2>4. How to Request a Refund</h2>
-      <p>Contact us at <strong>support@openboxcomm.in</strong> with:</p>
-      <ol>
-        <li>Your name and email address used for the transaction</li>
-        <li>Transaction ID, Patreon receipt, or UPI reference number</li>
-        <li>The platform or channel through which the payment was made</li>
-        <li>Date of transaction and amount</li>
-        <li>Reason for the refund request</li>
-      </ol>
-      <p>We will respond within <strong>10 business days</strong>.</p>
-
-      <h2>5. Processing Refunds</h2>
+      <h2>2. Safe Harbour — Intermediary Liability</h2>
       <p>
-        Approved refunds will be processed to the original payment method within{' '}
-        <strong>5 to 10 business days</strong>. We are not responsible for delays caused by the payment
-        intermediary. UPI refunds may take up to 5 business days depending on your bank.
-      </p>
-
-      <h2>6. Consumer Rights</h2>
-      <p>
-        Under the{' '}
-        <a href="https://www.indiacode.nic.in/bitstream/123456789/15256/1/consumer_protection_act_2019.pdf" target="_blank" rel="noopener noreferrer">
-          Consumer Protection Act, 2019
+        Under{' '}
+        <a href="https://indiankanoon.org/doc/10190353/" target="_blank" rel="noopener noreferrer">
+          Section 79 of the IT Act, 2000
         </a>
-        , you have rights regarding unfair trade practices and deficient services. If you believe your
-        consumer rights have been violated, you may approach:
+        , Open Box operates as an intermediary and is not liable for user-generated content, provided we
+        observe due diligence and expeditiously remove infringing content upon receiving a valid notice. This
+        policy describes our due diligence procedures.
+      </p>
+
+      <h2>3. Reporting Copyright Infringement</h2>
+      <p>
+        If you believe content anywhere on the Open Box Platform infringes your copyright, submit a written
+        takedown notice to:
       </p>
       <ul>
-        <li><strong>District Consumer Disputes Redressal Commission</strong> — for claims up to ₹50 lakhs</li>
-        <li><strong>State Consumer Disputes Redressal Commission</strong> — for claims between ₹50 lakhs and ₹2 crores</li>
-        <li><strong>National Consumer Disputes Redressal Commission</strong> — for claims above ₹2 crores</li>
-        <li>
-          <strong>National Consumer Helpline:</strong>{' '}
-          <a href="https://consumerhelpline.gov.in" target="_blank" rel="noopener noreferrer">consumerhelpline.gov.in</a>{' '}
-          | 1800-11-4000
-        </li>
+        <li><strong>Email:</strong> legal@openboxcomm.in</li>
+        <li><strong>Subject line:</strong> Copyright Takedown Notice</li>
       </ul>
-
-      <h2>7. Changes to This Policy</h2>
+      <p>Your notice must include:</p>
+      <ol>
+        <li>Your full name and contact information (email and phone number)</li>
+        <li>A description of the copyrighted work you claim has been infringed</li>
+        <li>The URL, Discord server, channel, post, or location where the infringing content appears</li>
+        <li>A statement that you have a good faith belief the use is not authorised by the copyright owner, its agent, or law</li>
+        <li>A statement, under penalty of perjury, that the information in your notice is accurate and that you are the copyright owner or authorised to act on their behalf</li>
+        <li>Your electronic or physical signature</li>
+      </ol>
       <p>
-        We reserve the right to update this Refund Policy at any time. The updated policy will be posted here
-        with a revised &quot;Last updated&quot; date.
+        <strong>Note for Indian rights holders:</strong> You may additionally invoke your rights under{' '}
+        <a href="https://indiankanoon.org/doc/1142284/" target="_blank" rel="noopener noreferrer">
+          Sections 51 to 63
+        </a>{' '}
+        of the{' '}
+        <a href="https://www.indiacode.nic.in/bitstream/123456789/1367/1/a1957-14.pdf" target="_blank" rel="noopener noreferrer">
+          Copyright Act, 1957
+        </a>
+        , which cover infringement, remedies, and criminal penalties.
       </p>
 
-      <h2>8. Contact</h2>
-      <p>For refund inquiries: <strong>support@openboxcomm.in</strong></p>
+      <h2>4. Our Response to Valid Notices</h2>
+      <p>Upon receiving a valid and complete takedown notice, we will:</p>
+      <ul>
+        <li>Acknowledge receipt within <strong>2 business days</strong></li>
+        <li>Remove or disable access to the allegedly infringing content (typically within <strong>5 business days</strong>)</li>
+        <li>Notify the user who posted the content that it has been removed</li>
+        <li>Provide the user an opportunity to submit a counter-notice</li>
+      </ul>
+
+      <h2>5. Counter-Notice Procedure</h2>
+      <p>
+        If you believe your content was removed in error, submit a counter-notice to{' '}
+        <strong>legal@openboxcomm.in</strong> with:
+      </p>
+      <ol>
+        <li>Your full name and contact information</li>
+        <li>Identification of the removed content and where it appeared (website URL, Discord server and channel, social media post, etc.)</li>
+        <li>A statement, under penalty of perjury, that you have a good faith belief the content was removed by mistake or misidentification</li>
+        <li>Your consent to the jurisdiction of Indian courts</li>
+        <li>Your electronic or physical signature</li>
+      </ol>
+      <p>
+        If we receive a valid counter-notice and the original complainant does not initiate legal proceedings
+        within <strong>10 business days</strong>, we may restore the content at our discretion.
+      </p>
+
+      <h2>6. Repeat Infringers</h2>
+      <p>
+        In accordance with our obligations under{' '}
+        <a href="https://indiankanoon.org/doc/10190353/" target="_blank" rel="noopener noreferrer">
+          Section 79 of the IT Act, 2000
+        </a>
+        , Open Box maintains a policy of terminating accounts of users found to be repeat infringers across
+        any of our platforms. Three or more valid takedown notices against a single user will result in
+        permanent removal from all Open Box spaces.
+      </p>
+
+      <h2>7. Misuse of the Takedown Process</h2>
+      <p>
+        Submitting a false or materially misrepresented takedown notice is a serious matter. Under both Indian
+        law and{' '}
+        <a href="https://www.copyright.gov/title17/92chap5.html#512" target="_blank" rel="noopener noreferrer">
+          Section 512(f) of the DMCA
+        </a>
+        , misrepresentation can result in liability for damages, including costs and attorneys&apos; fees. We
+        reserve the right to seek damages for abuse of the takedown process.
+      </p>
+
+      <h2>8. Open Box Intellectual Property</h2>
+      <p>
+        All logos, branding, server identities, and original content created by Open Box are protected under
+        the{' '}
+        <a href="https://www.indiacode.nic.in/bitstream/123456789/1367/1/a1957-14.pdf" target="_blank" rel="noopener noreferrer">
+          Copyright Act, 1957
+        </a>
+        . This includes all assets associated with individual servers (JN, Dev, GG, Classic, Study, Connect)
+        and the Open Box umbrella brand. For brand usage guidelines, refer to our{' '}
+        <a href="/legal/aup">Acceptable Use Policy</a>.
+      </p>
+
+      <h2>9. Contact</h2>
+      <p>For all copyright and DMCA matters: <strong>legal@openboxcomm.in</strong></p>
     </article>
   )
 }

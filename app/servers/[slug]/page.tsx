@@ -14,6 +14,12 @@ const SERVER_LOGOS: Record<string, string> = {
   gg: '/images/gg.png',
 }
 
+const DOC_SLUG_MAP: Record<string, string> = {
+  jn: 'jn-guide',
+  dev: 'dev-handbook',
+  gg: 'gg-event-guide',
+}
+
 export async function generateStaticParams() {
   return servers.filter((s) => s.isLive).map((s) => ({ slug: s.slug }))
 }
@@ -174,7 +180,7 @@ export default async function ServerPage({
 
               <div className="mt-5 space-y-2 border-t border-border pt-5">
                 <Button asChild variant="ghost" className="w-full justify-start gap-2">
-                  <Link href={`/doc/${slug}`}>
+                  <Link href={`/doc/${DOC_SLUG_MAP[server.slug] || 'getting-started'}`}>
                     <BookOpen className="h-4 w-4" />
                     Server Documentation
                   </Link>

@@ -22,18 +22,18 @@ export const docContents: Record<string, DocData> = {
       },
       {
         title: 'Step 1: Join the Discord',
-        content: 'Click the invite link at openboxcomm.in/join. It will take you to OB Junction, the main entry point. You do not need an account on the website to join. A Discord account is all you need.',
+        content: 'Click the invite link at openboxcomm.in/join. It will take you to jion page, Junction(Jn.) the main entry point. You do not need an account on the website to join. A Discord account is all you need.',
       },
       {
         title: 'Step 2: Complete Onboarding',
-        content: 'When you join, Discord will walk you through a short onboarding flow. Read and accept the community rules when prompted. This unlocks the rest of the server. If you skip it by accident, the rules channel has a button to complete it.',
+        content: 'When you join, Discord will walk you through a short onboarding flow. Read and accept the community rules when prompted. This unlocks the rest of the server. If you skip it by accident, the "Channels & Roles" section below the Evenrts to complete it.',
       },
+      // {
+      //   title: 'Step 3: Introduce Yourself',
+      //   content: 'Head to the introductions channel and drop a quick hello. Your name, what you do or are learning, and one thing you are working on. It does not need to be long. People read them.',
+      // },
       {
-        title: 'Step 3: Introduce Yourself',
-        content: 'Head to the introductions channel and drop a quick hello. Your name, what you do or are learning, and one thing you are working on. It does not need to be long. People read them.',
-      },
-      {
-        title: 'Step 4: Explore the Servers',
+        title: 'Step 3: Explore the Servers',
         content: 'Junction is the starting point. From there you can join OB Dev for building and coding, OB GG for gaming, OB Study for learning accountability, and OB Connect for networking and careers. Each has its own guide in these docs.',
       },
       {
@@ -51,7 +51,7 @@ export const docContents: Record<string, DocData> = {
       },
       {
         title: 'Joining the Server',
-        content: 'Use the invite link at openboxcomm.in/join to join OB Junction. If you already have Discord installed, it will open automatically. On mobile, it opens the Discord app. On desktop, it opens in the browser or app depending on your setup.',
+        content: 'Use the invite link at openboxcomm.in/join & join OB Junction. If you already have Discord installed, it will open automatically. On mobile, it opens the Discord app. On desktop, it opens in the browser or app depending on your setup.',
       },
       {
         title: 'Completing the Onboarding Flow',
@@ -63,51 +63,69 @@ export const docContents: Record<string, DocData> = {
       },
       {
         title: 'Getting Your Roles',
-        content: 'Some roles are assigned automatically when you join and complete onboarding. Others you pick up by being active, participating in events, or supporting the community through tiers. Check the #roles channel in Junction for the full list and how to get each one.',
+        content: 'Some roles are assigned automatically when you join and complete onboarding. Others you pick up by being active, participating in events, or supporting the community through tiers. Check the "Channels & Roles" section in Junction for the full list and you can get by ansering the questions.',
       },
       {
         title: 'Joining Other Servers',
-        content: 'Each Open Box server has its own invite link. You can find them all at openboxcomm.in/servers or in the #server-links channel in Junction. Joining multiple servers uses the same Discord account — no separate signup needed.',
+        content: 'Each Open Box server has its own invite link. You can find them all at openboxcomm.in/servers or in the #our-servers channel in Junction. Joining multiple servers uses the same Discord account — no separate signup needed.',
       },
     ],
   },
 
-  rules: {
-    sections: [
-      {
-        title: 'Be Respectful',
-        content: 'Treat everyone like a collaborator, not a target. No harassment, hate speech, personal attacks, slurs, or hostile behavior of any kind. This applies in public channels, threads, DMs initiated through the server, and voice.',
-      },
-      {
-        title: 'Keep Channels Useful',
-        content: 'Post in the right channel when you can. When asking for help, add context: what you tried, what broke, what you expected. A good question gets a faster answer and helps others who hit the same thing later.',
-      },
-      {
-        title: 'No Spam',
-        content: 'Do not flood channels, mass mention people, repost the same message across servers, or drop unrelated links. Self-promotion is fine in the right channel and with context. Cold drops get removed.',
-      },
-      {
-        title: 'Share Work Honestly',
-        content: 'Credit people when you share their work. If you used AI tools, templates, or starter kits in something you are presenting, say so when it matters. Using tools is fine. Passing off others\' work as entirely your own is not.',
-      },
-      {
-        title: 'Protect Privacy',
-        content: 'Do not share private messages, personal data, or someone else\'s contact information without their permission. What happens in DMs stays in DMs unless the person involved chooses to share it.',
-      },
-      {
-        title: 'Follow Event Guidance',
-        content: 'Events may have extra rules covering teams, submission formats, deadlines, bracket conduct, or judging criteria. Read the event post and follow organizer instructions. If something is unclear, ask before the deadline.',
-      },
-      {
-        title: 'Moderation',
-        content: 'Moderators may remove content, move conversations, mute members, or restrict access when needed. If you think a moderation call was wrong, use the appeals process at appeals@openboxcomm.in. Do not argue it in public channels.',
-      },
-      {
-        title: 'Reporting',
-        content: 'If you see something that breaks these rules, ping a moderator or reach out at support@openboxcomm.in. Do not try to handle it yourself in the channel. Screenshots help.',
-      },
-    ],
-  },
+ rules: {
+  sections: [
+    {
+      title: 'Respect & Inclusion',
+      content:
+        'Treat all members with dignity regardless of background, experience level, gender, religion, caste, or nationality. Harassment, bullying, targeted abuse, hate speech, discriminatory slurs, casteist language, and content that promotes communal disharmony are strictly prohibited. Constructive criticism is welcome. Personal attacks are not.',
+    },
+    {
+      title: 'Content Standards',
+      content:
+        'Keep content relevant to the channel or context. NSFW content — explicit, sexual, violent, or gory material — is strictly banned. Do not share content that glorifies self-harm, suicide, or violence. Misinformation, deliberate disinformation, political campaigning, and communally sensitive content are not permitted on any Open Box platform.',
+    },
+    {
+      title: 'No Spam or Unsolicited Promotion',
+      content:
+        'No unsolicited DMs, advertisement spam, or chain messages. Self-promotion is only allowed in designated channels or with moderator approval. Flooding channels with repeated posts will result in a mute. Phishing links, malware, or deceptive URLs result in an immediate permanent ban.',
+    },
+    {
+      title: 'Intellectual Property',
+      content:
+        'Do not share pirated software, cracked tools, or illegally distributed media. Credit the original creator when sharing others\' work. Plagiarism is prohibited. Sharing copyrighted material without authorisation may be reported under the IT Act, 2000 and the Copyright Act, 1957.',
+    },
+    {
+      title: 'Privacy',
+      content:
+        'Do not share personal information — phone numbers, addresses, Aadhaar, etc. — of yourself or others without explicit consent. Doxxing results in an immediate permanent ban and may be reported under the DPDP Act, 2023. Do not record, screenshot, or share private conversations without all parties\' consent.',
+    },
+    {
+      title: 'Events',
+      content:
+        'All participants at Open Box events — on Discord, live on YouTube or X, or at IRL meetups — must follow these rules in full. Events may have additional rules covering teams, submissions, deadlines, or judging. Read the event post and follow organizer instructions. For full details, refer to the Events Policy at /legal/events.',
+    },
+    {
+      title: 'Social Media',
+      content:
+        'These rules apply when interacting with Open Box\'s official accounts on X, Instagram, and YouTube. Violating comments or interactions may be removed and the user may be blocked or reported to the respective platform.',
+    },
+    {
+      title: 'Moderator Authority',
+      content:
+        'Moderator decisions are final. Do not argue with moderators publicly — use the designated appeal channels. Do not attempt to bypass moderation actions using alternate accounts. Impersonating moderators, staff, or the Open Box brand results in an immediate permanent ban.',
+    },
+    {
+      title: 'Appeals',
+      content:
+        'If you believe a moderation action was applied in error, appeal via the Help Centre at /help, the official support channel on Discord, or by emailing appeals@openboxcomm.in. Appeals are reviewed within 7 days.',
+    },
+    {
+      title: 'Reporting Violations',
+      content:
+        'Use the #report channel on any Discord server or email admin@openboxcomm.in for cross-platform or serious violations. Do not try to handle violations yourself in the channel. Screenshots help. For legal violations, report to CERT-In (cert-in.org.in) or the National Cyber Crime Reporting Portal (cybercrime.gov.in).',
+    },
+  ],
+},
 
   glossary: {
     sections: [
@@ -147,10 +165,10 @@ export const docContents: Record<string, DocData> = {
         title: 'Onboarding',
         content: 'The short setup flow Discord runs when you first join a server. In Open Box servers, completing it unlocks full channel access.',
       },
-      {
-        title: 'Carl-bot',
-        content: 'The bot used across Open Box servers for reaction roles, welcome messages, moderation logging, and automod.',
-      },
+      // {
+      //   title: 'Carl-bot',
+      //   content: 'The bot used across Open Box servers for reaction roles, welcome messages, moderation logging, and automod.',
+      // },
     ],
   },
 
@@ -162,18 +180,18 @@ export const docContents: Record<string, DocData> = {
         title: 'What Is OB Junction',
         content: 'Junction is the front door of Open Box. It is where new members land, where general conversation happens, and where community-wide announcements go out. If you are not sure which server to join first, start here.',
       },
-      {
-        title: 'When You First Join',
-        content: 'Head to the introductions channel and drop a quick hello. Your name, what you do or what you are learning, and one thing you are currently working on. It does not have to be long. People read them and respond.',
-      },
+      // {
+      //   title: 'When You First Join',
+      //   content: 'Head to the introductions channel and drop a quick hello. Your name, what you do or what you are learning, and one thing you are currently working on. It does not have to be long. People read them and respond.',
+      // },
       {
         title: 'Channel Overview',
-        content: 'Announcements go in announcements only. General chat is for anything casual. Help channels are for questions with context. The project channel is for sharing things you have built or are building. Memes go in memes. Use the right channel and things stay useful for everyone.',
+        content: 'Announcements go in announcements only. General chat is for anything casual. Help channels are for questions with context. Memes go in memes. Use the right channel and things stay useful for everyone.',
       },
-      {
-        title: 'How to Share a Project',
-        content: 'Post a short description, a link or screenshot, and what kind of feedback you are looking for — or just that you wanted to share it. You do not need a finished product. Works in progress are welcome.',
-      },
+      // {
+      //   title: 'How to Share a Project',
+      //   content: 'Post a short description, a link or screenshot, and what kind of feedback you are looking for — or just that you wanted to share it. You do not need a finished product. Works in progress are welcome.',
+      // },
       {
         title: 'Asking for Help',
         content: 'Add context when you ask a question. What are you trying to do, what did you already try, and what happened. A question with context gets answered faster and helps others who hit the same problem later.',

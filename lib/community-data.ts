@@ -334,7 +334,7 @@ export const teamMembers = [
     name: 'Sachin',
     role: 'Community Founder',
     bio: ' Sachin is the Founder of Open Box, a community for developers, builders, gamers, and students. They are passionate about creating spaces where people can connect, learn, and grow together.',
-    avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=sachin',
+    avatar: 'https://api.dicebear.com/10.x/initials/svg?seed=Sachin',
     socials: {
       instagram: 'https://x.com/alex',
       github: 'https://github.com/alex',

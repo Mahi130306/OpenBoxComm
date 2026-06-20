@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { servers } from '@/lib/community-data'
 import { ArrowRight, Sparkles,   } from 'lucide-react'
 import { ServerMemberCountInline } from '@/components/ServerMemberCountInline'
+import { INSTAGRAM_URL, YOUTUBE_URL, X_URL } from '@/lib/constants'
 
 export const metadata: Metadata = {
   title: 'Join Open Box',
@@ -136,13 +137,19 @@ export default function JoinPage() {
             </Link>
           </p>
           <div className="flex gap-6">
-            {['Instagram', 'YouTube', 'X'].map((social) => (
+            {[
+              { name: 'Instagram', href: INSTAGRAM_URL },
+              { name: 'YouTube', href: YOUTUBE_URL },
+              { name: 'X', href: X_URL }
+            ].map((social) => (
               <a
-                key={social}
-                href="#"
+                key={social.name}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-xs font-semibold uppercase tracking-widest text-muted-foreground transition-colors hover:text-foreground"
               >
-                {social}
+                {social.name}
               </a>
             ))}
           </div>

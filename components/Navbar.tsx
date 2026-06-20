@@ -242,7 +242,7 @@ export function Navbar() {
             <div className="space-y-1 px-4 pb-3 pt-2">
               <Link href="/" className="block py-2 text-sm font-medium hover:text-muted-foreground">Home</Link>
               <Link href="/about" className="block py-2 text-sm font-medium hover:text-muted-foreground">About</Link>
-              <Link href="/team" className="block py-2 text-sm font-medium hover:text-muted-foreground">Team</Link>
+              {/* <Link href="/team" className="block py-2 text-sm font-medium hover:text-muted-foreground">Team</Link> */}
               <div className="py-2">
                 <p className="text-sm font-medium text-muted-foreground mb-1">Live Servers</p>
                 {servers.live.map((server) => (
@@ -265,7 +265,8 @@ export function Navbar() {
               <Link href="/blogs" className="block py-2 text-sm font-medium hover:text-muted-foreground">Blogs</Link>
               <Link href="/doc" className="block py-2 text-sm font-medium hover:text-muted-foreground">Docs</Link>
               <Link href="/join" className="block py-2 text-sm font-bold text-cyan-500">Join Community</Link>
-              <Link href="/support" className="block py-2 text-sm font-medium hover:text-muted-foreground">Support</Link>
+              <Link href="/support" className="flex items-center gap-1.5 py-2 text-sm font-medium hover:text-muted-foreground">
+                <Heart className="h-4 w-4" /> Support </Link>              
               <Link href="/help" className="block py-2 text-sm font-medium hover:text-muted-foreground">Help</Link>
             </div>
           </div>

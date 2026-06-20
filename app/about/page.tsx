@@ -20,20 +20,21 @@ const servers = [
 
 export default function AboutPage() {
   return (
-    <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+    <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-16 lg:px-8">
       {/* Hero Section */}
-      <div className="mb-16 rounded-3xl border border-black/10 bg-gradient-to-br from-black/[0.04] to-violet-400/[0.08] p-8 shadow-sm dark:border-white/10 dark:from-white/[0.08] dark:to-violet-400/[0.05] sm:p-12 lg:p-16">
-        <div className="flex items-center gap-3 mb-6">
-            <Info className="h-8 w-8 text-violet-500" />
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-violet-600 dark:text-violet-300">About Open Box</p>
+      <div className="mb-12 rounded-3xl border border-black/10 bg-gradient-to-br from-black/[0.04] to-violet-400/[0.08] p-5 shadow-sm dark:border-white/10 dark:from-white/[0.08] dark:to-violet-400/[0.05] sm:p-10 lg:p-16 overflow-hidden">
+        <div className="flex items-center gap-2 mb-4">
+          <Info className="h-5 w-5 shrink-0 text-violet-500 sm:h-6 sm:w-6" />
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-violet-600 dark:text-violet-300 sm:text-sm">About Open Box</p>
         </div>
-        <h1 className="mb-6 text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl lg:text-6xl max-w-4xl">
+        <h1 className="mb-4 text-2xl font-extrabold tracking-tight text-foreground w-full break-words sm:text-4xl lg:text-5xl">
           A people-focused network of communities.
         </h1>
-        <p className="max-w-3xl text-xl text-muted-foreground/90 leading-relaxed">
+        <p className="max-w-3xl text-sm text-muted-foreground/90 leading-relaxed sm:text-base lg:text-xl">
           Open Box was founded on a simple belief: great things happen when people come together. We provide welcoming, high-signal spaces where creators can find their tribe.
         </p>
       </div>
+
 
       <div className="grid gap-16 lg:grid-cols-5">
         {/* Main Content */}
@@ -105,7 +106,7 @@ export default function AboutPage() {
               </div>
             </div>
 
-            <div className="rounded-3xl bg-violet-600 p-8 text-white shadow-xl shadow-violet-600/20">
+            {/* <div className="rounded-3xl bg-violet-600 p-8 text-white shadow-xl shadow-violet-600/20">
                 <h3 className="text-xl font-bold mb-3">Join our journey</h3>
                 <p className="text-violet-100 mb-6 text-sm leading-relaxed">
                     Open Box is more than just a set of servers — it&apos;s a collective of passionate people building together.
@@ -115,14 +116,14 @@ export default function AboutPage() {
                         Pick Your World
                     </button>
                 </Link>
-            </div>
+            </div> */}
           </div>
         </aside>
       </div>
 
-      <div className="mt-24">
+      {/* <div className="mt-24">
         <CTASection />
-      </div>
+      </div> */}
     </div>
   )
 }
