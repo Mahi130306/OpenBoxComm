@@ -154,7 +154,7 @@ export default function SupportPage() {
           <Button
             asChild
             size="lg"
-            className="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-bold rounded-xl shadow-xl shadow-amber-500/20 border-none transition-all duration-200 hover:scale-[1.02]"
+            className="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-black font-bold rounded-xl shadow-xl shadow-amber-500/20 border-none transition-all duration-200 hover:scale-[1.02]"
           >
             <a href={process.env.NEXT_PUBLIC_PATREON_URL || 'https://patreon.com/OpenBoxComm'} target="_blank" rel="noopener noreferrer">
               Support on Patreon
