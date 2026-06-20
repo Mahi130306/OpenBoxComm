@@ -45,12 +45,12 @@ export default function ServersPage() {
               <div className={`h-1 bg-gradient-to-r ${server.accent}`} />
               <div className="flex flex-col flex-1 p-5">
                 <div className="flex items-start justify-between mb-3">
-                  <h3 className="text-base font-bold text-foreground">{server.name}</h3>
+                  <h3 className="text-md font-bold text-foreground">{server.name}</h3>
                   <Badge variant="secondary" className="bg-green-500/10 text-green-600 dark:text-green-400 border-none text-xs shrink-0 ml-2">
                     Live
                   </Badge>
                 </div>
-                <p className="text-sm text-muted-foreground leading-relaxed flex-1 mb-4">
+                <p className="text-m text-muted-foreground leading-relaxed flex-1 mb-4">
                   {server.description}
                 </p>
                 <div className="flex flex-wrap gap-1.5 mb-4">
@@ -85,12 +85,12 @@ export default function ServersPage() {
                 <div className={`h-1 bg-gradient-to-r ${server.accent} opacity-40`} />
                 <div className="flex flex-col flex-1 p-5">
                   <div className="flex items-start justify-between mb-3">
-                    <h3 className="text-base font-bold text-foreground">{server.name}</h3>
+                    <h3 className="text-md font-bold text-foreground">{server.name}</h3>
                     <Badge variant="outline" className="text-xs shrink-0 ml-2">
                       Soon
                     </Badge>
                   </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed flex-1 mb-4">
+                  <p className="text-m text-muted-foreground leading-relaxed flex-1 mb-4">
                     {server.description}
                   </p>
                   <div className="flex flex-wrap gap-1.5">
