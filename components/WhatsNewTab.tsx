@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { X, Bell, Calendar, BookOpen, MessageSquare, ExternalLink } from 'lucide-react'
+import { X, Bell, Calendar, BookOpen, MessageSquare, ExternalLink, Megaphone } from 'lucide-react'
 import { useRouter } from 'next/navigation'
 import { Update, UpdateType } from '@/types'
 import { cn } from '@/lib/utils'
@@ -12,6 +12,7 @@ const ICONS: Record<UpdateType, React.ReactNode> = {
   event: <Calendar className="w-4 h-4" />,
   doc: <BookOpen className="w-4 h-4" />,
   update: <Bell className="w-4 h-4" />,
+  announcement: <Megaphone className="w-4 h-4" />,
 }
 
 export function WhatsNewTab() {
