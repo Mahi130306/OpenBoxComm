@@ -18,8 +18,31 @@ export function WhatsNewTab() {
   const [isOpen, setIsOpen] = useState(false)
   const [updates, setUpdates] = useState<Update[]>([])
   const [seenIds, setSeenIds] = useState<string[]>([])
+  const [isTabVisible, setIsTabVisible] = useState(true)
+  const lastScrollY = useRef(0)
   const panelRef = useRef<HTMLDivElement>(null)
   const router = useRouter()
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY
+
+      if (currentScrollY < 100) {
+        setIsTabVisible(true)
+      } else if (currentScrollY > lastScrollY.current) {
+        // Scrolling down
+        setIsTabVisible(false)
+      } else {
+        // Scrolling up
+        setIsTabVisible(true)
+      }
+
+      lastScrollY.current = currentScrollY
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   useEffect(() => {
     const fetchUpdates = async () => {
@@ -65,9 +88,12 @@ export function WhatsNewTab() {
   return (
     <>
       {/* Floating Tab */}
-      <button
+      <motion.button
         onClick={handleOpen}
-        className="fixed right-0 top-1/2 -translate-y-1/2 z-40 flex items-center gap-2 bg-primary/90 hover:bg-primary text-primary-foreground py-4 px-2 rounded-l-xl transition-all shadow-lg backdrop-blur-sm group"
+        initial={{ x: 0 }}
+        animate={{ x: isTabVisible ? 0 : '100%' }}
+        transition={{ type: 'spring', damping: 20, stiffness: 300 }}
+        className="fixed right-0 top-1/2 -translate-y-1/2 z-40 flex items-center gap-2 bg-primary/90 hover:bg-primary text-primary-foreground py-4 px-2 rounded-l-xl shadow-lg backdrop-blur-sm group transition-colors"
       >
         <div className="flex flex-col items-center gap-2">
           <span className="[writing-mode:vertical-lr] font-syne font-bold uppercase tracking-widest text-xs">
@@ -79,7 +105,7 @@ export function WhatsNewTab() {
             </span>
           )}
         </div>
-      </button>
+      </motion.button>
 
       {/* Slide-in Panel */}
       <AnimatePresence>
