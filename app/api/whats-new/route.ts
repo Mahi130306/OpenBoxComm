@@ -29,15 +29,7 @@ const updates: Update[] = [
     href: '/docs/getting-started',
     isNew: false,
   },
-  {
-    id: '4',
-    title: 'Town Hall Meeting',
-    type: 'event',
-    date: '2026-08-16',
-    description: 'Community updates, open questions, and a look at what Open Box is building next.',
-    href: '/events/jn-town-hall',
-    isNew: false,
-  },
+
 ]
 
 export async function GET() {
