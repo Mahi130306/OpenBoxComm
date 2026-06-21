@@ -18,8 +18,8 @@ export function useDiscordMembers(targetSlug?: string) {
     const fetchCounts = async () => {
       // Only fetch live servers that have an inviteCode
       const liveServers = servers.filter((s) => s.isLive && s.inviteCode);
-      const serversToFetch = targetSlug 
-        ? liveServers.filter((s) => s.slug === targetSlug) 
+      const serversToFetch = targetSlug
+        ? liveServers.filter((s) => s.slug === targetSlug)
         : liveServers;
 
       await Promise.allSettled(
@@ -29,9 +29,9 @@ export function useDiscordMembers(targetSlug?: string) {
             if (res.ok) {
               const data = await res.json();
               if (data.approximate_member_count !== undefined && mounted) {
-                setCounts((prev) => ({ 
-                  ...prev, 
-                  [server.slug]: data.approximate_member_count 
+                setCounts((prev) => ({
+                  ...prev,
+                  [server.slug]: data.approximate_member_count
                 }));
               }
             }
@@ -43,8 +43,8 @@ export function useDiscordMembers(targetSlug?: string) {
     };
 
     fetchCounts();
-    // Poll every 30 seconds
-    const interval = setInterval(fetchCounts, 30_000);
+    // Poll every 60 seconds
+    const interval = setInterval(fetchCounts, 60_000);
 
     return () => {
       mounted = false;
