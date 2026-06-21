@@ -3,7 +3,7 @@ import { Update } from '@/types'
 
 const updates: Update[] = [
   {
-    id: "1",
+    id: 'welcome-to-open-box',
     title: 'Welcome to Open Box',
     type: 'announcement',
     date: '2026-06-01',
@@ -12,7 +12,7 @@ const updates: Update[] = [
     isNew: true,
   },
   {
-    id: '2',
+    id: 'where-we-go-from-here',
     title: 'Where We Go From Here',
     type: 'blog',
     date: '2026-06-11',
@@ -21,7 +21,7 @@ const updates: Update[] = [
     isNew: true,
   },
   {
-    id: '3',
+    id: 'getting-started-guide',
     title: 'Getting Started Guide',
     type: 'doc',
     date: '2026-05-20',
@@ -30,7 +30,7 @@ const updates: Update[] = [
     isNew: false,
   },
   {
-    id: '4',
+    id: 'ob-gg-beta',
     title: 'OB GG Is in Beta',
     type: 'blog',
     date: '2026-06-01',
