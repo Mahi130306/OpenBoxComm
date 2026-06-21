@@ -7,6 +7,7 @@ import { LoadingScreen } from '@/components/LoadingScreen'
 import { ScrollToTop } from '@/components/ScrollToTop'
 import { ConsentBanner } from '@/components/ConsentBanner'
 import { SecurityGuard } from '@/components/SecurityGuard'
+import { WhatsNewTab } from '@/components/WhatsNewTab'
 import './globals.css'
 
 const BASE_URL = 'https://openboxcomm.in'
@@ -94,6 +95,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <LoadingScreen />
           <Navbar />
           <main className="pt-16 min-h-screen">{children}</main>
+          <WhatsNewTab />
           <Footer />
           <ConsentBanner />
         </ThemeProvider>
