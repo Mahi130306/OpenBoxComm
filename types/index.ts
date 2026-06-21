@@ -42,3 +42,15 @@ export interface Supporter {
   name: string
   tier?: string
 }
+
+export type UpdateType = 'blog' | 'event' | 'doc' | 'update'
+
+export interface Update {
+  id: string
+  title: string
+  type: UpdateType
+  date: string
+  description: string
+  href: string
+  isNew: boolean
+}
