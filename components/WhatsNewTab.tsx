@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect, useRef } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { gsap } from 'gsap'
 import { X, Bell, Calendar, BookOpen, MessageSquare, ExternalLink } from 'lucide-react'
 import { useRouter } from 'next/navigation'
 import { Update, UpdateType } from '@/types'
@@ -16,9 +16,11 @@ const ICONS: Record<UpdateType, React.ReactNode> = {
 
 export function WhatsNewTab() {
   const [isOpen, setIsOpen] = useState(false)
+  const [mounted, setMounted] = useState(false)
   const [updates, setUpdates] = useState<Update[]>([])
   const [seenIds, setSeenIds] = useState<string[]>([])
   const panelRef = useRef<HTMLDivElement>(null)
+  const backdropRef = useRef<HTMLDivElement>(null)
   const router = useRouter()
 
   useEffect(() => {
@@ -53,6 +55,32 @@ export function WhatsNewTab() {
     return () => document.removeEventListener('mousedown', handleClickOutside)
   }, [isOpen])
 
+  useEffect(() => {
+    if (isOpen) {
+      setMounted(true)
+    }
+  }, [isOpen])
+
+  useEffect(() => {
+    if (!mounted) return
+
+    if (isOpen) {
+      gsap.to(backdropRef.current, { opacity: 1, duration: 0.3 })
+      gsap.to(panelRef.current, { x: 0, duration: 0.5, ease: 'power3.out' })
+    } else {
+      const tl = gsap.timeline({
+        onComplete: () => {
+          if (!isOpen) setMounted(false)
+        },
+      })
+      tl.to(backdropRef.current, { opacity: 0, duration: 0.3 }).to(
+        panelRef.current,
+        { x: '100%', duration: 0.4, ease: 'power3.in' },
+        0
+      )
+    }
+  }, [isOpen, mounted])
+
   const handleOpen = () => {
     setIsOpen(true)
     const newSeenIds = Array.from(new Set([...seenIds, ...updates.map((u) => u.id)]))
@@ -82,26 +110,21 @@ export function WhatsNewTab() {
       </button>
 
       {/* Slide-in Panel */}
-      <AnimatePresence>
-        {isOpen && (
-          <>
-            {/* Backdrop */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black/40 backdrop-blur-[2px] z-50"
-            />
+      {mounted && (
+        <>
+          {/* Backdrop */}
+          <div
+            ref={backdropRef}
+            style={{ opacity: 0 }}
+            className="fixed inset-0 bg-black/40 backdrop-blur-[2px] z-50"
+          />
 
-            {/* Panel */}
-            <motion.div
-              ref={panelRef}
-              initial={{ x: '100%' }}
-              animate={{ x: 0 }}
-              exit={{ x: '100%' }}
-              transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-              className="fixed right-0 top-0 h-full w-full max-w-[320px] bg-background/80 backdrop-blur-xl border-l border-white/10 z-50 shadow-2xl flex flex-col"
-            >
+          {/* Panel */}
+          <div
+            ref={panelRef}
+            style={{ transform: 'translateX(100%)' }}
+            className="fixed right-0 top-0 h-full w-full max-w-[320px] bg-background/80 backdrop-blur-xl border-l border-white/10 z-50 shadow-2xl flex flex-col"
+          >
               <div className="p-6 flex items-center justify-between border-b border-white/5">
                 <h2 className="font-syne text-xl font-bold">What's New</h2>
                 <button
@@ -153,10 +176,9 @@ export function WhatsNewTab() {
                   ))
                 )}
               </div>
-            </motion.div>
-          </>
-        )}
-      </AnimatePresence>
+          </div>
+        </>
+      )}
     </>
   )
 }
