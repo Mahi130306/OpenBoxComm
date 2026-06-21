@@ -10,12 +10,19 @@ const nextConfig = {
 
   // ── Images ────────────────────────────────────────────────────────────────
   images: {
+    unoptimized: true,
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     remotePatterns: [
       {
         protocol: 'https',
         hostname: 'api.dicebear.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn.discordapp.com',
         port: '',
         pathname: '/**',
       },

@@ -1,3 +1,5 @@
+import type { Metadata } from 'next'
+export const runtime = "edge"
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { CalendarClock, MapPin, Ticket, ChevronLeft, Info, Calendar } from 'lucide-react'
@@ -5,9 +7,22 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { events, getEvent, getServer } from '@/lib/community-data'
 
-export function generateStaticParams() {
-  return events.map((event) => ({ id: event.id }))
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+  const { id } = await params
+  const event = getEvent(id)
+  if (!event) return {}
+  return {
+    title: event.name,
+    description: event.description,
+    openGraph: {
+      title: event.name,
+      description: event.description,
+      images: ['/og-default.png'],
+    },
+  }
 }
+
+
 
 export default async function EventDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params

@@ -1,5 +1,6 @@
-import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
+export const runtime = "edge"
+import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { ChevronLeft } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -8,9 +9,6 @@ import { getDocContent } from '@/lib/docs'
 import { docs } from '@/lib/community-data'
 import { TableOfContents } from '@/components/TableOfContents'
 
-export async function generateStaticParams() {
-  return docs.map((doc) => ({ slug: doc.slug }))
-}
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params

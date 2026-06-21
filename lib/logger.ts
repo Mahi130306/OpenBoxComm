@@ -56,9 +56,15 @@ function shouldLog(level: LogLevel): boolean {
 
 // ── Write to localStorage ─────────────────────────────────────────────────────
 function persist(entry: LogEntry): void {
+  if (typeof window === 'undefined') return
   try {
     const raw = localStorage.getItem(STORAGE_KEY)
-    const logs: LogEntry[] = raw ? JSON.parse(raw) : []
+    let logs: LogEntry[] = []
+    try {
+      logs = raw ? JSON.parse(raw) : []
+    } catch (e) {
+      console.error('Failed to parse logs', e)
+    }
     logs.push(entry)
     // Ring buffer — keep last MAX_ENTRIES
     if (logs.length > MAX_ENTRIES) logs.splice(0, logs.length - MAX_ENTRIES)
@@ -113,7 +119,12 @@ export const logger = {
     if (typeof window === 'undefined') return []
     try {
       const raw = localStorage.getItem(STORAGE_KEY)
-      return raw ? JSON.parse(raw) : []
+      try {
+        return raw ? JSON.parse(raw) : []
+      } catch (e) {
+        console.error('Failed to parse logs', e)
+        return []
+      }
     } catch {
       return []
     }

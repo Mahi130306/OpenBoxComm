@@ -1,3 +1,5 @@
+import type { Metadata } from 'next'
+export const runtime = "edge"
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -6,6 +8,22 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { events, getServer, servers } from '@/lib/community-data'
 import { ServerMemberPill } from '@/components/ServerMemberPill'
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params
+  const server = getServer(slug)
+  if (!server) return {}
+  return {
+    title: `${server.name} — Open Box`,
+    description: server.description,
+    openGraph: {
+      title: `${server.name} — Open Box`,
+      description: server.description,
+      images: ['/og-default.png'],
+    },
+  }
+}
+
 
 // Server logo map
 const SERVER_LOGOS: Record<string, string> = {
@@ -20,9 +38,6 @@ const DOC_SLUG_MAP: Record<string, string> = {
   gg: 'gg-event-guide',
 }
 
-export async function generateStaticParams() {
-  return servers.filter((s) => s.isLive).map((s) => ({ slug: s.slug }))
-}
 
 export default async function ServerPage({
   params,

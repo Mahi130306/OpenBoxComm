@@ -1,0 +1,32 @@
+./components/WhatsNewTab.tsx:60: const savedSeen = localStorage.getItem('ob-seen-updates')
+./components/WhatsNewTab.tsx:83: localStorage.setItem('ob-seen-updates', JSON.stringify(newSeenIds))
+./app/legal/cookie/page.tsx:41: localStorage, sessionStorage, and pixel tags.
+./app/legal/cookie/page.tsx:73: <h3>2.2 Functional Cookies &amp; localStorage</h3>
+./app/legal/cookie/page.tsx:84: ['ob-theme', 'Colour theme preference (persisted via localStorage)'],
+./app/legal/cookie/page.tsx:131: <li><strong>localStorage:</strong> Clear localStorage via your browser&apos;s DevTools (Application &gt; Storage &gt; Local Storage) at any time. This resets your theme preference to the default (dark).</li>
+./app/legal/cookie/page.tsx:138: localStorage. For non-essential cookies, we will seek your explicit consent where required under the{' '}
+./lib/consent-logger.ts:5: *   1. localStorage  — instant client-side retrieval
+./lib/consent-logger.ts:53: let id = localStorage.getItem(VISITOR_ID_KEY)
+./lib/consent-logger.ts:59: localStorage.setItem(VISITOR_ID_KEY, id)
+./lib/consent-logger.ts:78: * Read the stored consent record from localStorage.
+./lib/consent-logger.ts:79: * Returns null if not yet consented (or localStorage unavailable).
+./lib/consent-logger.ts:84: const raw = localStorage.getItem(CONSENT_KEY)
+./lib/consent-logger.ts:93: * - Persists to localStorage immediately.
+./lib/consent-logger.ts:95: * - 'dismiss' is intentionally NOT stored to localStorage so the banner
+./lib/consent-logger.ts:115: // Persist to localStorage only for accept / reject (dismiss is session-only)
+./lib/consent-logger.ts:118: localStorage.setItem(CONSENT_KEY, JSON.stringify(record))
+./lib/consent-logger.ts:143: localStorage.removeItem(CONSENT_KEY)
+./lib/logger.ts:15: *   JSON.parse(localStorage.getItem('ob-logs') || '[]')
+./lib/logger.ts:18: *   localStorage.removeItem('ob-logs')
+./lib/logger.ts:38: let id = sessionStorage.getItem(SESSION_KEY)
+./lib/logger.ts:41: sessionStorage.setItem(SESSION_KEY, id)
+./lib/logger.ts:57: // ── Write to localStorage ─────────────────────────────────────────────────────
+./lib/logger.ts:60: const raw = localStorage.getItem(STORAGE_KEY)
+./lib/logger.ts:65: localStorage.setItem(STORAGE_KEY, JSON.stringify(logs))
+./lib/logger.ts:67: // localStorage may be unavailable (private browsing quota, etc.)
+./lib/logger.ts:100: // Persist to localStorage
+./lib/logger.ts:115: const raw = localStorage.getItem(STORAGE_KEY)
+./lib/logger.ts:125: localStorage.removeItem(STORAGE_KEY)
+./lib/hooks/useConsent.ts:9: *   dismiss()     — record 'dismiss' (session-only, no localStorage)
+./lib/hooks/useConsent.ts:24: /** True once the hook has checked localStorage (prevents flash) */
+./lib/hooks/useConsent.ts:40: // On mount: read localStorage (client-only)
