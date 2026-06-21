@@ -3,6 +3,9 @@ import { Update } from '@/types'
 
 const updates: Update[] = [
   {
+    id
+  }
+  {
     id: '1',
     title: 'Where We Go From Here',
     type: 'blog',

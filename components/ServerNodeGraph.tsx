@@ -49,11 +49,11 @@ export default function ServerNodeGraph() {
     const vRnd = () => (Math.random() - 0.5) * 0.65;
 
     const servers: Server[] = [
-      { label: "Junction", sub: "Hub · Front door",  color: "#1D9E75", r: 34, x: W / 2,    y: H / 2,    vx: 0,     vy: 0,     emoji: "🔗" },
-      { label: "Dev",      sub: "Developers · Code",   color: "#7F77DD", r: 24, x: rnd(50, W-50), y: rnd(50, H-50), vx: vRnd(), vy: vRnd(), emoji: "💻" },
-      { label: "GG",       sub: "Gaming · Compete",  color: "#378ADD", r: 24, x: rnd(50, W-50), y: rnd(50, H-50), vx: vRnd(), vy: vRnd(), emoji: "🎮" },
-      { label: "Study",    sub: "Learn · Grind",     color: "#639922", r: 22, x: rnd(50, W-50), y: rnd(50, H-50), vx: vRnd(), vy: vRnd(), emoji: "📚" },
-      { label: "Connect",  sub: "Meet · Collab",     color: "#D85A30", r: 22, x: rnd(50, W-50), y: rnd(50, H-50), vx: vRnd(), vy: vRnd(), emoji: "🌐" },
+      { label: "Junction", sub: "Hub · Front door", color: "#aaaaaa", r: 34, x: W / 2, y: H / 2, vx: 0, vy: 0, emoji: "🔗" },
+      { label: "Dev", sub: "Developers · Code", color: "#39ff14", r: 24, x: rnd(50, W - 50), y: rnd(50, H - 50), vx: vRnd(), vy: vRnd(), emoji: "💻" },
+      { label: "GG", sub: "Gaming · Compete", color: "#ff0000", r: 24, x: rnd(50, W - 50), y: rnd(50, H - 50), vx: vRnd(), vy: vRnd(), emoji: "🎮" },
+      { label: "Study", sub: "Learn · Grind", color: "#004aad", r: 22, x: rnd(50, W - 50), y: rnd(50, H - 50), vx: vRnd(), vy: vRnd(), emoji: "📚" },
+      { label: "Connect", sub: "Meet · Collab", color: "#5f0eff", r: 22, x: rnd(50, W - 50), y: rnd(50, H - 50), vx: vRnd(), vy: vRnd(), emoji: "🌐" },
     ];
 
     const mouse = { x: -999, y: -999 };
@@ -213,7 +213,7 @@ export default function ServerNodeGraph() {
         className="bg-[#0a0e14ee] border border-white/10 rounded-xl px-3.5 py-2"
       >
         <span ref={tipNameRef} className="block text-[13px] font-semibold text-white" />
-        <span ref={tipSubRef}  className="block text-[11px] text-white/45 mt-0.5" />
+        <span ref={tipSubRef} className="block text-[11px] text-white/45 mt-0.5" />
       </div>
     </>
   );

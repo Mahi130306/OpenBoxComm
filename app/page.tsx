@@ -74,11 +74,11 @@ export default function Home() {
           </div>
 
           {/* Hero Abstract Graphic — right column */}
-          <div className="flex items-center justify-center lg:justify-end">
+          {/* <div className="flex items-center justify-center lg:justify-end">
             <div className="flex items-center justify-center w-full h-full">
               <ServerNodeGraph />
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 
