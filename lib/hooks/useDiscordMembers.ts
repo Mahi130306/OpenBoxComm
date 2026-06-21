@@ -16,7 +16,6 @@ export function useDiscordMembers(targetSlug?: string) {
     let mounted = true;
 
     const fetchCounts = async () => {
-      // Only fetch live servers that have an inviteCode
       const liveServers = servers.filter((s) => s.isLive && s.inviteCode);
       const serversToFetch = targetSlug
         ? liveServers.filter((s) => s.slug === targetSlug)
@@ -26,14 +25,15 @@ export function useDiscordMembers(targetSlug?: string) {
         serversToFetch.map(async (server) => {
           try {
             const res = await fetch(`/api/discord-members?code=${server.inviteCode}`);
-            if (res.ok) {
-              const data = await res.json();
-              if (data.approximate_member_count !== undefined && mounted) {
-                setCounts((prev) => ({
-                  ...prev,
-                  [server.slug]: data.approximate_member_count
-                }));
-              }
+            if (!res.ok) {
+              throw new Error(`HTTP error! status: ${res.status}`);
+            }
+            const data = await res.json();
+            if (data.approximate_member_count !== undefined && mounted) {
+              setCounts((prev) => ({
+                ...prev,
+                [server.slug]: data.approximate_member_count
+              }));
             }
           } catch (error) {
             console.error(`Failed to fetch stats for ${server.slug}`, error);
@@ -43,7 +43,6 @@ export function useDiscordMembers(targetSlug?: string) {
     };
 
     fetchCounts();
-    // Poll every 60 seconds
     const interval = setInterval(fetchCounts, 60_000);
 
     return () => {

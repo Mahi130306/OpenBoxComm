@@ -57,9 +57,15 @@ export function WhatsNewTab() {
       }
     }
 
-    const savedSeen = localStorage.getItem('ob-seen-updates')
-    if (savedSeen) {
-      setSeenIds(JSON.parse(savedSeen))
+    if (typeof window !== 'undefined') {
+      const savedSeen = localStorage.getItem('ob-seen-updates')
+      if (savedSeen) {
+        try {
+          setSeenIds(JSON.parse(savedSeen))
+        } catch (e) {
+          console.error('Failed to parse seen updates', e)
+        }
+      }
     }
 
     fetchUpdates()
@@ -80,7 +86,9 @@ export function WhatsNewTab() {
     setIsOpen(true)
     const newSeenIds = Array.from(new Set([...seenIds, ...updates.map((u) => u.id)]))
     setSeenIds(newSeenIds)
-    localStorage.setItem('ob-seen-updates', JSON.stringify(newSeenIds))
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('ob-seen-updates', JSON.stringify(newSeenIds))
+    }
   }
 
   const unseenCount = updates.filter((u) => !seenIds.includes(u.id)).length

@@ -15,6 +15,8 @@
 
 import { NextResponse, type NextRequest } from 'next/server'
 
+export const runtime = 'experimental-edge'
+
 // ── Blocked path patterns ─────────────────────────────────────────────────────
 const BLOCKED_PATTERNS: RegExp[] = [
   /^\/\.git(\/|$)/i,
@@ -54,7 +56,7 @@ function buildSecurityHeaders(): Record<string, string> {
   }
 }
 
-export async function proxy(request: NextRequest) {
+export default async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
 
   // ── Block sensitive paths ─────────────────────────────────────────────────

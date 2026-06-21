@@ -49,17 +49,17 @@ export default function TeamPage() {
 
               <div className="flex items-center justify-center gap-4 mb-6">
                 {member.socials.github && (
-                  <a href={member.socials.github} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+                  <a href={member.socials.github} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors" aria-label="GitHub">
                     <Github className="h-5 w-5" />
                   </a>
                 )}
                 {member.socials.twitter && (
-                  <a href={member.socials.twitter} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+                  <a href={member.socials.twitter} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors" aria-label="Twitter">
                     <Twitter className="h-5 w-5" />
                   </a>
                 )}
                 {member.socials.instagram && (
-                  <a href={member.socials.instagram} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+                  <a href={member.socials.instagram} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors" aria-label="Instagram">
                     <Instagram className="h-5 w-5" />
                   </a>
                 )}

@@ -1,0 +1,5 @@
+./components/WhatsNewTab.tsx:62: setSeenIds(JSON.parse(savedSeen))
+./lib/consent-logger.ts:85: return raw ? (JSON.parse(raw) as ConsentRecord) : null
+./lib/logger.ts:15: *   JSON.parse(localStorage.getItem('ob-logs') || '[]')
+./lib/logger.ts:61: const logs: LogEntry[] = raw ? JSON.parse(raw) : []
+./lib/logger.ts:116: return raw ? JSON.parse(raw) : []

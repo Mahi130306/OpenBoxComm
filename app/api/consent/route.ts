@@ -20,6 +20,8 @@
 
 import { NextRequest, NextResponse } from 'next/server'
 
+export const runtime = 'edge'
+
 interface ConsentPayload {
   visitorId:    string
   action:       'accept' | 'reject' | 'dismiss'

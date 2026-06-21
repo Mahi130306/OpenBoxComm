@@ -1,5 +1,6 @@
+export const runtime = 'edge'
 import type { Metadata } from 'next'
-import { blogs } from '@/lib/community-data'
+import { blogs, Blog } from '@/lib/community-data'
 import { BlogSearch } from '@/components/BlogSearch'
 
 export const metadata: Metadata = {
@@ -13,7 +14,7 @@ export default async function BlogsPage({ searchParams }: { searchParams: Promis
   const { server: serverQuery } = await searchParams
   const serverFilter = serverQuery?.toLowerCase()
 
-  const activeBlogs = blogs.filter((blog: any) => blog.category !== 'dbw')
+  const activeBlogs = blogs.filter((blog: Blog) => blog.category !== 'dbw')
 
   const filteredBlogs = serverFilter
     ? activeBlogs.filter((blog) => blog.server.toLowerCase() === serverFilter)

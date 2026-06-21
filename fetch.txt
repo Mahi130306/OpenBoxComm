@@ -1,0 +1,4 @@
+./components/WhatsNewTab.tsx:50: const res = await fetch('/api/whats-new')
+./app/api/discord-members/route.ts:12: const res = await fetch(`https://discord.com/api/v9/invites/${code}?with_counts=true`, {
+./lib/consent-logger.ts:126: await fetch('/api/consent', {
+./lib/hooks/useDiscordMembers.ts:28: const res = await fetch(`/api/discord-members?code=${server.inviteCode}`);

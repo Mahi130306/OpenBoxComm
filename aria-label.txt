@@ -1,0 +1,7 @@
+./components/Footer.tsx:                  aria-label={s.name}
+./components/ServerNodeGraph.tsx:        aria-label="Live node graph showing OpenBox servers connected to the Junction hub"
+./components/ConsentBanner.tsx:            aria-label="Dismiss"
+./components/Navbar.tsx:        aria-label={`Switch to ${isDark ? 'light' : 'dark'} mode`}
+./components/Navbar.tsx:                aria-label="Toggle mobile menu"
+./app/team/[slug]/page.tsx:                <a href={member.socials.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+./app/team/[slug]/page.tsx:                <a href={member.socials.twitter} target="_blank" rel="noopener noreferrer" aria-label="Twitter">

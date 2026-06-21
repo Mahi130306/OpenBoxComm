@@ -1,5 +1,6 @@
-import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
+export const runtime = "edge"
+import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { ChevronLeft } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
@@ -7,11 +8,6 @@ import { Button } from '@/components/ui/button'
 import { blogs, getBlog } from '@/lib/community-data'
 import { getBlogContent } from '@/lib/Blog'
 
-export function generateStaticParams() {
-  return blogs
-    .filter((blog: any) => blog.category !== 'dbw')
-    .map((blog) => ({ slug: blog.slug }))
-}
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params

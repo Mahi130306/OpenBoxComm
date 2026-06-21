@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server'
 import { Update } from '@/types'
 
+export const runtime = 'edge'
+
 const updates: Update[] = [
   {
     id: '1',

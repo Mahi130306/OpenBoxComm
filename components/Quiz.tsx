@@ -101,6 +101,11 @@ export function Quiz() {
     return recommendations.default
   }
 
+  const getInviteUrl = (slug: string) => {
+    const key = `NEXT_PUBLIC_DISCORD_${slug.toUpperCase()}_INVITE` as keyof NodeJS.ProcessEnv
+    return process.env[key] || '#'
+  }
+
   const resetQuiz = () => {
     setCurrentQuestion(0)
     setAnswers({})
@@ -121,7 +126,7 @@ export function Quiz() {
             <CardFooter>
               <Button asChild className="w-full" disabled={rec.comingSoon}>
                 <a
-                  href={rec.comingSoon ? '#' : process.env[`NEXT_PUBLIC_DISCORD_${rec.slug.toUpperCase()}_INVITE` as any]}
+                  href={rec.comingSoon ? '#' : getInviteUrl(rec.slug)}
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={(e) => {
