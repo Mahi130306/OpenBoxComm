@@ -43,7 +43,7 @@ export interface Supporter {
   tier?: string
 }
 
-export type UpdateType = 'blog' | 'event' | 'doc' | 'update' | 'announcement'
+export type UpdateType = 'blog' | 'event' | 'doc' | 'update' | 'announcement' | 'release' | 'feature' | 'fix' | 'video' | 'community'
 
 export interface Update {
   id: string
