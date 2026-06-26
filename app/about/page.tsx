@@ -11,11 +11,11 @@ export const metadata: Metadata = {
 }
 
 const servers = [
-  { name: 'Jn.', status: 'Live', description: 'Main community hub and entry point.', color: 'bg-green-500' },
-  { name: 'Dev', status: 'Live', description: 'Development, coding, and building things.', color: 'bg-purple-500' },
-  { name: 'GG', status: 'Live', description: 'Gaming, competitions, and community play.', color: 'bg-blue-500' },
-  { name: 'Study', status: 'Coming Soon', description: 'Learning, accountability, and study groups.', color: 'bg-orange-500' },
-  { name: 'Connect', status: 'Coming Soon', description: 'Professional networking and career growth.', color: 'bg-cyan-500' },
+  { name: 'Jn.', status: 'Live', description: 'Main community hub and entry point.', color: 'bg-gray-500' },
+  { name: 'Dev', status: 'Live', description: 'Development, coding, and building things.', color: 'bg-green-500' },
+  { name: 'GG', status: 'Live', description: 'Gaming, competitions, and community play.', color: 'bg-red-500' },
+  { name: 'Study', status: 'Coming Soon', description: 'Learning, accountability, and study groups.', color: 'bg-blue-500' },
+  { name: 'Connect', status: 'Coming Soon', description: 'Professional networking and career growth.', color: 'bg-purple-500' },
 ]
 
 export default function AboutPage() {

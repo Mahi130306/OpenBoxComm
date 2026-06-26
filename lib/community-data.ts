@@ -1,7 +1,81 @@
-export const servers = [
+// ─── Types ────────────────────────────────────────────────────────────────────
+
+export type TicketStatus = 'free' | 'paid'
+
+export interface Sponsor {
+  name: string
+  logo: string
+  url: string
+  tagline?: string
+  socials?: {
+    x?: string
+    instagram?: string
+    linkedin?: string
+    youtube?: string
+  }
+}
+
+export interface Event {
+  id: string
+  name: string
+  server: string
+  serverSlug: string
+  date: string
+  deadline?: string
+  description: string
+  ticketStatus: TicketStatus
+  price?: string
+  isOffline: boolean
+  location: string
+  agenda: string[]
+  sponsor?: Sponsor
+}
+
+export interface Servers {
+  slug: string
+  name: string
+  description: string
+  longDescription?: string
+  tags: string[]
+  memberCount: number
+  isLive: boolean
+  accent: string
+  channels?: string[]
+  rules?: string[]
+  inviteEnv?: string
+  inviteCode?: string
+}
+
+export interface Blog {
+  slug: string
+  title: string
+  server: string
+  date: string
+  excerpt: string
+  readTime: string
+  category?: 'dbw'
+}
+
+export interface TeamMember {
+  slug: string
+  name: string
+  role: string
+  bio: string
+  avatar: string
+  socials?: {
+    github?: string
+    twitter?: string
+    instagram?: string
+    linkedin?: string
+  }
+}
+
+// ─── Servers ──────────────────────────────────────────────────────────────────
+
+export const servers: Servers[] = [
   {
     slug: 'jn',
-    name: 'Junction (Jn.)',
+    name: 'Junction [Jn.]',
     description: 'The main hub for founders, students, and curious people.',
     longDescription:
       'Jn. is the friendly front door of Open Box. Bring a rough idea, ask for feedback, share your wins, or find people who want to build alongside you.',
@@ -73,18 +147,31 @@ export const servers = [
   // },
 ]
 
-export const events = [
+// ─── Events ───────────────────────────────────────────────────────────────────
+
+export const events: Event[] = [
   // {
   //   id: 'open-build-night',
   //   name: 'Open Build Night',
   //   server: 'Dev',
   //   serverSlug: 'dev',
-  //   date: '2026-07-18T19:00:00+05:30',
+  //   date: '2026-06-22T14:00:00+05:30',
+  //   deadline: '2026-06-22T14:00:00+05:30',
   //   description: 'Bring a half-built project, get momentum, and leave with a tiny shipped improvement.',
   //   ticketStatus: 'free',
   //   isOffline: false,
   //   location: 'Discord voice stage',
   //   agenda: ['Quick intros', '45 minute build sprint', 'Feedback rounds', 'Show-and-tell'],
+  //   sponsor: {
+  //     name: 'Devfolio',
+  //     logo: 'https://devfolio.co/img/logo.png',
+  //     url: 'https://devfolio.co',
+  //     tagline: 'Powered by Devfolio',
+  //     socials: {
+  //       x: 'devfolio',
+  //       instagram: 'devfolio',
+  //     },
+  //   },
   // },
   // {
   //   id: 'gg-community-cup',
@@ -102,7 +189,7 @@ export const events = [
   // {
   //   id: 'jn-town-hall',
   //   name: 'JN Town Hall',
-  //   server: 'JN',
+  //   server: 'Jn.',
   //   serverSlug: 'jn',
   //   date: '2026-08-16T17:00:00+05:30',
   //   description: 'Community updates, open questions, and a look at what Open Box is building next.',
@@ -113,18 +200,10 @@ export const events = [
   // },
 ]
 
-export interface Blog {
-  slug: string
-  title: string
-  server: string
-  date: string
-  excerpt: string
-  readTime: string
-  category?: 'dbw'
-}
+// ─── Blogs ────────────────────────────────────────────────────────────────────
 
 export const blogs: Blog[] = [
-   {
+  {
     slug: 'where-we-go-from-here',
     title: 'Where We Go From Here',
     server: 'OB Team',
@@ -132,7 +211,6 @@ export const blogs: Blog[] = [
     excerpt: 'OpenBox has gone from a club side-project to its own independent community. Here is what we are focused on next and what we want to build with you.',
     readTime: '2 min read',
   },
- 
   {
     slug: 'ob-gg-gaming-server-beta',
     title: 'OB GG Is in Beta',
@@ -141,7 +219,6 @@ export const blogs: Blog[] = [
     excerpt: 'OB GG is our gaming server. We built it to bring more people into the OpenBox world and give gamers in the community a dedicated home. It is live now in beta.',
     readTime: '2 min read',
   },
- 
   {
     slug: 'the-new-website',
     title: 'The New Website',
@@ -150,7 +227,6 @@ export const blogs: Blog[] = [
     excerpt: 'We rebuilt openboxcomm.in from the ground up on Next.js and Vercel. Here is what it does now and what is coming next, including a dedicated ticketing site with Discord login.',
     readTime: '2 min read',
   },
- 
   {
     slug: 'the-first-website-broke',
     title: 'The First Website Broke',
@@ -159,7 +235,6 @@ export const blogs: Blog[] = [
     excerpt: 'We shipped our first website fast, felt good about it, and then watched it break in production. A build failure we did not catch for way too long.',
     readTime: '2 min read',
   },
- 
   {
     slug: 'how-we-started',
     title: 'How We Started',
@@ -179,145 +254,43 @@ export const blogs: Blog[] = [
   },
 ]
 
-// community-data.ts — docs page card metadata
+// ─── Docs ─────────────────────────────────────────────────────────────────────
 
 export const docs = [
+  // ─── Core ───────────────────────────────────────────────
+  { slug: 'getting-started', title: 'Getting Started', description: 'New to Open Box? Start here. Everything you need to join, settle in, and find your place.', section: 'Core' },
+  { slug: 'account-setup', title: 'Account Setup & Profile', description: 'How to join our Discord, complete onboarding, get your roles, and set up your profile the right way.', section: 'Core' },
+  { slug: 'rules', title: 'Community Rules', description: 'The shared expectations that keep Open Box friendly, useful, and safe.', section: 'Core' },
+  { slug: 'glossary', title: 'Glossary', description: 'Terms, abbreviations, and shorthand used across Open Box servers and the website.', section: 'Core' },
 
-  // ─── Core ─────────────────────────────────────────────────
-  {
-    slug: 'getting-started',
-    title: 'Getting Started',
-    description: 'New to Open Box? Start here. Everything you need to join, settle in, and find your place.',
-    section: 'Core',
-  },
-  {
-    slug: 'account-setup',
-    title: 'Account Setup & Profile',
-    description: 'How to join our Discord, complete onboarding, get your roles, and set up your profile the right way.',
-    section: 'Core',
-  },
-  {
-    slug: 'rules',
-    title: 'Community Rules',
-    description: 'The shared expectations that keep Open Box friendly, useful, and safe.',
-    section: 'Core',
-  },
-  {
-    slug: 'glossary',
-    title: 'Glossary',
-    description: 'Terms, abbreviations, and shorthand used across Open Box servers and the website.',
-    section: 'Core',
-  },
+  // ─── Community ──────────────────────────────────────────
+  { slug: 'discord-boosts', title: 'Discord Boosts', description: 'How Server Boosts work, what they unlock for Open Box, and perks for members who boost.', section: 'Community' },
+  { slug: 'jn-guide', title: 'Jn. Community Guide', description: 'Start here for introductions, sharing projects, and community norms.', section: 'Community' },
+  { slug: 'dev-handbook', title: 'Dev Server Handbook', description: 'How to ask for coding help, request reviews, and use project channels.', section: 'Community' },
+  { slug: 'gg-event-guide', title: 'GG Event Guide', description: 'Tournament expectations, gaming channels, and collaboration notes.', section: 'Community' },
+  { slug: 'groups', title: 'Groups & Sub-Communities', description: 'How the Open Box servers connect — Dev, GG, Study, and Connect as extensions of Junction.', section: 'Community' },
+  { slug: 'content-standards', title: 'Content Standards', description: 'What good content looks like in Open Box — and what crosses the line.', section: 'Community' },
+  { slug: 'privacy-community', title: 'Privacy in the Community', description: 'What to share, what to keep private, display name norms, and how to stay safe in the servers.', section: 'Community' },
 
-  // ─── Community ────────────────────────────────────────────
-  {
-    slug: 'jn-guide',
-    title: 'Jn. Community Guide',
-    description: 'Start here for introductions, sharing projects, and community norms.',
-    section: 'Community',
-  },
-  {
-    slug: 'dev-handbook',
-    title: 'Dev Server Handbook',
-    description: 'How to ask for coding help, request reviews, and use project channels.',
-    section: 'Community',
-  },
-  {
-    slug: 'gg-event-guide',
-    title: 'GG Event Guide',
-    description: 'Tournament expectations, gaming channels, and collaboration notes.',
-    section: 'Community',
-  },
-  {
-    slug: 'groups',
-    title: 'Groups & Sub-Communities',
-    description: 'How the Open Box servers connect — Dev, GG, Study, and Connect as extensions of Junction.',
-    section: 'Community',
-  },
-  {
-    slug: 'content-standards',
-    title: 'Content Standards',
-    description: 'What good content looks like in Open Box — and what crosses the line.',
-    section: 'Community',
-  },
-  {
-    slug: 'privacy-community',
-    title: 'Privacy in the Community',
-    description: 'What to share, what to keep private, display name norms, and how to stay safe in the servers.',
-    section: 'Community',
-  },
+  // ─── Platform ───────────────────────────────────────────
+  { slug: 'features', title: 'Features Overview', description: 'A tour of what Open Box offers — Discord servers, the website, events, and what is coming next.', section: 'Platform' },
+  { slug: 'roles', title: 'Roles & Permissions', description: 'How roles work across Open Box servers, how to earn them, and what they unlock.', section: 'Platform' },
+  { slug: 'events-tickets', title: 'Events & Tickets', description: 'How Open Box events work, how to register, and how to use tickets.openboxcomm.in.', section: 'Platform' },
+  { slug: 'tos-summary', title: 'Terms of Service Summary', description: 'A plain-English summary of the Open Box Terms & Conditions.', section: 'Platform' },
 
-  // ─── Platform ─────────────────────────────────────────────
-  {
-    slug: 'features',
-    title: 'Features Overview',
-    description: 'A tour of what Open Box offers — Discord servers, the website, events, and what is coming next.',
-    section: 'Platform',
-  },
-  {
-    slug: 'roles',
-    title: 'Roles & Permissions',
-    description: 'How roles work across Open Box servers, how to earn them, and what they unlock.',
-    section: 'Platform',
-  },
-  {
-    slug: 'events-tickets',
-    title: 'Events & Tickets',
-    description: 'How Open Box events work, how to register, and how to use tickets.openboxcomm.in.',
-    section: 'Platform',
-  },
-  {
-    slug: 'tos-summary',
-    title: 'Terms of Service Summary',
-    description: 'A plain-English summary of the Open Box Terms & Conditions.',
-    section: 'Platform',
-  },
+  // ─── Support ────────────────────────────────────────────
+  { slug: 'moderation-policy', title: 'Moderation Policy', description: 'How moderation works at Open Box — what moderators do, how decisions are made, and how to appeal.', section: 'Support' },
+  { slug: 'reporting', title: 'Reporting & Enforcement', description: 'How to report rule violations, what happens after a report, and how enforcement works.', section: 'Support' },
+  { slug: 'troubleshooting', title: 'Troubleshooting', description: 'Common issues and how to fix them. When in doubt, reach the team at support@openboxcomm.in.', section: 'Support' },
+  { slug: 'contact', title: 'Contact & Support', description: 'Every way to reach the Open Box team — email, Discord, and what to expect when you do.', section: 'Support' },
 
-  // ─── Support ──────────────────────────────────────────────
-  {
-    slug: 'moderation-policy',
-    title: 'Moderation Policy',
-    description: 'How moderation works at Open Box — what moderators do, how decisions are made, and how to appeal.',
-    section: 'Support',
-  },
-  {
-    slug: 'reporting',
-    title: 'Reporting & Enforcement',
-    description: 'How to report rule violations, what happens after a report, and how enforcement works.',
-    section: 'Support',
-  },
-  {
-    slug: 'troubleshooting',
-    title: 'Troubleshooting',
-    description: 'Common issues and how to fix them. When in doubt, reach the team at support@openboxcomm.in.',
-    section: 'Support',
-  },
-  {
-    slug: 'contact',
-    title: 'Contact & Support',
-    description: 'Every way to reach the Open Box team — email, Discord, and what to expect when you do.',
-    section: 'Support',
-  },
+  // ─── Contributing ───────────────────────────────────────
+  { slug: 'contributing', title: 'Contributing to the Community', description: 'How to submit suggestions, build tools, contribute bots, and help make Open Box better.', section: 'Contributing' },
+]
 
-  // ─── Contributing ─────────────────────────────────────────
-  {
-    slug: 'contributing',
-    title: 'Contributing to the Community',
-    description: 'How to submit suggestions, build tools, contribute bots, and help make Open Box better.',
-    section: 'Contributing',
-  },
+// ─── Team ─────────────────────────────────────────────────────────────────────
 
-];
-
-export function getServer(slug: string) {
-  return servers.find((server) => server.slug === slug)
-}
-
-export function getBlog(slug: string) {
-  return blogs.find((blog) => blog.slug === slug)
-}
-
-export const teamMembers = [
+export const teamMembers: TeamMember[] = [
   // {
   //   slug: 'jules',
   //   name: 'Jules',
@@ -327,19 +300,19 @@ export const teamMembers = [
   //   socials: {
   //     github: 'https://github.com/jules',
   //     twitter: 'https://x.com/jules',
-  //   }
+  //   },
   // },
   {
     slug: 'sachin',
     name: 'Sachin',
     role: 'Community Founder',
-    bio: ' Sachin is the Founder of Open Box, a community for developers, builders, gamers, and students. They are passionate about creating spaces where people can connect, learn, and grow together.',
+    bio: 'Sachin is the Founder of Open Box, a community for developers, builders, gamers, and students. They are passionate about creating spaces where people can connect, learn, and grow together.',
     avatar: 'https://api.dicebear.com/10.x/initials/svg?seed=Sachin',
     socials: {
-      instagram: 'https://x.com/alex',
-      github: 'https://github.com/alex',
-      twitter: 'https://x.com/alex',
-    }
+      instagram: 'https://instagram.com/openboxcomm',
+      github: 'https://github.com/openboxcomm',
+      twitter: 'https://x.com/openboxcomm',
+    },
   },
   // {
   //   slug: 'rohit',
@@ -349,14 +322,24 @@ export const teamMembers = [
   //   avatar: '#',
   //   socials: {
   //     github: 'https://github.com/rohit',
-  //   }
-  // }
+  //   },
+  // },
 ]
 
-export function getEvent(id: string) {
-  return events.find((event) => event.id === id)
+// ─── Helpers ──────────────────────────────────────────────────────────────────
+
+export function getServer(slug: string) {
+  return servers.find((server) => server.slug === slug)
 }
 
-export function getTeamMember(slug: string) {
-  return teamMembers.find((member) => member.slug === slug)
+export function getEvent(id: string): Event | undefined {
+  return events.find((e) => e.id === id)
+}
+
+export function getBlog(slug: string): Blog | undefined {
+  return blogs.find((b) => b.slug === slug)
+}
+
+export function getTeamMember(slug: string): TeamMember | undefined {
+  return teamMembers.find((m) => m.slug === slug)
 }

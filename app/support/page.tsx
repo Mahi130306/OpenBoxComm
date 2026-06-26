@@ -58,7 +58,7 @@ const tiers = [
   },
   {
     name: 'GOAT',
-    price: '$4/mo',
+    price: '$6/mo',
     icon: Trophy,
     description: 'Reserved for the ones who go above and beyond. Exclusive access.',
     perks: [
@@ -117,6 +117,15 @@ const tiers = [
   },
 ]
 
+const phantomPerks = [
+  'Everything in Legend (All 13)',
+  'Exclusive OP Supporter role — rare, visible on supporter wall',
+  '12–16% off paid OB events + priority spot',
+  'Monthly voice hangout with OB founders',
+  'First dibs + discount when OB merch drops',
+  'Namedropped in DBW every week*',
+]
+
 export default function SupportPage() {
   return (
     <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
@@ -129,7 +138,6 @@ export default function SupportPage() {
           boxShadow: '0 20px 50px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.05)',
         }}
       >
-        {/* Dynamic backdrop accent */}
         <div
           className="absolute -right-24 -top-24 w-96 h-96 rounded-full pointer-events-none opacity-20 filter blur-[80px]"
           style={{
@@ -179,7 +187,8 @@ export default function SupportPage() {
           Your supporter role will be assigned based on your contribution inside the OpenBox Jn. server.
         </p>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        {/* First 4 tiers */}
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 mb-6">
           {tiers.map((tier) => {
             const Icon = tier.icon
             const isLegend = tier.name === 'Legend'
@@ -195,10 +204,11 @@ export default function SupportPage() {
                   ${tier.theme.border} ${tier.theme.bg} ${tier.theme.glow}
                 `}
                 style={{
-                  boxShadow: isLegend ? '0 10px 30px -10px rgba(245,158,11,0.15)' : 'none'
+                  boxShadow: isLegend
+                    ? '0 10px 30px -10px rgba(245,158,11,0.15)'
+                    : 'none'
                 }}
               >
-                {/* Background ambient spotlight for high tiers */}
                 {(isLegend || isGoat) && (
                   <div
                     className="absolute -right-16 -top-16 w-36 h-36 rounded-full pointer-events-none opacity-20 filter blur-2xl group-hover:opacity-40 transition-opacity"
@@ -211,7 +221,6 @@ export default function SupportPage() {
                 )}
 
                 <div>
-                  {/* Top Header Row with Icon & Badge */}
                   <div className="flex items-center justify-between mb-5">
                     <div className={`flex h-11 w-11 items-center justify-center rounded-xl ${tier.theme.iconBg} ${tier.theme.iconColor} group-hover:scale-110 transition-transform duration-300`}>
                       <Icon className="h-5 w-5" />
@@ -223,7 +232,6 @@ export default function SupportPage() {
                     )}
                   </div>
 
-                  {/* Title & Price */}
                   <div className="mb-4">
                     <div className="flex items-baseline justify-between gap-2">
                       <h3 className={`text-2xl font-black ${tier.theme.title}`}>
@@ -238,10 +246,8 @@ export default function SupportPage() {
                     </p>
                   </div>
 
-                  {/* Divider */}
                   <div className="w-full h-px my-4 bg-zinc-800/60" />
 
-                  {/* Perks List */}
                   <ul className="space-y-3 text-xs text-zinc-300/90 mt-2 mb-6">
                     {tier.perks.map((perk, i) => (
                       <li key={i} className="flex items-start gap-2">
@@ -252,7 +258,6 @@ export default function SupportPage() {
                   </ul>
                 </div>
 
-                {/* Exclusive Action Button */}
                 <div className="mt-auto">
                   <Button
                     asChild
@@ -261,13 +266,177 @@ export default function SupportPage() {
                     style={tier.theme.buttonStyle}
                   >
                     <a href={process.env.NEXT_PUBLIC_PATREON_URL || 'https://patreon.com/OpenBoxComm'} target="_blank" rel="noopener noreferrer">
-                      Get {tier.name} {isLegend && <Sparkles size={12} className="ml-1 text-black-500 animate-pulse" />}
+                      {`Become a Supporter`}
+                      {isLegend && <Sparkles size={12} className="ml-1 animate-pulse" />}
                     </a>
                   </Button>
                 </div>
               </div>
             )
           })}
+        </div>
+
+        {/* OP SUPPORTER / Phantom — full-width premium card */}
+        <div
+          style={{
+            position: 'relative',
+            borderRadius: '20px',
+            padding: '1.5px',
+            background: 'linear-gradient(145deg, rgba(167,139,250,0.7) 0%, rgba(109,40,217,0.4) 25%, rgba(0,0,0,0) 55%, rgba(167,139,250,0.5) 100%)',
+            boxShadow: '0 0 70px -10px rgba(139,92,246,0.45), 0 0 140px -30px rgba(109,40,217,0.25)',
+          }}
+        >
+          <div
+            style={{
+              borderRadius: '18.5px',
+              background: 'linear-gradient(160deg, #0d0a1a 0%, #0a0812 45%, #060410 100%)',
+              padding: '32px 36px',
+              position: 'relative',
+              overflow: 'hidden',
+            }}
+          >
+            {/* Top shimmer line */}
+            <div style={{
+              position: 'absolute', top: 0, left: '8%', right: '8%', height: '1px',
+              background: 'linear-gradient(90deg, transparent, rgba(167,139,250,0.9), rgba(216,180,254,1), rgba(167,139,250,0.9), transparent)',
+              filter: 'blur(0.5px)',
+            }} />
+
+            {/* Ambient glow orbs */}
+            <div style={{
+              position: 'absolute', top: '-60px', right: '-60px', width: '280px', height: '280px',
+              background: 'radial-gradient(circle, rgba(109,40,217,0.3) 0%, transparent 70%)',
+              borderRadius: '50%', filter: 'blur(30px)', pointerEvents: 'none',
+            }} />
+            <div style={{
+              position: 'absolute', bottom: '-40px', left: '-40px', width: '220px', height: '220px',
+              background: 'radial-gradient(circle, rgba(76,29,149,0.2) 0%, transparent 70%)',
+              borderRadius: '50%', filter: 'blur(24px)', pointerEvents: 'none',
+            }} />
+            <div style={{
+              position: 'absolute', top: '50%', left: '45%', width: '300px', height: '300px',
+              background: 'radial-gradient(circle, rgba(109,40,217,0.08) 0%, transparent 70%)',
+              borderRadius: '50%', filter: 'blur(40px)', pointerEvents: 'none',
+              transform: 'translateY(-50%)',
+            }} />
+
+            <div style={{ position: 'relative', zIndex: 1, display: 'flex', gap: '48px', alignItems: 'flex-start', flexWrap: 'wrap' }}>
+
+              {/* Left column — identity */}
+              <div style={{ flex: '0 0 auto', minWidth: '220px' }}>
+                {/* Icon + badge row */}
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '20px' }}>
+                  <div style={{
+                    width: '52px', height: '52px', borderRadius: '14px',
+                    background: 'linear-gradient(135deg, rgba(109,40,217,0.5), rgba(76,29,149,0.25))',
+                    border: '1px solid rgba(167,139,250,0.3)',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    boxShadow: '0 0 20px rgba(139,92,246,0.35)',
+                  }}>
+                    <Star size={24} color="#c4b5fd" />
+                  </div>
+
+                  <div style={{
+                    padding: '4px 12px', borderRadius: '999px',
+                    background: 'linear-gradient(135deg, rgba(109,40,217,0.45), rgba(91,33,182,0.3))',
+                    border: '1px solid rgba(167,139,250,0.45)',
+                    fontSize: '9px', fontWeight: '800', letterSpacing: '0.22em',
+                    color: '#ddd6fe', textTransform: 'uppercase' as const,
+                    boxShadow: '0 0 14px rgba(139,92,246,0.3)',
+                  }}>
+                    RARE
+                  </div>
+                </div>
+
+                {/* Tier name */}
+                <h3 style={{
+                  fontSize: '32px', fontWeight: '900', letterSpacing: '-0.02em', lineHeight: 1,
+                  background: 'linear-gradient(135deg, #f5f3ff 0%, #ddd6fe 30%, #a78bfa 65%, #7c3aed 100%)',
+                  WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                  filter: 'drop-shadow(0 0 14px rgba(167,139,250,0.35))',
+                  marginBottom: '4px',
+                }}>
+                  OP SUPPORTER
+                </h3>
+                <p style={{
+                  fontSize: '11px', fontWeight: '500', letterSpacing: '0.14em',
+                  color: 'rgba(167,139,250,0.45)', textTransform: 'uppercase' as const,
+                  marginBottom: '20px',
+                }}>
+                  This tier is not aviliable anywhere
+                </p>
+
+                {/* Price */}
+                <div style={{ display: 'flex', alignItems: 'baseline', gap: '4px', marginBottom: '12px' }}>
+                  <span style={{
+                    fontSize: '40px', fontWeight: '800', color: '#fff',
+                    letterSpacing: '-0.03em',
+                    textShadow: '0 0 24px rgba(167,139,250,0.25)',
+                  }}>$10</span>
+                  <span style={{ fontSize: '14px', color: 'rgba(167,139,250,0.55)', fontWeight: '500' }}>/mo</span>
+                </div>
+
+                <p style={{
+                  fontSize: '13px', color: 'rgba(196,181,253,0.55)', lineHeight: '1.5',
+                  maxWidth: '200px',
+                }}>
+                  Few know. Fewer are. The ones who were here before it was cool.
+                </p>
+              </div>
+
+              {/* Vertical divider */}
+              <div style={{
+                width: '1px', alignSelf: 'stretch',
+                background: 'linear-gradient(180deg, transparent, rgba(139,92,246,0.3), transparent)',
+                flexShrink: 0,
+              }} />
+
+              {/* Right column — perks + CTA */}
+              <div style={{ flex: 1, minWidth: '260px' }}>
+                <p style={{
+                  fontSize: '10px', fontWeight: '700', letterSpacing: '0.18em',
+                  color: 'rgba(167,139,250,0.45)', textTransform: 'uppercase' as const,
+                  marginBottom: '14px',
+                }}>
+                  What you get
+                </p>
+                <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 28px 0', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px 24px' }}>
+                  {phantomPerks.map((perk, i) => (
+                    <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
+                      <CheckCircle2 size={13} style={{ color: '#a78bfa', flexShrink: 0, marginTop: '2px' }} />
+                      <span style={{ fontSize: '12px', color: 'rgba(221,214,254,0.75)', lineHeight: '1.45' }}>{perk}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <Button
+                  asChild
+                  style={{
+                    background: 'linear-gradient(135deg, #6d28d9 0%, #5b21b6 50%, #4c1d95 100%)',
+                    color: '#000', fontSize: '13px', fontWeight: '800',
+                    letterSpacing: '0.03em', borderRadius: '12px', border: 'none',
+                    padding: '12px 28px', cursor: 'pointer',
+                    boxShadow: '0 4px 28px rgba(109,40,217,0.55), inset 0 1px 0 rgba(255,255,255,0.12)',
+                    display: 'inline-flex', alignItems: 'center', gap: '8px',
+                    transition: 'all 0.2s',
+                  }}
+                >
+                  <a href={process.env.NEXT_PUBLIC_PATREON_URL || 'https://patreon.com/OpenBoxComm'} target="_blank" rel="noopener noreferrer">
+                    <Star size={15} />
+                    Become a OP Supporter
+                    <Star size={15} />
+                  </a>
+                </Button>
+              </div>
+            </div>
+
+            {/* Bottom shimmer */}
+            <div style={{
+              position: 'absolute', bottom: 0, left: '15%', right: '15%', height: '1px',
+              background: 'linear-gradient(90deg, transparent, rgba(109,40,217,0.45), transparent)',
+            }} />
+          </div>
         </div>
       </section>
 

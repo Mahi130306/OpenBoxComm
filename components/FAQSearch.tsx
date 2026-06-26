@@ -107,6 +107,30 @@ const FAQ_CATEGORIES = [
         tags: ['tiers', 'npc', 'rookie', 'goat', 'legend', 'patreon', 'perks', 'supporter'],
       },
       {
+        question: 'Can I support without Patreon?',
+        answer:
+          'No, Patreon is the only official way to support Open Box. It funds hosting, domain, and operations. Every contribution helps keep Open Box free and running.',
+        tags: ['support', 'patreon', 'funding'],
+      },
+      {
+        question: 'Why the tiers in dollars($)?',
+        answer:
+        'Because Patreon only supports USD. Open Box is international and welcomes members from all countries. The tiers are priced in USD but you can pay with any currency through Patreon.',
+        tags: ['tiers', 'patreon', 'currency', 'usd'],
+      },
+      {
+        question: 'What are the benefits of each tier?',
+        answer:
+          'Each tier comes with a unique Discord role, priority access to certain channels or events, and recognition inside the community. Higher tiers include more perks. Check openboxcomm.in/tiers for the full breakdown.',
+        tags: ['tiers', 'benefits', 'perks', 'supporter'],
+      },
+      {
+        question: 'Why support tier start from 1$?',
+        answer:
+          'Open Box is free and volunteer-run. The $1 tier is the minimum to support the community and help cover hosting, domain, and operations. Every contribution, big or small, keeps Open Box free and running.',
+      },
+
+      {
         question: 'How do I contact the team?',
         answer:
           'For general questions: hello@openboxcomm.in. For support issues: support@openboxcomm.in. For moderation appeals: appeals@openboxcomm.in. For partnerships: partnerships@openboxcomm.in.',

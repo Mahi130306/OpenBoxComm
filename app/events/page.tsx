@@ -1,9 +1,6 @@
 'use client'
 
-// Note: metadata export is not supported in client components. 
-// For SEO, move page shell to a server component if needed in future.
-
-import { useMemo, useState } from 'react'
+import { useMemo, useState, useEffect } from 'react'
 import Link from 'next/link'
 import { CalendarClock, Calendar } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -17,6 +14,9 @@ const typeFilters = ['all', 'online', 'offline']
 export default function EventsPage() {
   const [filterServer, setFilterServer] = useState('All')
   const [filterType, setFilterType] = useState('all')
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => setMounted(true), [])
 
   const filteredEvents = useMemo(() => {
     return events.filter((event) => {
@@ -41,20 +41,23 @@ export default function EventsPage() {
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-      {/* Premium Hero Banner */}
+      {/* Hero */}
       <div className="mb-16 rounded-3xl border border-black/10 bg-gradient-to-br from-black/[0.04] to-cyan-400/[0.08] p-8 shadow-sm dark:border-white/10 dark:from-white/[0.08] dark:to-cyan-400/[0.05] sm:p-12 lg:p-16">
-        <div className="flex items-center gap-3 mb-6">
-            <Calendar className="h-8 w-8 text-cyan-500" />
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-cyan-600 dark:text-cyan-300">Community calendar</p>
+        <div className="mb-6 flex items-center gap-3">
+          <Calendar className="h-8 w-8 text-cyan-500" />
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-cyan-600 dark:text-cyan-300">
+            Community calendar
+          </p>
         </div>
-        <h1 className="mb-6 text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl lg:text-6xl max-w-4xl">
+        <h1 className="mb-6 max-w-4xl text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
           Events
         </h1>
-        <p className="max-w-3xl text-xl text-muted-foreground/90 leading-relaxed">
+        <p className="max-w-3xl text-xl leading-relaxed text-muted-foreground/90">
           Join workshops, tournaments, build nights, and community gatherings across all Open Box servers.
         </p>
       </div>
 
+      {/* Filters */}
       <div className="mb-8 flex flex-wrap gap-4 border-b border-border pb-4">
         <div className="flex flex-wrap gap-2">
           {serverFilters.map((server) => (
@@ -83,40 +86,74 @@ export default function EventsPage() {
         </div>
       </div>
 
+      {/* Grid or empty state */}
       {filteredEvents.length === 0 ? (
         <div className="rounded-lg border border-dashed border-border bg-surface p-10 text-center">
           <CalendarClock className="mx-auto mb-4 h-10 w-10 text-cyan-300" />
           <h2 className="mb-2 text-3xl">Coming soon</h2>
           <p className="mx-auto max-w-xl text-muted-foreground">
             No events match this view yet. New sessions will appear here once the community calendar is updated.
-             <br />
-                Have an event you'd like to see? <u> <Link href="/help" className="text-cyan-500 hover:underline">Suggest it!</Link></u>
+            <br />
+            Have an event you&apos;d like to see?{' '}
+            <Link href="/help" className="text-cyan-500 underline">
+              Suggest it!
+            </Link>
           </p>
         </div>
       ) : (
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {filteredEvents.map((event, i) => (
-            <Card 
-              key={event.id} 
+            <Card
+              key={event.id}
               className="flex flex-col border-border bg-surface transition-all hover:-translate-y-1 hover:shadow-lg animate-in fade-in slide-in-from-bottom-4 duration-500 fill-mode-both"
               style={{ animationDelay: `${100 + i * 50}ms` }}
             >
+              {/* Sponsor banner strip */}
+              {event.sponsor && (
+                <div className="flex items-center gap-2 rounded-t-lg border-b border-yellow-500/20 bg-yellow-500/5 px-4 py-2">
+                  <img
+                    src={event.sponsor.logo}
+                    alt={event.sponsor.name}
+                    className="h-4 w-auto max-w-[80px] object-contain opacity-80"
+                  />
+                  <span className="text-xs text-yellow-500/70">
+                    {event.sponsor.tagline ?? `Sponsored by ${event.sponsor.name}`}
+                  </span>
+                </div>
+              )}
+
               <CardHeader>
                 <div className="flex items-start justify-between gap-3">
                   <CardTitle className="text-xl">{event.name}</CardTitle>
-                  <Badge variant={event.ticketStatus === 'free' ? 'secondary' : 'default'} className="shrink-0">
+                  <Badge
+                    variant={event.ticketStatus === 'free' ? 'secondary' : 'default'}
+                    className="shrink-0"
+                  >
                     {event.ticketStatus === 'free' ? 'Free' : event.price}
                   </Badge>
                 </div>
-                <CardDescription className="text-muted-foreground">{formatDate(event.date)}</CardDescription>
+                <CardDescription className="text-muted-foreground">
+                  {mounted ? (
+                    formatDate(event.date)
+                  ) : (
+                    <span className="opacity-0">Loading date...</span>
+                  )}
+                </CardDescription>
               </CardHeader>
+
               <CardContent className="flex-1">
                 <p className="text-sm text-muted-foreground">{event.description}</p>
                 <div className="mt-4 flex flex-wrap gap-2">
                   <Badge variant="outline">{event.server}</Badge>
                   <Badge variant="outline">{event.isOffline ? 'Offline' : 'Online'}</Badge>
+                  {event.sponsor && (
+                    <Badge variant="outline" className="border-yellow-500/30 text-yellow-400">
+                      Sponsored
+                    </Badge>
+                  )}
                 </div>
               </CardContent>
+
               <CardFooter>
                 <Button asChild className="w-full">
                   <Link href={`/events/${event.id}`}>View Details</Link>

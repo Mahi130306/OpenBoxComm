@@ -36,6 +36,12 @@ export default function HelpPage() {
               Community Rules
             </Link>
           </Button>
+          <Button asChild variant="outline" size="lg" className="rounded-full">
+            <Link href="/contact-us">
+              <Mail className="mr-2 h-4 w-4" />
+              Contact Us
+            </Link>
+          </Button>
         </div>
       </div>
 

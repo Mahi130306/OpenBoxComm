@@ -95,13 +95,29 @@ export default function CookiePage() {
 
       <h3>2.3 Analytics Cookies</h3>
       <p>
-        We may use privacy-respecting analytics (such as Plausible or similar) that do not set persistent
-        cookies or collect personally identifiable information, in compliance with the{' '}
-        <a href="https://www.indiacode.nic.in/bitstream/123456789/20168/1/2023_Act_22_Digital_Personal_Data_Protection_Act.pdf" target="_blank" rel="noopener noreferrer">
-          DPDP Act, 2023
-        </a>
-        .
+        We use PostHog for privacy-respecting, consent-gated analytics. These cookies are only set
+        after you accept the consent banner and are never used to identify you personally.
       </p>
+      <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+        <thead>
+          <tr>
+            <th style={{ textAlign: 'left', padding: '8px 4px', borderBottom: '1px solid #333' }}>Name</th>
+            <th style={{ textAlign: 'left', padding: '8px 4px', borderBottom: '1px solid #333' }}>Provider</th>
+            <th style={{ textAlign: 'left', padding: '8px 4px', borderBottom: '1px solid #333' }}>Purpose</th>
+            <th style={{ textAlign: 'left', padding: '8px 4px', borderBottom: '1px solid #333' }}>Duration</th>
+            <th style={{ textAlign: 'left', padding: '8px 4px', borderBottom: '1px solid #333' }}>Controlled by</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style={{ padding: '6px 4px', borderBottom: '1px solid #222', fontFamily: 'monospace', fontSize: '0.85em' }}>ph_*</td>
+            <td style={{ padding: '6px 4px', borderBottom: '1px solid #222' }}>PostHog</td>
+            <td style={{ padding: '6px 4px', borderBottom: '1px solid #222' }}>Anonymous usage analytics (pages visited, features used, session duration). No personally identifiable information is collected.</td>
+            <td style={{ padding: '6px 4px', borderBottom: '1px solid #222', color: 'var(--muted-foreground)' }}>1 year</td>
+            <td style={{ padding: '6px 4px', borderBottom: '1px solid #222' }}>Consent banner on site</td>
+          </tr>
+        </tbody>
+      </table>
 
       <h3>2.4 Third-Party Cookies</h3>
       <p>Third-party services integrated into our website may set their own cookies:</p>
@@ -130,6 +146,7 @@ export default function CookiePage() {
         <li><strong>Browser settings:</strong> You can instruct your browser to refuse cookies or delete existing cookies. Disabling necessary cookies may impair website functionality.</li>
         <li><strong>localStorage:</strong> Clear localStorage via your browser&apos;s DevTools (Application &gt; Storage &gt; Local Storage) at any time. This resets your theme preference to the default (dark).</li>
         <li><strong>Diagnostic logs:</strong> Open your browser console and run <code>__ob.clearLogs()</code> to wipe all locally stored diagnostic logs.</li>
+        <li><strong>Withdraw analytics consent:</strong> Clear your browser cookies and localStorage, or email <strong>privacy@openboxcomm.in</strong> — analytics will not be re-initialised until you accept the consent banner again.</li>
       </ul>
 
       <h2>4. Consent</h2>

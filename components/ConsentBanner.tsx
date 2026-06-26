@@ -50,7 +50,7 @@ export function ConsentBanner() {
         </p>
         <div className="flex items-center gap-2 shrink-0">
           <button
-            onClick={() => animateOut(() => accept())}
+            onClick={() => animateOut(() => { accept(); window.dispatchEvent(new Event('cookie-consent-accepted')) })}
             className="px-3 py-1.5 rounded-lg text-xs font-semibold bg-foreground text-background hover:opacity-80 transition-opacity"
           >
             Accept

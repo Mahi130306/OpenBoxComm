@@ -8,9 +8,9 @@ export type DocData = {
 }
 
 export const docContents: Record<string, DocData> = {
- // docs.ts — full content for every doc page
+  // docs.ts — full content for every doc page
 
-// export const docsContent: Record<string, { sections: { title: string; content: string }[] }> = {
+  // export const docsContent: Record<string, { sections: { title: string; content: string }[] }> = {
 
   // ─── CORE ─────────────────────────────────────────────────
 
@@ -72,60 +72,60 @@ export const docContents: Record<string, DocData> = {
     ],
   },
 
- rules: {
-  sections: [
-    {
-      title: 'Respect & Inclusion',
-      content:
-        'Treat all members with dignity regardless of background, experience level, gender, religion, caste, or nationality. Harassment, bullying, targeted abuse, hate speech, discriminatory slurs, casteist language, and content that promotes communal disharmony are strictly prohibited. Constructive criticism is welcome. Personal attacks are not.',
-    },
-    {
-      title: 'Content Standards',
-      content:
-        'Keep content relevant to the channel or context. NSFW content — explicit, sexual, violent, or gory material — is strictly banned. Do not share content that glorifies self-harm, suicide, or violence. Misinformation, deliberate disinformation, political campaigning, and communally sensitive content are not permitted on any Open Box platform.',
-    },
-    {
-      title: 'No Spam or Unsolicited Promotion',
-      content:
-        'No unsolicited DMs, advertisement spam, or chain messages. Self-promotion is only allowed in designated channels or with moderator approval. Flooding channels with repeated posts will result in a mute. Phishing links, malware, or deceptive URLs result in an immediate permanent ban.',
-    },
-    {
-      title: 'Intellectual Property',
-      content:
-        'Do not share pirated software, cracked tools, or illegally distributed media. Credit the original creator when sharing others\' work. Plagiarism is prohibited. Sharing copyrighted material without authorisation may be reported under the IT Act, 2000 and the Copyright Act, 1957.',
-    },
-    {
-      title: 'Privacy',
-      content:
-        'Do not share personal information — phone numbers, addresses, Aadhaar, etc. — of yourself or others without explicit consent. Doxxing results in an immediate permanent ban and may be reported under the DPDP Act, 2023. Do not record, screenshot, or share private conversations without all parties\' consent.',
-    },
-    {
-      title: 'Events',
-      content:
-        'All participants at Open Box events — on Discord, live on YouTube or X, or at IRL meetups — must follow these rules in full. Events may have additional rules covering teams, submissions, deadlines, or judging. Read the event post and follow organizer instructions. For full details, refer to the Events Policy at /legal/events.',
-    },
-    {
-      title: 'Social Media',
-      content:
-        'These rules apply when interacting with Open Box\'s official accounts on X, Instagram, and YouTube. Violating comments or interactions may be removed and the user may be blocked or reported to the respective platform.',
-    },
-    {
-      title: 'Moderator Authority',
-      content:
-        'Moderator decisions are final. Do not argue with moderators publicly — use the designated appeal channels. Do not attempt to bypass moderation actions using alternate accounts. Impersonating moderators, staff, or the Open Box brand results in an immediate permanent ban.',
-    },
-    {
-      title: 'Appeals',
-      content:
-        'If you believe a moderation action was applied in error, appeal via the Help Centre at /help, the official support channel on Discord, or by emailing appeals@openboxcomm.in. Appeals are reviewed within 7 days.',
-    },
-    {
-      title: 'Reporting Violations',
-      content:
-        'Use the #report channel on any Discord server or email admin@openboxcomm.in for cross-platform or serious violations. Do not try to handle violations yourself in the channel. Screenshots help. For legal violations, report to CERT-In (cert-in.org.in) or the National Cyber Crime Reporting Portal (cybercrime.gov.in).',
-    },
-  ],
-},
+  rules: {
+    sections: [
+      {
+        title: 'Respect & Inclusion',
+        content:
+          'Treat all members with dignity regardless of background, experience level, gender, religion, caste, or nationality. Harassment, bullying, targeted abuse, hate speech, discriminatory slurs, casteist language, and content that promotes communal disharmony are strictly prohibited. Constructive criticism is welcome. Personal attacks are not.',
+      },
+      {
+        title: 'Content Standards',
+        content:
+          'Keep content relevant to the channel or context. NSFW content — explicit, sexual, violent, or gory material — is strictly banned. Do not share content that glorifies self-harm, suicide, or violence. Misinformation, deliberate disinformation, political campaigning, and communally sensitive content are not permitted on any Open Box platform.',
+      },
+      {
+        title: 'No Spam or Unsolicited Promotion',
+        content:
+          'No unsolicited DMs, advertisement spam, or chain messages. Self-promotion is only allowed in designated channels or with moderator approval. Flooding channels with repeated posts will result in a mute. Phishing links, malware, or deceptive URLs result in an immediate permanent ban.',
+      },
+      {
+        title: 'Intellectual Property',
+        content:
+          'Do not share pirated software, cracked tools, or illegally distributed media. Credit the original creator when sharing others\' work. Plagiarism is prohibited. Sharing copyrighted material without authorisation may be reported under the IT Act, 2000 and the Copyright Act, 1957.',
+      },
+      {
+        title: 'Privacy',
+        content:
+          'Do not share personal information — phone numbers, addresses, Aadhaar, etc. — of yourself or others without explicit consent. Doxxing results in an immediate permanent ban and may be reported under the DPDP Act, 2023. Do not record, screenshot, or share private conversations without all parties\' consent.',
+      },
+      {
+        title: 'Events',
+        content:
+          'All participants at Open Box events — on Discord, live on YouTube or X, or at IRL meetups — must follow these rules in full. Events may have additional rules covering teams, submissions, deadlines, or judging. Read the event post and follow organizer instructions. For full details, refer to the Events Policy at /legal/events.',
+      },
+      {
+        title: 'Social Media',
+        content:
+          'These rules apply when interacting with Open Box\'s official accounts on X, Instagram, and YouTube. Violating comments or interactions may be removed and the user may be blocked or reported to the respective platform.',
+      },
+      {
+        title: 'Moderator Authority',
+        content:
+          'Moderator decisions are final. Do not argue with moderators publicly — use the designated appeal channels. Do not attempt to bypass moderation actions using alternate accounts. Impersonating moderators, staff, or the Open Box brand results in an immediate permanent ban.',
+      },
+      {
+        title: 'Appeals',
+        content:
+          'If you believe a moderation action was applied in error, appeal via the Help Centre at /help, the official support channel on Discord, or by emailing appeals@openboxcomm.in. Appeals are reviewed within 7 days.',
+      },
+      {
+        title: 'Reporting Violations',
+        content:
+          'Use the #report channel on any Discord server or email admin@openboxcomm.in for cross-platform or serious violations. Do not try to handle violations yourself in the channel. Screenshots help. For legal violations, report to CERT-In (cert-in.org.in) or the National Cyber Crime Reporting Portal (cybercrime.gov.in).',
+      },
+    ],
+  },
 
   glossary: {
     sections: [
@@ -171,7 +171,50 @@ export const docContents: Record<string, DocData> = {
       // },
     ],
   },
-
+  'discord-boosts': {
+    sections: [
+      {
+        title: 'What Are Server Boosts?',
+        content:
+          'Discord Server Boosts are a way for members to directly support Open Box and unlock perks for the entire community. When you boost, you spend one of your Nitro boost slots on the Open Box server. Every boost counts toward the server\'s overall boost level, which unlocks better features for everyone — not just the person who boosted.',
+      },
+      {
+        title: 'Boost Levels and What They Unlock',
+        content:
+          'Open Box benefits from Discord\'s three-tier boost system. Level 1 (2 boosts) unlocks a custom server invite link, improved audio quality, and a server banner. Level 2 (7 boosts) adds higher quality screen share, a server splash screen, and more emoji slots. Level 3 (14 boosts) unlocks the best audio quality, a custom server banner, vanity URL, and increased file upload limits for everyone.',
+      },
+      {
+        title: 'How to Boost',
+        content:
+          'Open the Open Box server on Discord. Click the server name at the top left to open the dropdown. Select "Boost Server". Choose how many of your available boost slots you want to use. Confirm. That\'s it. Boosts last 30 days and auto-renew as long as your Nitro subscription is active. You can remove your boost at any time, but the perk is gone immediately.',
+      },
+      {
+        title: 'Do I Need Nitro to Boost?',
+        content:
+          'Yes. Server boosts are a Discord Nitro feature. Nitro Basic gives you 0 boosts. Nitro Classic gives you 2 boosts. Nitro (full) gives you 2 boosts as well, plus access to all Nitro features. If you don\'t have Nitro, you can still support Open Box through the Patreon tiers at openboxcomm.in/tiers.',
+      },
+      {
+        title: 'Perks for Boosters',
+        content:
+          'Members who boost Open Box get a special Booster role on the server. This gives you a distinct color in the member list, access to the #boosters-lounge channel, priority support in Help Centre tickets, and a shoutout in the monthly community update. Perks are active as long as your boost is active.',
+      },
+      {
+        title: 'Boosts vs Patreon Support',
+        content:
+          'Boosts directly improve the server experience for every member on Discord. Patreon support funds the infrastructure — hosting, domain, tooling, and operations. Both matter. If you want to do more than boost, check out the support tiers at openboxcomm.in/support. Every contribution, big or small, keeps Open Box free and running.',
+      },
+      {
+        title: 'Current Boost Status',
+        content:
+          'You can see the live boost count at the top of the member list on any Open Box Discord server. The goal is Level 2. Once we hit that, screen share quality goes up for everyone in voice channels — which means better dev sessions, game streams, and live events.',
+      },
+      {
+        title: 'Questions?',
+        content:
+          'For account issues, role problems, event registration, or anything that is not working: support@openboxcomm.in. Include your Discord username and a description of the issue. Screenshots help.',
+      },
+    ],
+  },
   // ─── COMMUNITY ────────────────────────────────────────────
 
   'jn-guide': {
