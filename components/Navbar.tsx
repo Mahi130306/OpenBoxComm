@@ -28,15 +28,28 @@ const servers = {
 }
 
 function ThemeToggle() {
-  const { theme, setTheme } = useTheme()
+  const { theme, setTheme, resolvedTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
   const [tease, setTease] = useState(false)
   const [darkToast, setDarkToast] = useState(false)
+  const [showSuggestion, setShowSuggestion] = useState(false)
 
   useEffect(() => setMounted(true), [])
+
+  useEffect(() => {
+    if (!mounted) return
+    const timer = setTimeout(() => {
+      const dismissed = sessionStorage.getItem('ob-dismissed-dark-suggestion')
+      if (resolvedTheme === 'light' && !dismissed) {
+        setShowSuggestion(true)
+      }
+    }, 1500)
+    return () => clearTimeout(timer)
+  }, [mounted, resolvedTheme])
+
   if (!mounted) return <div className="h-9 w-9" />
 
-  const isDark = theme === 'dark'
+  const isDark = resolvedTheme === 'dark'
 
   const handleToggle = () => {
     if (isDark) {
@@ -45,7 +58,7 @@ function ThemeToggle() {
     }
     setTheme('dark')
     setDarkToast(true)
-    setTimeout(() => setDarkToast(false), 2500)
+    setTimeout(() => setDarkToast(false), 4500)
   }
 
   const handleYes = () => {
@@ -60,6 +73,19 @@ function ThemeToggle() {
 
   const handleNo = () => {
     setTease(false)
+  }
+
+  const handleToggleSuggestion = () => {
+    setShowSuggestion(false)
+    sessionStorage.setItem('ob-dismissed-dark-suggestion', 'true')
+    setTheme('dark')
+    setDarkToast(true)
+    setTimeout(() => setDarkToast(false), 4500)
+  }
+
+  const handleDismissSuggestion = () => {
+    setShowSuggestion(false)
+    sessionStorage.setItem('ob-dismissed-dark-suggestion', 'true')
   }
 
   return (
@@ -100,8 +126,35 @@ function ThemeToggle() {
       )}
 
       {darkToast && (
-        <div className="absolute top-12 right-0 z-50 whitespace-nowrap animate-in fade-in slide-in-from-top-2 duration-300 bg-background border border-border px-3 py-2 rounded-lg shadow-md">
-          <span className="text-2xl font-bold text-foreground">welcome back to the dark side 👾</span>
+        <div className="fixed bottom-6 left-1/2 z-[100] w-[90%] max-w-sm -translate-x-1/2 rounded-xl border border-border bg-background/95 p-3.5 text-center shadow-2xl backdrop-blur supports-[backdrop-filter]:bg-background/85 animate-in fade-in slide-in-from-bottom-4 duration-300 md:absolute md:bottom-auto md:top-12 md:left-auto md:right-0 md:translate-x-0 md:w-auto md:max-w-none md:text-left">
+          <span className="text-sm font-bold text-foreground sm:text-base whitespace-normal md:whitespace-nowrap">
+            welcome back to the dark side 👾
+          </span>
+        </div>
+      )}
+
+      {showSuggestion && (
+        <div className="fixed bottom-6 left-1/2 z-[100] w-[90%] max-w-sm -translate-x-1/2 rounded-xl border border-border bg-background/95 p-4 text-center shadow-2xl backdrop-blur supports-[backdrop-filter]:bg-background/85 animate-in fade-in slide-in-from-bottom-4 duration-300 md:absolute md:bottom-auto md:top-12 md:left-auto md:right-0 md:translate-x-0 md:w-64 md:text-left">
+          <p className="text-sm font-bold text-foreground mb-2">
+            System is in light mode? ☀️
+          </p>
+          <p className="text-xs text-muted-foreground mb-3 leading-relaxed">
+            The dark side looks way better! Switch now?
+          </p>
+          <div className="flex gap-2">
+            <button
+              onClick={handleToggleSuggestion}
+              className="flex-1 rounded-lg bg-cyan-500 hover:bg-cyan-600 text-black text-xs font-bold py-1.5 transition-colors"
+            >
+              Toggle 🌙
+            </button>
+            <button
+              onClick={handleDismissSuggestion}
+              className="flex-1 rounded-lg bg-accent hover:bg-accent/80 text-foreground text-xs font-bold py-1.5 transition-colors"
+            >
+              Keep Light
+            </button>
+          </div>
         </div>
       )}
     </div>
