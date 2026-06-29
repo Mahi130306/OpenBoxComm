@@ -17,7 +17,7 @@ const updates: Update[] = [
     type: 'blog',
     date: '2026-06-29',
     description: 'OpenBox has gone from a club side-project to its own independent community.',
-    href: '/blog/where-we-go-from-here',
+    href: '/blogs/where-we-go-from-here',
     isNew: true,
   },
   {
@@ -26,7 +26,7 @@ const updates: Update[] = [
     type: 'doc',
     date: '2026-06-29',
     description: 'New to Open Box? Start here. Everything you need to join.',
-    href: '/docs/getting-started',
+    href: '/doc/getting-started',
     isNew: false,
   },
   {
@@ -35,7 +35,7 @@ const updates: Update[] = [
     type: 'blog',
     date: '2026-06-29',
     description: 'OB GG is our gaming server. It is live now in beta.',
-    href: '/blog/ob-gg-gaming-server-beta',
+    href: '/blogs/ob-gg-gaming-server-beta',
     isNew: true,
   },
 ]
