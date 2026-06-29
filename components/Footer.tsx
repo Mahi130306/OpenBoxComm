@@ -32,39 +32,39 @@ const DiscordIcon = () => (
   </svg>
 )
 
-// ── Creator config — update these when you have the real details ──────────────
-const CREATOR_NAME = 'creator_name'
-const CREATOR_GITHUB = 'https://github.com/creator_name'
+// ── Creator config ────────────────────────────────────────────────────────────
+const CREATOR_NAME = 'Sachin'
+const CREATOR_HREF = '/team/sachin'
 
 export function Footer() {
   const socialLinks = [
     {
       name: 'YouTube',
-      href: process.env.NEXT_PUBLIC_YOUTUBE_URL || '#',
+      href: 'https://www.youtube.com/@obcommunities-yt',
       icon: <YoutubeIcon />,
       id: 'footer-youtube',
     },
     {
       name: 'Instagram',
-      href: process.env.NEXT_PUBLIC_INSTAGRAM_URL || '#',
+      href: 'https://www.instagram.com/openboxcomm/',
       icon: <InstagramIcon />,
       id: 'footer-instagram',
     },
     {
       name: 'Patreon',
-      href: process.env.NEXT_PUBLIC_PATREON_URL || '#',
+      href: 'https://patreon.com/OpenBoxComm',
       icon: <PatreonIcon />,
       id: 'footer-patreon',
     },
     {
       name: 'X (Twitter)',
-      href: process.env.NEXT_PUBLIC_X_URL || '#',
+      href: 'https://x.com/Openboxcomm',
       icon: <XIcon />,
       id: 'footer-x',
     },
     {
       name: 'Discord',
-      href: process.env.NEXT_PUBLIC_DISCORD_INVITE_MAIN || '#',
+      href: 'https://discord.gg/7ZWckKU89J',
       icon: <DiscordIcon />,
       id: 'footer-discord',
     },
@@ -77,7 +77,7 @@ export function Footer() {
     { label: 'Community Rules', href: '/legal/rules' },
     { label: 'AUP', href: '/legal/aup' },
     { label: 'DMCA / Copyright', href: '/legal/dmca' },
-    { label: 'Refund Policy', href: '/legal/refund' },    
+    { label: 'Refund Policy', href: '/legal/refund' },
     { label: 'Event Policy', href: '/legal/event' },
   ]
 
@@ -101,7 +101,7 @@ export function Footer() {
               <span className="text-lg font-heading font-bold tracking-tight">Open Box</span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              OpenBox: Free communities for gaming, dev, study & more. 
+              OpenBox: Free communities for gaming, dev, study & more.
             </p>
 
             {/* Social links */}
@@ -187,15 +187,13 @@ export function Footer() {
 
           <p>
             Created by{' '}
-            <a
-              href={CREATOR_GITHUB}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href={CREATOR_HREF}
               id="footer-creator"
               className="font-medium text-foreground/70 underline underline-offset-2 hover:text-foreground transition-colors"
             >
               {CREATOR_NAME}
-            </a>
+            </Link>
           </p>
 
           <div className="flex flex-wrap justify-center gap-x-4 gap-y-1">
