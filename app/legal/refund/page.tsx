@@ -6,7 +6,7 @@ export const metadata: Metadata = {
 }
 
 export default function RefundPage() {
-  const lastUpdated = '6 June 2025'
+  const lastUpdated = 'June 29, 2026 — This document has not been reviewed, approved, or endorsed by a licensed attorney or legal counsel. It was drafted with AI assistance and does not constitute legal advice.'
 
   return (
     <article>

@@ -124,24 +124,26 @@ export default function EventsPage() {
           </p>
 
           {/* Stats row */}
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+          {totalEvents > 0 && (
+            <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             {[
-              { icon: Zap,    label: `${totalEvents} events`,   sub: 'scheduled'    },
-              { icon: Wifi,   label: `${onlineEvents} online`,  sub: 'from anywhere' },
-              { icon: Globe,  label: `${offlineEvents} offline`, sub: 'in person'   },
-            ].map((stat) => (
-              <div
-                key={stat.label}
-                className="flex items-center gap-2.5 rounded-xl border border-border bg-muted/40 px-4 py-2.5"
-              >
-                <stat.icon className="h-4 w-4 text-cyan-500 dark:text-cyan-400" />
-                <div className="text-left">
-                  <p className="text-sm font-bold text-foreground">{stat.label}</p>
-                  <p className="text-[11px] text-muted-foreground">{stat.sub}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+      { icon: Zap,   label: `${totalEvents} events`,    sub: 'scheduled'    },
+      { icon: Wifi,  label: `${onlineEvents} online`,   sub: 'from anywhere' },
+      { icon: Globe, label: `${offlineEvents} offline`, sub: 'in person'    },
+    ].map((stat) => (
+      <div
+        key={stat.label}
+        className="flex items-center gap-2.5 rounded-xl border border-border bg-muted/40 px-4 py-2.5"
+      >
+        <stat.icon className="h-4 w-4 text-cyan-500 dark:text-cyan-400" />
+        <div className="text-left">
+          <p className="text-sm font-bold text-foreground">{stat.label}</p>
+          <p className="text-[11px] text-muted-foreground">{stat.sub}</p>
+        </div>
+      </div>
+    ))}
+            </div>
+          )}
         </div>
 
         {/* ── Filters ─────────────────────────────────────────────────── */}
@@ -198,9 +200,9 @@ export default function EventsPage() {
             <h2 className="mb-2 text-2xl font-bold text-foreground/70">Coming soon</h2>
             <p className="max-w-sm text-sm text-muted-foreground">
               No events match this filter yet. New sessions will appear here once the calendar is updated.{' '}
-              <Link href="/help" className="text-cyan-500 underline underline-offset-2 hover:text-cyan-600 dark:hover:text-cyan-300">
+              {/* <Link href="/help" className="text-cyan-500 underline underline-offset-2 hover:text-cyan-600 dark:hover:text-cyan-300">
                 Suggest one!
-              </Link>
+              </Link> */}
             </p>
           </div>
         ) : (

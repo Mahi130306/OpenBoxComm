@@ -166,7 +166,7 @@ Edit [`lib/community-data.ts`](./lib/community-data.ts) and add an entry to the 
   slug: 'your-post-slug',          // Used as URL: /blogs/your-post-slug
   title: 'Your Post Title',
   server: 'OB JN',                 // Server label shown on card
-  date: '2026-07-01',              // ISO date string
+  date: '2026-06-29',              // ISO date string
   excerpt: 'One-line summary.',
   readTime: '4 min read',
 }

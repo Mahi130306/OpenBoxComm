@@ -27,12 +27,22 @@ const servers = {
   ],
 }
 
-function ThemeToggle() {
+interface ThemeToggleProps {
+  darkToast: boolean
+  setDarkToast: (val: boolean) => void
+  showSuggestion: boolean
+  setShowSuggestion: (val: boolean) => void
+}
+
+function ThemeToggle({
+  darkToast,
+  setDarkToast,
+  showSuggestion,
+  setShowSuggestion,
+}: ThemeToggleProps) {
   const { theme, setTheme, resolvedTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
   const [tease, setTease] = useState(false)
-  const [darkToast, setDarkToast] = useState(false)
-  const [showSuggestion, setShowSuggestion] = useState(false)
 
   useEffect(() => setMounted(true), [])
 
@@ -45,7 +55,7 @@ function ThemeToggle() {
       }
     }, 1500)
     return () => clearTimeout(timer)
-  }, [mounted, resolvedTheme])
+  }, [mounted, resolvedTheme, setShowSuggestion])
 
   if (!mounted) return <div className="h-9 w-9" />
 
@@ -73,19 +83,6 @@ function ThemeToggle() {
 
   const handleNo = () => {
     setTease(false)
-  }
-
-  const handleToggleSuggestion = () => {
-    setShowSuggestion(false)
-    sessionStorage.setItem('ob-dismissed-dark-suggestion', 'true')
-    setTheme('dark')
-    setDarkToast(true)
-    setTimeout(() => setDarkToast(false), 4500)
-  }
-
-  const handleDismissSuggestion = () => {
-    setShowSuggestion(false)
-    sessionStorage.setItem('ob-dismissed-dark-suggestion', 'true')
   }
 
   return (
@@ -124,46 +121,16 @@ function ThemeToggle() {
           </div>
         </div>
       )}
-
-      {darkToast && (
-        <div className="fixed bottom-6 left-1/2 z-[100] w-[90%] max-w-sm -translate-x-1/2 rounded-xl border border-border bg-background/95 p-3.5 text-center shadow-2xl backdrop-blur supports-[backdrop-filter]:bg-background/85 animate-in fade-in slide-in-from-bottom-4 duration-300 md:absolute md:bottom-auto md:top-12 md:left-auto md:right-0 md:translate-x-0 md:w-auto md:max-w-none md:text-left">
-          <span className="text-sm font-bold text-foreground sm:text-base whitespace-normal md:whitespace-nowrap">
-            welcome back to the dark side 👾
-          </span>
-        </div>
-      )}
-
-      {showSuggestion && (
-        <div className="fixed bottom-6 left-1/2 z-[100] w-[90%] max-w-sm -translate-x-1/2 rounded-xl border border-border bg-background/95 p-4 text-center shadow-2xl backdrop-blur supports-[backdrop-filter]:bg-background/85 animate-in fade-in slide-in-from-bottom-4 duration-300 md:absolute md:bottom-auto md:top-12 md:left-auto md:right-0 md:translate-x-0 md:w-64 md:text-left">
-          <p className="text-sm font-bold text-foreground mb-2">
-            System is in light mode? ☀️
-          </p>
-          <p className="text-xs text-muted-foreground mb-3 leading-relaxed">
-            The dark side looks way better! Switch now?
-          </p>
-          <div className="flex gap-2">
-            <button
-              onClick={handleToggleSuggestion}
-              className="flex-1 rounded-lg bg-cyan-500 hover:bg-cyan-600 text-black text-xs font-bold py-1.5 transition-colors"
-            >
-              Toggle 🌙
-            </button>
-            <button
-              onClick={handleDismissSuggestion}
-              className="flex-1 rounded-lg bg-accent hover:bg-accent/80 text-foreground text-xs font-bold py-1.5 transition-colors"
-            >
-              Keep Light
-            </button>
-          </div>
-        </div>
-      )}
     </div>
   )
 }
 
 export function Navbar() {
+  const { setTheme } = useTheme()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [darkToast, setDarkToast] = useState(false)
+  const [showSuggestion, setShowSuggestion] = useState(false)
   const pathname = usePathname()
 
   useEffect(() => {
@@ -175,6 +142,19 @@ export function Navbar() {
   useEffect(() => {
     setMobileMenuOpen(false)
   }, [pathname])
+
+  const handleToggleSuggestion = () => {
+    setShowSuggestion(false)
+    sessionStorage.setItem('ob-dismissed-dark-suggestion', 'true')
+    setTheme('dark')
+    setDarkToast(true)
+    setTimeout(() => setDarkToast(false), 4500)
+  }
+
+  const handleDismissSuggestion = () => {
+    setShowSuggestion(false)
+    sessionStorage.setItem('ob-dismissed-dark-suggestion', 'true')
+  }
 
   return (
     <>
@@ -213,9 +193,6 @@ export function Navbar() {
               <Link href="/about" className="text-sm font-medium hover:text-muted-foreground transition-colors">
                 About
               </Link>
-              {/* <Link href="/team" className="text-sm font-medium hover:text-muted-foreground transition-colors">
-                Team
-              </Link> */}
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <button className="text-sm font-medium hover:text-muted-foreground transition-colors">
@@ -256,12 +233,6 @@ export function Navbar() {
               <Link href="/doc" className="text-sm font-medium hover:text-muted-foreground transition-colors">
                 Docs
               </Link>
-              {/* <Link href="/join" className="group relative inline-flex items-center gap-1.5 overflow-hidden rounded-full bg-foreground px-4 py-1.5 text-sm font-bold text-background transition-all hover:bg-foreground/90 hover:shadow-lg hover:shadow-cyan-500/20 active:scale-95">
-                <span className="relative z-10 flex items-center gap-1">
-                  Join <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5" />
-                </span>
-                <div className="absolute inset-0 z-0 bg-gradient-to-r from-cyan-400 to-blue-500 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-              </Link> */}
             </div>
 
             <div className="hidden md:flex md:items-center md:space-x-2">
@@ -274,11 +245,21 @@ export function Navbar() {
               <Link href="/help" className="text-sm font-medium hover:text-muted-foreground px-2 py-1 transition-colors">
                 Help
               </Link>
-              <ThemeToggle />
+              <ThemeToggle
+                darkToast={darkToast}
+                setDarkToast={setDarkToast}
+                showSuggestion={showSuggestion}
+                setShowSuggestion={setShowSuggestion}
+              />
             </div>
 
             <div className="flex md:hidden items-center gap-2">
-              <ThemeToggle />
+              <ThemeToggle
+                darkToast={darkToast}
+                setDarkToast={setDarkToast}
+                showSuggestion={showSuggestion}
+                setShowSuggestion={setShowSuggestion}
+              />
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className="text-foreground p-1"
@@ -295,7 +276,6 @@ export function Navbar() {
             <div className="space-y-1 px-4 pb-3 pt-2">
               <Link href="/" className="block py-2 text-sm font-medium hover:text-muted-foreground">Home</Link>
               <Link href="/about" className="block py-2 text-sm font-medium hover:text-muted-foreground">About</Link>
-              {/* <Link href="/team" className="block py-2 text-sm font-medium hover:text-muted-foreground">Team</Link> */}
               <div className="py-2">
                 <p className="text-sm font-medium text-muted-foreground mb-1">Live Servers</p>
                 {servers.live.map((server) => (
@@ -317,14 +297,48 @@ export function Navbar() {
               <Link href="/events" className="block py-2 text-sm font-medium hover:text-muted-foreground">Events</Link>
               <Link href="/blogs" className="block py-2 text-sm font-medium hover:text-muted-foreground">Blogs</Link>
               <Link href="/doc" className="block py-2 text-sm font-medium hover:text-muted-foreground">Docs</Link>
-              <Link href="/join" className="block py-2 text-sm font-bold text-cyan-500">Join Community</Link>
+              {/* <Link href="/join" className="block py-2 text-sm font-bold text-cyan-500">Join Community</Link> */}
               <Link href="/support" className="flex items-center gap-1.5 py-2 text-sm font-medium hover:text-muted-foreground">
-                <Heart className="h-4 w-4" /> Support </Link>              
+                <Heart className="h-4 w-4" /> Support </Link>
               <Link href="/help" className="block py-2 text-sm font-medium hover:text-muted-foreground">Help</Link>
             </div>
           </div>
         )}
       </nav>
+
+      {/* Render the fixed toasts completely outside the fixed <nav> block */}
+      {darkToast && (
+        <div className="fixed bottom-6 left-1/2 z-[100] w-[90%] max-w-sm -translate-x-1/2 rounded-xl border border-border bg-background/95 p-3.5 text-center shadow-2xl backdrop-blur supports-[backdrop-filter]:bg-background/85 animate-in fade-in slide-in-from-bottom-4 duration-300 md:fixed md:bottom-auto md:top-20 md:left-auto md:right-6 md:translate-x-0 md:w-auto md:max-w-none md:text-left">
+          <span className="text-sm font-bold text-foreground sm:text-base whitespace-normal md:whitespace-nowrap">
+            welcome back to the dark side 👾
+          </span>
+        </div>
+      )}
+
+      {showSuggestion && (
+        <div className="fixed bottom-6 left-1/2 z-[100] w-[90%] max-w-sm -translate-x-1/2 rounded-xl border border-border bg-background/95 p-4 text-center shadow-2xl backdrop-blur supports-[backdrop-filter]:bg-background/85 animate-in fade-in slide-in-from-bottom-4 duration-300 md:fixed md:bottom-auto md:top-20 md:left-auto md:right-6 md:translate-x-0 md:w-64 md:text-left">
+          <p className="text-sm font-bold text-foreground mb-2">
+            System is in light mode? ☀️
+          </p>
+          <p className="text-xs text-muted-foreground mb-3 leading-relaxed">
+            The dark side looks way better! Switch now?
+          </p>
+          <div className="flex gap-2">
+            <button
+              onClick={handleToggleSuggestion}
+              className="flex-1 rounded-lg bg-cyan-500 hover:bg-cyan-600 text-black text-xs font-bold py-1.5 transition-colors"
+            >
+              Toggle 🌙
+            </button>
+            <button
+              onClick={handleDismissSuggestion}
+              className="flex-1 rounded-lg bg-accent hover:bg-accent/80 text-foreground text-xs font-bold py-1.5 transition-colors"
+            >
+              Keep Light
+            </button>
+          </div>
+        </div>
+      )}
     </>
   )
 }
