@@ -49,21 +49,21 @@ export default async function TeamMemberPage({ params }: { params: Promise<{ slu
           </div>
 
           <div className="flex gap-4">
-            {member.socials.github && (
+            {member.socials?.github && (
               <Button asChild variant="outline" size="icon" className="rounded-full">
                 <a href={member.socials.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                   <Github className="h-5 w-5" />
                 </a>
               </Button>
             )}
-            {member.socials.twitter && (
+            {member.socials?.twitter && (
               <Button asChild variant="outline" size="icon" className="rounded-full">
                 <a href={member.socials.twitter} target="_blank" rel="noopener noreferrer" aria-label="X / Twitter">
                   <Twitter className="h-5 w-5" />
                 </a>
               </Button>
             )}
-            {member.socials.instagram && (
+            {member.socials?.instagram && (
               <Button asChild variant="outline" size="icon" className="rounded-full">
                 <a href={member.socials.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                   <Instagram className="h-5 w-5" />
