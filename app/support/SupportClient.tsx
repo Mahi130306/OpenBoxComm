@@ -238,7 +238,7 @@ export default function SupportClient() {
               <Button
                 asChild
                 size="lg"
-                className="bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white font-bold rounded-xl shadow-lg shadow-amber-500/20 border-none transition-all duration-200 hover:scale-[1.02]"
+                className="bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-black font-bold rounded-xl shadow-lg shadow-amber-500/20 border-none transition-all duration-200 hover:scale-[1.02]"
               >
                 <a href={PATREON_URL} target="_blank" rel="noopener noreferrer">
                   Become a Supporter
@@ -260,7 +260,7 @@ export default function SupportClient() {
           </div>
 
           {/* Interactive Transparency Budget Chart */}
-          <div className="w-full lg:w-[420px] shrink-0">
+          {/* <div className="w-full lg:w-[420px] shrink-0">
             <div className="rounded-2xl border border-zinc-200/80 bg-white/80 p-6 shadow-xl dark:border-zinc-800/80 dark:bg-zinc-950/80 backdrop-blur-md">
               <div className="flex items-center gap-2 mb-4">
                 <Info size={16} className="text-amber-500" />
@@ -294,7 +294,7 @@ export default function SupportClient() {
                 ))}
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </motion.div>
 
@@ -303,25 +303,23 @@ export default function SupportClient() {
         <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-zinc-900 dark:text-white font-heading text-center mb-6">
           Choose Your Supporter Journey
         </h2>
-        
+
         <div className="inline-flex items-center p-1.5 bg-zinc-100 dark:bg-zinc-900 rounded-2xl border border-zinc-200 dark:border-zinc-800">
           <button
             onClick={() => setBillingCycle('monthly')}
-            className={`px-5 py-2.5 rounded-xl text-xs font-bold transition-all ${
-              billingCycle === 'monthly'
-                ? 'bg-white text-zinc-950 shadow-md dark:bg-zinc-800 dark:text-white'
-                : 'text-zinc-500 hover:text-zinc-800 dark:hover:text-zinc-300'
-            }`}
+            className={`px-5 py-2.5 rounded-xl text-xs font-bold transition-all ${billingCycle === 'monthly'
+              ? 'bg-white text-zinc-950 shadow-md dark:bg-zinc-800 dark:text-white'
+              : 'text-zinc-500 hover:text-zinc-800 dark:hover:text-zinc-300'
+              }`}
           >
             Monthly Billing
           </button>
           <button
             onClick={() => setBillingCycle('annual')}
-            className={`relative px-5 py-2.5 rounded-xl text-xs font-bold transition-all ${
-              billingCycle === 'annual'
-                ? 'bg-white text-zinc-950 shadow-md dark:bg-zinc-800 dark:text-white'
-                : 'text-zinc-500 hover:text-zinc-800 dark:hover:text-zinc-300'
-            }`}
+            className={`relative px-5 py-2.5 rounded-xl text-xs font-bold transition-all ${billingCycle === 'annual'
+              ? 'bg-white text-zinc-950 shadow-md dark:bg-zinc-800 dark:text-white'
+              : 'text-zinc-500 hover:text-zinc-800 dark:hover:text-zinc-300'
+              }`}
           >
             Annual Billing
             <span className="absolute -top-3.5 -right-3.5 bg-amber-500 text-zinc-950 font-black text-[9px] px-2 py-0.5 rounded-full uppercase tracking-wider animate-bounce">
@@ -453,7 +451,7 @@ export default function SupportClient() {
               </div>
 
               <p className="text-xs text-zinc-550 dark:text-zinc-400 max-w-sm leading-relaxed">
-                Few know. Fewer are. Designed for the core patrons who have supported us since the early days. Enjoy max event access and extreme custom permissions.
+                This tier is still not available. We are working on it.
               </p>
             </div>
 
@@ -483,9 +481,7 @@ export default function SupportClient() {
                   className="w-full sm:w-auto px-8 py-6 rounded-2xl text-sm font-extrabold bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-700 text-white dark:from-purple-500 dark:via-violet-600 dark:to-indigo-500 dark:text-zinc-950 shadow-lg shadow-purple-500/20 hover:opacity-95 transition-all hover:scale-[1.01] border-none"
                 >
                   <a href={PATREON_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5 justify-center">
-                    <Star size={16} className="animate-pulse text-yellow-300 fill-yellow-300" />
-                    Unlock OP Perks
-                    <Star size={16} className="animate-pulse text-yellow-300 fill-yellow-300" />
+                    Notify when available
                   </a>
                 </Button>
               </div>
@@ -584,11 +580,10 @@ export default function SupportClient() {
                   <div
                     key={idx}
                     onClick={() => setSyncStep(idx)}
-                    className={`p-4 rounded-xl border cursor-pointer transition-all ${
-                      syncStep === idx
-                        ? 'border-indigo-450 bg-white dark:border-indigo-500/40 dark:bg-zinc-900/50 shadow-md'
-                        : 'border-transparent hover:bg-white/40 dark:hover:bg-zinc-900/20'
-                    }`}
+                    className={`p-4 rounded-xl border cursor-pointer transition-all ${syncStep === idx
+                      ? 'border-indigo-450 bg-white dark:border-indigo-500/40 dark:bg-zinc-900/50 shadow-md'
+                      : 'border-transparent hover:bg-white/40 dark:hover:bg-zinc-900/20'
+                      }`}
                   >
                     <h3 className={`text-sm font-bold ${syncStep === idx ? 'text-indigo-600 dark:text-indigo-400' : 'text-zinc-800 dark:text-zinc-200'}`}>
                       {step.title}
@@ -658,7 +653,7 @@ export default function SupportClient() {
           </p>
         </div>
 
-        <div className="grid gap-6 grid-cols-2 sm:grid-cols-3 lg:grid-cols-6">
+        {/* <div className="grid gap-6 grid-cols-2 sm:grid-cols-3 lg:grid-cols-6">
           {wallOfFame.map((member, idx) => (
             <motion.div
               key={idx}
@@ -691,7 +686,7 @@ export default function SupportClient() {
               </Badge>
             </motion.div>
           ))}
-        </div>
+        </div> */}
       </section>
 
       {/* ── FAQ Section ── */}
