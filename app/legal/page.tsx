@@ -83,12 +83,15 @@ export default function LegalIndexPage() {
       {/* Hero Section */}
       <div className="mb-12 rounded-3xl border border-black/10 bg-gradient-to-br from-black/[0.04] to-violet-400/[0.08] p-8 shadow-sm dark:border-white/10 dark:from-white/[0.08] dark:to-violet-400/[0.05] sm:p-12">
         <div className="flex items-center gap-3 mb-6">
-            <Scale className="h-8 w-8 text-violet-500" />
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-violet-600 dark:text-violet-300">Compliance & Trust</p>
+          <Scale className="h-8 w-8 text-violet-500" />
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-violet-600 dark:text-violet-300">Compliance & Trust</p>
         </div>
         <h1 className="mb-6 text-4xl font-extrabold tracking-tight text-foreground lg:text-5xl">Legal Documents</h1>
         <p className="max-w-3xl text-lg text-muted-foreground/90 leading-relaxed">
           Transparency is core to how we operate. Below you&apos;ll find all the legal documents governing your use of Open Box platforms, Discord servers, and services.
+        </p>
+        <p className="max-w-3xl text-lg text-muted-foreground/90 leading-relaxed text-sm">
+          These documents have not been reviewed, approved, or endorsed by a licensed attorney or legal counsel. They were drafted with AI assistance and do not constitute legal advice.
         </p>
       </div>
 
@@ -108,9 +111,9 @@ export default function LegalIndexPage() {
                   <p className="text-sm leading-relaxed text-muted-foreground">{doc.description}</p>
                 </CardContent>
                 <CardFooter className="pt-0">
-                    <div className="flex items-center gap-1 text-sm font-bold text-violet-500 opacity-0 transition-all group-hover:opacity-100">
-                        Read Policy <ArrowRight className="h-4 w-4" />
-                    </div>
+                  <div className="flex items-center gap-1 text-sm font-bold text-violet-500 opacity-0 transition-all group-hover:opacity-100">
+                    Read Policy <ArrowRight className="h-4 w-4" />
+                  </div>
                 </CardFooter>
               </Card>
             </Link>
