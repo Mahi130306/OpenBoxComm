@@ -6,7 +6,7 @@ const updates: Update[] = [
     id: 'welcome-to-open-box',
     title: 'Welcome to Open Box',
     type: 'announcement',
-    date: '2026-06-29',
+    date: '2026-06-30',
     description: 'Welcome to Open Box. This is where we will share updates about the community.',
     href: '/servers',
     isNew: true,
