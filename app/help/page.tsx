@@ -16,8 +16,8 @@ export default function HelpPage() {
       {/* Hero Section */}
       <div className="mb-12 rounded-2xl border border-black/10 bg-gradient-to-br from-black/[0.04] to-cyan-400/[0.08] p-8 shadow-sm dark:border-white/10 dark:from-white/[0.08] dark:to-cyan-400/[0.05] sm:p-12">
         <div className="flex items-center gap-3 mb-4">
-            <HelpCircle className="h-8 w-8 text-cyan-500" />
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-cyan-600 dark:text-cyan-300">Help Centre</p>
+          <HelpCircle className="h-8 w-8 text-cyan-500" />
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-cyan-600 dark:text-cyan-300">Help Centre</p>
         </div>
         <h1 className="mb-4 text-4xl font-extrabold tracking-tight text-foreground lg:text-5xl">How can we help?</h1>
         <p className="max-w-2xl text-lg text-muted-foreground/90">
@@ -31,15 +31,27 @@ export default function HelpPage() {
             </Link>
           </Button>
           <Button asChild variant="outline" size="lg" className="rounded-full">
-            <Link href="/doc/rules">
-              <Shield className="mr-2 h-4 w-4" />
-              Community Rules
-            </Link>
-          </Button>
-          <Button asChild variant="outline" size="lg" className="rounded-full">
             <Link href="/contact-us">
               <Mail className="mr-2 h-4 w-4" />
               Contact Us
+            </Link>
+          </Button>
+          <Button asChild variant="outline" size="lg" className="rounded-full">
+            <Link href="#help">
+              <Mail className="mr-2 h-4 w-4" />
+              Get Support
+            </Link>
+          </Button>
+          <Button asChild variant="outline" size="lg" className="rounded-full">
+            <Link href="#suggest">
+              <Mail className="mr-2 h-4 w-4" />
+              Submit a Suggestion
+            </Link>
+          </Button>
+          <Button asChild variant="outline" size="lg" className="rounded-full">
+            <Link href="/doc/rules">
+              <Shield className="mr-2 h-4 w-4" />
+              Community Rules
             </Link>
           </Button>
         </div>
