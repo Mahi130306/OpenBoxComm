@@ -159,11 +159,10 @@ export function Navbar() {
   return (
     <>
       <nav
-        className={`fixed top-0 z-50 w-full border-b transition-all duration-300 ${
-          scrolled
+        className={`fixed top-0 z-50 w-full border-b transition-all duration-300 ${scrolled
             ? 'bg-background/98 shadow-sm backdrop-blur-lg'
             : 'bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60'
-        } border-border`}
+          } border-border`}
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
@@ -310,7 +309,7 @@ export function Navbar() {
       {darkToast && (
         <div className="fixed bottom-6 left-1/2 z-[100] w-[90%] max-w-sm -translate-x-1/2 rounded-xl border border-border bg-background/95 p-3.5 text-center shadow-2xl backdrop-blur supports-[backdrop-filter]:bg-background/85 animate-in fade-in slide-in-from-bottom-4 duration-300 md:fixed md:bottom-auto md:top-20 md:left-auto md:right-6 md:translate-x-0 md:w-auto md:max-w-none md:text-left">
           <span className="text-sm font-bold text-foreground sm:text-base whitespace-normal md:whitespace-nowrap">
-            welcome back to the dark side 👾
+            Welcome back to the dark side 👾
           </span>
         </div>
       )}

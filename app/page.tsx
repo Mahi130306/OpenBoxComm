@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     url: '/',
     images: [
       {
-        url: '/og-default.png',
+        url: '/images/og-default.png',
         width: 1200,
         height: 630,
         alt: 'Open Box Community Network',
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Open Box — Community for Everyone',
     description: 'Find your people in Open Box. A free community network spanning gaming, development, studying, and more.',
-    images: ['/og-default.png'],
+    images: ['/images/og-default.png'],
   },
 }
 

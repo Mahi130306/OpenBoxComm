@@ -91,11 +91,11 @@ export function UpdateBanner() {
           key="update-banner"
           role="alert"
           aria-live="polite"
-          initial={{ opacity: 0, y: 24, scale: 0.97 }}
+          initial={{ opacity: 0, y: -24, scale: 0.97 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
-          exit={{ opacity: 0, y: 24, scale: 0.97 }}
+          exit={{ opacity: 0, y: -24, scale: 0.97 }}
           transition={{ type: 'spring', stiffness: 340, damping: 28 }}
-          className="fixed bottom-6 left-1/2 z-[9999] -translate-x-1/2"
+          className="fixed top-6 left-1/2 z-[9999] -translate-x-1/2"
         >
           <div
             className="

@@ -391,7 +391,6 @@ export default function SupportClient() {
                   ))}
                 </ul>
               </div>
-
               <div className="mt-auto">
                 <Button
                   asChild
@@ -469,7 +468,7 @@ export default function SupportClient() {
                   {phantomPerks.map((perk, i) => (
                     <li key={i} className="flex items-start gap-2.5">
                       <ShieldCheck size={16} className="text-purple-500 dark:text-purple-400 shrink-0 mt-0.5" />
-                      <span className="text-zinc-700 dark:text-zinc-350 leading-normal">{perk}</span>
+                      <span className="text-white-700 dark:text-white-350 leading-normal">{perk}</span>
                     </li>
                   ))}
                 </ul>
@@ -478,7 +477,7 @@ export default function SupportClient() {
               <div>
                 <Button
                   asChild
-                  className="w-full sm:w-auto px-8 py-6 rounded-2xl text-sm font-extrabold bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-700 text-white dark:from-purple-500 dark:via-violet-600 dark:to-indigo-500 dark:text-zinc-950 shadow-lg shadow-purple-500/20 hover:opacity-95 transition-all hover:scale-[1.01] border-none"
+                  className="w-full sm:w-auto px-8 py-6 rounded-2xl text-sm font-extrabold bg-purple-600 text-white dark:bg-purple-500 dark:text-zinc-950 shadow-lg shadow-purple-500/20 hover:opacity-95 transition-all hover:scale-[1.01] border-none"
                 >
                   <a href={PATREON_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5 justify-center">
                     Notify when available
