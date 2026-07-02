@@ -27,7 +27,7 @@ export default function HelpPage() {
           <Button asChild size="lg" className="rounded-full shadow-lg shadow-cyan-500/20">
             <a href={process.env.NEXT_PUBLIC_DISCORD_INVITE_MAIN} target="_blank" rel="noopener noreferrer">
               <MessageSquare className="mr-2 h-4 w-4" />
-              Get Support
+              Get Support.
             </a>
           </Button>
           <Button asChild variant="outline" size="lg" className="rounded-full">
