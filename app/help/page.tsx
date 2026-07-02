@@ -25,21 +25,21 @@ export default function HelpPage() {
         </p>
         <div className="mt-8 flex flex-wrap gap-4">
           <Button asChild size="lg" className="rounded-full shadow-lg shadow-cyan-500/20">
+            <a href={process.env.NEXT_PUBLIC_DISCORD_INVITE_MAIN} target="_blank" rel="noopener noreferrer">
+              <MessageSquare className="mr-2 h-4 w-4" />
+              Get Support
+            </a>
+          </Button>
+          <Button asChild variant="outline" size="lg" className="rounded-full">
+            <a href="https://forms.gle/your-suggestion-form" target="_blank" rel="noopener noreferrer">
+              <Mail className="mr-2 h-4 w-4" />
+              Submit a Suggestion
+            </a>
+          </Button>
+          <Button asChild variant="outline" size="lg" className="rounded-full">
             <Link href="/help/faq">
               <Search className="mr-2 h-4 w-4" />
               Search FAQ
-            </Link>
-          </Button>
-          <Button asChild variant="outline" size="lg" className="rounded-full">
-            <Link href="/doc/rules">
-              <Shield className="mr-2 h-4 w-4" />
-              Community Rules
-            </Link>
-          </Button>
-          <Button asChild variant="outline" size="lg" className="rounded-full">
-            <Link href="/contact-us">
-              <Mail className="mr-2 h-4 w-4" />
-              Contact Us
             </Link>
           </Button>
         </div>
@@ -47,38 +47,67 @@ export default function HelpPage() {
 
       <div className="grid gap-8 lg:grid-cols-3">
         <div className="lg:col-span-2 space-y-8">
-          {/* How to ask a question */}
+          {/* How to ask or suggest */}
           <Card className="border-border bg-surface/50 shadow-sm overflow-hidden">
             <CardHeader className="bg-muted/30 pb-6">
               <CardTitle className="flex items-center gap-2">
                 <MessageSquare className="h-5 w-5 text-cyan-500" />
-                How to ask a question to the team
+                How to ask or suggest to the team
               </CardTitle>
               <CardDescription>
                 Follow these steps for the fastest and most helpful response.
               </CardDescription>
             </CardHeader>
             <CardContent className="pt-6">
-              <ol className="space-y-6">
-                {[
-                  { step: "1", title: "Join the Server", desc: "Use the main invite link to join the Open Box Junction server." },
-                  { step: "2", title: "Go to #help", desc: "Head over to the help channel dedicated to community support." },
-                  { step: "3", title: "Describe Clearly", desc: "Include context, what you tried, and what actually happened." },
-                  { step: "4", title: "Be Patient", desc: "Everyone volunteers their time. We'll get back to you as soon as we can." }
-                ].map((item, i) => (
-                  <li key={i} className="flex gap-4">
-                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-cyan-500/10 text-sm font-bold text-cyan-600 dark:text-cyan-400">
-                      {item.step}
-                    </span>
-                    <div>
-                      <p className="font-bold text-foreground">{item.title}</p>
-                      <p className="text-sm text-muted-foreground mt-0.5">{item.desc}</p>
+              <div className="grid gap-8 md:grid-cols-2">
+                <div>
+                  <h3 className="mb-4 font-bold text-foreground flex items-center gap-2">
+                    <HelpCircle className="h-4 w-4 text-cyan-500" />
+                    How to ask
+                  </h3>
+                  <ol className="space-y-4">
+                    {[
+                      { step: "1", title: "Join Junction", desc: "Use the main invite link to join the server." },
+                      { step: "2", title: "Go to #help", desc: "Head over to the help channel." },
+                      { step: "3", title: "Describe Clearly", desc: "Include context and what you tried." },
+                      { step: "4", title: "Be Patient", desc: "We'll get back to you soon." }
+                    ].map((item, i) => (
+                      <li key={i} className="flex gap-3">
+                        <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-cyan-500/10 text-[10px] font-bold text-cyan-600 dark:text-cyan-400">
+                          {item.step}
+                        </span>
+                        <div>
+                          <p className="text-sm font-bold text-foreground">{item.title}</p>
+                          <p className="text-xs text-muted-foreground mt-0.5">{item.desc}</p>
+                        </div>
+                      </li>
+                    ))}
+                  </ol>
+                </div>
+                <div>
+                  <h3 className="mb-4 font-bold text-foreground flex items-center gap-2">
+                    <Mail className="h-4 w-4 text-cyan-500" />
+                    How to suggest
+                  </h3>
+                  <div className="space-y-4">
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      Have an idea for Open Box? We love hearing from the community. Use our formal suggestions form to share your thoughts.
+                    </p>
+                    <div className="rounded-lg bg-cyan-500/5 p-4 border border-cyan-500/10">
+                      <p className="text-xs font-medium text-cyan-600 dark:text-cyan-400 mb-2 uppercase tracking-wider">Suggestions Form</p>
+                      <p className="text-xs text-muted-foreground mb-4">Your input helps us build a better platform for everyone.</p>
+                      <Button asChild size="sm" variant="outline" className="w-full">
+                        <a href="https://forms.gle/your-suggestion-form" target="_blank" rel="noopener noreferrer">
+                          Open Form
+                          <ArrowRight className="ml-2 h-3 w-3" />
+                        </a>
+                      </Button>
                     </div>
-                  </li>
-                ))}
-              </ol>
-              <div className="mt-8">
-                <Button asChild className="w-full sm:w-auto">
+                  </div>
+                </div>
+              </div>
+              <div className="mt-8 flex flex-wrap gap-4">
+                <Button asChild className="sm:w-auto">
                   <a href={process.env.NEXT_PUBLIC_DISCORD_INVITE_MAIN} target="_blank" rel="noopener noreferrer">
                     Join the Junction Server
                     <ArrowRight className="ml-2 h-4 w-4" />

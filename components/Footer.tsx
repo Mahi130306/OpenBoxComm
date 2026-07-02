@@ -70,6 +70,24 @@ export function Footer() {
     },
   ]
 
+  const navLinks = [
+    { label: 'Home', href: '/' },
+    { label: 'About', href: '/about' },
+    { label: 'Servers', href: '/servers' },
+    { label: 'Events', href: '/events' },
+    { label: 'Blogs', href: '/blogs' },
+    { label: 'Docs', href: '/doc' },
+    { label: 'Contact Us', href: '/contact-us' },
+  ]
+
+  const communityLinks = [
+    { label: 'Support Us', href: '/support' },
+    { label: 'Help Centre', href: '/help' },
+    { label: 'Jn. Server', href: '/servers/jn' },
+    { label: 'Dev Server', href: '/servers/dev' },
+    { label: 'GG Server', href: '/servers/gg' },
+  ]
+
   const legalLinks = [
     { label: 'Terms & Conditions', href: '/legal/terms' },
     { label: 'Privacy Policy', href: '/legal/privacy' },
@@ -82,39 +100,38 @@ export function Footer() {
   ]
 
   return (
-    <footer className="border-t border-border bg-surface">
-      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-4">
+    <footer className="border-t border-border bg-surface text-foreground transition-colors duration-300">
+      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-2 gap-12 md:grid-cols-4 lg:grid-cols-5">
 
-          {/* Brand */}
-          <div className="md:col-span-1">
-            <div className="flex items-center gap-2 mb-3">
-              <div className="relative h-9 w-9 overflow-hidden rounded-lg flex-shrink-0">
+          {/* Brand Column */}
+          <div className="col-span-2 lg:col-span-2">
+            <Link href="/" className="flex items-center gap-3 mb-6 group">
+              <div className="relative h-10 w-10 overflow-hidden rounded-xl bg-background/50 p-1 shadow-sm border border-border group-hover:border-cyan-500/50 transition-colors">
                 <Image
                   src="/images/OB.png"
                   alt="Open Box logo"
                   fill
-                  sizes="36px"
-                  className="object-cover"
+                  sizes="40px"
+                  className="object-contain"
                 />
               </div>
-              <span className="text-lg font-heading font-bold tracking-tight">Open Box</span>
-            </div>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              OpenBox: Free communities for gaming, dev, study & more.
+              <span className="text-2xl font-heading font-bold tracking-tight">Open Box</span>
+            </Link>
+            <p className="text-sm text-muted-foreground leading-relaxed max-w-xs mb-8">
+              Open Box is a network of free communities for gaming, development, study, and more.
+              Build, learn, and connect without gatekeeping.
             </p>
 
-            {/* Social links */}
-            <div className="mt-5 flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-4">
               {socialLinks.map((s) => (
                 <a
                   key={s.id}
-                  id={s.id}
                   href={s.href}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={s.name}
-                  className="text-muted-foreground transition-colors duration-200 hover:text-foreground"
+                  className="p-2 rounded-full bg-muted/50 text-muted-foreground transition-all duration-300 hover:bg-cyan-500/10 hover:text-cyan-500 border border-transparent hover:border-cyan-500/20"
                 >
                   {s.icon}
                 </a>
@@ -122,23 +139,13 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Navigate */}
+          {/* Navigate Column */}
           <div>
-            <h3 className="text-sm font-semibold mb-4 text-foreground">Navigate</h3>
-            <ul className="space-y-2 text-sm">
-              {[
-                { label: 'Home', href: '/' },
-                { label: 'About', href: '/about' },
-                // { label: 'Team', href: '/team' },
-                // { label: 'Join', href: '/join' },
-                { label: 'Servers', href: '/servers' },
-                { label: 'Events', href: '/events' },
-                { label: 'Blogs', href: '/blogs' },
-                { label: 'Docs', href: '/doc' },
-                { label: 'Contact Us', href: '/contact-us' },
-              ].map((l) => (
+            <h3 className="text-xs font-bold uppercase tracking-widest mb-6 text-muted-foreground">Navigate</h3>
+            <ul className="space-y-4">
+              {navLinks.map((l) => (
                 <li key={l.href}>
-                  <Link href={l.href} className="text-muted-foreground hover:text-foreground transition-colors">
+                  <Link href={l.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                     {l.label}
                   </Link>
                 </li>
@@ -146,19 +153,13 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Community */}
+          {/* Community Column */}
           <div>
-            <h3 className="text-sm font-semibold mb-4 text-foreground">Community</h3>
-            <ul className="space-y-2 text-sm">
-              {[
-                { label: 'Support Us', href: '/support' },
-                { label: 'Help Centre', href: '/help' },
-                { label: 'Jn. Server', href: '/servers/jn' },
-                { label: 'Dev Server', href: '/servers/dev' },
-                { label: 'GG Server', href: '/servers/gg' },
-              ].map((l) => (
+            <h3 className="text-xs font-bold uppercase tracking-widest mb-6 text-muted-foreground">Community</h3>
+            <ul className="space-y-4">
+              {communityLinks.map((l) => (
                 <li key={l.href}>
-                  <Link href={l.href} className="text-muted-foreground hover:text-foreground transition-colors">
+                  <Link href={l.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                     {l.label}
                   </Link>
                 </li>
@@ -166,45 +167,50 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Legal */}
+          {/* Legal Column */}
           <div>
-            <h3 className="text-sm font-semibold mb-4 text-foreground">Legal</h3>
-            <ul className="space-y-2 text-sm">
-              {legalLinks.map((l) => (
+            <h3 className="text-xs font-bold uppercase tracking-widest mb-6 text-muted-foreground">Legal</h3>
+            <ul className="space-y-4">
+              {legalLinks.slice(0, 4).map((l) => (
                 <li key={l.href}>
-                  <Link href={l.href} className="text-muted-foreground hover:text-foreground transition-colors">
+                  <Link href={l.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                     {l.label}
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link href="/legal" className="text-sm font-medium text-cyan-600 dark:text-cyan-400 hover:underline">
+                  View All Legal
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-10 border-t border-border pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
-          <p>© {new Date().getFullYear()} Open Box. All rights reserved.</p>
+        <div className="mt-16 pt-8 border-t border-border/50">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6 text-[11px] text-muted-foreground font-medium uppercase tracking-wider">
+            <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8">
+              <p>© {new Date().getFullYear()} Open Box Community</p>
+              <div className="hidden md:block h-1 w-1 rounded-full bg-border" />
+              <p>
+                Created with ❤️ by{' '}
+                <Link
+                  href={CREATOR_HREF}
+                  className="text-foreground hover:text-cyan-500 transition-colors"
+                >
+                  {CREATOR_NAME}
+                </Link>
+              </p>
+            </div>
 
-          <p>
-            Created by{' '}
-            <Link
-              href={CREATOR_HREF}
-              id="footer-creator"
-              className="font-medium text-foreground/70 underline underline-offset-2 hover:text-foreground transition-colors"
-            >
-              {CREATOR_NAME}
-            </Link>
-          </p>
-
-          <div className="flex flex-wrap justify-center gap-x-4 gap-y-1">
-            {/* <Link href="/legal/terms" className="hover:text-foreground transition-colors">Terms</Link>
-            <Link href="/legal/privacy" className="hover:text-foreground transition-colors">Privacy</Link>
-            <Link href="/legal/cookie" className="hover:text-foreground transition-colors">Cookies</Link>
-            <Link href="/legal/rules" className="hover:text-foreground transition-colors">Rules</Link>
-            <Link href="/legal/aup" className="hover:text-foreground transition-colors">AUP</Link>
-            <Link href="/legal/dmca" className="hover:text-foreground transition-colors">DMCA</Link>
-            <Link href="/legal/refund" className="hover:text-foreground transition-colors">Refunds</Link>
-            <Link href="/legal/event" className="hover:text-foreground transition-colors">Events</Link> */}
+            <div className="flex flex-wrap justify-center gap-6">
+              {legalLinks.slice(0, 3).map((l) => (
+                <Link key={l.href} href={l.href} className="hover:text-foreground transition-colors">
+                  {l.label.split(' ')[0]}
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </div>
