@@ -549,17 +549,6 @@ export const docs = [
 // ─── Team ─────────────────────────────────────────────────────────────────────
 
 export const teamMembers: TeamMember[] = [
-  // {
-  //   slug: 'jules',
-  //   name: 'Jules',
-  //   role: 'Lead Architect',
-  //   bio: 'Jules is the primary architect behind Open Box, focusing on community infrastructure and developer experience. They believe in the power of open collaboration.',
-  //   avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=jules',
-  //   socials: {
-  //     github: 'https://github.com/jules',
-  //     twitter: 'https://x.com/jules',
-  //   },
-  // },
   {
     slug: 'mahi-hh',
     name: 'Mahi HH',
@@ -572,50 +561,61 @@ export const teamMembers: TeamMember[] = [
       twitter: 'https://x.com/mahihh1212',
     },
   },
-  //   {
-  //     slug: 'arjun',
-  //     name: 'Arjun',
-  //     role: 'Lead Developer',
-  //     bio: 'Arjun architects the technical backbone of Open Box — from bots to dashboards. He thrives on clean code and late-night deploys.',
-  //     avatar: 'https://api.dicebear.com/10.x/initials/svg?seed=Arjun',
-  //     socials: {
-  //       github: 'https://github.com/openboxcomm',
-  //       twitter: 'https://x.com/openboxcomm',
-  //     },
-  //   },
-  //   {
-  //     slug: 'priya',
-  //     name: 'Priya',
-  //     role: 'Community Manager',
-  //     bio: 'Priya keeps the vibe alive across every server. From onboarding newcomers to running events, she makes sure everyone feels at home.',
-  //     avatar: 'https://api.dicebear.com/10.x/initials/svg?seed=Priya',
-  //     socials: {
-  //       instagram: 'https://instagram.com/openboxcomm',
-  //       twitter: 'https://x.com/openboxcomm',
-  //     },
-  //   },
-  //   {
-  //     slug: 'rohan',
-  //     name: 'Rohan',
-  //     role: 'Events Lead',
-  //     bio: 'Rohan plans and executes every tournament, workshop, and meetup. If there is an event on the calendar, Rohan probably built it.',
-  //     avatar: 'https://api.dicebear.com/10.x/initials/svg?seed=Rohan',
-  //     socials: {
-  //       github: 'https://github.com/openboxcomm',
-  //       instagram: 'https://instagram.com/openboxcomm',
-  //     },
-  //   },
-  //   {
-  //     slug: 'neha',
-  //     name: 'Neha',
-  //     role: 'Content & Design',
-  //     bio: 'Neha crafts the visuals, writes the copy, and shapes how Open Box looks and feels. Every banner and blog post has her fingerprint on it.',
-  //     avatar: 'https://api.dicebear.com/10.x/initials/svg?seed=Neha',
-  //     socials: {
-  //       instagram: 'https://instagram.com/openboxcomm',
-  //       twitter: 'https://x.com/openboxcomm',
-  //     },
-  //   },
+  {
+    slug: 'jules',
+    name: 'Jules',
+    role: 'Lead Architect',
+    bio: 'Jules is the primary architect behind Open Box, focusing on community infrastructure and developer experience. They believe in the power of open collaboration.',
+    avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=jules',
+    socials: {
+      github: 'https://github.com/jules',
+      twitter: 'https://x.com/jules',
+    },
+  },
+  {
+    slug: 'arjun',
+    name: 'Arjun',
+    role: 'Lead Developer',
+    bio: 'Arjun architects the technical backbone of Open Box — from bots to dashboards. He thrives on clean code and late-night deploys.',
+    avatar: 'https://api.dicebear.com/10.x/initials/svg?seed=Arjun',
+    socials: {
+      github: 'https://github.com/openboxcomm',
+      twitter: 'https://x.com/openboxcomm',
+    },
+  },
+  {
+    slug: 'priya',
+    name: 'Priya',
+    role: 'Community Manager',
+    bio: 'Priya keeps the vibe alive across every server. From onboarding newcomers to running events, she makes sure everyone feels at home.',
+    avatar: 'https://api.dicebear.com/10.x/initials/svg?seed=Priya',
+    socials: {
+      instagram: 'https://instagram.com/openboxcomm',
+      twitter: 'https://x.com/openboxcomm',
+    },
+  },
+  {
+    slug: 'rohan',
+    name: 'Rohan',
+    role: 'Events Lead',
+    bio: 'Rohan plans and executes every tournament, workshop, and meetup. If there is an event on the calendar, Rohan probably built it.',
+    avatar: 'https://api.dicebear.com/10.x/initials/svg?seed=Rohan',
+    socials: {
+      github: 'https://github.com/openboxcomm',
+      instagram: 'https://instagram.com/openboxcomm',
+    },
+  },
+  {
+    slug: 'neha',
+    name: 'Neha',
+    role: 'Content & Design',
+    bio: 'Neha crafts the visuals, writes the copy, and shapes how Open Box looks and feels. Every banner and blog post has her fingerprint on it.',
+    avatar: 'https://api.dicebear.com/10.x/initials/svg?seed=Neha',
+    socials: {
+      instagram: 'https://instagram.com/openboxcomm',
+      twitter: 'https://x.com/openboxcomm',
+    },
+  },
 ]
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
