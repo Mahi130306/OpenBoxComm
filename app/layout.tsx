@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     template: '%s — Open Box',
   },
   description: 'A community network with multiple Discord servers. Join Open Box to build, learn, game, and connect — free, no gatekeeping.',
-  keywords: ['Open Box', 'Discord community', 'gaming server', 'developer community', 'study group', 'networking', 'free community'],
+  keywords: ['Open Box', 'Discord community', 'gaming server', 'developer community', 'study group', 'networking', 'free community', 'the best Discord community', 'the best tech community', 'open box community', 'open box comm'],
   authors: [{ name: 'Open Box', url: BASE_URL }],
   creator: 'Open Box',
   icons: {
@@ -122,6 +122,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" suppressHydrationWarning>
       <head>
         <meta name="msvalidate.01" content="E7F02EAA1582F97200DE2848358DE313" />
+        {/* Google Tag Manager */}
+        <Script id="gtm-head" strategy="afterInteractive">
+          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5B33KBB4');`}
+        </Script>
+        {/* End Google Tag Manager */}
         {/* Google tag (gtag.js) */}
         <Script
           async
@@ -144,6 +153,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="bg-background">
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-5B33KBB4"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
+        {/* End Google Tag Manager (noscript) */}
         <ThemeProvider>
           <SecurityGuard />
           <ScrollToTop />

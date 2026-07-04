@@ -196,7 +196,7 @@ export default function HelpPage() {
               </CardHeader>
               <CardContent className="pt-6">
                 <Button asChild variant="outline" className="rounded-full">
-                  <Link href="/legal/rules">
+                  <Link href="/legal/community-rules">
                     <Shield className="mr-2 h-4 w-4" />
                     View Community Rules
                   </Link>

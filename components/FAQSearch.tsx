@@ -234,7 +234,7 @@ const FAQ_CATEGORIES = [
       {
         question: 'Does Open Box have a privacy policy?',
         answer:
-          'Yes. The full Privacy Policy is at openboxcomm.in/legal/privacy. Open Box does not sell your data. The site uses Supabase for backend and Vercel for hosting. Email communications are handled through Zoho Mail.',
+          'Yes. The full Privacy Policy is at openboxcomm.in/legal/privacy-policy. Open Box does not sell your data. The site uses Supabase for backend and Vercel for hosting. Email communications are handled through Zoho Mail.',
         tags: ['privacy', 'policy', 'data', 'legal'],
       },
       {

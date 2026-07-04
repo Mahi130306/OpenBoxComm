@@ -78,7 +78,7 @@ export default function PrivacyPolicyPage() {
         <li>IP address and approximate location (country/region)</li>
         <li>Browser type, device type, operating system</li>
         <li>Pages visited, time spent, referring URLs</li>
-        <li>Cookies and similar technologies (see our <u><a href="/legal/cookie-policy">Cookie Policy</a></u>)</li>
+        <li>Cookies and similar technologies — including those set by Google Tag Manager and Google Analytics for aggregate, anonymous traffic analysis (see our <u><a href="/legal/cookie-policy">Cookie Policy</a></u>)</li>
       </ul>
 
       <h3>2.3 Information from Third-Party Platforms</h3>
@@ -120,6 +120,7 @@ export default function PrivacyPolicyPage() {
       <h2>4. Data Sharing &amp; Transfers</h2>
       <p>We do <strong>not</strong> sell your personal data. We may share data with:</p>
       <ul>
+        <li><strong>Google LLC</strong> — Google Tag Manager (GTM-5B33KBB4) and Google Analytics (G-58P0FR4M2T) are used to collect anonymous, aggregated traffic statistics. Data is processed in accordance with <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google&apos;s Privacy Policy</a>. You can opt out via <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">Google Analytics Opt-out</a>.</li>
         <li><strong>Discord Inc.</strong> — authentication and community platform</li>
         <li><strong>Supabase Inc.</strong> — database and authentication backend</li>
         <li><strong>Patreon Inc.</strong> — donation processing</li>

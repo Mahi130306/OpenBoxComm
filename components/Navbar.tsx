@@ -91,6 +91,7 @@ function ThemeToggle({
         id="theme-toggle"
         onClick={handleToggle}
         aria-label={`Switch to ${isDark ? 'light' : 'dark'} mode`}
+        title={`Switch to ${isDark ? 'light' : 'dark'} mode`}
         className="relative rounded-md p-2 text-muted-foreground transition-all duration-200 hover:bg-accent hover:text-foreground"
       >
         {isDark ? (
@@ -142,6 +143,14 @@ export function Navbar() {
   useEffect(() => {
     setMobileMenuOpen(false)
   }, [pathname])
+
+  useEffect(() => {
+    const handleEsc = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setMobileMenuOpen(false)
+    }
+    document.addEventListener('keydown', handleEsc)
+    return () => document.removeEventListener('keydown', handleEsc)
+  }, [])
 
   const handleToggleSuggestion = () => {
     setShowSuggestion(false)
@@ -263,6 +272,8 @@ export function Navbar() {
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className="text-foreground p-1"
                 aria-label="Toggle mobile menu"
+                aria-expanded={mobileMenuOpen}
+                aria-controls="mobile-menu"
               >
                 {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
               </button>
@@ -271,7 +282,7 @@ export function Navbar() {
         </div>
 
         {mobileMenuOpen && (
-          <div className="md:hidden border-t border-border bg-surface animate-fade-in">
+          <div id="mobile-menu" role="navigation" className="md:hidden border-t border-border bg-surface animate-fade-in">
             <div className="space-y-1 px-4 pb-3 pt-2">
               <Link href="/" className="block py-2 text-sm font-medium hover:text-muted-foreground">Home</Link>
               <Link href="/about" className="block py-2 text-sm font-medium hover:text-muted-foreground">About</Link>

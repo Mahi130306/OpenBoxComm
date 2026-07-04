@@ -102,7 +102,7 @@ export const docContents: Record<string, DocData> = {
       {
         title: 'Events',
         content:
-          'All participants at Open Box events — on Discord, live on YouTube or X, or at IRL meetups — must follow these rules in full. Events may have additional rules covering teams, submissions, deadlines, or judging. Read the event post and follow organizer instructions. For full details, refer to the Events Policy at /legal/events.',
+          'All participants at Open Box events — on Discord, live on YouTube or X, or at IRL meetups — must follow these rules in full. Events may have additional rules covering teams, submissions, deadlines, or judging. Read the event post and follow organizer instructions. For full details, refer to the Events Policy at /legal/event-policy.',
       },
       {
         title: 'Social Media',
@@ -402,7 +402,7 @@ export const docContents: Record<string, DocData> = {
       },
       {
         title: 'Your Data on the Website',
-        content: 'The Open Box website privacy policy covers how data is collected and handled on openboxcomm.in. You can find it at openboxcomm.in/legal/privacy.',
+        content: 'The Open Box website privacy policy covers how data is collected and handled on openboxcomm.in. You can find it at openboxcomm.in/legal/privacy-policy.',
       },
     ],
   },
@@ -503,7 +503,7 @@ export const docContents: Record<string, DocData> = {
       },
       {
         title: 'Refunds and Cancellations',
-        content: 'Refund policy for paid events is covered in the Open Box Refund Policy at openboxcomm.in/legal/refunds. For free events, cancellations do not require action but letting the organizers know is appreciated.',
+        content: 'Refund policy for paid events is covered in the Open Box Refund Policy at openboxcomm.in/legal/refund-policy. For free events, cancellations do not require action but letting the organizers know is appreciated.',
       },
     ],
   },
@@ -512,7 +512,7 @@ export const docContents: Record<string, DocData> = {
     sections: [
       {
         title: 'What This Is',
-        content: 'This is a plain-English summary of the Open Box Terms & Conditions. It is not a legal document. The full Terms are at openboxcomm.in/legal/terms and are the authoritative version. If anything here conflicts with the full Terms, the full Terms apply.',
+        content: 'This is a plain-English summary of the Open Box Terms & Conditions. It is not a legal document. The full Terms are at openboxcomm.in/legal/terms-and-conditions and are the authoritative version. If anything here conflicts with the full Terms, the full Terms apply.',
       },
       {
         title: 'Who the Terms Cover',
@@ -528,7 +528,7 @@ export const docContents: Record<string, DocData> = {
       },
       {
         title: 'What You Cannot Do',
-        content: 'No illegal content. No harassment, hate speech, or defamation. No intellectual property violations. No hacking, scraping, or reverse-engineering the platform. No impersonation. Full details are in the Acceptable Use Policy at openboxcomm.in/legal/aup.',
+        content: 'No illegal content. No harassment, hate speech, or defamation. No intellectual property violations. No hacking, scraping, or reverse-engineering the platform. No impersonation. Full details are in the Acceptable Use Policy at openboxcomm.in/legal/acceptable-use-policy.',
       },
       {
         title: 'Your Content',

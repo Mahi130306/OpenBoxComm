@@ -192,7 +192,7 @@ export default async function ServerPage({
                   </Link>
                 </Button>
                 <Button asChild variant="ghost" className="w-full justify-start gap-2">
-                  <Link href="/legal/rules">
+                  <Link href="/legal/community-rules">
                     <Shield className="h-4 w-4" />
                     Community Rules
                   </Link>

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 const legalDocs = [
   {
-    href: '/legal/terms',
+    href: '/legal/terms-and-conditions',
     label: 'Terms & Conditions',
     description: 'The rules governing your access to and use of all Open Box platforms and services.',
     icon: FileText,
@@ -20,7 +20,7 @@ const legalDocs = [
     bg: 'bg-indigo-500/10',
   },
   {
-    href: '/legal/privacy',
+    href: '/legal/privacy-policy',
     label: 'Privacy Policy',
     description: 'How we collect, use, store, and protect your personal information.',
     icon: Shield,
@@ -28,7 +28,7 @@ const legalDocs = [
     bg: 'bg-cyan-500/10',
   },
   {
-    href: '/legal/cookie',
+    href: '/legal/cookie-policy',
     label: 'Cookie Policy',
     description: 'What cookies we use, why, and how you can control them.',
     icon: Cookie,
@@ -36,7 +36,7 @@ const legalDocs = [
     bg: 'bg-amber-500/10',
   },
   {
-    href: '/legal/rules',
+    href: '/legal/community-rules',
     label: 'Community Rules',
     description: 'The shared expectations that keep Open Box friendly, useful, and safe.',
     icon: BookOpen,
@@ -44,7 +44,7 @@ const legalDocs = [
     bg: 'bg-green-500/10',
   },
   {
-    href: '/legal/refund',
+    href: '/legal/refund-policy',
     label: 'Refund Policy',
     description: 'Our policy on payments, Patreon memberships, and event registration refunds.',
     icon: RefreshCw,
@@ -52,7 +52,7 @@ const legalDocs = [
     bg: 'bg-rose-500/10',
   },
   {
-    href: '/legal/dmca',
+    href: '/legal/dmca-policy',
     label: 'DMCA / Copyright',
     description: 'How to report copyright infringement and our process for handling DMCA notices.',
     icon: AlertCircle,
@@ -60,7 +60,7 @@ const legalDocs = [
     bg: 'bg-red-500/10',
   },
   {
-    href: '/legal/aup',
+    href: '/legal/acceptable-use-policy',
     label: 'Acceptable Use Policy',
     description: 'Permitted and prohibited uses of all Open Box platforms and brand assets.',
     icon: CheckSquare,
@@ -68,7 +68,7 @@ const legalDocs = [
     bg: 'bg-violet-500/10',
   },
   {
-    href: '/legal/event',
+    href: '/legal/event-policy',
     label: 'Event Policies',
     description: 'Rules and expectations for all Open Box online and offline events.',
     icon: Calendar,

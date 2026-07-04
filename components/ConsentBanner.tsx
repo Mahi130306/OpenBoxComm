@@ -35,15 +35,15 @@ export function ConsentBanner() {
       <div className="rounded-xl border border-border bg-surface/95 backdrop-blur-md shadow-lg px-4 py-3 flex flex-col sm:flex-row sm:items-center gap-3">
         <p className="text-xs text-muted-foreground leading-relaxed flex-1">
           🍪 By using this site you agree to our{' '}
-          <Link href="/legal/terms" target="_blank" className="underline hover:text-foreground transition-colors">
+          <Link href="/legal/terms-and-conditions" target="_blank" className="underline hover:text-foreground transition-colors">
             Terms
           </Link>
           ,{' '}
-          <Link href="/legal/privacy" target="_blank" className="underline hover:text-foreground transition-colors">
+          <Link href="/legal/privacy-policy" target="_blank" className="underline hover:text-foreground transition-colors">
             Privacy Policy
           </Link>
           , and{' '}
-          <Link href="/legal/cookies" target="_blank" className="underline hover:text-foreground transition-colors">
+          <Link href="/legal/cookie-policy" target="_blank" className="underline hover:text-foreground transition-colors">
             Cookie Policy
           </Link>
           .

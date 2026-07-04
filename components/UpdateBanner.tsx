@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { X, RefreshCw, Sparkles } from 'lucide-react'
 
-const POLL_INTERVAL_MS = 60_000
+const POLL_INTERVAL_MS = 300_000
 const SESSION_KEY = 'ob_update_dismissed'
 
 // Injected at build time via next.config.mjs env
@@ -136,6 +136,7 @@ export function UpdateBanner() {
               id="update-banner-dismiss"
               onClick={dismiss}
               aria-label="Dismiss update notification"
+              title="Dismiss update notification"
               className="
                 ml-0.5 rounded-lg p-1.5 text-white/50 transition-all
                 duration-150 hover:bg-white/10 hover:text-white/90

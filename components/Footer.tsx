@@ -118,6 +118,7 @@ export function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={s.name}
+                    title={s.name}
                     className="h-10 w-10 flex items-center justify-center rounded-lg border border-border text-muted-foreground transition-all duration-200 hover:border-cyan-500 hover:bg-cyan-500/10 hover:text-cyan-500"
                   >
                     {s.icon}
