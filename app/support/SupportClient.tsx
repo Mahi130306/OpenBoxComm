@@ -181,7 +181,7 @@ export default function SupportClient() {
   ]
 
   const wallOfFame = [
-    { name: 'Sachin', role: 'Core Team / Developer', avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80', tier: 'Core' },
+    { name: 'Mahi HH', role: 'Core Team / Developer', avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80', tier: 'Core' },
     { name: 'Mahi', role: 'Founder', avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80', tier: 'Founder' },
     { name: 'Zenith', role: 'OP Supporter', avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80', tier: 'OP Supporter' },
     { name: 'Alex', role: 'Legend Supporter', avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80', tier: 'Legend' },

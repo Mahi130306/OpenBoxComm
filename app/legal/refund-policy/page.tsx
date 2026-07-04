@@ -5,13 +5,11 @@ export const metadata: Metadata = {
   description: 'Refund Policy for Open Box — how we handle refund requests for Patreon, UPI, and other payment channels.',
 }
 
-export default function RefundPage() {
-  const lastUpdated = 'June 29, 2026 — This document has not been reviewed, approved, or endorsed by a licensed attorney or legal counsel. It was drafted with AI assistance and does not constitute legal advice.'
-
+export default function RefundPolicyPage() {
   return (
     <article>
       <h1 className="!text-3xl !font-extrabold mb-1">Refund Policy</h1>
-      <p className="text-sm text-muted-foreground mb-8">Last updated: {lastUpdated}</p>
+      <p className="text-sm text-muted-foreground mb-8">Last updated: {new Date().toLocaleDateString('en-IN')}</p>
 
       <p>
         This Refund Policy applies to any financial contributions or payments made to Open Box across any of
@@ -70,7 +68,7 @@ export default function RefundPage() {
       <ul>
         <li>Voluntary cancellation after a billing cycle has already completed</li>
         <li>Dissatisfaction with content that was fully accessible during the membership or subscription period</li>
-        <li>Account suspension or ban from any Open Box platform due to violations of our <a href="/legal/rules">Community Rules</a>, <a href="/legal/aup">Acceptable Use Policy</a>, or <a href="/legal/terms">Terms &amp; Conditions</a></li>
+        <li>Account suspension or ban from any Open Box platform due to violations of our <a href="/legal/community-rules">Community Rules</a>, <a href="/legal/acceptable-use-policy">Acceptable Use Policy</a>, or <a href="/legal/terms-and-conditions">Terms &amp; Conditions</a></li>
         <li>Donations or payments made more than 7 days prior to the refund request</li>
         <li>Change of mind after an event has taken place or event materials have been distributed</li>
       </ul>

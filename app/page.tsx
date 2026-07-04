@@ -7,33 +7,16 @@ import { MasterCalendar } from '@/components/MasterCalendar'
 import { CTASection } from '@/components/CTASection'
 import ServerNodeGraph from "@/components/ServerNodeGraph";
 import { ArrowRight, Sparkles } from 'lucide-react'
+import { generatePageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
-  title: 'Open Box — Community for Everyone | Gamers, Students',
+export const metadata: Metadata = generatePageMetadata({
+  title: 'Home',
   description: 'Join Open Box, a free, no-gatekeeping community network for gamers, students, and creators. Explore our Discord servers, attend events, and connect with peers.',
-  keywords: ['Open Box', 'Discord community', 'gamers', 'students', 'creators', 'networking', 'open source', 'free community'],
-  alternates: { canonical: '/' },
-  openGraph: {
-    title: 'Open Box — The Ultimate Community Network',
-    description: 'Find your people in Open Box. A free community network spanning gaming, development, studying, and more. No gatekeeping, just connection.',
-    type: 'website',
-    url: '/',
-    images: [
-      {
-        url: '/images/og-default.png',
-        width: 1200,
-        height: 630,
-        alt: 'Open Box Community Network',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Open Box — Community for Everyone',
-    description: 'Find your people in Open Box. A free community network spanning gaming, development, studying, and more.',
-    images: ['/images/og-default.png'],
-  },
-}
+  keywords: ['Open Box', 'Discord community', 'gamers', 'students', 'creators', 'networking', 'gaming', 'development'],
+  path: '/',
+  imageUrl: '/images/og-default.png',
+  imageAlt: 'Open Box Community Network',
+})
 
 
 export default function Home() {

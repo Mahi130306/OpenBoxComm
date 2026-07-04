@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     template: '%s — Open Box',
   },
   description: 'A community network with multiple Discord servers. Join Open Box to build, learn, game, and connect — free, no gatekeeping.',
-  keywords: ['Open Box', 'Discord community', 'gaming server', 'developer community', 'study group', 'networking'],
+  keywords: ['Open Box', 'Discord community', 'gaming server', 'developer community', 'study group', 'networking', 'free community'],
   authors: [{ name: 'Open Box', url: BASE_URL }],
   creator: 'Open Box',
   icons: {
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Open Box — Community for Everyone',
-    description: 'A community network with multiple Discord servers. Free to join.',
+    description: 'A community network with multiple Discord servers. Join for gaming, development, learning, and networking.',
     url: BASE_URL,
     siteName: 'Open Box',
     images: [{ url: '/images/og-default.png', width: 1200, height: 630, alt: 'Open Box Community' }],
@@ -40,12 +40,14 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Open Box — Community for Everyone',
-    description: 'A community network with multiple Discord servers. Free to join.',
+    description: 'A community network with multiple Discord servers. Join for gaming, development, learning, and networking.',
     images: ['/images/og-default.png'],
     site: '@Openboxcomm',
+    creator: '@Openboxcomm',
   },
   alternates: { canonical: BASE_URL },
-  robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true }, 'max-image-preview': 'large', 'max-snippet': -1 },
+  verification: { google: 'google-site-verification-code' },
 }
 
 const jsonLd = {
@@ -55,26 +57,62 @@ const jsonLd = {
       '@type': 'Organization',
       '@id': `${BASE_URL}/#organization`,
       name: 'Open Box',
+      description: 'A free community network for gaming, development, learning, and networking.',
       url: BASE_URL,
-      logo: { '@type': 'ImageObject', url: `${BASE_URL}/images/OB.png` },
+      logo: { '@type': 'ImageObject', url: `${BASE_URL}/images/OB.png`, width: 512, height: 512 },
+      image: { '@type': 'ImageObject', url: `${BASE_URL}/images/og-default.png`, width: 1200, height: 630 },
       sameAs: [
         'https://discord.gg/7ZWckKU89J',
         'https://www.instagram.com/openboxcomm/',
         'https://x.com/Openboxcomm',
         'https://www.youtube.com/@obcommunities-yt',
       ],
+      contactPoint: {
+        '@type': 'ContactPoint',
+        contactType: 'Customer Support',
+        email: 'admin@openboxcomm.in',
+        url: `${BASE_URL}/contact-us`,
+      },
+      foundingDate: '2021-01-01',
+      areaServed: 'IN',
+      knowsAbout: ['Gaming', 'Software Development', 'Community Building', 'Networking', 'Education'],
     },
     {
       '@type': 'WebSite',
       '@id': `${BASE_URL}/#website`,
       url: BASE_URL,
       name: 'Open Box',
+      description: 'A free community network for gaming, development, learning, and networking.',
       publisher: { '@id': `${BASE_URL}/#organization` },
       potentialAction: {
         '@type': 'SearchAction',
         target: { '@type': 'EntryPoint', urlTemplate: `${BASE_URL}/servers?q={search_term_string}` },
         'query-input': 'required name=search_term_string',
       },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': `${BASE_URL}/#breadcrumbs`,
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: BASE_URL,
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Servers',
+          item: `${BASE_URL}/servers`,
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'Events',
+          item: `${BASE_URL}/events`,
+        },
+      ],
     },
   ],
 }
@@ -83,6 +121,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <meta name="msvalidate.01" content="E7F02EAA1582F97200DE2848358DE313" />
+        {/* Google tag (gtag.js) */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-58P0FR4M2T"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-58P0FR4M2T');
+          `}
+        </Script>
         <Script
           id="json-ld"
           type="application/ld+json"

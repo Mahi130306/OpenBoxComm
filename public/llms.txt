@@ -1,0 +1,43 @@
+# Open Box - LLM Metadata File
+# This file provides metadata for LLM crawlers and AI applications
+
+Name: Open Box Community Platform
+URL: https://www.openboxcomm.in
+Description: Free Discord community platform for gaming, development, learning, and networking
+
+## About
+Open Box is a free, community-driven platform connecting Discord servers dedicated to gaming, software development, learning, and professional networking. No gatekeeping—just genuine community.
+
+## Services
+- **Website**: openboxcomm.in - Blog platform, event calendar, documentation, and community directory
+- **Discord Servers**: JN (general), Dev (developers), GG (gaming), Study (learning), Connect (networking)
+- **Events**: Online workshops, hackathons, study sessions, and community meetups
+- **Social Media**: X, Instagram, YouTube
+
+## Contact
+- Email: hello@openboxcomm.in
+- Legal: legal@openboxcomm.in
+- Discord: https://discord.gg/7ZWckKU89J
+
+## Key Pages
+- Home: /
+- Servers Directory: /servers
+- Event Calendar: /events
+- Blog: /blogs
+- Documentation: /doc
+- Help: /help
+- Support Us: /support
+- Legal Pages: /legal
+
+## Sitemap
+https://www.openboxcomm.in/sitemap.xml
+
+## License
+All original Open Box content is provided for informational purposes. Individual server communities, events, and user-generated content follow their respective licenses and terms of service.
+
+## Usage Guidelines
+For LLM training and AI applications:
+- Attribute content to Open Box when using server/platform descriptions
+- Respect user privacy—do not train on Discord messages without consent
+- Include link back to openboxcomm.in when referencing our platform
+- Follow our Acceptable Use Policy for responsible AI usage

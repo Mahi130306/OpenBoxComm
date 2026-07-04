@@ -1,33 +1,14 @@
-# Open Box — Developer Guide
+# Open Box — Community Platform
 
-https://www.openboxcomm.in/
+A modern, high-performance Discord community website built with Next.js, TypeScript, and Tailwind CSS.
 
-OpenBox is a multi-server Discord community website built with **Next.js 16 (App Router)**, **TypeScript**, **Tailwind CSS**, and **MDX**.
-
----
-
-## Tech Stack
-
-| Layer | Technology |
-|---|---|
-| Animation | GSAP |
-| 3D Visuals | Three.js |
-
-| Layer | Technology |
-|---|---|
-| Framework | Next.js 16 (App Router) |
-| Language | TypeScript |
-| Styling | Tailwind CSS v3 + `tailwindcss-animate` |
-| Fonts | Syne (headings) · Inter (body) via Google Fonts |
-| UI Components | Radix UI + shadcn/ui patterns (`components/ui/`) |
-| MDX | `next-mdx-remote` + `gray-matter` (for docs) |
-| Theme | `next-themes` (dark/light toggle) |
+**Live:** https://www.openboxcomm.in/
 
 ---
 
-## Local Setup
+## Quick Start
 
-### 1. Clone and install
+### Installation
 
 ```bash
 git clone <repo-url>
@@ -35,201 +16,188 @@ cd open-box-website-del
 npm install
 ```
 
-### 2. Environment variables
+### Environment Setup
 
-Copy `.env.local.example` to `.env.local` and fill in your values:
+Copy `.env.local.example` to `.env.local`:
 
 ```bash
 cp .env.local.example .env.local
 ```
 
-Required variables:
+Required environment variables:
 
 ```env
-# Discord invite links for each server
+# Discord Server Invites
 NEXT_PUBLIC_DISCORD_JN_INVITE=https://discord.gg/...
 NEXT_PUBLIC_DISCORD_DEV_INVITE=https://discord.gg/...
 NEXT_PUBLIC_DISCORD_GG_INVITE=https://discord.gg/...
 NEXT_PUBLIC_DISCORD_INVITE_MAIN=https://discord.gg/...
 
-# Social links (used in Footer)
+# Social Links
 NEXT_PUBLIC_YOUTUBE_URL=https://youtube.com/@openbox
 NEXT_PUBLIC_INSTAGRAM_URL=https://instagram.com/openboxcomm
 NEXT_PUBLIC_PATREON_URL=https://patreon.com/openbox
 NEXT_PUBLIC_X_URL=https://x.com/openboxcomm
 
-# Feature flags
+# Feature Flags
 NEXT_PUBLIC_LOGIN_ENABLED=false
-
 ```
 
-### GSAP + Three.js
-
-The Hero section uses GSAP for timing and Three.js for rendering the 3D icosahedron.
-- Ensure `gsap` and `three` are installed via npm.
-- The component is located at `components/HeroGraphic.tsx`.
-
-### 3. Run locally
+### Development Server
 
 ```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Open [http://localhost:3000](http://localhost:3000)
 
 ---
 
-## Folder Structure
+## Tech Stack
+
+| Category | Technology |
+|---|---|
+| Framework | Next.js 16 (App Router) |
+| Language | TypeScript |
+| Styling | Tailwind CSS v3 + Animations |
+| UI Library | Radix UI + shadcn/ui |
+| Content | MDX (next-mdx-remote + gray-matter) |
+| Theme | next-themes (dark/light) |
+| 3D Graphics | Three.js |
+| Animations | GSAP |
+| Fonts | Syne (headings) · Inter (body) |
+
+---
+
+## Project Structure
 
 ```
 open-box-website-del/
-├── app/                    # Next.js App Router pages
-│   ├── layout.tsx          # Root layout — Navbar, Footer, ScrollToTop, ThemeProvider
-│   ├── page.tsx            # Home page (hero + quiz + directory + calendar + CTA)
-│   ├── not-found.tsx       # Custom 404 page
-│   ├── error.tsx           # Global error boundary (500 / network errors)
-│   ├── about/              # About page
-│   ├── blogs/
-│   │   ├── page.tsx        # Blog listing
-│   │   └── [slug]/page.tsx # Individual blog post (reads from community-data.ts)
-│   ├── contact/page.tsx    # Contact page
-│   ├── doc/
-│   │   ├── page.tsx        # Docs listing
-│   │   └── [slug]/page.tsx # Individual doc (reads .mdx from content/docs/)
-│   ├── events/
-│   │   ├── page.tsx        # Events listing
-│   │   └── [id]/page.tsx   # Individual event (reads from community-data.ts)
-│   ├── help/
-│   │   ├── page.tsx        # Help / contact page
-│   │   └── faq/            # FAQ search page
-│   ├── legal/
-│   │   ├── layout.tsx      # Shared sidebar layout for all legal pages
-│   │   ├── page.tsx        # Legal index — card grid of all legal documents
-│   │   ├── terms/          # Terms & Conditions
-│   │   ├── privacy/        # Privacy Policy
-│   │   ├── cookie/         # Cookie Policy
-│   │   ├── rules/          # Community Rules
-│   │   ├── refund/         # Refund Policy
-│   │   ├── dmca/           # DMCA / Copyright
-│   │   ├── aup/            # Acceptable Use Policy
-│   │   └── event/          # Event Policies
-│   ├── servers/
-│   │   ├── page.tsx        # All servers listing
-│   │   └── [slug]/page.tsx # Individual server page
-│   └── support/            # Support / Patreon page
+├── app/                       # Pages and routes
+│   ├── layout.tsx            # Root layout (Navbar, Footer, Theme)
+│   ├── page.tsx              # Home page
+│   ├── about/                # About page
+│   ├── blogs/                # Blog listing & posts
+│   ├── contact/              # Contact form
+│   ├── contact-us/           # Contact page
+│   ├── doc/                  # Documentation listing & pages
+│   ├── events/               # Events listing & details
+│   ├── help/                 # Help center & FAQ
+│   ├── join/                 # Join page
+│   ├── legal/                # Legal pages (terms, privacy, etc.)
+│   ├── servers/              # Server listing & details
+│   ├── support/              # Support/Patreon page
+│   ├── team/                 # Team member profiles
+│   ├── (auth)/               # Auth routes (login, dashboard)
+│   └── api/                  # API routes (webhooks, data)
 │
-├── components/             # Shared React components
-│   ├── ui/                 # shadcn/ui base components (Button, Card, Badge, etc.)
-│   ├── Navbar.tsx          # Top navigation bar
-│   ├── Footer.tsx          # Site footer
-│   ├── ScrollToTop.tsx     # Scrolls to top on every route change
-│   ├── DiscordStats.tsx    # Live Discord member counter (polls every 10s)
-│   ├── Quiz.tsx            # "Find Your Fit" quiz on home page
-│   ├── BlogCard.tsx        # Blog post card component
-│   ├── ServerCard.tsx      # Server card component
-│   ├── DirectorySearch.tsx # Server directory + search
-│   ├── MasterCalendar.tsx  # Community event calendar
-│   ├── CTASection.tsx      # Call-to-action banner
-│   ├── FAQSearch.tsx       # FAQ search component
-│   ├── LoadingScreen.tsx   # Initial loading animation
-│   ├── TableOfContents.tsx # TOC for doc pages
-│   └── ThemeProvider.tsx   # next-themes wrapper
+├── components/               # Reusable components
+│   ├── ui/                   # shadcn/ui components
+│   ├── Navbar.tsx            # Navigation bar
+│   ├── Footer.tsx            # Footer
+│   ├── Quiz.tsx              # "Find Your Fit" quiz
+│   ├── MasterCalendar.tsx    # Event calendar
+│   ├── DirectorySearch.tsx   # Server search
+│   ├── DiscordStats.tsx      # Live member counts
+│   ├── BlogCard.tsx          # Blog post card
+│   ├── ServerCard.tsx        # Server card
+│   ├── FAQSearch.tsx         # FAQ search
+│   ├── TableOfContents.tsx   # Doc navigation
+│   └── ThemeProvider.tsx     # Theme switcher
 │
 ├── content/
-│   ├── docs/               # MDX files for documentation pages
-│   │   ├── rules.mdx
-│   │   ├── jn.mdx
-│   │   ├── dev.mdx
-│   │   └── gg.mdx
-│   └── blogs/              # (Currently unused — blog data is in community-data.ts)
+│   └── docs/                 # MDX documentation files
 │
 ├── lib/
-│   ├── community-data.ts   # ⭐ Main data file — servers, blogs, events, docs
-│   ├── mdx.ts              # MDX file reader for content/docs/
-│   ├── constants.ts        # Shared constants
-│   ├── utils.ts            # cn() utility
-│   └── logger.ts           # Logging utility
+│   ├── community-data.ts     # All content data (servers, blogs, events)
+│   ├── docs.ts               # MDX file reader
+│   ├── constants.ts          # App constants
+│   ├── utils.ts              # Helper functions
+│   └── hooks/                # Custom React hooks
 │
-├── types/                  # TypeScript type definitions
 ├── public/
-│   └── images/             # Static images (OB.png, jn.png, dev.png, gg.png)
-├── tailwind.config.ts      # Tailwind config (fonts: Syne/Inter, colors, tokens)
-└── .env.local              # Local environment variables (never commit this)
+│   ├── images/               # Logos, icons, OG images
+│   └── sitemap.xml           # SEO sitemap
+│
+├── types/                    # TypeScript definitions
+├── tailwind.config.ts        # Tailwind configuration
+├── next.config.mjs           # Next.js configuration
+└── tsconfig.json             # TypeScript configuration
 ```
 
 ---
 
-## How to Add a New Blog Post
+## Content Management
 
-Edit [`lib/community-data.ts`](./lib/community-data.ts) and add an entry to the `blogs` array:
+### Adding a Blog Post
+
+Edit [`lib/community-data.ts`](./lib/community-data.ts) and add to the `blogs` array:
 
 ```ts
 {
-  slug: 'your-post-slug',          // Used as URL: /blogs/your-post-slug
-  title: 'Your Post Title',
-  server: 'OB JN',                 // Server label shown on card
-  date: '2026-06-29',              // ISO date string
-  excerpt: 'One-line summary.',
+  slug: 'my-post',
+  title: 'Post Title',
+  server: 'OB JN',
+  date: '2026-06-29',
+  excerpt: 'Brief description.',
   readTime: '4 min read',
 }
 ```
 
-The blog detail page at `app/blogs/[slug]/page.tsx` currently renders a shared body. To add per-post content, extend the `blog` object with a `content` field and render it in the detail page.
+View at `/blogs/my-post`
 
----
+### Adding an Event
 
-## How to Add a New Event
-
-Uncomment or add an entry in the `events` array in [`lib/community-data.ts`](./lib/community-data.ts):
+Add to the `events` array in [`lib/community-data.ts`](./lib/community-data.ts):
 
 ```ts
 {
-  id: 'your-event-id',             // Used as URL: /events/your-event-id
+  id: 'my-event',
   name: 'Event Name',
-  server: 'Dev',                   // Display name
-  serverSlug: 'dev',               // Must match a server slug
+  server: 'Dev',
+  serverSlug: 'dev',
   date: '2026-08-01T18:00:00+05:30',
-  description: 'What the event is about.',
-  ticketStatus: 'free',            // 'free' | 'paid'
+  description: 'Event description.',
+  ticketStatus: 'free',
   isOffline: false,
-  location: 'Discord voice stage',
-  agenda: ['Step 1', 'Step 2', 'Step 3'],
+  location: 'Discord',
+  agenda: ['Part 1', 'Part 2'],
 }
 ```
 
----
+View at `/events/my-event`
 
-## How to Add a New Document
+### Adding Documentation
 
-### Option A: MDX file (for full rich-text docs)
+#### Option 1: MDX File (Recommended)
 
-1. Create a new `.mdx` file in `content/docs/`:
+1. Create `content/docs/my-doc.mdx`:
 
 ```mdx
 ---
-title: Your Document Title
-description: Short description shown in the header.
+title: My Document
+description: Brief description
 ---
 
-## Section One
+## Section
 
-Your content here.
+Your content here with **Markdown** support.
 ```
 
-2. Add an entry to the `docs` array in `lib/community-data.ts` (so it appears on the `/doc` listing page):
+2. Add to `docs` array in [`lib/community-data.ts`](./lib/community-data.ts):
 
 ```ts
 {
-  slug: 'your-doc-slug',           // Must match filename: content/docs/your-doc-slug.mdx
-  title: 'Your Document Title',
-  description: 'Short description.',
-  section: 'Core',                 // Section label shown on card
+  slug: 'my-doc',
+  title: 'My Document',
+  description: 'Brief description.',
+  section: 'Core',
 }
 ```
 
----
+View at `/doc/my-doc`
 
-## How to Add or Edit a Server Entry
+### Adding a Server
 
 Edit the `servers` array in [`lib/community-data.ts`](./lib/community-data.ts):
 
@@ -237,93 +205,101 @@ Edit the `servers` array in [`lib/community-data.ts`](./lib/community-data.ts):
 {
   slug: 'myserver',
   name: 'OB MyServer',
-  description: 'Short tagline shown on the card.',
-  longDescription: 'Full description shown on the server detail page.',
+  description: 'Tagline shown on card.',
+  longDescription: 'Full description for detail page.',
   tags: ['tag1', 'tag2'],
   memberCount: 0,
-  isLive: true,                    // false = shows "Coming Soon" button
-  accent: 'from-violet-500 to-fuchsia-600',  // Tailwind gradient classes
+  isLive: true,
+  accent: 'from-violet-500 to-fuchsia-600',  // Tailwind gradient
   channels: ['Channel A', 'Channel B'],
   rules: ['Rule 1', 'Rule 2'],
   inviteEnv: 'NEXT_PUBLIC_DISCORD_MYSERVER_INVITE',
 }
 ```
 
-**Accent color guide** — use Tailwind gradient syntax:
+Add logo: `/public/images/myserver.png`
 
-| Server | Accent |
-|---|---|
-| Jn. | `from-rose-500 to-amber-300` |
-| Dev | `from-green-400 to-emerald-600` |
-| GG | `from-red-500 to-rose-700` |
-| Study | `from-violet-400 to-fuchsia-500` |
-| Connect | `from-orange-300 to-red-500` |
+**Gradient Colors:**
 
-Add the server logo as `/public/images/<slug>.png` and register it in `SERVER_LOGOS` at the top of `app/servers/[slug]/page.tsx`.
+- Jn.: `from-rose-500 to-amber-300`
+- Dev: `from-green-400 to-emerald-600`
+- GG: `from-red-500 to-rose-700`
+- Study: `from-violet-400 to-fuchsia-500`
+- Connect: `from-orange-300 to-red-500`
 
----
+### Adding a Legal Page
 
-## How to Add a New Legal Page
-
-1. Create the page file at `app/legal/<name>/page.tsx`:
+1. Create `app/legal/[page-name]/page.tsx`:
 
 ```tsx
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Your Policy — Open Box',
+  title: 'Legal Page — Open Box',
 }
 
-export default function YourPolicyPage() {
+export default function LegalPage() {
   return (
     <article>
-      <h1>Your Policy</h1>
-      <p>Content goes here.</p>
+      <h1>Legal Page Title</h1>
+      <p>Content here.</p>
     </article>
   )
 }
 ```
 
-2. Add the page to the sidebar in `app/legal/layout.tsx`:
-
-```ts
-{ href: '/legal/<name>', label: 'Your Policy' }
-```
-
-3. Add a card to `app/legal/page.tsx` in the `legalDocs` array:
-
-```ts
-{
-  href: '/legal/<name>',
-  label: 'Your Policy',
-  description: 'What this policy covers.',
-  icon: SomeLucideIcon,
-  accent: 'from-blue-400 to-indigo-500',
-}
-```
-
-4. Add a link in the footer in `components/Footer.tsx` under `legalLinks`.
+2. Update `app/legal/layout.tsx` sidebar
+3. Update footer links in `components/Footer.tsx`
 
 ---
 
-## Deployment Notes
+## Scripts
 
-This project is deployable to **Vercel** or any Node.js-compatible platform.
+```bash
+# Development
+npm run dev
 
-- All environment variables prefixed with `NEXT_PUBLIC_` are exposed to the browser
-- The `content/docs/` directory is read at build time — add new MDX files and rebuild
-- Discord widget API (`discord.com/api/guilds/.../widget.json`) requires the widget to be **enabled** in each server's settings (Server Settings → Widget → Enable Server Widget)
-- If a Discord widget is disabled, `DiscordStats` will show `—` for that server gracefully
+# Build
+npm run build
+npm run start
 
-### Build
+# Code quality
+npm run lint
+```
+
+---
+
+## Deployment
+
+**Recommended:** Vercel (seamless Next.js integration)
+
+### Build & Run
 
 ```bash
 npm run build
 npm run start
 ```
 
-### Lint
+### Environment Variables
 
-```bash
-npm run lint
-```
+All `NEXT_PUBLIC_*` variables are exposed to the browser. Keep secrets server-side.
+
+### Notes
+
+- Discord widgets must be **enabled** in server settings for live member counts
+- MDX files are processed at build time — rebuild after adding new docs
+- All images should be optimized (PNG/WebP)
+
+---
+
+## Key Features
+
+✅ **Server Discovery** — Browse all Discord servers with live member counts  
+✅ **Event Calendar** — Master calendar of all community events  
+✅ **Blog Platform** — Share updates and stories  
+✅ **Documentation** — MDX-based docs with full Markdown support  
+✅ **Dark Mode** — Theme switcher with persistence  
+✅ **SEO Optimized** — Metadata, sitemap, structured data  
+✅ **Responsive** — Mobile-first design with Tailwind CSS  
+✅ **Fast** — Next.js optimizations, image lazy-loading  
+✅ **Accessible** — WCAG compliance with Radix UI components

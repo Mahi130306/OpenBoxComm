@@ -31,6 +31,9 @@ const nextConfig = {
         pathname: '/**',
       },
     ],
+    formats: ['image/avif', 'image/webp'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
 
   // ── HTTP security headers (fallback if middleware is bypassed) ────────────
@@ -39,11 +42,11 @@ const nextConfig = {
       {
         source: '/(.*)',
         headers: [
-          { key: 'X-Frame-Options',           value: 'DENY' },
-          { key: 'X-Content-Type-Options',     value: 'nosniff' },
-          { key: 'X-DNS-Prefetch-Control',     value: 'on' },
-          { key: 'Referrer-Policy',            value: 'strict-origin-when-cross-origin' },
-          { key: 'X-XSS-Protection',           value: '1; mode=block' },
+          { key: 'X-Frame-Options', value: 'DENY' },
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'X-DNS-Prefetch-Control', value: 'on' },
+          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+          { key: 'X-XSS-Protection', value: '1; mode=block' },
           {
             key: 'Strict-Transport-Security',
             value: 'max-age=31536000; includeSubDomains; preload',
@@ -79,19 +82,64 @@ const nextConfig = {
   // ── Typo-fix redirects ────────────────────────────────────────────────────
   async redirects() {
     return [
-      { source: '/hmoe',      destination: '/',          permanent: true },
-      { source: '/aboot',     destination: '/about',     permanent: true },
-      { source: '/abot',      destination: '/about',     permanent: true },
-      { source: '/contat',    destination: '/contact-us', permanent: true },
+      // Home page
+      { source: '/hmoe', destination: '/', permanent: true },
+      { source: '/home', destination: '/', permanent: true },
+
+      // About page
+      { source: '/aboot', destination: '/about', permanent: true },
+      { source: '/abot', destination: '/about', permanent: true },
+      { source: '/bout', destination: '/about', permanent: true },
+
+      // Contact pages
+      { source: '/contat', destination: '/contact-us', permanent: true },
       { source: '/contactus', destination: '/contact-us', permanent: true },
-      { source: '/sever',     destination: '/servers',   permanent: true },
-      { source: '/severs',    destination: '/servers',   permanent: true },
-      { source: '/eventss',   destination: '/events',    permanent: true },
-      { source: '/event',     destination: '/events',    permanent: true },
-      { source: '/docs',      destination: '/doc',       permanent: true },
-      { source: '/docss',     destination: '/doc',       permanent: true },
-      { source: '/joinus',    destination: '/join',      permanent: true },
-      { source: '/jion/',     destination: '/join',      permanent: true },
+      { source: '/contact', destination: '/contact-us', permanent: true },
+      { source: '/kontact', destination: '/contact-us', permanent: true },
+
+      // Servers page
+      { source: '/sever', destination: '/servers', permanent: true },
+      { source: '/severs', destination: '/servers', permanent: true },
+      { source: '/server', destination: '/servers', permanent: true },
+      { source: '/servs', destination: '/servers', permanent: true },
+
+      // Events page (note: /event* routes except /legal/event)
+      { source: '/eventss', destination: '/events', permanent: true },
+      { source: '/events/:slug', destination: '/events/:slug', permanent: false },
+
+      // Documentation page
+      { source: '/docs', destination: '/doc', permanent: true },
+      { source: '/docss', destination: '/doc', permanent: true },
+      { source: '/documentation', destination: '/doc', permanent: true },
+      { source: '/guide', destination: '/doc', permanent: true },
+
+      // Join page
+      { source: '/joinus', destination: '/join', permanent: true },
+      { source: '/jion/', destination: '/join', permanent: true },
+      { source: '/join-us', destination: '/join', permanent: true },
+
+      // Blog page
+      { source: '/blg', destination: '/blogs', permanent: true },
+      { source: '/blog', destination: '/blogs', permanent: true },
+
+      // Help page
+      { source: '/hlep', destination: '/help', permanent: true },
+      { source: '/help-us', destination: '/help', permanent: true },
+      { source: '/faq', destination: '/help/faq', permanent: true },
+
+      // Support page
+      { source: '/suport', destination: '/support', permanent: true },
+      { source: '/supprt', destination: '/support', permanent: true },
+
+      // Legal route renames (backward compatibility)
+      { source: '/legal/privacy', destination: '/legal/privacy-policy', permanent: true },
+      { source: '/legal/terms', destination: '/legal/terms-and-conditions', permanent: true },
+      { source: '/legal/cookie', destination: '/legal/cookie-policy', permanent: true },
+      { source: '/legal/rules', destination: '/legal/community-rules', permanent: true },
+      { source: '/legal/refund', destination: '/legal/refund-policy', permanent: true },
+      { source: '/legal/dmca', destination: '/legal/dmca-policy', permanent: true },
+      { source: '/legal/aup', destination: '/legal/acceptable-use-policy', permanent: true },
+      { source: '/legal/event', destination: '/legal/event-policy', permanent: true },
     ]
   },
 }

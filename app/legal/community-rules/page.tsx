@@ -5,13 +5,11 @@ export const metadata: Metadata = {
   description: 'Community Rules for all Open Box spaces — Discord servers, website, events, and affiliated platforms.',
 }
 
-export default function RulesPage() {
-  const lastUpdated = 'June 29, 2026 — This document has not been reviewed, approved, or endorsed by a licensed attorney or legal counsel. It was drafted with AI assistance and does not constitute legal advice.'
-
+export default function CommunityRulesPage() {
   return (
     <article>
       <h1 className="!text-3xl !font-extrabold mb-1">Community Rules</h1>
-      <p className="text-sm text-muted-foreground mb-8">Last updated: {lastUpdated}</p>
+      <p className="text-sm text-muted-foreground mb-8">Last updated: {new Date().toLocaleDateString('en-IN')}</p>
 
       <p>
         These rules apply to <strong>all Open Box spaces</strong> — the website at{' '}
@@ -142,7 +140,7 @@ export default function RulesPage() {
       <p>
         All participants at Open Box events — online on Discord, live on YouTube or X, or in person at an IRL
         meetup — are expected to follow these rules in full. For full details, refer to our{' '}
-        <u><a href="/legal/events">Events Policy</a></u>.
+        <u><a href="/legal/event-policy">Event Policy</a></u>.
       </p>
 
       <h2>7. Social Media</h2>
@@ -165,7 +163,6 @@ export default function RulesPage() {
         <li><strong>JN (Junction):</strong> General entry server. See #jn-rules on Discord.</li>
         <li><strong>Dev:</strong> Developers. See #dev-rules on Discord.</li>
         <li><strong>GG:</strong> Gaming. See #gg-rules on Discord.</li>
-        {/* <li><strong>Classic:</strong> Casual social. See #classic-rules on Discord.</li> */}
         <li><strong>Study:</strong> Study and accountability. See #study-rules on Discord.</li>
         <li><strong>Connect:</strong> Networking and careers. See #connect-rules on Discord.</li>
       </ul>

@@ -6,14 +6,14 @@ import { cn } from '@/lib/utils'
 import { ChevronRight } from 'lucide-react'
 
 const legalPages = [
-  { href: '/legal/terms',   label: 'Terms & Conditions' },
-  { href: '/legal/privacy', label: 'Privacy Policy' },
-  { href: '/legal/cookie',  label: 'Cookie Policy' },
-  { href: '/legal/rules',   label: 'Community Rules' },
-  { href: '/legal/refund',  label: 'Refund Policy' },
-  { href: '/legal/dmca',    label: 'DMCA / Copyright' },
-  { href: '/legal/aup',     label: 'Acceptable Use Policy' },
-  { href: '/legal/event',    label: 'Event Policies' },
+  { href: '/legal/terms-and-conditions', label: 'Terms & Conditions' },
+  { href: '/legal/privacy-policy', label: 'Privacy Policy' },
+  { href: '/legal/cookie-policy', label: 'Cookie Policy' },
+  { href: '/legal/community-rules', label: 'Community Rules' },
+  { href: '/legal/refund-policy', label: 'Refund Policy' },
+  { href: '/legal/dmca-policy', label: 'DMCA / Copyright' },
+  { href: '/legal/acceptable-use-policy', label: 'Acceptable Use Policy' },
+  { href: '/legal/event-policy', label: 'Event Policies' },
 ]
 
 export default function LegalLayout({ children }: { children: React.ReactNode }) {
@@ -60,17 +60,17 @@ export default function LegalLayout({ children }: { children: React.ReactNode })
               })}
             </nav>
 
-            <div className="mt-12 rounded-2xl bg-muted/50 p-6 border border-border/50">
-                <h4 className="text-sm font-bold mb-2">Need help?</h4>
-                <p className="text-xs text-muted-foreground leading-relaxed mb-4">
-                    For legal inquiries or reporting violations, please contact us.
-                </p>
-                <a
-                    href="mailto:legal@openboxcomm.in"
-                    className="text-xs font-bold text-violet-500 hover:underline"
-                >
-                    legal@openboxcomm.in
-                </a>
+            <div className="mt-6 rounded-2xl bg-muted/50 p-6 border border-border/50">
+              <h4 className="text-sm font-bold mb-2">Need help?</h4>
+              <p className="text-xs text-muted-foreground leading-relaxed mb-4">
+                For legal inquiries or reporting violations, please contact us.
+              </p>
+              <a
+                href="mailto:legal@openboxcomm.in"
+                className="text-xs font-bold text-violet-500 hover:underline"
+              >
+                legal@openboxcomm.in
+              </a>
             </div>
           </div>
         </aside>

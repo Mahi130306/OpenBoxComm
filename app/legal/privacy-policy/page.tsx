@@ -5,13 +5,11 @@ export const metadata: Metadata = {
   description: 'Privacy Policy for Open Box — how we collect, use, and protect your personal data under the DPDP Act 2023.',
 }
 
-export default function PrivacyPage() {
-  const lastUpdated = 'June 29, 2026 — This document has not been reviewed, approved, or endorsed by a licensed attorney or legal counsel. It was drafted with AI assistance and does not constitute legal advice.'
-
+export default function PrivacyPolicyPage() {
   return (
     <article>
       <h1 className="!text-3xl !font-extrabold mb-1">Privacy Policy</h1>
-      <p className="text-sm text-muted-foreground mb-8">Last updated: {lastUpdated}</p>
+      <p className="text-sm text-muted-foreground mb-8">Last updated: {new Date().toLocaleDateString('en-IN')}</p>
 
       <p>
         Open Box (&quot;we&quot;, &quot;our&quot;, &quot;us&quot;) is committed to protecting your personal data. This Privacy Policy
@@ -60,7 +58,7 @@ export default function PrivacyPage() {
       </p>
       <ul>
         <li><strong>Email:</strong> privacy@openboxcomm.in</li>
-        <li><strong>Grievance Officer:</strong> [Grievance Officer Name], reachable at the above email</li>
+        <li><strong>Grievance Officer:</strong> Data Protection Team, reachable at the above email</li>
         <li><strong>Response time:</strong> Within 30 days of receipt of complaint, as required by law</li>
       </ul>
 
@@ -80,7 +78,7 @@ export default function PrivacyPage() {
         <li>IP address and approximate location (country/region)</li>
         <li>Browser type, device type, operating system</li>
         <li>Pages visited, time spent, referring URLs</li>
-        <li>Cookies and similar technologies (see our <u><a href="/legal/cookie">Cookie Policy</a></u>)</li>
+        <li>Cookies and similar technologies (see our <u><a href="/legal/cookie-policy">Cookie Policy</a></u>)</li>
       </ul>
 
       <h3>2.3 Information from Third-Party Platforms</h3>
@@ -203,6 +201,13 @@ export default function PrivacyPage() {
         </a></u>
         .
       </p>
+
+      <h2>11. Contact Us</h2>
+      <p>For any privacy-related inquiries, reach out to:</p>
+      <ul>
+        <li><strong>Email:</strong> privacy@openboxcomm.in</li>
+        <li><strong>Discord:</strong> <a href="https://discord.gg/7ZWckKU89J">Join our server</a> and contact admins</li>
+      </ul>
     </article>
   )
 }

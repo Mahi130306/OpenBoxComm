@@ -33,8 +33,8 @@ const DiscordIcon = () => (
 )
 
 // ── Creator config ────────────────────────────────────────────────────────────
-const CREATOR_NAME = 'Sachin'
-const CREATOR_HREF = '/team/sachin'
+const CREATOR_NAME = 'Mahi HH'
+const CREATOR_HREF = '/team/Mahi HH'
 
 export function Footer() {
   const socialLinks = [
@@ -71,74 +71,76 @@ export function Footer() {
   ]
 
   const legalLinks = [
-    { label: 'Terms & Conditions', href: '/legal/terms' },
-    { label: 'Privacy Policy', href: '/legal/privacy' },
-    { label: 'Cookie Policy', href: '/legal/cookie' },
-    { label: 'Community Rules', href: '/legal/rules' },
-    { label: 'AUP', href: '/legal/aup' },
-    { label: 'DMCA / Copyright', href: '/legal/dmca' },
-    { label: 'Refund Policy', href: '/legal/refund' },
-    { label: 'Event Policy', href: '/legal/event' },
+    { label: 'Terms & Conditions', href: '/legal/terms-and-conditions' },
+    { label: 'Privacy Policy', href: '/legal/privacy-policy' },
+    { label: 'Cookie Policy', href: '/legal/cookie-policy' },
+    { label: 'Community Rules', href: '/legal/community-rules' },
+    { label: 'AUP', href: '/legal/acceptable-use-policy' },
+    { label: 'DMCA / Copyright', href: '/legal/dmca-policy' },
+    { label: 'Refund Policy', href: '/legal/refund-policy' },
+    { label: 'Event Policy', href: '/legal/event-policy' },
   ]
 
   return (
     <footer className="border-t border-border bg-surface">
-      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-4">
-
-          {/* Brand */}
-          <div className="md:col-span-1">
-            <div className="flex items-center gap-2 mb-3">
-              <div className="relative h-9 w-9 overflow-hidden rounded-lg flex-shrink-0">
-                <Image
-                  src="/images/OB.png"
-                  alt="Open Box logo"
-                  fill
-                  sizes="36px"
-                  className="object-cover"
-                />
+      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        {/* Main Footer Content */}
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-12 mb-12">
+          {/* Brand Section - Spans 3 columns */}
+          <div className="lg:col-span-3">
+            <div className="mb-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="relative h-10 w-10 overflow-hidden rounded-lg flex-shrink-0">
+                  <Image
+                    src="/images/OB.png"
+                    alt="Open Box logo"
+                    fill
+                    sizes="40px"
+                    className="object-cover"
+                  />
+                </div>
+                <span className="text-xl font-heading font-bold tracking-tight">Open Box</span>
               </div>
-              <span className="text-lg font-heading font-bold tracking-tight">Open Box</span>
+              <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
+                Free communities for gaming, development, learning, and connecting.
+              </p>
             </div>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              OpenBox: Free communities for gaming, dev, study & more.
-            </p>
 
-            {/* Social links */}
-            <div className="mt-5 flex flex-wrap gap-3">
-              {socialLinks.map((s) => (
-                <a
-                  key={s.id}
-                  id={s.id}
-                  href={s.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={s.name}
-                  className="text-muted-foreground transition-colors duration-200 hover:text-foreground"
-                >
-                  {s.icon}
-                </a>
-              ))}
+            {/* Social Links */}
+            <div className="space-y-4">
+              <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Connect With Us</p>
+              <div className="flex gap-3">
+                {socialLinks.map((s) => (
+                  <a
+                    key={s.id}
+                    id={s.id}
+                    href={s.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={s.name}
+                    className="h-10 w-10 flex items-center justify-center rounded-lg border border-border text-muted-foreground transition-all duration-200 hover:border-cyan-500 hover:bg-cyan-500/10 hover:text-cyan-500"
+                  >
+                    {s.icon}
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
 
           {/* Navigate */}
-          <div>
-            <h3 className="text-sm font-semibold mb-4 text-foreground">Navigate</h3>
-            <ul className="space-y-2 text-sm">
+          <div className="lg:col-span-2">
+            <h3 className="text-sm font-semibold mb-5 text-foreground uppercase tracking-wider">Navigate</h3>
+            <ul className="space-y-3 text-sm">
               {[
                 { label: 'Home', href: '/' },
                 { label: 'About', href: '/about' },
-                // { label: 'Team', href: '/team' },
-                // { label: 'Join', href: '/join' },
                 { label: 'Servers', href: '/servers' },
                 { label: 'Events', href: '/events' },
                 { label: 'Blogs', href: '/blogs' },
                 { label: 'Docs', href: '/doc' },
-                { label: 'Contact Us', href: '/contact-us' },
               ].map((l) => (
                 <li key={l.href}>
-                  <Link href={l.href} className="text-muted-foreground hover:text-foreground transition-colors">
+                  <Link href={l.href} className="text-muted-foreground hover:text-cyan-500 transition-colors duration-150">
                     {l.label}
                   </Link>
                 </li>
@@ -147,18 +149,19 @@ export function Footer() {
           </div>
 
           {/* Community */}
-          <div>
-            <h3 className="text-sm font-semibold mb-4 text-foreground">Community</h3>
-            <ul className="space-y-2 text-sm">
+          <div className="lg:col-span-2">
+            <h3 className="text-sm font-semibold mb-5 text-foreground uppercase tracking-wider">Community</h3>
+            <ul className="space-y-3 text-sm">
               {[
                 { label: 'Support Us', href: '/support' },
                 { label: 'Help Centre', href: '/help' },
+                { label: 'Contact Us', href: '/contact-us' },
                 { label: 'Jn. Server', href: '/servers/jn' },
                 { label: 'Dev Server', href: '/servers/dev' },
                 { label: 'GG Server', href: '/servers/gg' },
               ].map((l) => (
                 <li key={l.href}>
-                  <Link href={l.href} className="text-muted-foreground hover:text-foreground transition-colors">
+                  <Link href={l.href} className="text-muted-foreground hover:text-cyan-500 transition-colors duration-150">
                     {l.label}
                   </Link>
                 </li>
@@ -166,13 +169,27 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Legal */}
-          <div>
-            <h3 className="text-sm font-semibold mb-4 text-foreground">Legal</h3>
-            <ul className="space-y-2 text-sm">
-              {legalLinks.map((l) => (
+          {/* Legal - Split into 2 columns for better spacing */}
+          <div className="lg:col-span-2">
+            <h3 className="text-sm font-semibold mb-5 text-foreground uppercase tracking-wider">Legal</h3>
+            <ul className="space-y-3 text-sm">
+              {legalLinks.slice(0, 4).map((l) => (
                 <li key={l.href}>
-                  <Link href={l.href} className="text-muted-foreground hover:text-foreground transition-colors">
+                  <Link href={l.href} className="text-muted-foreground hover:text-cyan-500 transition-colors duration-150">
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Legal Continued */}
+          <div className="lg:col-span-2">
+            <h3 className="text-sm font-semibold mb-5 text-foreground uppercase tracking-wider opacity-0 pointer-events-none">Legal</h3>
+            <ul className="space-y-3 text-sm">
+              {legalLinks.slice(4).map((l) => (
+                <li key={l.href}>
+                  <Link href={l.href} className="text-muted-foreground hover:text-cyan-500 transition-colors duration-150">
                     {l.label}
                   </Link>
                 </li>
@@ -181,30 +198,26 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Bottom bar */}
-        <div className="mt-10 border-t border-border pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
-          <p>© {new Date().getFullYear()} Open Box. All rights reserved.</p>
+        {/* Divider */}
+        <div className="h-px bg-gradient-to-r from-border via-border to-border mb-8"></div>
 
-          <p>
-            Created by{' '}
-            <Link
-              href={CREATOR_HREF}
-              id="footer-creator"
-              className="font-medium text-foreground/70 underline underline-offset-2 hover:text-foreground transition-colors"
-            >
-              {CREATOR_NAME}
-            </Link>
-          </p>
+        {/* Bottom Bar */}
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-muted-foreground">
+          <div>
+            <p>© {new Date().getFullYear()} Open Box. All rights reserved.</p>
+          </div>
 
-          <div className="flex flex-wrap justify-center gap-x-4 gap-y-1">
-            {/* <Link href="/legal/terms" className="hover:text-foreground transition-colors">Terms</Link>
-            <Link href="/legal/privacy" className="hover:text-foreground transition-colors">Privacy</Link>
-            <Link href="/legal/cookie" className="hover:text-foreground transition-colors">Cookies</Link>
-            <Link href="/legal/rules" className="hover:text-foreground transition-colors">Rules</Link>
-            <Link href="/legal/aup" className="hover:text-foreground transition-colors">AUP</Link>
-            <Link href="/legal/dmca" className="hover:text-foreground transition-colors">DMCA</Link>
-            <Link href="/legal/refund" className="hover:text-foreground transition-colors">Refunds</Link>
-            <Link href="/legal/event" className="hover:text-foreground transition-colors">Events</Link> */}
+          <div className="flex items-center gap-4">
+            <p>
+              Built with passion by{' '}
+              <Link
+                href={CREATOR_HREF}
+                id="footer-creator"
+                className="font-medium text-foreground/80 hover:text-cyan-500 transition-colors duration-150"
+              >
+                {CREATOR_NAME}
+              </Link>
+            </p>
           </div>
         </div>
       </div>

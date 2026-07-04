@@ -561,15 +561,15 @@ export const teamMembers: TeamMember[] = [
   //   },
   // },
   {
-    slug: 'sachin',
-    name: 'Sachin',
+    slug: 'mahi-hh',
+    name: 'Mahi HH',
     role: 'Community Founder',
-    bio: 'Sachin is the Founder of Open Box, a community for developers, builders, gamers, and students. They are passionate about creating spaces where people can connect, learn, and grow together.',
-    avatar: 'https://api.dicebear.com/10.x/initials/svg?seed=Sachin',
+    bio: 'Mahi HH is the Founder of Open Box, a community for developers, builders, gamers, and students. They are passionate about creating spaces where people can connect, learn, and grow together.',
+    avatar: 'https://api.dicebear.com/10.x/initials/svg?seed=Mahi%20HH',
     socials: {
       instagram: 'https://instagram.com/openboxcomm',
-      github: 'https://github.com/openboxcomm',
-      twitter: 'https://x.com/mrsachindev',
+      github: 'https://github.com/mahi130306',
+      twitter: 'https://x.com/mahihh1212',
     },
   },
   //   {

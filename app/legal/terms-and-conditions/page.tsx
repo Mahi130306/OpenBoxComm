@@ -5,13 +5,11 @@ export const metadata: Metadata = {
   description: 'Terms and Conditions for using the Open Box platform, website, Discord servers, and community services.',
 }
 
-export default function TermsPage() {
-  const lastUpdated = 'June 29, 2026 — This document has not been reviewed, approved, or endorsed by a licensed attorney or legal counsel. It was drafted with AI assistance and does not constitute legal advice.'
-
+export default function TermsAndConditionsPage() {
   return (
     <article>
       <h1 className="!text-3xl !font-extrabold mb-1">Terms &amp; Conditions</h1>
-      <p className="text-sm text-muted-foreground mb-8">Last updated: {lastUpdated}</p>
+      <p className="text-sm text-muted-foreground mb-8">Last updated: {new Date().toLocaleDateString('en-IN')}</p>
 
       <p>
         Welcome to <strong>Open Box</strong> (&quot;we&quot;, &quot;our&quot;, &quot;us&quot;). These Terms &amp; Conditions govern your
@@ -71,7 +69,7 @@ export default function TermsPage() {
         By registering, browsing, joining a Discord server, interacting on social media, or otherwise using
         any part of the Platform, you confirm that you are at least <strong>13 years of age</strong> (or the
         age of digital consent in your jurisdiction, whichever is higher), and that you agree to these Terms
-        and our <u><a href="/legal/privacy">Privacy Policy</a></u>. If you do not agree, you must immediately
+        and our <u><a href="/legal/privacy-policy">Privacy Policy</a></u>. If you do not agree, you must immediately
         discontinue use of all Open Box platforms.
       </p>
 
@@ -91,12 +89,12 @@ export default function TermsPage() {
         <li>You are responsible for maintaining the confidentiality of your account credentials.</li>
         <li>You must provide accurate and truthful information during registration on any platform.</li>
         <li>You must not impersonate any person, entity, or the Open Box brand on any platform.</li>
-        <li>Accounts may be suspended or terminated across all Open Box platforms for violations of these Terms, our <u><a href="/legal/rules">Community Rules</a></u>, our <u><a href="/legal/aup">Acceptable Use Policy</a></u>, or applicable Indian law.</li>
+        <li>Accounts may be suspended or terminated across all Open Box platforms for violations of these Terms, our <u><a href="/legal/community-rules">Community Rules</a></u>, our <u><a href="/legal/acceptable-use-policy">Acceptable Use Policy</a></u>, or applicable Indian law.</li>
       </ul>
 
       <h2>4. Prohibited Conduct</h2>
       <p>
-        Detailed prohibited conduct is covered in our <u><a href="/legal/aup">Acceptable Use Policy</a></u>. In
+        Detailed prohibited conduct is covered in our <u><a href="/legal/acceptable-use-policy">Acceptable Use Policy</a></u>. In
         summary, you must not:
       </p>
       <ul>
@@ -115,7 +113,7 @@ export default function TermsPage() {
           Copyright Act, 1957
         </a></u>
         . For permitted uses of Open Box branding, refer to our{' '}
-        <u><a href="/legal/aup">Acceptable Use Policy</a></u>.
+        <u><a href="/legal/acceptable-use-policy">Acceptable Use Policy</a></u>.
       </p>
 
       <h2>6. User-Generated Content</h2>
@@ -129,14 +127,14 @@ export default function TermsPage() {
       <h2>7. Events</h2>
       <p>
         Participation in Open Box events — online workshops, IRL meetups, hackathons, contests, and live
-        streams — is subject to our <u><a href="/legal/events">Events Policy</a></u>, which forms part of these
+        streams — is subject to our <u><a href="/legal/event-policy">Event Policy</a></u>, which forms part of these
         Terms.
       </p>
 
       <h2>8. Payments &amp; Refunds</h2>
       <p>
         Payments made to Open Box across any channel are subject to our{' '}
-        <u><a href="/legal/refunds">Refund Policy</a></u>, governed by the{' '}
+        <u><a href="/legal/refund-policy">Refund Policy</a></u>, governed by the{' '}
         <u><a href="https://www.indiacode.nic.in/bitstream/123456789/15256/1/consumer_protection_act_2019.pdf" target="_blank" rel="noopener noreferrer">
           Consumer Protection Act, 2019
         </a></u>  
@@ -146,7 +144,7 @@ export default function TermsPage() {
       <h2>9. Acceptable Use</h2>
       <p>
         Use of all Open Box platforms is subject to our{' '}
-        <u><a href="/legal/aup">Acceptable Use Policy</a></u> , which covers permitted uses, prohibited conduct, brand
+        <u><a href="/legal/acceptable-use-policy">Acceptable Use Policy</a></u>, which covers permitted uses, prohibited conduct, brand
         usage guidelines, and responsible disclosure.
       </p>
 
