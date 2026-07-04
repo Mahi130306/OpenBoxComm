@@ -104,8 +104,12 @@ const nextConfig = {
       { source: '/servs', destination: '/servers', permanent: true },
 
       // Events page (note: /event* routes except /legal/event)
+      { source: '/event/:slug', destination: '/events/:slug', permanent: true },
       { source: '/eventss', destination: '/events', permanent: true },
-      { source: '/events/:slug', destination: '/events/:slug', permanent: false },
+
+      // Team page
+      { source: '/teams', destination: '/team', permanent: true },
+      { source: '/teams/:slug', destination: '/team/:slug', permanent: true },
 
       // Documentation page
       { source: '/docs', destination: '/doc', permanent: true },
