@@ -88,7 +88,7 @@ export const servers: Servers[] = [
     channels: ['OB Jn FEEDs', 'Notification', 'Forms', 'System'],
     rules: ['Be respectful and welcoming', 'Share context when asking for help', 'Use the right channel', 'Celebrate work in progress'],
     inviteEnv: 'NEXT_PUBLIC_DISCORD_JN_INVITE',
-    inviteCode: '7ZWckKU89J',
+    inviteCode: 'xHD4PRxauw',
   },
   {
     slug: 'dev',
@@ -103,7 +103,7 @@ export const servers: Servers[] = [
     channels: ['Dev & Projects', 'Knowledge Base', 'Events', 'Career'],
     rules: ['Be helpful', 'Use code blocks', 'Respect others work', 'No spam or low-context promotion'],
     inviteEnv: 'NEXT_PUBLIC_DISCORD_DEV_INVITE',
-    inviteCode: 'H2AmpBrPdW',
+    inviteCode: 'nF48vqYwEk',
   },
   {
     slug: 'gg',

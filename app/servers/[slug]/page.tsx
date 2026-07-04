@@ -170,7 +170,7 @@ export default async function ServerPage({
             <div className="rounded-2xl border border-border bg-surface p-6 shadow-sm">
               <Button asChild className="w-full" size="lg">
                 <a
-                  href={process.env[server.inviteEnv ?? ''] || '#'}
+                  href={server.inviteCode ? `https://discord.gg/${server.inviteCode}` : '#'}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
