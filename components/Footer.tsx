@@ -156,6 +156,7 @@ export function Footer() {
               {[
                 { label: 'Support Us', href: '/support' },
                 { label: 'Help Centre', href: '/help' },
+                { label: 'Our Team', href: '/team' },
                 { label: 'Contact Us', href: '/contact-us' },
                 { label: 'Jn. Server', href: '/servers/jn' },
                 { label: 'Dev Server', href: '/servers/dev' },

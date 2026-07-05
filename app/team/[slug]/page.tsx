@@ -85,9 +85,7 @@ export default async function TeamMemberPage({ params }: { params: Promise<{ slu
             <div className="mt-10 p-6 rounded-xl border border-border bg-surface/50 backdrop-blur-sm">
               <h3 className="text-lg font-bold mb-3">About {member.name}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                As a {member.role}, {member.name} is a key contributor to the Open Box community.
-                Whether it's architecting new systems, managing community engagement, or advocating for developer needs,
-                their work helps shape the future of our network.
+                {member.aboutSection}
               </p>
             </div>
           </div>

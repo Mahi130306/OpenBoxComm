@@ -64,6 +64,7 @@ export interface TeamMember {
   role: string
   bio: string
   avatar: string
+  aboutSection: string
   socials?: {
     github?: string
     twitter?: string
@@ -152,90 +153,90 @@ export const servers: Servers[] = [
 // ─── Events ───────────────────────────────────────────────────────────────────
 
 export const events: Event[] = [
-  {
-    id: 'open-build-night',
-    name: 'Open Build Night',
-    server: 'Dev',
-    serverSlug: 'dev',
-    date: '2026-06-22T14:00:00+05:30',
-    deadline: '2026-06-22T14:00:00+05:30',
-    description: 'Bring a half-built project, get momentum, and leave with a tiny shipped improvement.',
-    ticketStatus: 'free',
-    isOffline: false,
-    location: 'Discord voice stage',
-    agenda: ['Quick intros', '45 minute build sprint', 'Feedback rounds', 'Show-and-tell'],
-    sponsors: [
-      {
-        name: 'Devfolio',
-        logo: 'https://devfolio.co/img/logo.png',
-        url: 'https://devfolio.co',
-        type: 'sponsor',
-        tagline: 'Powered by Devfolio',
-        socials: {
-          x: 'devfolio',
-          instagram: 'devfolio',
-        },
-      },
-    ],
-    sponsor: {
-      name: 'Devfolio',
-      logo: 'https://devfolio.co/img/logo.png',
-      url: 'https://devfolio.co',
-      tagline: 'Powered by Devfolio',
-      socials: {
-        x: 'devfolio',
-        instagram: 'devfolio',
-      },
-    },
-  },
-  {
-    id: 'gg-community-cup',
-    name: 'GG Community Cup',
-    server: 'GG',
-    serverSlug: 'gg',
-    date: '2026-08-02T18:00:00+05:30',
-    description: 'A friendly tournament night with squads, brackets, and post-match hangout rooms.',
-    ticketStatus: 'paid',
-    price: '₹299',
-    isOffline: false,
-    location: 'GG Discord tournament channels',
-    agenda: ['Check-in', 'Qualifier matches', 'Final lobby', 'Highlights and prizes'],
-    sponsors: [
-      {
-        name: 'Discord',
-        logo: 'https://logo.clearbit.com/discord.com',
-        url: 'https://discord.com',
-        type: 'partner',
-        tagline: 'Community platform partner',
-        socials: {
-          x: 'discord',
-          instagram: 'discord',
-        },
-      },
-      {
-        name: 'Razer',
-        logo: 'https://logo.clearbit.com/razer.com',
-        url: 'https://razer.com',
-        type: 'sponsor',
-        tagline: 'Gear partner for community play',
-        socials: {
-          x: 'razer',
-          instagram: 'razer',
-          youtube: 'razer',
-        },
-      },
-      {
-        name: 'Challonge',
-        logo: 'https://logo.clearbit.com/challonge.com',
-        url: 'https://challonge.com',
-        type: 'partner',
-        tagline: 'Tournament bracket partner',
-        socials: {
-          x: 'challonge',
-        },
-      },
-    ],
-  },
+  // {
+  //   id: 'open-build-night',
+  //   name: 'Open Build Night',
+  //   server: 'Dev',
+  //   serverSlug: 'dev',
+  //   date: '2026-06-22T14:00:00+05:30',
+  //   deadline: '2026-06-22T14:00:00+05:30',
+  //   description: 'Bring a half-built project, get momentum, and leave with a tiny shipped improvement.',
+  //   ticketStatus: 'free',
+  //   isOffline: false,
+  //   location: 'Discord voice stage',
+  //   agenda: ['Quick intros', '45 minute build sprint', 'Feedback rounds', 'Show-and-tell'],
+  //   sponsors: [
+  //     {
+  //       name: 'Devfolio',
+  //       logo: 'https://devfolio.co/img/logo.png',
+  //       url: 'https://devfolio.co',
+  //       type: 'sponsor',
+  //       tagline: 'Powered by Devfolio',
+  //       socials: {
+  //         x: 'devfolio',
+  //         instagram: 'devfolio',
+  //       },
+  //     },
+  //   ],
+  //   sponsor: {
+  //     name: 'Devfolio',
+  //     logo: 'https://devfolio.co/img/logo.png',
+  //     url: 'https://devfolio.co',
+  //     tagline: 'Powered by Devfolio',
+  //     socials: {
+  //       x: 'devfolio',
+  //       instagram: 'devfolio',
+  //     },
+  //   },
+  // },
+  // {
+  //   id: 'gg-community-cup',
+  //   name: 'GG Community Cup',
+  //   server: 'GG',
+  //   serverSlug: 'gg',
+  //   date: '2026-08-02T18:00:00+05:30',
+  //   description: 'A friendly tournament night with squads, brackets, and post-match hangout rooms.',
+  //   ticketStatus: 'paid',
+  //   price: '₹299',
+  //   isOffline: false,
+  //   location: 'GG Discord tournament channels',
+  //   agenda: ['Check-in', 'Qualifier matches', 'Final lobby', 'Highlights and prizes'],
+  //   sponsors: [
+  //     {
+  //       name: 'Discord',
+  //       logo: 'https://logo.clearbit.com/discord.com',
+  //       url: 'https://discord.com',
+  //       type: 'partner',
+  //       tagline: 'Community platform partner',
+  //       socials: {
+  //         x: 'discord',
+  //         instagram: 'discord',
+  //       },
+  //     },
+  //     {
+  //       name: 'Razer',
+  //       logo: 'https://logo.clearbit.com/razer.com',
+  //       url: 'https://razer.com',
+  //       type: 'sponsor',
+  //       tagline: 'Gear partner for community play',
+  //       socials: {
+  //         x: 'razer',
+  //         instagram: 'razer',
+  //         youtube: 'razer',
+  //       },
+  //     },
+  //     {
+  //       name: 'Challonge',
+  //       logo: 'https://logo.clearbit.com/challonge.com',
+  //       url: 'https://challonge.com',
+  //       type: 'partner',
+  //       tagline: 'Tournament bracket partner',
+  //       socials: {
+  //         x: 'challonge',
+  //       },
+  //     },
+  //   ],
+  // },
   // {
   //   id: 'jn-town-hall',
   //   name: 'JN Town Hall',
@@ -552,9 +553,10 @@ export const teamMembers: TeamMember[] = [
   {
     slug: 'mahi-hh',
     name: 'Mahi HH',
-    role: 'Community Founder',
-    bio: 'Mahi HH is the Founder of Open Box, a community for developers, builders, gamers, and students. They are passionate about creating spaces where people can connect, learn, and grow together.',
+    role: 'Founder',
+    bio: 'The Founder of Open Box, a community for developers, builders, gamers, and students. They are passionate about creating spaces where people can connect, learn, and grow together.',
     avatar: 'https://api.dicebear.com/10.x/initials/svg?seed=Mahi',
+    aboutSection: 'From building a community in school to hosting coding bootcamps and game tournaments for thousands of students, Mahi leads Open Box with a simple belief: everyone deserves a place to belong, learn, and grow. He is a builder at heart, and he loves bringing people together. Whether it’s coding, gaming, creating, or just hanging out — there is a spot for you here.',
     socials: {
       instagram: 'https://instagram.com/openboxcomm',
       github: 'https://github.com/mahi130306',
@@ -562,60 +564,61 @@ export const teamMembers: TeamMember[] = [
     },
   },
   {
-    slug: 'jules',
-    name: 'Jules',
-    role: 'Lead Architect',
-    bio: 'Jules is the primary architect behind Open Box, focusing on community infrastructure and developer experience. They believe in the power of open collaboration.',
-    avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=jules',
-    socials: {
-      github: 'https://github.com/jules',
-      twitter: 'https://x.com/jules',
-    },
-  },
-  {
-    slug: 'arjun',
-    name: 'Arjun',
-    role: 'Lead Developer',
-    bio: 'Arjun architects the technical backbone of Open Box — from bots to dashboards. He thrives on clean code and late-night deploys.',
-    avatar: 'https://api.dicebear.com/10.x/initials/svg?seed=Arjun',
-    socials: {
-      github: 'https://github.com/openboxcomm',
-      twitter: 'https://x.com/openboxcomm',
-    },
-  },
-  {
-    slug: 'priya',
-    name: 'Priya',
+    slug: 'rohith',
+    name: 'Rohith',
     role: 'Community Manager',
-    bio: 'Priya keeps the vibe alive across every server. From onboarding newcomers to running events, she makes sure everyone feels at home.',
-    avatar: 'https://api.dicebear.com/10.x/initials/svg?seed=Priya',
+    bio: 'The Community Manager of Open Box.',
+    avatar: 'https://api.dicebear.com/10.x/initials/svg?seed=Rohith',
+    aboutSection: 'Rohith leads Open Box operations — from server management and events to partnerships and moderation. He is passionate about building communities that feel like home for everyone who joins.',
     socials: {
-      instagram: 'https://instagram.com/openboxcomm',
-      twitter: 'https://x.com/openboxcomm',
+      // github: 'https://github.com/jules',
+      // twitter: 'https://x.com/jules',
     },
   },
-  {
-    slug: 'rohan',
-    name: 'Rohan',
-    role: 'Events Lead',
-    bio: 'Rohan plans and executes every tournament, workshop, and meetup. If there is an event on the calendar, Rohan probably built it.',
-    avatar: 'https://api.dicebear.com/10.x/initials/svg?seed=Rohan',
-    socials: {
-      github: 'https://github.com/openboxcomm',
-      instagram: 'https://instagram.com/openboxcomm',
-    },
-  },
-  {
-    slug: 'neha',
-    name: 'Neha',
-    role: 'Content & Design',
-    bio: 'Neha crafts the visuals, writes the copy, and shapes how Open Box looks and feels. Every banner and blog post has her fingerprint on it.',
-    avatar: 'https://api.dicebear.com/10.x/initials/svg?seed=Neha',
-    socials: {
-      instagram: 'https://instagram.com/openboxcomm',
-      twitter: 'https://x.com/openboxcomm',
-    },
-  },
+  // {
+  //   slug: 'arjun',
+  //   name: 'Arjun',
+  //   role: 'Lead Developer',
+  //   bio: 'Arjun architects the technical backbone of Open Box — from bots to dashboards. He thrives on clean code and late-night deploys.',
+  //   avatar: 'https://api.dicebear.com/10.x/initials/svg?seed=Arjun',
+  //   socials: {
+  //     github: 'https://github.com/openboxcomm',
+  //     twitter: 'https://x.com/openboxcomm',
+  //   },
+  // },
+  // {
+  //   slug: 'priya',
+  //   name: 'Priya',
+  //   role: 'Community Manager',
+  //   bio: 'Priya keeps the vibe alive across every server. From onboarding newcomers to running events, she makes sure everyone feels at home.',
+  //   avatar: 'https://api.dicebear.com/10.x/initials/svg?seed=Priya',
+  //   socials: {
+  //     instagram: 'https://instagram.com/openboxcomm',
+  //     twitter: 'https://x.com/openboxcomm',
+  //   },
+  // },
+  // {
+  //   slug: 'rohan',
+  //   name: 'Rohan',
+  //   role: 'Events Lead',
+  //   bio: 'Rohan plans and executes every tournament, workshop, and meetup. If there is an event on the calendar, Rohan probably built it.',
+  //   avatar: 'https://api.dicebear.com/10.x/initials/svg?seed=Rohan',
+  //   socials: {
+  //     github: 'https://github.com/openboxcomm',
+  //     instagram: 'https://instagram.com/openboxcomm',
+  //   },
+  // },
+  // {
+  //   slug: 'neha',
+  //   name: 'Neha',
+  //   role: 'Content & Design',
+  //   bio: 'Neha crafts the visuals, writes the copy, and shapes how Open Box looks and feels. Every banner and blog post has her fingerprint on it.',
+  //   avatar: 'https://api.dicebear.com/10.x/initials/svg?seed=Neha',
+  //   socials: {
+  //     instagram: 'https://instagram.com/openboxcomm',
+  //     twitter: 'https://x.com/openboxcomm',
+  //   },
+  // },
 ]
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
