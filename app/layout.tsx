@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     description: 'A community network with multiple Discord servers. Join for gaming, development, learning, and networking.',
     url: BASE_URL,
     siteName: 'Open Box',
-    images: [{ url: '/images/og-default.png', width: 1200, height: 630, alt: 'Open Box Community' }],
+    images: [{ url: 'https://openboxcomm.in/images/og-default.png', width: 1200, height: 630, alt: 'Open Box Community' }],
     locale: 'en_IN',
     type: 'website',
   },
