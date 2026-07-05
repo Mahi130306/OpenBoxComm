@@ -561,6 +561,7 @@ export const teamMembers: TeamMember[] = [
       instagram: 'https://instagram.com/openboxcomm',
       github: 'https://github.com/mahi130306',
       twitter: 'https://x.com/mahihh1212',
+      linkedin: 'https://www.linkedin.com/in/mahi-hh-59001831b/',
     },
   },
   {
@@ -571,8 +572,7 @@ export const teamMembers: TeamMember[] = [
     avatar: 'https://api.dicebear.com/10.x/initials/svg?seed=Rohith',
     aboutSection: 'Rohith leads Open Box operations — from server management and events to partnerships and moderation. He is passionate about building communities that feel like home for everyone who joins.',
     socials: {
-      // github: 'https://github.com/jules',
-      // twitter: 'https://x.com/jules',
+      github: 'https://github.com/knsorrigie',
     },
   },
   // {
