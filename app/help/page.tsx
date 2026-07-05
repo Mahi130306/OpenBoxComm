@@ -39,6 +39,7 @@ export default function HelpPage() {
           <p className="mb-4 text-sm font-semibold text-muted-foreground">Quick Access</p>
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
             <button
+              type="button"
               onClick={() => scrollToSection('faq-section')}
               className={`group flex flex-col items-center justify-center gap-2 rounded-xl border-2 p-4 transition-all ${activeSection === 'faq-section'
                 ? 'border-cyan-500 bg-cyan-500/10 text-cyan-600 dark:text-cyan-400'
@@ -50,6 +51,7 @@ export default function HelpPage() {
             </button>
 
             <button
+              type="button"
               onClick={() => scrollToSection('support-section')}
               className={`group flex flex-col items-center justify-center gap-2 rounded-xl border-2 p-4 transition-all ${activeSection === 'support-section'
                 ? 'border-cyan-500 bg-cyan-500/10 text-cyan-600 dark:text-cyan-400'
@@ -61,6 +63,7 @@ export default function HelpPage() {
             </button>
 
             <button
+              type="button"
               onClick={() => scrollToSection('rules-section')}
               className={`group flex flex-col items-center justify-center gap-2 rounded-xl border-2 p-4 transition-all ${activeSection === 'rules-section'
                 ? 'border-cyan-500 bg-cyan-500/10 text-cyan-600 dark:text-cyan-400'
@@ -72,8 +75,9 @@ export default function HelpPage() {
             </button>
 
             <button
-              onClick={() => scrollToSection('contact-section')}
-              className={`group flex flex-col items-center justify-center gap-2 rounded-xl border-2 p-4 transition-all ${activeSection === 'contact-section'
+              type="button"
+              onClick={() => scrollToSection('direct-contact')}
+              className={`group flex flex-col items-center justify-center gap-2 rounded-xl border-2 p-4 transition-all ${activeSection === 'direct-contact'
                 ? 'border-cyan-500 bg-cyan-500/10 text-cyan-600 dark:text-cyan-400'
                 : 'border-border hover:border-cyan-500/50 hover:bg-muted/50'
                 }`}
@@ -83,6 +87,7 @@ export default function HelpPage() {
             </button>
 
             <button
+              type="button"
               onClick={() => scrollToSection('legal-section')}
               className={`group flex flex-col items-center justify-center gap-2 rounded-xl border-2 p-4 transition-all ${activeSection === 'legal-section'
                 ? 'border-cyan-500 bg-cyan-500/10 text-cyan-600 dark:text-cyan-400'
@@ -142,7 +147,7 @@ export default function HelpPage() {
               </Card>
 
               {/* Direct Contact heading + stacked cards, kept as a single grid column */}
-              <div>
+              <div id="direct-contact" className="scroll-mt-20">
                 <div className="mb-6 flex items-center gap-3">
                   <Mail className="h-6 w-6 text-cyan-500" />
                   <h2 className="text-3xl font-bold text-foreground">Direct Contact</h2>
@@ -206,7 +211,7 @@ export default function HelpPage() {
           </section>
 
           {/* Contact Section - now shows How It Works */}
-          <section id="contact-section" className="scroll-mt-20">
+          <section id="how-it-works-section" className="scroll-mt-20">
             <div className="mb-6 flex items-center gap-3">
               <Info className="h-6 w-6 text-cyan-500" />
               <h2 className="text-3xl font-bold text-foreground">How It Works</h2>
