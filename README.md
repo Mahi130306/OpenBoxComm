@@ -210,7 +210,7 @@ Edit the `servers` array in [`lib/community-data.ts`](./lib/community-data.ts):
 }
 ```
 
-Add a logo at `/public/images/myserver.png`
+Add a logo at `/public/images/og-default.png` and `/public/images/favicon.png`.
 
 ---
 
