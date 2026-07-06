@@ -5,7 +5,7 @@ import { Search } from 'lucide-react'
 import { Input } from '@/components/ui/input'
 import { cn } from '@/lib/utils'
 
-const FAQ_CATEGORIES = [
+export const FAQ_CATEGORIES = [
   {
     id: 'getting-started',
     label: 'Getting Started',
@@ -115,7 +115,7 @@ const FAQ_CATEGORIES = [
       {
         question: 'Why the tiers in dollars($)?',
         answer:
-        'Because Patreon only supports USD. Open Box is international and welcomes members from all countries. The tiers are priced in USD but you can pay with any currency through Patreon.',
+          'Because Patreon only supports USD. Open Box is international and welcomes members from all countries. The tiers are priced in USD but you can pay with any currency through Patreon.',
         tags: ['tiers', 'patreon', 'currency', 'usd'],
       },
       {
@@ -128,8 +128,8 @@ const FAQ_CATEGORIES = [
         question: 'Why support tier start from 1$?',
         answer:
           'Open Box is free and volunteer-run. The $1 tier is the minimum to support the community and help cover hosting, domain, and operations. Every contribution, big or small, keeps Open Box free and running.',
+        tags: ['tiers', 'support', 'funding']
       },
-
       {
         question: 'How do I contact the team?',
         answer:

@@ -1,12 +1,35 @@
-# Open Box — Community Platform
+<div align="center">
 
-A modern, high-performance Discord community website built with Next.js, TypeScript, and Tailwind CSS.
+# 📦 Open Box
 
-**Live:** https://www.openboxcomm.in/
+### A modern, high-performance Discord community platform
+
+**Built with Next.js · TypeScript · Tailwind CSS**
+
+[![Live Site](https://img.shields.io/badge/live-openboxcomm.in-FF5A5F?style=for-the-badge)](https://www.openboxcomm.in/)
+[![Next.js](https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-blue?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v3-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+
+**[Visit the Site](https://www.openboxcomm.in/)** · **[Report a Bug](#)** · **[Request a Feature](#)**
+
+</div>
 
 ---
 
-## Quick Start
+## 📖 Table of Contents
+
+- [Quick Start](#-quick-start)
+- [Tech Stack](#-tech-stack)
+- [Project Structure](#-project-structure)
+- [Content Management](#-content-management)
+- [Scripts](#-scripts)
+- [Deployment](#-deployment)
+- [Key Features](#-key-features)
+
+---
+
+## 🚀 Quick Start
 
 ### Installation
 
@@ -24,7 +47,7 @@ Copy `.env.local.example` to `.env.local`:
 cp .env.local.example .env.local
 ```
 
-Required environment variables:
+Fill in the required environment variables:
 
 ```env
 # Discord Server Invites
@@ -43,33 +66,33 @@ NEXT_PUBLIC_X_URL=https://x.com/openboxcomm
 NEXT_PUBLIC_LOGIN_ENABLED=false
 ```
 
-### Development Server
+### Run the Dev Server
 
 ```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000)
+Open **[http://localhost:3000](http://localhost:3000)** and you're live.
 
 ---
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 | Category | Technology |
 |---|---|
-| Framework | Next.js 16 (App Router) |
-| Language | TypeScript |
-| Styling | Tailwind CSS v3 + Animations |
-| UI Library | Radix UI + shadcn/ui |
-| Content | MDX (next-mdx-remote + gray-matter) |
-| Theme | next-themes (dark/light) |
-| 3D Graphics | Three.js |
-| Animations | GSAP |
-| Fonts | Syne (headings) · Inter (body) |
+| 🧩 Framework | Next.js 16 (App Router) |
+| 📘 Language | TypeScript |
+| 🎨 Styling | Tailwind CSS v3 + Animations |
+| 🧱 UI Library | Radix UI + shadcn/ui |
+| 📄 Content | MDX (next-mdx-remote + gray-matter) |
+| 🌗 Theme | next-themes (dark/light) |
+| 🧊 3D Graphics | Three.js |
+| ✨ Animations | GSAP |
+| 🔤 Fonts | Syne (headings) · Inter (body) |
 
 ---
 
-## Project Structure
+## 📁 Project Structure
 
 ```
 open-box-website-del/
@@ -85,49 +108,49 @@ open-box-website-del/
 │   ├── help/                 # Help center & FAQ
 │   ├── join/                 # Join page
 │   ├── legal/                # Legal pages (terms, privacy, etc.)
-│   ├── servers/              # Server listing & details
+│   ├── servers/               # Server listing & details
 │   ├── support/              # Support/Patreon page
 │   ├── team/                 # Team member profiles
-│   ├── (auth)/               # Auth routes (login, dashboard)
-│   └── api/                  # API routes (webhooks, data)
+│   ├── (auth)/                # Auth routes (login, dashboard)
+│   └── api/                   # API routes (webhooks, data)
 │
-├── components/               # Reusable components
-│   ├── ui/                   # shadcn/ui components
-│   ├── Navbar.tsx            # Navigation bar
-│   ├── Footer.tsx            # Footer
-│   ├── Quiz.tsx              # "Find Your Fit" quiz
-│   ├── MasterCalendar.tsx    # Event calendar
-│   ├── DirectorySearch.tsx   # Server search
-│   ├── DiscordStats.tsx      # Live member counts
-│   ├── BlogCard.tsx          # Blog post card
-│   ├── ServerCard.tsx        # Server card
-│   ├── FAQSearch.tsx         # FAQ search
-│   ├── TableOfContents.tsx   # Doc navigation
-│   └── ThemeProvider.tsx     # Theme switcher
+├── components/                # Reusable components
+│   ├── ui/                    # shadcn/ui components
+│   ├── Navbar.tsx             # Navigation bar
+│   ├── Footer.tsx              # Footer
+│   ├── Quiz.tsx                # "Find Your Fit" quiz
+│   ├── MasterCalendar.tsx      # Event calendar
+│   ├── DirectorySearch.tsx     # Server search
+│   ├── DiscordStats.tsx        # Live member counts
+│   ├── BlogCard.tsx            # Blog post card
+│   ├── ServerCard.tsx          # Server card
+│   ├── FAQSearch.tsx           # FAQ search
+│   ├── TableOfContents.tsx     # Doc navigation
+│   └── ThemeProvider.tsx       # Theme switcher
 │
 ├── content/
-│   └── docs/                 # MDX documentation files
+│   └── docs/                   # MDX documentation files
 │
 ├── lib/
-│   ├── community-data.ts     # All content data (servers, blogs, events)
-│   ├── docs.ts               # MDX file reader
-│   ├── constants.ts          # App constants
-│   ├── utils.ts              # Helper functions
-│   └── hooks/                # Custom React hooks
+│   ├── community-data.ts       # All content data (servers, blogs, events)
+│   ├── docs.ts                 # MDX file reader
+│   ├── constants.ts            # App constants
+│   ├── utils.ts                 # Helper functions
+│   └── hooks/                   # Custom React hooks
 │
 ├── public/
-│   ├── images/               # Logos, icons, OG images
-│   └── sitemap.xml           # SEO sitemap
+│   ├── images/                  # Logos, icons, OG images
+│   └── sitemap.xml              # SEO sitemap
 │
-├── types/                    # TypeScript definitions
-├── tailwind.config.ts        # Tailwind configuration
-├── next.config.mjs           # Next.js configuration
-└── tsconfig.json             # TypeScript configuration
+├── types/                        # TypeScript definitions
+├── tailwind.config.ts             # Tailwind configuration
+├── next.config.mjs                # Next.js configuration
+└── tsconfig.json                  # TypeScript configuration
 ```
 
 ---
 
-## Content Management
+## 📝 Content Management
 
 ### Adding a Blog Post
 
@@ -144,7 +167,7 @@ Edit [`lib/community-data.ts`](./lib/community-data.ts) and add to the `blogs` a
 }
 ```
 
-View at `/blogs/my-post`
+📍 View at `/blogs/my-post`
 
 ### Adding an Event
 
@@ -165,11 +188,11 @@ Add to the `events` array in [`lib/community-data.ts`](./lib/community-data.ts):
 }
 ```
 
-View at `/events/my-event`
+📍 View at `/events/my-event`
 
 ### Adding Documentation
 
-#### Option 1: MDX File (Recommended)
+**Option 1: MDX File (Recommended)**
 
 1. Create `content/docs/my-doc.mdx`:
 
@@ -184,7 +207,7 @@ description: Brief description
 Your content here with **Markdown** support.
 ```
 
-2. Add to `docs` array in [`lib/community-data.ts`](./lib/community-data.ts):
+2. Add to the `docs` array in [`lib/community-data.ts`](./lib/community-data.ts):
 
 ```ts
 {
@@ -195,7 +218,7 @@ Your content here with **Markdown** support.
 }
 ```
 
-View at `/doc/my-doc`
+📍 View at `/doc/my-doc`
 
 ### Adding a Server
 
@@ -217,15 +240,17 @@ Edit the `servers` array in [`lib/community-data.ts`](./lib/community-data.ts):
 }
 ```
 
-Add logo: `/public/images/myserver.png`
+Add a logo at `/public/images/myserver.png`
 
-**Gradient Colors:**
+**Gradient Colors by Server**
 
-- Jn.: `from-rose-500 to-amber-300`
-- Dev: `from-green-400 to-emerald-600`
-- GG: `from-red-500 to-rose-700`
-- Study: `from-violet-400 to-fuchsia-500`
-- Connect: `from-orange-300 to-red-500`
+| Server | Gradient |
+|---|---|
+| 🚪 Jn. | `from-rose-500 to-amber-300` |
+| 💻 Dev | `from-green-400 to-emerald-600` |
+| 🎮 GG | `from-red-500 to-rose-700` |
+| 📚 Study | `from-violet-400 to-fuchsia-500` |
+| 🌐 Connect | `from-orange-300 to-red-500` |
 
 ### Adding a Legal Page
 
@@ -253,7 +278,7 @@ export default function LegalPage() {
 
 ---
 
-## Scripts
+## 📜 Scripts
 
 ```bash
 # Development
@@ -269,9 +294,9 @@ npm run lint
 
 ---
 
-## Deployment
+## ☁️ Deployment
 
-**Recommended:** Vercel (seamless Next.js integration)
+> **Recommended:** Vercel, for seamless Next.js integration.
 
 ### Build & Run
 
@@ -282,24 +307,34 @@ npm run start
 
 ### Environment Variables
 
-All `NEXT_PUBLIC_*` variables are exposed to the browser. Keep secrets server-side.
+All `NEXT_PUBLIC_*` variables are exposed to the browser. Keep secrets server-side only.
 
 ### Notes
 
 - Discord widgets must be **enabled** in server settings for live member counts
-- MDX files are processed at build time — rebuild after adding new docs
+- MDX files are processed at build time, so rebuild after adding new docs
 - All images should be optimized (PNG/WebP)
 
 ---
 
-## Key Features
+## ✨ Key Features
 
-✅ **Server Discovery** — Browse all Discord servers with live member counts  
-✅ **Event Calendar** — Master calendar of all community events  
-✅ **Blog Platform** — Share updates and stories  
-✅ **Documentation** — MDX-based docs with full Markdown support  
-✅ **Dark Mode** — Theme switcher with persistence  
-✅ **SEO Optimized** — Metadata, sitemap, structured data  
-✅ **Responsive** — Mobile-first design with Tailwind CSS  
-✅ **Fast** — Next.js optimizations, image lazy-loading  
-✅ **Accessible** — WCAG compliance with Radix UI components
+| | |
+|---|---|
+| 🔎 **Server Discovery** | Browse all Discord servers with live member counts |
+| 📅 **Event Calendar** | Master calendar of all community events |
+| ✍️ **Blog Platform** | Share updates and stories |
+| 📚 **Documentation** | MDX-based docs with full Markdown support |
+| 🌓 **Dark Mode** | Theme switcher with persistence |
+| 📈 **SEO Optimized** | Metadata, sitemap, structured data |
+| 📱 **Responsive** | Mobile-first design with Tailwind CSS |
+| ⚡ **Fast** | Next.js optimizations, image lazy-loading |
+| ♿ **Accessible** | WCAG compliance with Radix UI components |
+
+---
+
+<div align="center">
+
+Made with ⚡ by the **OpenBox Team**
+
+</div>
