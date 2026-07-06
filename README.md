@@ -4,14 +4,14 @@
 
 ### A modern, high-performance Discord community platform
 
-**Built with Next.js · TypeScript · Tailwind CSS**
+**Built with Next.js · TypeScript · Tailwind CSS · Framer Motion · GSAP · Three.js**
 
 [![Live Site](https://img.shields.io/badge/live-openboxcomm.in-FF5A5F?style=for-the-badge)](https://www.openboxcomm.in/)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-blue?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v3-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
-**[Visit the Site](https://www.openboxcomm.in/)** · **[Report a Bug](#)** · **[Request a Feature](#)**
+**[Visit the Site](https://www.openboxcomm.in/)** · **[Report a Bug](mailto:support@openboxcomm.in)** · **[Request a Feature](mailto:hello@openboxcomm.in)**
 
 </div>
 
@@ -82,13 +82,13 @@ Open **[http://localhost:3000](http://localhost:3000)** and you're live.
 |---|---|
 | 🧩 Framework | Next.js 16 (App Router) |
 | 📘 Language | TypeScript |
-| 🎨 Styling | Tailwind CSS v3 + Animations |
-| 🧱 UI Library | Radix UI + shadcn/ui |
-| 📄 Content | MDX (next-mdx-remote + gray-matter) |
+| 🎨 Styling | Tailwind CSS v3, class-variance-authority, clsx, tailwind-merge |
+| 🧱 UI Library | Radix UI (`@radix-ui/react-*`) + shadcn/ui |
+| 📄 Content | TypeScript Objects (`lib/community-data.ts`, `lib/docs.ts`) |
 | 🌗 Theme | next-themes (dark/light) |
 | 🧊 3D Graphics | Three.js |
-| ✨ Animations | GSAP |
-| 🔤 Fonts | Syne (headings) · Inter (body) |
+| ✨ Animations | Framer Motion + GSAP |
+| 🔤 Icons | Lucide React |
 
 ---
 
@@ -96,61 +96,31 @@ Open **[http://localhost:3000](http://localhost:3000)** and you're live.
 
 ```
 open-box-website-del/
-├── app/                       # Pages and routes
-│   ├── layout.tsx            # Root layout (Navbar, Footer, Theme)
-│   ├── page.tsx              # Home page
-│   ├── about/                # About page
-│   ├── blogs/                # Blog listing & posts
-│   ├── contact/              # Contact form
-│   ├── contact-us/           # Contact page
-│   ├── doc/                  # Documentation listing & pages
-│   ├── events/               # Events listing & details
-│   ├── help/                 # Help center & FAQ
-│   ├── join/                 # Join page
-│   ├── legal/                # Legal pages (terms, privacy, etc.)
-│   ├── servers/               # Server listing & details
-│   ├── support/              # Support/Patreon page
-│   ├── team/                 # Team member profiles
-│   ├── (auth)/                # Auth routes (login, dashboard)
-│   └── api/                   # API routes (webhooks, data)
-│
-├── components/                # Reusable components
+├── app/                       # Next.js App Router (Pages, layouts, API routes)
+│   ├── (auth)/                # Auth routes
+│   ├── about/, blogs/, doc/   # Main pages
+│   ├── events/, servers/      # Dynamic listings
+│   └── api/                   # API endpoints
+├── components/                # Reusable UI components
 │   ├── ui/                    # shadcn/ui components
-│   ├── Navbar.tsx             # Navigation bar
-│   ├── Footer.tsx              # Footer
-│   ├── Quiz.tsx                # "Find Your Fit" quiz
-│   ├── MasterCalendar.tsx      # Event calendar
-│   ├── DirectorySearch.tsx     # Server search
-│   ├── DiscordStats.tsx        # Live member counts
-│   ├── BlogCard.tsx            # Blog post card
-│   ├── ServerCard.tsx          # Server card
-│   ├── FAQSearch.tsx           # FAQ search
-│   ├── TableOfContents.tsx     # Doc navigation
-│   └── ThemeProvider.tsx       # Theme switcher
-│
-├── content/
-│   └── docs/                   # MDX documentation files
-│
-├── lib/
-│   ├── community-data.ts       # All content data (servers, blogs, events)
-│   ├── docs.ts                 # MDX file reader
-│   ├── constants.ts            # App constants
-│   ├── utils.ts                 # Helper functions
-│   └── hooks/                   # Custom React hooks
-│
-├── public/
-│   ├── images/                  # Logos, icons, OG images
-│   └── sitemap.xml              # SEO sitemap
-│
-├── types/                        # TypeScript definitions
-├── tailwind.config.ts             # Tailwind configuration
-├── next.config.mjs                # Next.js configuration
-└── tsconfig.json                  # TypeScript configuration
+│   └── ...                    # Navbar, Footer, Quiz, MasterCalendar, etc.
+├── lib/                       # Core logic and hardcoded data
+│   ├── community-data.ts      # Data for servers, blogs, events, doc index
+│   ├── docs.ts                # Documentation page contents
+│   ├── constants.ts           # App constants
+│   ├── seo.ts, performance.ts # Utilities
+│   └── hooks/                 # Custom React hooks
+├── public/                    # Static assets (images, fonts)
+├── types/                     # TypeScript definitions
+├── tailwind.config.ts         # Tailwind configuration
+└── next.config.mjs            # Next.js configuration
 ```
 
 ---
 
 ## 📝 Content Management
+
+Our content is currently managed via TypeScript objects rather than markdown/MDX files. This ensures strong typing and faster builds.
 
 ### Adding a Blog Post
 
@@ -192,22 +162,9 @@ Add to the `events` array in [`lib/community-data.ts`](./lib/community-data.ts):
 
 ### Adding Documentation
 
-**Option 1: MDX File (Recommended)**
+Documentation consists of an entry in `community-data.ts` and the actual content in `docs.ts`.
 
-1. Create `content/docs/my-doc.mdx`:
-
-```mdx
----
-title: My Document
-description: Brief description
----
-
-## Section
-
-Your content here with **Markdown** support.
-```
-
-2. Add to the `docs` array in [`lib/community-data.ts`](./lib/community-data.ts):
+1. Add the metadata to the `docs` array in [`lib/community-data.ts`](./lib/community-data.ts):
 
 ```ts
 {
@@ -216,6 +173,19 @@ Your content here with **Markdown** support.
   description: 'Brief description.',
   section: 'Core',
 }
+```
+
+2. Add the content to `docContents` in [`lib/docs.ts`](./lib/docs.ts):
+
+```ts
+'my-doc': {
+  sections: [
+    {
+      title: 'Section 1',
+      content: 'Your content goes here.',
+    },
+  ],
+},
 ```
 
 📍 View at `/doc/my-doc`
@@ -242,40 +212,6 @@ Edit the `servers` array in [`lib/community-data.ts`](./lib/community-data.ts):
 
 Add a logo at `/public/images/myserver.png`
 
-**Gradient Colors by Server**
-
-| Server | Gradient |
-|---|---|
-| 🚪 Jn. | `from-rose-500 to-amber-300` |
-| 💻 Dev | `from-green-400 to-emerald-600` |
-| 🎮 GG | `from-red-500 to-rose-700` |
-| 📚 Study | `from-violet-400 to-fuchsia-500` |
-| 🌐 Connect | `from-orange-300 to-red-500` |
-
-### Adding a Legal Page
-
-1. Create `app/legal/[page-name]/page.tsx`:
-
-```tsx
-import type { Metadata } from 'next'
-
-export const metadata: Metadata = {
-  title: 'Legal Page — Open Box',
-}
-
-export default function LegalPage() {
-  return (
-    <article>
-      <h1>Legal Page Title</h1>
-      <p>Content here.</p>
-    </article>
-  )
-}
-```
-
-2. Update `app/legal/layout.tsx` sidebar
-3. Update footer links in `components/Footer.tsx`
-
 ---
 
 ## 📜 Scripts
@@ -284,7 +220,7 @@ export default function LegalPage() {
 # Development
 npm run dev
 
-# Build
+# Build for Production
 npm run build
 npm run start
 
@@ -296,14 +232,7 @@ npm run lint
 
 ## ☁️ Deployment
 
-> **Recommended:** Vercel, for seamless Next.js integration.
-
-### Build & Run
-
-```bash
-npm run build
-npm run start
-```
+> **Recommended:** Vercel, for seamless Next.js App Router integration.
 
 ### Environment Variables
 
@@ -312,8 +241,7 @@ All `NEXT_PUBLIC_*` variables are exposed to the browser. Keep secrets server-si
 ### Notes
 
 - Discord widgets must be **enabled** in server settings for live member counts
-- MDX files are processed at build time, so rebuild after adding new docs
-- All images should be optimized (PNG/WebP)
+- All images should be optimized (PNG/WebP) and stored in `/public/images/`
 
 ---
 
@@ -324,11 +252,11 @@ All `NEXT_PUBLIC_*` variables are exposed to the browser. Keep secrets server-si
 | 🔎 **Server Discovery** | Browse all Discord servers with live member counts |
 | 📅 **Event Calendar** | Master calendar of all community events |
 | ✍️ **Blog Platform** | Share updates and stories |
-| 📚 **Documentation** | MDX-based docs with full Markdown support |
-| 🌓 **Dark Mode** | Theme switcher with persistence |
+| 📚 **Documentation** | TypeScript-based docs system |
+| 🌓 **Dark Mode** | Theme switcher with `next-themes` |
 | 📈 **SEO Optimized** | Metadata, sitemap, structured data |
 | 📱 **Responsive** | Mobile-first design with Tailwind CSS |
-| ⚡ **Fast** | Next.js optimizations, image lazy-loading |
+| ⚡ **Fast & Dynamic** | Framer Motion + GSAP + Three.js |
 | ♿ **Accessible** | WCAG compliance with Radix UI components |
 
 ---
