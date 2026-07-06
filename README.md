@@ -2,6 +2,7 @@
 
 # 📦 Open Box
 
+<img src="./public/images/og-default.png" alt="Open Box Banner" width="100%" />
 ### A modern, high-performance Discord community platform
 
 **Built with Next.js · TypeScript · Tailwind CSS · Framer Motion · GSAP · Three.js**
@@ -258,6 +259,24 @@ All `NEXT_PUBLIC_*` variables are exposed to the browser. Keep secrets server-si
 | 📱 **Responsive** | Mobile-first design with Tailwind CSS |
 | ⚡ **Fast & Dynamic** | Framer Motion + GSAP + Three.js |
 | ♿ **Accessible** | WCAG compliance with Radix UI components |
+
+---
+
+## 🎨 Server Logos
+
+Here are the logos for our various Open Box servers:
+
+<div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
+  <img src="./public/images/OB.png" alt="OB Logo" width="100" />
+  <img src="./public/images/jn.png" alt="Junction Logo" width="100" />
+  <img src="./public/images/dev.png" alt="Dev Logo" width="100" />
+  <img src="./public/images/gg.png" alt="GG Logo" width="100" />
+  <img src="./public/images/study.png" alt="Study Logo" width="100" />
+  <img src="./public/images/connect.png" alt="Connect Logo" width="100" />
+  <img src="./public/images/internal.png" alt="Internal Logo" width="100" />
+  <img src="./public/images/gen.png" alt="General Logo" width="100" />
+  <img src="./public/images/classic.png" alt="Classic Logo" width="100" />
+</div>
 
 ---
 
