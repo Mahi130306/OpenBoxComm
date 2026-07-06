@@ -1,9 +1,10 @@
+<img src="./public/images/og-default.png" alt="Open Box Banner" width="100%" />
+
 <div align="center">
 
 # Open Box
 
-<img src="./public/images/og-default.png" alt="Open Box Banner" width="100%" />
-### A modern, high-performance Discord community platform
+## A modern, high-performance Discord community platform
 
 **Built with Next.js · TypeScript · Tailwind CSS · Framer Motion · GSAP · Three.js**
 
