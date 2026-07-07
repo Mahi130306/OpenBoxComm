@@ -1,4 +1,3 @@
-/// <reference types="node" />
 import { NextResponse } from 'next/server'
 
 const BASE_URL = 'https://openboxcomm.in'

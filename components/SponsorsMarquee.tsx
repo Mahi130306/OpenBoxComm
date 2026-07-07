@@ -128,7 +128,7 @@ function SingleSponsorBanner({ sponsor }: { sponsor: Sponsor }) {
   )
 }
 
-function SponsorCard({ sponsor }: { sponsor: Sponsor; key?: React.Key }) {
+function SponsorCard({ sponsor }: { sponsor: Sponsor }) {
   return (
     <a
       href={sponsor.url}

@@ -348,15 +348,15 @@ export function FAQSearch() {
   )
 }
 
-interface FAQItemProps {
+function FAQItem({
+  faq,
+}: {
   faq: {
     question: string
     answer: string
     tags?: string[]
   }
-}
-
-function FAQItem({ faq }: FAQItemProps) {
+}) {
   return (
     <article className="rounded-lg border border-border bg-surface p-5 transition-colors hover:border-white/20">
       <h3 className="mb-2 text-xl font-semibold">{faq.question}</h3>
