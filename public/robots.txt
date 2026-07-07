@@ -1,15 +1,54 @@
-# Robots.txt for Open Box
-# Allows search engines to crawl and index the website
+# Robots.txt for Open Box — openboxcomm.in
 
+# ── Standard crawlers ─────────────────────────────────────────────────────────
 User-agent: *
 Allow: /
-
-# Disallow private/admin areas (if any)
 Disallow: /admin
-Disallow: /api
+Disallow: /api/
 Disallow: /.next
 Disallow: /auth
 
-# Sitemap location
+# ── AI / LLM crawlers — explicitly allowed ────────────────────────────────────
+# ChatGPT / OpenAI
+User-agent: GPTBot
+Allow: /
+
+# Google Gemini / Bard
+User-agent: Google-Extended
+Allow: /
+
+# Anthropic Claude
+User-agent: Claude-Web
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Meta AI
+User-agent: FacebookBot
+Allow: /
+
+# Microsoft Copilot / Bing AI
+User-agent: Bingbot
+Allow: /
+
+# Common Crawl (used by many LLMs for training)
+User-agent: CCBot
+Allow: /
+
+# Amazon Alexa
+User-agent: ia_archiver
+Allow: /
+
+# Cohere
+User-agent: cohere-ai
+Allow: /
+
+# ── LLM metadata ──────────────────────────────────────────────────────────────
+# AI tools: read /llms.txt for a structured summary of this site's content.
+
+# ── Sitemaps ──────────────────────────────────────────────────────────────────
 Sitemap: https://openboxcomm.in/sitemap.xml
-Sitemap: https://openboxcomm.in/sitemap-0.xml
