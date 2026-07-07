@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Event Policy — Open Box',
@@ -9,15 +10,15 @@ export default function EventPolicyPage() {
   return (
     <article>
       <h1 className="!text-3xl !font-extrabold mb-1">Event Policy</h1>
-      <p className="text-sm text-muted-foreground mb-8">Last updated: {new Date().toLocaleDateString('en-IN')}</p>
+      <p className="text-sm text-muted-foreground mb-8">Last updated: 07/07/2026</p>
 
       <p>
         This Event Policy applies to all events organised or co-hosted by Open Box across any of our
         platforms — including online events announced on <strong>openboxcomm.in</strong>, across our Discord
         servers, our social media accounts on X, Instagram, and YouTube, and any in-person events we run. By registering for or participating in any Open Box event,
-        you agree to this policy, our <a href="/legal/community-rules">Community Rules</a>, our{' '}
-        <a href="/legal/acceptable-use-policy">Acceptable Use Policy</a>, and our{' '}
-        <a href="/legal/terms-and-conditions">Terms &amp; Conditions</a>.
+        you agree to this policy, our <Link href="/legal/community-rules" className="underline hover:text-foreground transition-colors">Community Rules</Link>, our{' '}
+        <Link href="/legal/acceptable-use-policy" className="underline hover:text-foreground transition-colors">Acceptable Use Policy</Link>, and our{' '}
+        <Link href="/legal/terms-and-conditions" className="underline hover:text-foreground transition-colors">Terms &amp; Conditions</Link>.
       </p>
 
       <h2>1. Types of Events</h2>
@@ -39,7 +40,7 @@ export default function EventPolicyPage() {
 
       <h2>3. Code of Conduct at Events</h2>
       <p>
-        All participants — online or in-person — must follow our <a href="/legal/community-rules">Community Rules</a>.
+        All participants — online or in-person — must follow our <Link href="/legal/community-rules" className="underline hover:text-foreground transition-colors">Community Rules</Link>.
       </p>
       <ul>
         <li>Harassment, discrimination, or disruptive behaviour results in immediate removal and potential permanent ban</li>

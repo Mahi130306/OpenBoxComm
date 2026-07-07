@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Community Rules — Open Box',
@@ -9,7 +10,7 @@ export default function CommunityRulesPage() {
   return (
     <article>
       <h1 className="!text-3xl !font-extrabold mb-1">Community Rules</h1>
-      <p className="text-sm text-muted-foreground mb-8">Last updated: {new Date().toLocaleDateString('en-IN')}</p>
+      <p className="text-sm text-muted-foreground mb-8">Last updated: 07/07/2026</p>
 
       <p>
         These rules apply to <strong>all Open Box spaces</strong> — the website at{' '}
@@ -140,7 +141,7 @@ export default function CommunityRulesPage() {
       <p>
         All participants at Open Box events — online on Discord, live on YouTube or X, or in person at an IRL
         meetup — are expected to follow these rules in full. For full details, refer to our{' '}
-        <u><a href="/legal/event-policy">Event Policy</a></u>.
+        <u><Link href="/legal/event-policy" className="hover:text-foreground transition-colors">Event Policy</Link></u>.
       </p>
 
       <h2>7. Social Media</h2>
@@ -170,7 +171,7 @@ export default function CommunityRulesPage() {
       <h2>10. Appeals</h2>
       <p>
         If you believe a moderation action was applied in error, appeal via the Help Centre at{' '}
-        <u><a href="/help">/help</a></u>, the official support channel on Discord, or by emailing{' '}
+        <u><Link href="/help" className="hover:text-foreground transition-colors">/help</Link></u>, the official support channel on Discord, or by emailing{' '}
         <strong>appeals@openboxcomm.in</strong>. Appeals are reviewed within 7 days.
       </p>
 

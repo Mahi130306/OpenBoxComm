@@ -63,7 +63,7 @@ const nextConfig = {
               "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com",
               "font-src 'self' https://fonts.gstatic.com",
               "img-src 'self' data: blob: https://api.dicebear.com https://cdn.discordapp.com",
-              "connect-src 'self' https://discord.com https://discordapp.com ws: wss: http://localhost:* http://127.0.0.1:*",
+              "connect-src 'self' https://discord.com https://discordapp.com https://api.indexnow.org https://www.bing.com ws: wss: http://localhost:* http://127.0.0.1:*",
               "frame-ancestors 'none'",
               "base-uri 'self'",
               "form-action 'self'",
@@ -75,6 +75,11 @@ const nextConfig = {
       {
         source: '/.git/:path*',
         headers: [{ key: 'X-Robots-Tag', value: 'noindex' }],
+      },
+      // Ensure IndexNow key file is served as plain text
+      {
+        source: '/a63d11d22e28485ea9e0da8f7fa62387.txt',
+        headers: [{ key: 'Content-Type', value: 'text/plain' }],
       },
     ]
   },

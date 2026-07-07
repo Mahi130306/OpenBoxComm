@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Privacy Policy — Open Box',
@@ -9,7 +10,7 @@ export default function PrivacyPolicyPage() {
   return (
     <article>
       <h1 className="!text-3xl !font-extrabold mb-1">Privacy Policy</h1>
-      <p className="text-sm text-muted-foreground mb-8">Last updated: {new Date().toLocaleDateString('en-IN')}</p>
+      <p className="text-sm text-muted-foreground mb-8">Last updated: 07/07/2026</p>
 
       <p>
         Open Box (&quot;we&quot;, &quot;our&quot;, &quot;us&quot;) is committed to protecting your personal data. This Privacy Policy
@@ -78,7 +79,7 @@ export default function PrivacyPolicyPage() {
         <li>IP address and approximate location (country/region)</li>
         <li>Browser type, device type, operating system</li>
         <li>Pages visited, time spent, referring URLs</li>
-        <li>Cookies and similar technologies — including those set by Google Tag Manager and Google Analytics for aggregate, anonymous traffic analysis (see our <u><a href="/legal/cookie-policy">Cookie Policy</a></u>)</li>
+        <li>Cookies and similar technologies — including those set by Google Tag Manager and Google Analytics for aggregate, anonymous traffic analysis (see our <u><Link href="/legal/cookie-policy" className="hover:text-foreground transition-colors">Cookie Policy</Link></u>)</li>
       </ul>
 
       <h3>2.3 Information from Third-Party Platforms</h3>

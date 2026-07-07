@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Terms & Conditions — Open Box',
@@ -9,7 +10,7 @@ export default function TermsAndConditionsPage() {
   return (
     <article>
       <h1 className="!text-3xl !font-extrabold mb-1">Terms &amp; Conditions</h1>
-      <p className="text-sm text-muted-foreground mb-8">Last updated: {new Date().toLocaleDateString('en-IN')}</p>
+      <p className="text-sm text-muted-foreground mb-8">Last updated: 07/07/2026</p>
 
       <p>
         Welcome to <strong>Open Box</strong> (&quot;we&quot;, &quot;our&quot;, &quot;us&quot;). These Terms &amp; Conditions govern your
@@ -69,7 +70,7 @@ export default function TermsAndConditionsPage() {
         By registering, browsing, joining a Discord server, interacting on social media, or otherwise using
         any part of the Platform, you confirm that you are at least <strong>13 years of age</strong> (or the
         age of digital consent in your jurisdiction, whichever is higher), and that you agree to these Terms
-        and our <u><a href="/legal/privacy-policy">Privacy Policy</a></u>. If you do not agree, you must immediately
+        and our <u><Link href="/legal/privacy-policy" className="hover:text-foreground transition-colors">Privacy Policy</Link></u>. If you do not agree, you must immediately
         discontinue use of all Open Box platforms.
       </p>
 
@@ -89,12 +90,12 @@ export default function TermsAndConditionsPage() {
         <li>You are responsible for maintaining the confidentiality of your account credentials.</li>
         <li>You must provide accurate and truthful information during registration on any platform.</li>
         <li>You must not impersonate any person, entity, or the Open Box brand on any platform.</li>
-        <li>Accounts may be suspended or terminated across all Open Box platforms for violations of these Terms, our <u><a href="/legal/community-rules">Community Rules</a></u>, our <u><a href="/legal/acceptable-use-policy">Acceptable Use Policy</a></u>, or applicable Indian law.</li>
+        <li>Accounts may be suspended or terminated across all Open Box platforms for violations of these Terms, our <u><Link href="/legal/community-rules" className="hover:text-foreground transition-colors">Community Rules</Link></u>, our <u><Link href="/legal/acceptable-use-policy" className="hover:text-foreground transition-colors">Acceptable Use Policy</Link></u>, or applicable Indian law.</li>
       </ul>
 
       <h2>4. Prohibited Conduct</h2>
       <p>
-        Detailed prohibited conduct is covered in our <u><a href="/legal/acceptable-use-policy">Acceptable Use Policy</a></u>. In
+        Detailed prohibited conduct is covered in our <u><Link href="/legal/acceptable-use-policy" className="hover:text-foreground transition-colors">Acceptable Use Policy</Link></u>. In
         summary, you must not:
       </p>
       <ul>
@@ -113,7 +114,7 @@ export default function TermsAndConditionsPage() {
           Copyright Act, 1957
         </a></u>
         . For permitted uses of Open Box branding, refer to our{' '}
-        <u><a href="/legal/acceptable-use-policy">Acceptable Use Policy</a></u>.
+        <u><Link href="/legal/acceptable-use-policy" className="hover:text-foreground transition-colors">Acceptable Use Policy</Link></u>.
       </p>
 
       <h2>6. User-Generated Content</h2>
@@ -127,14 +128,14 @@ export default function TermsAndConditionsPage() {
       <h2>7. Events</h2>
       <p>
         Participation in Open Box events — online workshops, IRL meetups, hackathons, contests, and live
-        streams — is subject to our <u><a href="/legal/event-policy">Event Policy</a></u>, which forms part of these
+        streams — is subject to our <u><Link href="/legal/event-policy" className="hover:text-foreground transition-colors">Event Policy</Link></u>, which forms part of these
         Terms.
       </p>
 
       <h2>8. Payments &amp; Refunds</h2>
       <p>
         Payments made to Open Box across any channel are subject to our{' '}
-        <u><a href="/legal/refund-policy">Refund Policy</a></u>, governed by the{' '}
+        <u><Link href="/legal/refund-policy" className="hover:text-foreground transition-colors">Refund Policy</Link></u>, governed by the{' '}
         <u><a href="https://www.indiacode.nic.in/bitstream/123456789/15256/1/consumer_protection_act_2019.pdf" target="_blank" rel="noopener noreferrer">
           Consumer Protection Act, 2019
         </a></u>  
@@ -144,7 +145,7 @@ export default function TermsAndConditionsPage() {
       <h2>9. Acceptable Use</h2>
       <p>
         Use of all Open Box platforms is subject to our{' '}
-        <u><a href="/legal/acceptable-use-policy">Acceptable Use Policy</a></u>, which covers permitted uses, prohibited conduct, brand
+        <u><Link href="/legal/acceptable-use-policy" className="hover:text-foreground transition-colors">Acceptable Use Policy</Link></u>, which covers permitted uses, prohibited conduct, brand
         usage guidelines, and responsible disclosure.
       </p>
 

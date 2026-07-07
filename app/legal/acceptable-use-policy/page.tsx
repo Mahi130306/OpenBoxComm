@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Acceptable Use Policy — Open Box',
@@ -9,13 +10,13 @@ export default function AcceptableUsePolicyPage() {
   return (
     <article>
       <h1 className="!text-3xl !font-extrabold mb-1">Acceptable Use Policy</h1>
-      <p className="text-sm text-muted-foreground mb-8">Last updated: {new Date().toLocaleDateString('en-IN')}</p>
+      <p className="text-sm text-muted-foreground mb-8">Last updated: 07/07/2026</p>
 
       <p>
         This Acceptable Use Policy (&quot;AUP&quot;) governs how you may use any Open Box platform — including the
         website at <strong>openboxcomm.in</strong>, all Discord servers, official social media accounts, all events, and
         any other service operated under the Open Box brand. This AUP forms part of our{' '}
-        <a href="/legal/terms-and-conditions">Terms &amp; Conditions</a>.
+        <Link href="/legal/terms-and-conditions" className="underline hover:text-foreground transition-colors">Terms &amp; Conditions</Link>.
       </p>
 
       <div
@@ -110,7 +111,7 @@ export default function AcceptableUsePolicyPage() {
 
       <h3>4.2 Website (openboxcomm.in)</h3>
       <p>
-        User-generated content must follow this AUP and our <a href="/legal/community-rules">Community Rules</a>. We reserve the right to remove content at our discretion.
+        User-generated content must follow this AUP and our <Link href="/legal/community-rules" className="underline hover:text-foreground transition-colors">Community Rules</Link>. We reserve the right to remove content at our discretion.
       </p>
 
       <h3>4.3 Social Media</h3>
@@ -120,7 +121,7 @@ export default function AcceptableUsePolicyPage() {
 
       <h3>4.4 Events</h3>
       <p>
-        Event participants are bound by this AUP and our <a href="/legal/event-policy">Event Policy</a>. Violations may result in removal from the event and all Open Box platforms.
+        Event participants are bound by this AUP and our <Link href="/legal/event-policy" className="underline hover:text-foreground transition-colors">Event Policy</Link>. Violations may result in removal from the event and all Open Box platforms.
       </p>
 
       <h2>5. Open Box Brand Usage</h2>

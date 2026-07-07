@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Cookie Policy — Open Box',
@@ -9,13 +10,13 @@ export default function CookiePolicyPage() {
   return (
     <article>
       <h1 className="!text-3xl !font-extrabold mb-1">Cookie Policy</h1>
-      <p className="text-sm text-muted-foreground mb-8">Last updated: {new Date().toLocaleDateString('en-IN')}</p>
+      <p className="text-sm text-muted-foreground mb-8">Last updated: 07/07/2026</p>
 
       <p>
         Open Box (&quot;we&quot;, &quot;our&quot;) uses cookies and similar technologies on our website at{' '}
         <strong>openboxcomm.in</strong> to provide, improve, and secure our Platform. This policy explains
         what cookies are, which ones we use, and how you can control them. It is read alongside our{' '}
-        <a href="/legal/privacy-policy">Privacy Policy</a>.
+        <Link href="/legal/privacy-policy" className="underline hover:text-foreground transition-colors">Privacy Policy</Link>.
       </p>
 
       <h2>1. What Are Cookies?</h2>

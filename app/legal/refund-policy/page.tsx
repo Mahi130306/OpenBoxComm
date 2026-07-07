@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Refund Policy — Open Box',
@@ -9,7 +10,7 @@ export default function RefundPolicyPage() {
   return (
     <article>
       <h1 className="!text-3xl !font-extrabold mb-1">Refund Policy</h1>
-      <p className="text-sm text-muted-foreground mb-8">Last updated: {new Date().toLocaleDateString('en-IN')}</p>
+      <p className="text-sm text-muted-foreground mb-8">Last updated: 07/07/2026</p>
 
       <p>
         This Refund Policy applies to any financial contributions or payments made to Open Box across any of
@@ -68,7 +69,7 @@ export default function RefundPolicyPage() {
       <ul>
         <li>Voluntary cancellation after a billing cycle has already completed</li>
         <li>Dissatisfaction with content that was fully accessible during the membership or subscription period</li>
-        <li>Account suspension or ban from any Open Box platform due to violations of our <a href="/legal/community-rules">Community Rules</a>, <a href="/legal/acceptable-use-policy">Acceptable Use Policy</a>, or <a href="/legal/terms-and-conditions">Terms &amp; Conditions</a></li>
+        <li>Account suspension or ban from any Open Box platform due to violations of our <Link href="/legal/community-rules" className="underline hover:text-foreground transition-colors">Community Rules</Link>, <Link href="/legal/acceptable-use-policy" className="underline hover:text-foreground transition-colors">Acceptable Use Policy</Link>, or <Link href="/legal/terms-and-conditions" className="underline hover:text-foreground transition-colors">Terms &amp; Conditions</Link></li>
         <li>Donations or payments made more than 7 days prior to the refund request</li>
         <li>Change of mind after an event has taken place or event materials have been distributed</li>
       </ul>
