@@ -57,9 +57,7 @@ const jsonLd = {
       '@type': 'Organization',
       '@id': `${BASE_URL}/#organization`,
       name: 'Open Box',
-      alternateName: ['OB', 'OpenBox', 'Open Box Community', 'OB Comm'],
-      description:
-        'Open Box is a free, no-gatekeeping community network based in India. It operates multiple Discord servers for gaming (OB GG), software development (OB Dev), studying (OB Study), and professional networking (OB Connect), all accessible through openboxcomm.in.',
+      description: 'A free community network for gaming, development, learning, and networking.',
       url: BASE_URL,
       logo: { '@type': 'ImageObject', url: `${BASE_URL}/images/OB.png`, width: 512, height: 512 },
       image: { '@type': 'ImageObject', url: `${BASE_URL}/images/og-default.png`, width: 1200, height: 630 },
@@ -68,43 +66,23 @@ const jsonLd = {
         'https://www.instagram.com/openboxcomm/',
         'https://x.com/Openboxcomm',
         'https://www.youtube.com/@obcommunities-yt',
-        'https://patreon.com/OpenBoxComm',
       ],
-      contactPoint: [
-        {
-          '@type': 'ContactPoint',
-          contactType: 'Customer Support',
-          email: 'support@openboxcomm.in',
-          url: `${BASE_URL}/contact-us`,
-        },
-        {
-          '@type': 'ContactPoint',
-          contactType: 'Community',
-          email: 'hello@openboxcomm.in',
-          url: `${BASE_URL}/contact-us`,
-        },
-      ],
-      foundingDate: '2021',
-      areaServed: { '@type': 'Country', name: 'India' },
-      knowsAbout: [
-        'Gaming',
-        'Software Development',
-        'Community Building',
-        'Professional Networking',
-        'Education',
-        'Discord Servers',
-        'Hackathons',
-        'Developer Communities',
-        'Study Groups',
-      ],
+      contactPoint: {
+        '@type': 'ContactPoint',
+        contactType: 'Customer Support',
+        email: 'admin@openboxcomm.in',
+        url: `${BASE_URL}/contact-us`,
+      },
+      foundingDate: '2021-01-01',
+      areaServed: 'IN',
+      knowsAbout: ['Gaming', 'Software Development', 'Community Building', 'Networking', 'Education'],
     },
     {
       '@type': 'WebSite',
       '@id': `${BASE_URL}/#website`,
       url: BASE_URL,
       name: 'Open Box',
-      description:
-        'A free community network with multiple Discord servers for gaming, development, study, and networking.',
+      description: 'A free community network for gaming, development, learning, and networking.',
       publisher: { '@id': `${BASE_URL}/#organization` },
       potentialAction: {
         '@type': 'SearchAction',
@@ -112,84 +90,27 @@ const jsonLd = {
         'query-input': 'required name=search_term_string',
       },
     },
-    // CommunityForum — tells answer engines this is a social community platform
-    {
-      '@type': 'WebPage',
-      '@id': `${BASE_URL}/#webpage`,
-      url: BASE_URL,
-      name: 'Open Box — Community for Everyone',
-      isPartOf: { '@id': `${BASE_URL}/#website` },
-      about: { '@id': `${BASE_URL}/#organization` },
-      speakable: {
-        '@type': 'SpeakableSpecification',
-        cssSelector: ['h1', 'p'],
-      },
-      description:
-        'Open Box is a free, no-gatekeeping community network. Join Discord servers for gaming (OB GG), development (OB Dev), studying (OB Study), and networking (OB Connect).',
-    },
     {
       '@type': 'BreadcrumbList',
       '@id': `${BASE_URL}/#breadcrumbs`,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: BASE_URL },
-        { '@type': 'ListItem', position: 2, name: 'Servers', item: `${BASE_URL}/servers` },
-        { '@type': 'ListItem', position: 3, name: 'Events', item: `${BASE_URL}/events` },
-        { '@type': 'ListItem', position: 4, name: 'Blog', item: `${BASE_URL}/blogs` },
-        { '@type': 'ListItem', position: 5, name: 'Help', item: `${BASE_URL}/help` },
-      ],
-    },
-    // FAQPage — enables Google's FAQ rich results and AEO direct answers
-    {
-      '@type': 'FAQPage',
-      '@id': `${BASE_URL}/#faq`,
-      mainEntity: [
         {
-          '@type': 'Question',
-          name: 'What is Open Box?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Open Box is a free, no-gatekeeping community network based in India. It runs multiple Discord servers — OB Junction (general), OB Dev (developers), OB GG (gaming), OB Study (learning), and OB Connect (networking) — and a central website at openboxcomm.in.',
-          },
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: BASE_URL,
         },
         {
-          '@type': 'Question',
-          name: 'Is Open Box free to join?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Yes. All Open Box Discord servers are free to join and use. Optional paid supporter tiers (NPC, Rookie, GOAT, Legend) are available on Patreon for members who want to contribute financially and receive perks.',
-          },
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Servers',
+          item: `${BASE_URL}/servers`,
         },
         {
-          '@type': 'Question',
-          name: 'How do I join Open Box?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Visit openboxcomm.in/join or use the invite link discord.gg/7ZWckKU89J. You start in OB Junction, the main entry server, and can then join Dev, GG, Study, or Connect based on your interests.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Which Open Box server is for developers?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'OB Dev is the developer-focused Discord server inside Open Box. It has channels for code help, project feedback, tool discussions, hackathons, and finding collaborators. Invite: discord.gg/H2AmpBrPdW',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Does Open Box have a gaming server?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Yes. OB GG is the gaming server inside Open Box, currently in beta. It covers game sessions, competitions, and community gameplay. Invite: discord.gg/etnc7ZpDKT',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Is Open Box affiliated with any company or university?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'No. Open Box is entirely independent and volunteer-run. It is not affiliated with any company, university, or institution.',
-          },
+          '@type': 'ListItem',
+          position: 3,
+          name: 'Events',
+          item: `${BASE_URL}/events`,
         },
       ],
     },
