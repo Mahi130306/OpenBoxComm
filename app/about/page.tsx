@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import Script from 'next/script'
 import { CTASection } from '@/components/CTASection'
 import { Info, Users, Zap, Heart, CheckCircle2, ArrowUpRight } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
@@ -7,44 +6,8 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'About Open Box',
-  description:
-    'Open Box is a free, no-gatekeeping community network based in India, running multiple Discord servers for gaming, software development, study, and professional networking. Learn about who we are, our mission, and our values.',
+  description: 'Learn about Open Box — a people-focused network of communities for gamers, students, and creators. Free and open to everyone.',
   alternates: { canonical: '/about' },
-  openGraph: {
-    title: 'About Open Box — A People-Focused Community Network',
-    description:
-      'Open Box is a free, no-gatekeeping community network based in India with Discord servers for gaming (OB GG), development (OB Dev), studying (OB Study), and networking (OB Connect).',
-    url: '/about',
-  },
-}
-
-const BASE_URL = 'https://openboxcomm.in'
-
-const aboutJsonLd = {
-  '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'AboutPage',
-      '@id': `${BASE_URL}/about#webpage`,
-      url: `${BASE_URL}/about`,
-      name: 'About Open Box — A People-Focused Community Network',
-      description:
-        'Open Box is a free, no-gatekeeping community network based in India. It was founded with the belief that great things happen when people come together. Open Box operates multiple Discord servers: OB Junction (general community), OB Dev (software development), OB GG (gaming), OB Study (learning and accountability), and OB Connect (professional networking).',
-      isPartOf: { '@id': `${BASE_URL}/#website` },
-      about: { '@id': `${BASE_URL}/#organization` },
-      speakable: {
-        '@type': 'SpeakableSpecification',
-        cssSelector: ['h1', 'p'],
-      },
-      breadcrumb: {
-        '@type': 'BreadcrumbList',
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: BASE_URL },
-          { '@type': 'ListItem', position: 2, name: 'About', item: `${BASE_URL}/about` },
-        ],
-      },
-    },
-  ],
 }
 
 const servers = [

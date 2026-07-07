@@ -1,4 +1,4 @@
-import { NextResponse } from 'next/server'
+import { NextResponse } from 'next/serve'
 
 const BASE_URL = 'https://openboxcomm.in'
 const INDEXNOW_KEY = 'a63d11d22e28485ea9e0da8f7fa62387'
