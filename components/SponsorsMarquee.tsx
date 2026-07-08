@@ -1,4 +1,3 @@
-import React from 'react'
 import { ExternalLink } from 'lucide-react'
 import type { Sponsor } from '@/lib/community-data'
 
@@ -128,7 +127,7 @@ function SingleSponsorBanner({ sponsor }: { sponsor: Sponsor }) {
   )
 }
 
-function SponsorCard({ sponsor }: { sponsor: Sponsor; key?: React.Key }) {
+function SponsorCard({ sponsor }: { sponsor: Sponsor }) {
   return (
     <a
       href={sponsor.url}
