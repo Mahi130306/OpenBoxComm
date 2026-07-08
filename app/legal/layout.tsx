@@ -1,5 +1,6 @@
 'use client'
 
+import type { ReactNode } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
@@ -16,7 +17,7 @@ const legalPages = [
   { href: '/legal/event-policy', label: 'Event Policies' },
 ]
 
-export default function LegalLayout({ children }: { children: React.ReactNode }) {
+export default function LegalLayout({ children }: { children: ReactNode }) {
   const pathname = usePathname()
   const isIndex = pathname === '/legal'
 
