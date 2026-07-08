@@ -554,7 +554,7 @@ export const teamMembers: TeamMember[] = [
     slug: 'mahi-hh',
     name: 'Mahi HH',
     role: 'Founder',
-    bio: 'The Founder of Open Box, a community for developers, builders, gamers, and students. They are passionate about creating spaces where people can connect, learn, and grow together.',
+    bio: 'The Founder of Open Box.',
     avatar: 'https://api.dicebear.com/10.x/initials/svg?seed=Mahi',
     aboutSection: 'From building a community in school to hosting coding bootcamps and game tournaments for thousands of students, Mahi leads Open Box with a simple belief: everyone deserves a place to belong, learn, and grow. He is a builder at heart, and he loves bringing people together. Whether it’s coding, gaming, creating, or just hanging out — there is a spot for you here.',
     socials: {
