@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
-import Image from 'next/image'
 import { logger } from '@/lib/logger'
 
 export function LoadingScreen() {
@@ -23,7 +22,6 @@ export function LoadingScreen() {
 
   // Route changes
   useEffect(() => {
-    // Skip very first mount (handled above)
     setIsLoading(true)
     setIsFading(false)
     logger.info('Navigating to', { route: pathname })
@@ -46,51 +44,52 @@ export function LoadingScreen() {
       }}
       aria-hidden={isFading}
     >
-      {/* Logo */}
+      {/* Scanline texture, CLI feel */}
       <div
+        className="pointer-events-none absolute inset-0 opacity-[0.04]"
         style={{
-          animation: 'ob-pulse 1.2s ease-in-out infinite',
+          backgroundImage:
+            'repeating-linear-gradient(0deg, currentColor 0px, currentColor 1px, transparent 1px, transparent 3px)',
         }}
-      >
-        <Image
-          src="/images/OB.png"
-          alt="Open Box"
+      />
+
+      {/* Glow ring behind the gif */}
+      <div className="relative flex items-center justify-center">
+        <div
+          className="absolute h-24 w-24 rounded-full bg-indigo-500/20 blur-xl"
+          style={{ animation: 'ob-pulse 1.6s ease-in-out infinite' }}
+        />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/images/OBloader.gif"
+          alt="Open Box loading"
           width={72}
           height={72}
-          priority
-          className="rounded-xl"
+          className="relative rounded-xl"
         />
       </div>
 
-      {/* Wordmark */}
+      {/* Terminal-style wordmark */}
       <p
-        className="mt-4 text-lg font-heading font-bold tracking-widest text-foreground/70"
+        className="mt-5 font-mono text-sm tracking-[0.3em] text-foreground/60"
         style={{ animation: 'ob-fade-in 0.6s ease 0.2s both' }}
       >
         OPEN BOX
+        <span style={{ animation: 'ob-blink 1s step-end infinite' }}>_</span>
       </p>
-
-      {/* Spinner bar */}
-      <div className="mt-6 h-0.5 w-32 overflow-hidden rounded-full bg-border">
-        <div
-          className="h-full rounded-full bg-foreground"
-          style={{ animation: 'ob-slide 1s ease-in-out infinite' }}
-        />
-      </div>
 
       <style>{`
         @keyframes ob-pulse {
-          0%, 100% { transform: scale(1); opacity: 1; }
-          50% { transform: scale(1.06); opacity: 0.85; }
+          0%, 100% { transform: scale(1); opacity: 0.6; }
+          50% { transform: scale(1.15); opacity: 0.9; }
         }
         @keyframes ob-fade-in {
           from { opacity: 0; transform: translateY(6px); }
-          to   { opacity: 0.7; transform: translateY(0); }
+          to   { opacity: 0.6; transform: translateY(0); }
         }
-        @keyframes ob-slide {
-          0%   { transform: translateX(-100%); width: 60%; }
-          50%  { transform: translateX(50%);  width: 60%; }
-          100% { transform: translateX(200%); width: 60%; }
+        @keyframes ob-blink {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0; }
         }
       `}</style>
     </div>
