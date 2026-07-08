@@ -1,5 +1,5 @@
-import React from 'react'
 import type { Metadata } from 'next'
+import type { ReactNode } from 'react'
 import Script from 'next/script'
 import { Navbar } from '@/components/Navbar'
 import { Footer } from '@/components/Footer'
@@ -118,7 +118,7 @@ const jsonLd = {
   ],
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>

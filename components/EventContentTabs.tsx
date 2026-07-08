@@ -1,12 +1,13 @@
 'use client'
 
 import { useState } from 'react'
+import type { ElementType, ReactNode } from 'react'
 import { ChevronDown, ListChecks, Sparkles, Info } from 'lucide-react'
 
 interface Tab {
   id: string
   label: string
-  icon: React.ElementType
+  icon: ElementType
 }
 
 interface EventContentTabsProps {
@@ -37,7 +38,7 @@ export function EventContentTabs({
     setOpenAccordion((prev) => (prev === id ? null : id))
   }
 
-  const tabContent: Record<string, React.ReactNode> = {
+  const tabContent: Record<string, ReactNode> = {
     details: (
       <div className="space-y-4">
         <div className="rounded-2xl border border-border bg-muted/30 p-6">
