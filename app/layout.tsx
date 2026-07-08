@@ -1,4 +1,3 @@
-import React from 'react'
 import type { Metadata } from 'next'
 import Script from 'next/script'
 import { Navbar } from '@/components/Navbar'
