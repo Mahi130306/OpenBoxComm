@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import type { ReactNode } from 'react'
 import Script from 'next/script'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Analytics } from '@vercel/analytics/next'
 import { Navbar } from '@/components/Navbar'
 import { Footer } from '@/components/Footer'
@@ -176,6 +177,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <ConsentBanner />
           <UpdateBanner />
         </ThemeProvider>
+        <SpeedInsights />
         <Analytics />
       </body>
     </html>
