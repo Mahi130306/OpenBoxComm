@@ -567,10 +567,10 @@ export const teamMembers: TeamMember[] = [
   {
     slug: 'rohith',
     name: 'Rohith',
-    role: 'Community Manager',
-    bio: 'The Community Manager of Open Box.',
+    role: 'Founder',
+    bio: 'The Co - Founder of Open Box.',
     avatar: 'https://api.dicebear.com/10.x/initials/svg?seed=Rohith',
-    aboutSection: 'Rohith leads Open Box operations — from server management and events to partnerships and moderation. He is passionate about building communities that feel like home for everyone who joins.',
+    aboutSection: 'Rohith is a Co-Founder of Open Box, a community for developers, builders, gamers, and students. He is passionate about creating spaces where people can connect, learn, and grow together.',
     socials: {
       github: 'https://github.com/knsorrigie',
     },
