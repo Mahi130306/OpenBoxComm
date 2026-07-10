@@ -169,8 +169,8 @@ export function Navbar() {
     <>
       <nav
         className={`fixed top-0 z-50 w-full border-b transition-all duration-300 ${scrolled
-            ? 'bg-background/98 shadow-sm backdrop-blur-lg'
-            : 'bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60'
+          ? 'bg-background/98 shadow-sm backdrop-blur-lg'
+          : 'bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60'
           } border-border`}
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -216,8 +216,8 @@ export function Navbar() {
                       </Link>
                     </DropdownMenuItem>
                   ))}
-                  <DropdownMenuSeparator />
-                  <DropdownMenuLabel>Coming Soon</DropdownMenuLabel>
+                  {/* <DropdownMenuSeparator /> */}
+                  {/* <DropdownMenuLabel>Coming Soon</DropdownMenuLabel>
                   {servers.comingSoon.map((server) => (
                     <DropdownMenuItem
                       key={server.slug}
@@ -229,12 +229,12 @@ export function Navbar() {
                         <span className="text-xs bg-muted px-1.5 py-0.5 rounded">Soon</span>
                       </span>
                     </DropdownMenuItem>
-                  ))}
+                  ))} */}
                 </DropdownMenuContent>
               </DropdownMenu>
-              <Link href="/events" className="text-sm font-medium hover:text-muted-foreground transition-colors">
+              {/* <Link href="/events" className="text-sm font-medium hover:text-muted-foreground transition-colors">
                 Events
-              </Link>
+              </Link> */}
               <Link href="/blogs" className="text-sm font-medium hover:text-muted-foreground transition-colors">
                 Blogs
               </Link>
@@ -297,14 +297,14 @@ export function Navbar() {
                     {server.name}
                   </Link>
                 ))}
-                <p className="text-sm font-medium text-muted-foreground mt-2 mb-1">Coming Soon</p>
+                {/* <p className="text-sm font-medium text-muted-foreground mt-2 mb-1">Coming Soon</p>
                 {servers.comingSoon.map((server) => (
                   <span key={server.slug} className="block py-1 pl-2 text-sm text-muted-foreground opacity-50">
                     {server.name} (Soon)
                   </span>
-                ))}
+                ))} */}
               </div>
-              <Link href="/events" className="block py-2 text-sm font-medium hover:text-muted-foreground">Events</Link>
+              {/* <Link href="/events" className="block py-2 text-sm font-medium hover:text-muted-foreground">Events</Link> */}
               <Link href="/blogs" className="block py-2 text-sm font-medium hover:text-muted-foreground">Blogs</Link>
               <Link href="/doc" className="block py-2 text-sm font-medium hover:text-muted-foreground">Docs</Link>
               {/* <Link href="/join" className="block py-2 text-sm font-bold text-cyan-500">Join Community</Link> */}

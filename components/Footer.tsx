@@ -136,7 +136,7 @@ export function Footer() {
                 { label: 'Home', href: '/' },
                 { label: 'About', href: '/about' },
                 { label: 'Servers', href: '/servers' },
-                { label: 'Events', href: '/events' },
+                // { label: 'Events', href: '/events' },
                 { label: 'Blogs', href: '/blogs' },
                 { label: 'Docs', href: '/doc' },
               ].map((l) => (
