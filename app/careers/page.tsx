@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import { Briefcase, Mail, Megaphone, Users, MapPin, Clock, ArrowRight, Sparkles, Share2, TrendingUp, HelpCircle } from 'lucide-react'
-import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Careers — Open Box',
@@ -16,7 +15,7 @@ export default function CareersPage() {
       department: 'Content & Community',
       type: 'Part-time / Remote (India)',
       icon: Megaphone,
-      accentColor: 'from-pink-500 to-rose-600',
+      accentColor: 'from-cyan-500 to-blue-600',
       tagline: 'Connect with our audience and bring the Open Box vibe to the world.',
       responsibilities: [
         'Plan, create, and schedule engaging post, reels, and shorts across Instagram, YouTube, X (Twitter), and Discord.',
@@ -37,7 +36,7 @@ export default function CareersPage() {
       department: 'Strategy & Growth',
       type: 'Part-time / Remote (India)',
       icon: TrendingUp,
-      accentColor: 'from-violet-500 to-fuchsia-600',
+      accentColor: 'from-teal-500 to-emerald-600',
       tagline: 'Scale the community network and form strategic community partnerships.',
       responsibilities: [
         'Design and execute growth campaigns to increase member acquisition and active participation across our servers (Junction, Dev, GG).',
@@ -57,17 +56,17 @@ export default function CareersPage() {
   return (
     <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-16 lg:px-8">
       {/* Hero Section */}
-      <div className="mb-12 rounded-3xl border border-black/10 bg-gradient-to-br from-black/[0.04] to-violet-400/[0.08] p-6 shadow-sm dark:border-white/10 dark:from-white/[0.08] dark:to-violet-400/[0.05] sm:p-10 lg:p-16 overflow-hidden relative">
-        <div className="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-violet-500/10 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 left-0 -ml-16 -mb-16 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="mb-12 rounded-3xl border border-black/10 bg-gradient-to-br from-black/[0.04] to-cyan-400/[0.08] p-6 shadow-sm dark:border-white/10 dark:from-white/[0.08] dark:to-cyan-400/[0.05] sm:p-10 lg:p-16 overflow-hidden relative">
+        <div className="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 left-0 -ml-16 -mb-16 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
 
         <div className="relative z-10">
           <div className="flex items-center gap-2 mb-4">
-            <Sparkles className="h-5 w-5 shrink-0 text-violet-500" />
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-violet-600 dark:text-violet-300 sm:text-sm">We are Hiring</p>
+            <Sparkles className="h-5 w-5 shrink-0 text-cyan-500" />
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-cyan-600 dark:text-cyan-300 sm:text-sm">We are Hiring</p>
           </div>
           <h1 className="mb-4 text-3xl font-extrabold tracking-tight text-foreground w-full break-words sm:text-5xl lg:text-6xl">
-            Build the future of <span className="bg-gradient-to-r from-violet-500 to-cyan-500 bg-clip-text text-transparent">online communities</span>.
+            Build the future of <span className="bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent">online communities</span>.
           </h1>
           <p className="max-w-3xl text-sm text-muted-foreground/95 leading-relaxed sm:text-base lg:text-lg">
             At Open Box, we believe that great things happen when people come together. We provide high-signal, welcoming spaces for gaming, development, learning, and connection. Come help us build and grow the ultimate Discord-centric community platform in India.
@@ -93,7 +92,7 @@ export default function CareersPage() {
                 <div
                   key={role.id}
                   id={role.id}
-                  className="group relative overflow-hidden rounded-2xl border border-border bg-surface/50 p-6 transition-all hover:border-violet-500/50 hover:shadow-xl scroll-mt-24"
+                  className="group relative overflow-hidden rounded-2xl border border-border bg-surface/50 p-6 transition-all hover:border-cyan-500/50 hover:shadow-xl scroll-mt-24"
                 >
                   {/* Decorative corner accent */}
                   <div className={`absolute top-0 right-0 h-1.5 w-24 bg-gradient-to-r ${role.accentColor}`} />
@@ -115,20 +114,20 @@ export default function CareersPage() {
                       <span className="inline-flex items-center gap-1 rounded-full bg-cyan-500/10 px-2.5 py-1 text-xs font-semibold text-cyan-500 border border-cyan-500/20">
                         <MapPin className="h-3 w-3" /> Remote
                       </span>
-                      <span className="inline-flex items-center gap-1 rounded-full bg-violet-500/10 px-2.5 py-1 text-xs font-semibold text-violet-500 border border-violet-500/20">
+                      <span className="inline-flex items-center gap-1 rounded-full bg-blue-500/10 px-2.5 py-1 text-xs font-semibold text-blue-500 border border-blue-500/20">
                         <Clock className="h-3 w-3" /> Part-Time
                       </span>
                     </div>
                   </div>
 
-                  <p className="text-sm text-foreground/80 font-medium mb-6 italic border-l-2 border-violet-500/30 pl-3">
+                  <p className="text-sm text-foreground/80 font-medium mb-6 italic border-l-2 border-blue-500/30 pl-3">
                     &ldquo;{role.tagline}&rdquo;
                   </p>
 
                   <div className="space-y-6">
                     <div>
                       <h4 className="text-sm font-bold text-foreground mb-3 flex items-center gap-1.5">
-                        <span className="h-1 w-1.5 bg-violet-500 rounded-full" /> Key Responsibilities
+                        <span className="h-1 w-1.5 bg-blue-500 rounded-full" /> Key Responsibilities
                       </h4>
                       <ul className="grid gap-2.5 text-sm text-muted-foreground pl-3">
                         {role.responsibilities.map((resp, index) => (
@@ -147,7 +146,7 @@ export default function CareersPage() {
                       <ul className="grid gap-2.5 text-sm text-muted-foreground pl-3">
                         {role.requirements.map((req, index) => (
                           <li key={index} className="flex items-start gap-2">
-                            <span className="text-violet-500 font-bold shrink-0 mt-0.5">•</span>
+                            <span className="text-blue-500 font-bold shrink-0 mt-0.5">•</span>
                             <span>{req}</span>
                           </li>
                         ))}
@@ -215,10 +214,10 @@ export default function CareersPage() {
                   Send your application to
                 </p>
 
-                <div className="group/email relative rounded-xl border border-border bg-surface/80 p-3 text-center transition-all hover:border-violet-500/40">
+                <div className="group/email relative rounded-xl border border-border bg-surface/80 p-3 text-center transition-all hover:border-cyan-500/40">
                   <a
                     href="mailto:carrers@openboxcomm.in"
-                    className="block text-base font-bold text-violet-500 hover:text-violet-400 select-all tracking-wide"
+                    className="block text-base font-bold text-cyan-500 hover:text-cyan-400 select-all tracking-wide"
                   >
                     carrers@openboxcomm.in
                   </a>
@@ -236,7 +235,7 @@ export default function CareersPage() {
             {/* Why Join Us Card */}
             <div className="rounded-3xl border border-border bg-surface p-6 shadow-sm">
               <div className="flex items-center gap-2.5 mb-5">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-violet-500/10 text-violet-500">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-500/10 text-blue-500">
                   <Users className="h-5 w-5" />
                 </div>
                 <h3 className="text-xl font-bold tracking-tight text-foreground">Why Join Open Box?</h3>
@@ -258,7 +257,7 @@ export default function CareersPage() {
                   }
                 ].map((item, idx) => (
                   <div key={idx} className="flex gap-3">
-                    <span className="text-violet-500 text-lg font-bold shrink-0 mt-0.5">0{idx + 1}.</span>
+                    <span className="text-blue-500 text-lg font-bold shrink-0 mt-0.5">0{idx + 1}.</span>
                     <div>
                       <h4 className="font-bold text-sm text-foreground mb-0.5">{item.title}</h4>
                       <p className="text-xs text-muted-foreground leading-relaxed">{item.desc}</p>
