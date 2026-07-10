@@ -39,7 +39,7 @@ export default async function ServerPage({
   return (
     <div className="min-h-screen">
       {/* ── Hero banner ─────────────────────────────────────────────── */}
-      <div className={`relative overflow-hidden border-b border-border bg-gradient-to-br ${server.accent} p-px`}>
+      <div className={`relative overflow-hidden border-b border-border ${server.accent} p-px`}>
         <div className="relative bg-background/92 backdrop-blur-sm">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
             <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:gap-10">
@@ -47,7 +47,7 @@ export default async function ServerPage({
               {/* Logo */}
               {logoSrc && (
                 <div
-                  className={`relative h-24 w-24 flex-shrink-0 overflow-hidden rounded-2xl bg-gradient-to-br ${server.accent} p-px shadow-2xl`}
+                  className={`relative h-24 w-24 flex-shrink-0 overflow-hidden rounded-2xl ${server.accent} p-px shadow-2xl`}
                 >
                   <div className="h-full w-full overflow-hidden rounded-2xl bg-background/80">
                     <Image
@@ -66,7 +66,7 @@ export default async function ServerPage({
               <div className="flex-1">
                 <div className="mb-3 flex flex-wrap gap-2">
                   <span
-                    className={`inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r ${server.accent} px-3 py-0.5 text-xs font-bold text-black/80`}
+                    className={`inline-flex items-center gap-1.5 rounded-full ${server.accent} px-3 py-0.5 text-xs font-bold text-black/80`}
                   >
                     <span className="h-1.5 w-1.5 rounded-full bg-red-500 text-red-500" />
                     LIVE
@@ -130,7 +130,7 @@ export default async function ServerPage({
                       className="flex items-start gap-3 rounded-xl border border-border bg-surface px-4 py-3"
                     >
                       <span
-                        className={`mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-br ${server.accent} text-xs font-bold text-black/80`}
+                        className={`mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full ${server.accent} text-xs font-bold text-black/80`}
                       >
                         {i + 1}
                       </span>
@@ -225,7 +225,7 @@ export default async function ServerPage({
                           />
                         </div>
                       ) : (
-                        <div className={`h-7 w-7 flex-shrink-0 rounded-md bg-gradient-to-br ${s.accent}`} />
+                        <div className={`h-7 w-7 flex-shrink-0 rounded-md ${s.accent}`} />
                       )}
                       <span className="text-sm font-medium">{s.name}</span>
                     </Link>

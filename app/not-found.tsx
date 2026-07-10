@@ -13,7 +13,7 @@ export default function NotFound() {
           404
         </span>
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.07] to-indigo-400/[0.08] px-8 py-6">
+          <div className="rounded-2xl border border-white/10 bg-white/[0.07] px-8 py-6">
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-indigo-300 mb-2">Not Found</p>
             <h1 className="!text-3xl sm:!text-4xl">Page Not Found</h1>
           </div>

@@ -119,7 +119,7 @@ export default function SupportClient() {
         accentColor: 'text-amber-500 dark:text-amber-400',
         card: 'border-amber-200 bg-amber-50/20 hover:border-amber-400 dark:bg-amber-950/5 dark:border-amber-500/20 dark:hover:border-amber-500/50',
         badge: 'bg-amber-100/60 text-amber-800 border-amber-200 dark:bg-amber-950/50 dark:text-amber-355 dark:border-amber-500/30',
-        button: 'bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white border-none',
+        button: 'bg-amber-500 hover:bg-amber-600 text-white border-none',
         title: 'text-amber-850 dark:text-amber-355',
       }
     }
@@ -195,14 +195,6 @@ export default function SupportClient() {
       <div className="absolute top-0 left-0 w-full h-[600px] pointer-events-none overflow-hidden -z-10">
         <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[60%] rounded-full bg-amber-500/10 blur-[120px] dark:bg-amber-600/15" />
         <div className="absolute top-[20%] right-[-10%] w-[45%] h-[50%] rounded-full bg-purple-500/10 blur-[130px] dark:bg-purple-600/15" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,transparent_30%,hsl(var(--background)))]" />
-        <div
-          className="absolute inset-0 opacity-[0.015] dark:opacity-[0.03] pointer-events-none"
-          style={{
-            backgroundImage: `radial-gradient(circle, currentColor 1px, transparent 1px)`,
-            backgroundSize: '28px 28px',
-          }}
-        />
       </div>
 
       {/* ── Hero Banner Section ── */}
@@ -211,12 +203,10 @@ export default function SupportClient() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         className="relative mb-20 rounded-3xl border overflow-hidden p-8 sm:p-12 lg:p-16
-          bg-gradient-to-br from-amber-50/80 via-white to-orange-50/40 border-amber-200/50
-          dark:from-zinc-950/60 dark:via-zinc-950/30 dark:to-zinc-900/40 dark:border-white/[0.05]
+          bg-white/80 border-amber-200/50
+          dark:bg-zinc-950/40 dark:border-white/[0.05]
           shadow-2xl shadow-amber-500/[0.02] dark:shadow-[0_20px_50px_rgba(0,0,0,0.4)] backdrop-blur-md"
       >
-        <div className="absolute -right-24 -top-24 w-96 h-96 rounded-full pointer-events-none opacity-20 filter blur-[100px] bg-gradient-to-br from-amber-500 to-orange-600" />
-
         <div className="flex flex-col lg:flex-row gap-12 items-center relative z-10">
           <div className="flex-1 text-center lg:text-left">
             <div className="inline-flex items-center gap-2 mb-6 px-3 py-1 rounded-full border border-amber-200 bg-amber-500/10 dark:border-amber-500/20">
@@ -227,7 +217,7 @@ export default function SupportClient() {
             </div>
 
             <h1 className="mb-6 text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-zinc-900 dark:text-white font-heading leading-none">
-              Support <span className="bg-gradient-to-r from-amber-500 via-orange-500 to-yellow-500 dark:from-yellow-300 dark:via-amber-400 dark:to-orange-400 bg-clip-text text-transparent">Open Box</span>.
+              Support <span className="text-amber-500 dark:text-amber-400">Open Box</span>.
             </h1>
 
             <p className="max-w-2xl text-base sm:text-lg text-zinc-650 dark:text-zinc-300 leading-relaxed mb-8">
@@ -238,7 +228,7 @@ export default function SupportClient() {
               <Button
                 asChild
                 size="lg"
-                className="bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-black font-bold rounded-xl shadow-lg shadow-amber-500/20 border-none transition-all duration-200 hover:scale-[1.02]"
+                className="bg-amber-500 hover:bg-amber-600 text-black font-bold rounded-xl shadow-lg shadow-amber-500/20 border-none transition-all duration-200 hover:scale-[1.02]"
               >
                 <a href={PATREON_URL} target="_blank" rel="noopener noreferrer">
                   Become a Supporter
@@ -284,7 +274,7 @@ export default function SupportClient() {
                         initial={{ width: 0 }}
                         animate={{ width: `${metric.value}%` }}
                         transition={{ duration: 1, delay: 0.2 }}
-                        className="h-full bg-gradient-to-r from-amber-500 to-orange-500 rounded-full"
+                        className="h-full bg-amber-500 rounded-full"
                       />
                     </div>
                     <p className="text-[10px] text-zinc-450 dark:text-zinc-500 mt-1">
@@ -350,7 +340,7 @@ export default function SupportClient() {
               <div
                 className="absolute -right-16 -top-16 w-36 h-36 rounded-full pointer-events-none transition-opacity duration-500"
                 style={{
-                  background: `radial-gradient(circle, ${tier.theme.glow} 0%, transparent 70%)`,
+                  background: 'transparent',
                   opacity: isHovered ? 1 : 0.4
                 }}
               />
@@ -412,9 +402,9 @@ export default function SupportClient() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="relative rounded-3xl p-[1px] bg-gradient-to-r from-purple-500/30 via-violet-500/20 to-indigo-500/30 dark:from-purple-500/60 dark:via-violet-600/30 dark:to-indigo-500/40 shadow-xl shadow-purple-500/[0.03] dark:shadow-[0_0_50px_-5px_rgba(139,92,246,0.25)] mb-20 overflow-hidden"
+        className="relative rounded-3xl border border-purple-500/30 dark:border-purple-500/60 shadow-xl shadow-purple-500/[0.03] dark:shadow-[0_0_50px_-5px_rgba(139,92,246,0.25)] mb-20 overflow-hidden"
       >
-        <div className="rounded-[23px] bg-gradient-to-br from-purple-50/40 via-violet-50/10 to-indigo-50/30 dark:from-[#080512] dark:via-[#0c0818] dark:to-[#05030c] p-6 sm:p-8 lg:p-10 relative overflow-hidden backdrop-blur-md">
+        <div className="rounded-[23px] bg-purple-50/40 dark:bg-[#080512] p-6 sm:p-8 lg:p-10 relative overflow-hidden backdrop-blur-md">
           {/* Ambient Glows */}
           <div className="absolute -right-24 -top-24 w-80 h-80 rounded-full pointer-events-none opacity-20 filter blur-3xl bg-purple-500 dark:bg-purple-600" />
           <div className="absolute -left-24 -bottom-24 w-80 h-80 rounded-full pointer-events-none opacity-10 filter blur-3xl bg-indigo-500 dark:bg-indigo-600" />
@@ -427,12 +417,12 @@ export default function SupportClient() {
                   <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-purple-500/10 border border-purple-500/30 dark:bg-purple-950/40 dark:border-purple-500/40 shadow-md">
                     <Zap size={24} className="text-purple-600 dark:text-purple-400 animate-bounce" />
                   </div>
-                  <Badge className="bg-purple-600/15 text-purple-700 border-purple-400/50 dark:bg-gradient-to-r dark:from-purple-500/30 dark:to-indigo-500/30 dark:text-purple-300 dark:border-purple-500/50 font-black tracking-widest text-[9px] hover:bg-purple-600/25">
+                  <Badge className="bg-purple-600/15 text-purple-700 border-purple-400/50 dark:bg-purple-500/30 dark:text-purple-300 dark:border-purple-500/50 font-black tracking-widest text-[9px] hover:bg-purple-600/25">
                     RARE SPECIAL
                   </Badge>
                 </div>
 
-                <h3 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-2 bg-gradient-to-r from-purple-800 via-violet-700 to-indigo-800 dark:from-white dark:via-purple-250 dark:to-indigo-400 bg-clip-text text-transparent font-heading">
+                <h3 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-2 text-purple-800 dark:text-white font-heading">
                   OP SUPPORTER
                 </h3>
                 <p className="text-[10px] font-black tracking-wider text-purple-600/80 dark:text-purple-400/80 uppercase mb-5">
@@ -455,7 +445,7 @@ export default function SupportClient() {
             </div>
 
             {/* Custom Divider */}
-            <div className="hidden lg:block w-px h-64 bg-gradient-to-b from-transparent via-purple-300 dark:via-purple-500/20 to-transparent" />
+            <div className="hidden lg:block w-px h-64 bg-purple-300 dark:bg-purple-500/20" />
 
             {/* Perks & CTA Section */}
             <div className="flex flex-col justify-between h-full">
@@ -600,7 +590,7 @@ export default function SupportClient() {
               <div className="relative w-full aspect-square max-w-[300px] border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 rounded-3xl p-6 flex flex-col justify-around items-center shadow-xl">
                 <div className="flex justify-between items-center w-full relative">
                   {/* Connecting lines */}
-                  <div className="absolute top-1/2 left-[15%] right-[15%] h-0.5 bg-gradient-to-r from-orange-500 via-indigo-500 to-purple-600 -translate-y-1/2 -z-10" />
+                  <div className="absolute top-1/2 left-[15%] right-[15%] h-0.5 bg-indigo-500 -translate-y-1/2 -z-10" />
 
                   {/* Patreon Logo Ball */}
                   <div className="h-14 w-14 rounded-full bg-orange-100 dark:bg-orange-950/40 border border-orange-200 dark:border-orange-500/30 flex items-center justify-center shadow-lg relative">

@@ -24,19 +24,10 @@ export function generateStaticParams() {
 
 function getServerAccent(slug: string): string {
   switch (slug) {
-    case 'dev': return 'from-emerald-500 to-green-400'
-    case 'gg':  return 'from-rose-500 to-red-400'
-    case 'jn':  return 'from-amber-400 to-rose-400'
-    default:    return 'from-cyan-500 to-blue-500'
-  }
-}
-
-function getServerGlowDark(slug: string): string {
-  switch (slug) {
-    case 'dev': return 'dark:from-emerald-500/8'
-    case 'gg':  return 'dark:from-rose-500/8'
-    case 'jn':  return 'dark:from-amber-400/8'
-    default:    return 'dark:from-cyan-500/8'
+    case 'dev': return 'bg-emerald-500'
+    case 'gg':  return 'bg-rose-500'
+    case 'jn':  return 'bg-amber-500'
+    default:    return 'bg-cyan-500'
   }
 }
 
@@ -50,7 +41,6 @@ export default async function EventDetailPage({
   if (!event) notFound()
 
   const accentClass = getServerAccent(event.serverSlug)
-  const glowDark    = getServerGlowDark(event.serverSlug)
 
   const date = new Date(event.date)
 
@@ -72,12 +62,6 @@ export default async function EventDetailPage({
 
   return (
     <div className="relative min-h-screen w-full overflow-x-hidden pb-24">
-      {/* Ambient glow — dark mode only, invisible in light */}
-      <div
-        aria-hidden
-        className={`pointer-events-none absolute -top-32 left-1/3 h-[600px] w-[600px] rounded-full bg-gradient-to-br ${glowDark} via-transparent to-transparent blur-[140px] dark:opacity-100 opacity-0`}
-      />
-
       <div className="relative mx-auto max-w-7xl px-4 pt-6 sm:px-6 lg:px-8">
 
         {/* ── Back button ─────────────────────────────────────────────── */}
@@ -96,7 +80,7 @@ export default async function EventDetailPage({
         {/* ── Hero card ───────────────────────────────────────────────── */}
         <div className="mb-8 overflow-hidden rounded-3xl border border-border bg-card shadow-sm">
           {/* Server accent bar */}
-          <div className={`h-1 w-full bg-gradient-to-r ${accentClass}`} />
+          <div className={`h-1 w-full ${accentClass}`} />
 
           <div className="p-6 sm:p-8 lg:p-12">
             {/*
@@ -111,7 +95,7 @@ export default async function EventDetailPage({
                 {/* Badges */}
                 <div className="flex flex-wrap gap-2">
                   <span
-                    className={`inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r ${accentClass} px-3 py-1 text-xs font-bold text-black/75`}
+                    className={`inline-flex items-center gap-1.5 rounded-full ${accentClass} px-3 py-1 text-xs font-bold text-black/75`}
                   >
                     {event.server}
                   </span>
@@ -173,7 +157,7 @@ export default async function EventDetailPage({
               <div className="flex shrink-0 flex-row items-center gap-4 lg:flex-col lg:items-end">
                 {/* Calendar widget */}
                 <div className="overflow-hidden rounded-2xl border border-border bg-background shadow-lg">
-                  <div className={`bg-gradient-to-r ${accentClass} px-8 py-1.5 text-center`}>
+                  <div className={`${accentClass} px-8 py-1.5 text-center`}>
                     <span className="text-[10px] font-extrabold uppercase tracking-[0.2em] text-black/70">
                       {shortMonth}
                     </span>
@@ -283,7 +267,7 @@ function RegistrationCard({
 }) {
   return (
     <div className="overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
-      <div className={`h-0.5 w-full bg-gradient-to-r ${accentClass}`} />
+      <div className={`h-0.5 w-full ${accentClass}`} />
       <div className="p-5 sm:p-6">
         <h3 className="mb-5 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
           Registration
@@ -293,7 +277,7 @@ function RegistrationCard({
         <div className="mb-5 space-y-4">
           <div className="flex items-start gap-3">
             <div
-              className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br ${accentClass}`}
+              className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-xl ${accentClass}`}
             >
               <CalendarClock className="h-4 w-4 text-black/70" />
             </div>
@@ -376,7 +360,7 @@ function ServerCard({
   return (
     <div className="rounded-2xl border border-border bg-card p-5 sm:p-6 shadow-sm">
       <div className="mb-4 flex items-center gap-3">
-        <div className={`h-8 w-8 rounded-xl bg-gradient-to-br ${accentClass}`} />
+        <div className={`h-8 w-8 rounded-xl ${accentClass}`} />
         <div>
           <p className="text-sm font-bold text-foreground">{event!.server} Server</p>
           <p className="text-xs text-muted-foreground">Hosted here</p>

@@ -15,19 +15,7 @@ export default function TeamPage() {
   return (
     <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
       {/* ── Hero ───────────────────────────────────────────── */}
-      <div className="relative mb-20 overflow-hidden rounded-3xl border border-border bg-gradient-to-br from-cyan-950/40 via-background to-violet-950/30 px-6 py-16 text-center sm:px-12 sm:py-20">
-        {/* decorative dots */}
-        <div
-          className="pointer-events-none absolute inset-0 opacity-[0.03]"
-          style={{
-            backgroundImage: 'radial-gradient(circle, currentColor 1px, transparent 1px)',
-            backgroundSize: '24px 24px',
-          }}
-        />
-        {/* glow orbs */}
-        <div className="pointer-events-none absolute -top-32 left-1/2 h-64 w-64 -translate-x-1/2 rounded-full bg-cyan-500/20 blur-[100px]" />
-        <div className="pointer-events-none absolute -bottom-20 right-0 h-48 w-48 rounded-full bg-violet-500/15 blur-[80px]" />
-
+      <div className="relative mb-20 overflow-hidden rounded-3xl border border-border bg-black/[0.04] dark:bg-white/[0.06] px-6 py-16 text-center sm:px-12 sm:py-20">
         <p className="relative mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-cyan-400">
           Community Builders
         </p>
@@ -48,7 +36,7 @@ export default function TeamPage() {
             className="group relative overflow-hidden rounded-2xl border border-border bg-surface transition-all duration-300 hover:border-cyan-500/40 hover:-translate-y-1 hover:shadow-xl hover:shadow-cyan-950/20"
           >
             {/* top accent */}
-            <div className="h-0.5 w-full bg-gradient-to-r from-cyan-500 to-violet-500 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+            <div className="h-0.5 w-full bg-cyan-500 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
             <div className="p-6">
               <div className="mb-5 flex items-center gap-4">

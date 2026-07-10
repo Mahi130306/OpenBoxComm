@@ -21,7 +21,7 @@ export default async function BlogsPage({ searchParams }: { searchParams: Promis
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-      <div className="mb-10 rounded-xl border border-black/10 bg-gradient-to-br from-black/[0.04] to-pink-400/[0.08] p-8 shadow-sm dark:border-white/10 dark:from-white/[0.08] dark:to-pink-400/[0.06]">
+      <div className="mb-10 rounded-xl border border-black/10 bg-black/[0.04] dark:bg-white/[0.06] p-8 shadow-sm dark:border-white/10">
         <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-pink-600 dark:text-pink-300">Field notes</p>
         <h1 className="mb-4 text-4xl font-extrabold tracking-tight text-foreground lg:text-5xl">Blogs</h1>
         <p className="max-w-2xl text-lg text-muted-foreground/90">

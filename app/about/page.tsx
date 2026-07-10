@@ -22,7 +22,7 @@ export default function AboutPage() {
   return (
     <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-16 lg:px-8">
       {/* Hero Section */}
-      <div className="mb-12 rounded-3xl border border-black/10 bg-gradient-to-br from-black/[0.04] to-violet-400/[0.08] p-5 shadow-sm dark:border-white/10 dark:from-white/[0.08] dark:to-violet-400/[0.05] sm:p-10 lg:p-16 overflow-hidden">
+      <div className="mb-12 rounded-3xl border border-black/10 bg-black/[0.04] dark:bg-white/[0.06] p-5 shadow-sm dark:border-white/10 sm:p-10 lg:p-16 overflow-hidden">
         <div className="flex items-center gap-2 mb-4">
           <Info className="h-5 w-5 shrink-0 text-violet-500 sm:h-6 sm:w-6" />
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-violet-600 dark:text-violet-300 sm:text-sm">About Open Box</p>

@@ -81,7 +81,7 @@ export default function LegalIndexPage() {
   return (
     <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
       {/* Hero Section */}
-      <div className="mb-12 rounded-3xl border border-black/10 bg-gradient-to-br from-black/[0.04] to-violet-400/[0.08] p-8 shadow-sm dark:border-white/10 dark:from-white/[0.08] dark:to-violet-400/[0.05] sm:p-12">
+      <div className="mb-12 rounded-3xl border border-black/10 bg-black/[0.04] dark:bg-white/[0.06] p-8 shadow-sm dark:border-white/10 sm:p-12">
         <div className="flex items-center gap-3 mb-6">
           <Scale className="h-8 w-8 text-violet-500" />
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-violet-600 dark:text-violet-300">Compliance & Trust</p>

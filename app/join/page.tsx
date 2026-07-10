@@ -53,7 +53,7 @@ export default function JoinPage() {
             href={`/servers/${featured.slug}`}
             className="group relative flex flex-col items-center justify-between gap-8 overflow-hidden rounded-2xl border border-border bg-surface p-8 transition-all hover:-translate-y-1 hover:border-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/10 md:flex-row md:p-10"
           >
-            <div className={`absolute left-0 top-0 h-full w-1.5 bg-gradient-to-b ${featured.accent}`} />
+            <div className={`absolute left-0 top-0 h-full w-1.5 ${featured.accent}`} />
             <div className="flex-1 space-y-4">
               <div className="flex flex-wrap gap-2">
                 {featured.tags.map((tag) => (
@@ -83,7 +83,7 @@ export default function JoinPage() {
                 key={server.slug}
                 className={`flex flex-col border-border bg-surface transition-all hover:-translate-y-1 hover:border-cyan-500/30 hover:shadow-xl ${!server.isLive ? 'opacity-75' : ''}`}
               >
-                <div className={`h-1.5 bg-gradient-to-r ${server.accent}`} />
+                <div className={`h-1.5 ${server.accent}`} />
                 <CardHeader className="space-y-4">
                   <div className="flex items-start justify-between">
                     <div className="flex flex-wrap gap-2">

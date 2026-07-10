@@ -19,7 +19,7 @@ export default function ServersPage() {
   return (
     <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-16 lg:px-8">
       {/* Hero */}
-      <div className="mb-12 rounded-3xl border border-black/10 bg-gradient-to-br from-black/[0.04] to-cyan-400/[0.08] p-5 shadow-sm dark:border-white/10 dark:from-white/[0.08] dark:to-cyan-400/[0.05] sm:p-10 lg:p-16 overflow-hidden">
+      <div className="mb-12 rounded-3xl border border-black/10 bg-black/[0.04] dark:bg-white/[0.06] p-5 shadow-sm dark:border-white/10 sm:p-10 lg:p-16 overflow-hidden">
         <div className="flex items-center gap-2 mb-4">
           <LayoutGrid className="h-5 w-5 shrink-0 text-cyan-500 sm:h-6 sm:w-6" />
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-cyan-600 dark:text-cyan-300 sm:text-sm">Directory</p>
@@ -42,7 +42,7 @@ export default function ServersPage() {
               href={`/servers/${server.slug}`}
               className="group relative flex flex-col overflow-hidden rounded-2xl border border-border bg-surface/50 shadow-sm transition-all hover:-translate-y-1 hover:border-cyan-500/40 hover:shadow-lg"
             >
-              <div className={`h-1 bg-gradient-to-r ${server.accent}`} />
+              <div className={`h-1 ${server.accent}`} />
               <div className="flex flex-col flex-1 p-5">
                 <div className="flex items-start justify-between mb-3">
                   <h3 className="text-md font-bold text-foreground">{server.name}</h3>
@@ -82,7 +82,7 @@ export default function ServersPage() {
                 key={server.slug}
                 className="relative flex flex-col overflow-hidden rounded-2xl border border-border bg-surface/30 opacity-60"
               >
-                <div className={`h-1 bg-gradient-to-r ${server.accent} opacity-40`} />
+                <div className={`h-1 ${server.accent} opacity-40`} />
                 <div className="flex flex-col flex-1 p-5">
                   <div className="flex items-start justify-between mb-3">
                     <h3 className="text-md font-bold text-foreground">{server.name}</h3>

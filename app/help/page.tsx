@@ -23,7 +23,7 @@ export default function HelpPage() {
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="mb-12 rounded-2xl border border-black/10 bg-gradient-to-br from-black/[0.04] to-cyan-400/[0.08] p-8 shadow-sm dark:border-white/10 dark:from-white/[0.08] dark:to-cyan-400/[0.05] sm:p-12">
+        <div className="mb-12 rounded-2xl border border-black/10 bg-black/[0.04] dark:bg-white/[0.06] p-8 shadow-sm dark:border-white/10 sm:p-12">
           <div className="mb-4 flex items-center gap-3">
             <HelpCircle className="h-8 w-8 text-cyan-500" />
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-cyan-600 dark:text-cyan-300">Help Centre</p>

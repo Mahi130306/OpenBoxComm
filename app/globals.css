@@ -99,15 +99,11 @@
   }
 
   .dark body {
-    background:
-      linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0) 240px),
-      hsl(var(--background));
+    background-color: hsl(var(--background));
   }
 
   .light body {
-    background:
-      linear-gradient(180deg, rgba(0,0,0,0.015), rgba(0,0,0,0) 240px),
-      hsl(var(--background));
+    background-color: hsl(var(--background));
   }
 
   h1 {

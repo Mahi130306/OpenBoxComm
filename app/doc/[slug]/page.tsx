@@ -54,7 +54,7 @@ export default async function DocPage({ params }: { params: Promise<{ slug: stri
         </aside>
 
         <article className="order-1 min-w-0 lg:order-2">
-          <div className="mb-8 rounded-3xl border border-black/10 bg-gradient-to-br from-black/[0.04] to-lime-400/[0.08] p-8 shadow-sm dark:border-white/10 dark:from-white/[0.08] dark:to-lime-400/[0.05] sm:p-10">
+          <div className="mb-8 rounded-3xl border border-black/10 bg-black/[0.04] dark:bg-white/[0.06] p-8 shadow-sm dark:border-white/10 sm:p-10">
             {docMeta.section && (
               <Badge variant="secondary" className="mb-4 bg-lime-500/10 text-lime-600 dark:text-lime-400 border-none font-bold">
                 {docMeta.section}
