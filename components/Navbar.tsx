@@ -183,7 +183,7 @@ export function Navbar() {
                     src="/images/OB.png"
                     alt="Open Box logo"
                     fill
-                    sizes="32px"
+                    sizes="36px"
                     className="object-cover"
                     priority
                   />
