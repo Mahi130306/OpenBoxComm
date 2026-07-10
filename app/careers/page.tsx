@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Briefcase, Mail, Megaphone, Users, MapPin, Clock, ArrowRight, Sparkles, Share2, TrendingUp, HelpCircle } from 'lucide-react'
+import { Briefcase, Mail, Megaphone, Users, MapPin, Clock, ArrowRight, Sparkles, TrendingUp, HelpCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Careers — Open Box',
@@ -15,7 +15,7 @@ export default function CareersPage() {
       department: 'Content & Community',
       type: 'Part-time / Remote (India)',
       icon: Megaphone,
-      accentColor: 'from-cyan-500 to-blue-600',
+      accentColor: 'bg-cyan-500',
       tagline: 'Connect with our audience and bring the Open Box vibe to the world.',
       responsibilities: [
         'Plan, create, and schedule engaging post, reels, and shorts across Instagram, YouTube, X (Twitter), and Discord.',
@@ -36,7 +36,7 @@ export default function CareersPage() {
       department: 'Strategy & Growth',
       type: 'Part-time / Remote (India)',
       icon: TrendingUp,
-      accentColor: 'from-teal-500 to-emerald-600',
+      accentColor: 'bg-teal-500',
       tagline: 'Scale the community network and form strategic community partnerships.',
       responsibilities: [
         'Design and execute growth campaigns to increase member acquisition and active participation across our servers (Junction, Dev, GG).',
@@ -55,8 +55,8 @@ export default function CareersPage() {
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-16 lg:px-8">
-      {/* Hero Section */}
-      <div className="mb-12 rounded-3xl border border-black/10 bg-gradient-to-br from-black/[0.04] to-cyan-400/[0.08] p-6 shadow-sm dark:border-white/10 dark:from-white/[0.08] dark:to-cyan-400/[0.05] sm:p-10 lg:p-16 overflow-hidden relative">
+      {/* Hero Section - Solid subtle background (no gradient) */}
+      <div className="mb-12 rounded-3xl border border-black/10 bg-cyan-500/[0.04] p-6 shadow-sm dark:border-white/10 dark:bg-cyan-500/[0.06] sm:p-10 lg:p-16 overflow-hidden relative">
         <div className="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 left-0 -ml-16 -mb-16 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
 
@@ -66,7 +66,7 @@ export default function CareersPage() {
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-cyan-600 dark:text-cyan-300 sm:text-sm">We are Hiring</p>
           </div>
           <h1 className="mb-4 text-3xl font-extrabold tracking-tight text-foreground w-full break-words sm:text-5xl lg:text-6xl">
-            Build the future of <span className="bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent">online communities</span>.
+            Build the future of <span className="text-cyan-500 dark:text-cyan-400">online communities</span>.
           </h1>
           <p className="max-w-3xl text-sm text-muted-foreground/95 leading-relaxed sm:text-base lg:text-lg">
             At Open Box, we believe that great things happen when people come together. We provide high-signal, welcoming spaces for gaming, development, learning, and connection. Come help us build and grow the ultimate Discord-centric community platform in India.
@@ -94,12 +94,13 @@ export default function CareersPage() {
                   id={role.id}
                   className="group relative overflow-hidden rounded-2xl border border-border bg-surface/50 p-6 transition-all hover:border-cyan-500/50 hover:shadow-xl scroll-mt-24"
                 >
-                  {/* Decorative corner accent */}
-                  <div className={`absolute top-0 right-0 h-1.5 w-24 bg-gradient-to-r ${role.accentColor}`} />
+                  {/* Decorative corner accent - Solid color (no gradient) */}
+                  <div className={`absolute top-0 right-0 h-1.5 w-24 ${role.accentColor}`} />
 
                   <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-6">
                     <div className="flex items-center gap-3.5">
-                      <div className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br ${role.accentColor} text-white shadow-md`}>
+                      {/* Icon background - Solid color (no gradient) */}
+                      <div className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl ${role.accentColor} text-white shadow-md`}>
                         <role.icon className="h-6 w-6" />
                       </div>
                       <div>
