@@ -116,6 +116,9 @@ const nextConfig = {
       { source: '/teams', destination: '/team', permanent: true },
       { source: '/teams/:slug', destination: '/team/:slug', permanent: true },
 
+      // Careers page
+      { source: '/career', destination: '/careers', permanent: true },
+
       // Documentation page
       { source: '/docs', destination: '/doc', permanent: true },
       { source: '/docss', destination: '/doc', permanent: true },
