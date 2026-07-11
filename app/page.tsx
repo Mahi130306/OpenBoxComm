@@ -39,20 +39,20 @@ export default function Home() {
               OpenBox is home to multiple communities across gaming, development, study, networking, and more. Free to join. No gatekeeping. Just find the one that fits and jump in.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-3">
-              {/* <Button asChild size="lg">
+              <Button asChild size="lg">
                 <Link href="/join">
                   Join the Community
                 </Link>
-              </Button> */}
+              </Button>
               <Button asChild variant="secondary" size="lg">
                 <Link href="/servers">
                   Explore Servers
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg">
+              {/* <Button asChild variant="outline" size="lg">
                 <Link href="/events">Explore Events</Link>
-              </Button>
+              </Button> */}
             </div>
           </div>
 
