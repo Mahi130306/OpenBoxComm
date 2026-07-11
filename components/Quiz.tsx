@@ -3,7 +3,13 @@
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
+// import { DISCORD_JN_INVITE, DISCORD_DEV_INVITE, DISCORD_GG_INVITE } from '@/lib/constants' // adjust path
 
+// const INVITE_BY_SLUG: Record<string, string> = {
+//   jn: DISCORD_JN_INVITE,
+//   dev: DISCORD_DEV_INVITE,
+//   gg: DISCORD_GG_INVITE,
+// }
 const questions = [
   {
     id: 1,
@@ -120,8 +126,8 @@ export function Quiz() {
             </CardHeader>
             <CardFooter>
               <Button asChild className="w-full" disabled={rec.comingSoon}>
-                <a
-                  href={rec.comingSoon ? '#' : process.env[`NEXT_PUBLIC_DISCORD_${rec.slug.toUpperCase()}_INVITE` as any]}
+
+                <a href={rec.comingSoon ? '#' : `/servers/${rec.slug}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={(e) => {
@@ -131,11 +137,11 @@ export function Quiz() {
                     }
                   }}
                 >
-                  {rec.comingSoon ? `${rec.name} - Coming Soon` : `Join ${rec.name}`}
+                  {rec.comingSoon ? `${rec.name} - Coming Soon` : `View ${rec.name} Server`}
                 </a>
               </Button>
               <Button variant="outline" onClick={resetQuiz} className="ml-2">
-                Retake Quiz
+                Re-answer
               </Button>
             </CardFooter>
           </Card>
