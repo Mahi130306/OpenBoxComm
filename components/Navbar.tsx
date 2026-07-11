@@ -208,7 +208,12 @@ export function Navbar() {
                   </button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="w-56 bg-surface border-border">
-                  <DropdownMenuLabel>Live</DropdownMenuLabel>
+                  <DropdownMenuLabel>
+                    <Link href={`/servers`} className="cursor-pointer">
+                      All Servers
+                    </Link>
+                  </DropdownMenuLabel>
+                  <DropdownMenuSeparator />
                   {servers.live.map((server) => (
                     <DropdownMenuItem key={server.slug} asChild>
                       <Link href={`/servers/${server.slug}`} className="cursor-pointer">
