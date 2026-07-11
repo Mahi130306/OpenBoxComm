@@ -292,7 +292,11 @@ export function Navbar() {
               <Link href="/" className="block py-2 text-sm font-medium hover:text-muted-foreground">Home</Link>
               <Link href="/about" className="block py-2 text-sm font-medium hover:text-muted-foreground">About</Link>
               <div className="py-2">
-                <p className="text-sm font-medium text-muted-foreground mb-1">Live Servers</p>
+                <p className="text-sm font-medium text-muted-foreground mb-1 cursor-pointer">
+                  <Link href={`/servers`}>
+                    All Servers
+                  </Link>
+                </p>
                 {servers.live.map((server) => (
                   <Link
                     key={server.slug}
