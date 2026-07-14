@@ -12,7 +12,20 @@ import { ConsentBanner } from '@/components/ConsentBanner'
 import { SecurityGuard } from '@/components/SecurityGuard'
 import { WhatsNewTab } from '@/components/WhatsNewTab'
 import { UpdateBanner } from '@/components/UpdateBanner'
+import { Inter, Syne } from 'next/font/google'
 import './globals.css'
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+})
+
+const syne = Syne({
+  subsets: ['latin'],
+  variable: '--font-syne',
+  display: 'swap',
+})
 
 const BASE_URL = 'https://openboxcomm.in'
 
@@ -122,7 +135,7 @@ const jsonLd = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className={`${inter.variable} ${syne.variable}`} suppressHydrationWarning>
       <head>
         <meta name="msvalidate.01" content="E7F02EAA1582F97200DE2848358DE313" />
         {/* Google Tag Manager */}

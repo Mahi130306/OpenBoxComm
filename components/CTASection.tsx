@@ -9,7 +9,7 @@ export function CTASection() {
           Join a community that actually gets what you are into. Just good vibes and great collabs.
         </p>
         <Button asChild size="lg">
-          <a href={process.env.NEXT_PUBLIC_DISCORD_INVITE_MAIN} target="_blank" rel="noopener noreferrer">
+          <a href="https://discord.gg/7ZWckKU89J" target="_blank" rel="noopener noreferrer">
             Join Open Box
           </a>
         </Button>

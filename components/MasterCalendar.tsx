@@ -21,8 +21,8 @@ export function MasterCalendar() {
             <div className="rounded-lg border border-dashed border-border bg-surface p-8 text-center">
               <CalendarClock className="mx-auto mb-3 h-8 w-8 text-cyan-300" />
               <h3 className="font-heading text-2xl font-bold">Coming soon</h3>
-              <p className="mt-2 text-muted-foreground">New community events will land here as soon as they are announced. <br />
-                Have an event you'd like to see? <u> <Link href="/help" className="text-cyan-500 hover:underline">Suggest it!</Link></u>
+              <p className="mt-2 text-zinc-700 dark:text-zinc-300">New community events will land here as soon as they are announced. <br />
+                Have an event you'd like to see? <u> <Link href="/help" className="text-cyan-700 dark:text-cyan-400 hover:underline">Suggest it!</Link></u>
               </p>
             </div>
           )}

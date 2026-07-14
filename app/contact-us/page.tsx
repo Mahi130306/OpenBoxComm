@@ -109,7 +109,7 @@ export default function ContactUsPage() {
                 </p>
                 <Button asChild size="lg" className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold">
                     <a
-                        href={process.env.NEXT_PUBLIC_DISCORD_INVITE_MAIN || '#'}
+                        href="https://discord.gg/7ZWckKU89J"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
