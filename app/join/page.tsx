@@ -6,7 +6,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { servers } from '@/lib/community-data'
 import { ArrowRight, Sparkles,   } from 'lucide-react'
 import { ServerMemberCountInline } from '@/components/ServerMemberCountInline'
-import { INSTAGRAM_URL, YOUTUBE_URL, X_URL } from '@/lib/constants'
+import { INSTAGRAM_URL, YOUTUBE_URL, X_URL, WHATSAPP_URL, REDDIT_URL } from '@/lib/constants'
 
 export const metadata: Metadata = {
   title: 'Join Open Box',
@@ -140,7 +140,9 @@ export default function JoinPage() {
             {[
               { name: 'Instagram', href: INSTAGRAM_URL },
               { name: 'YouTube', href: YOUTUBE_URL },
-              { name: 'X', href: X_URL }
+              { name: 'X', href: X_URL },
+              { name: 'WhatsApp', href: WHATSAPP_URL },
+              { name: 'Reddit', href: REDDIT_URL },
             ].map((social) => (
               <a
                 key={social.name}

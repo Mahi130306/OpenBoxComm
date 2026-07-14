@@ -12,7 +12,7 @@ Open Box is a free, community-driven platform connecting Discord servers dedicat
 - **Website**: openboxcomm.in - Blog platform, event calendar, documentation, and community directory
 - **Discord Servers**: JN (general), Dev (developers), GG (gaming), Study (learning), Connect (networking)
 - **Events**: Online workshops, hackathons, study sessions, and community meetups
-- **Social Media**: X, Instagram, YouTube
+- **Social Media**: X, Instagram, YouTube, WhatsApp, Reddit, Patreon
 
 ## Contact
 - Email: hello@openboxcomm.in
