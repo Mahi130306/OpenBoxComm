@@ -28,6 +28,8 @@ Open Box is a free, community-driven platform connecting Discord servers dedicat
 - Help: /help
 - Support Us: /support
 - Legal Pages: /legal
+- Join: /join
+
 
 ## Sitemap
 https://openboxcomm.in/sitemap.xml

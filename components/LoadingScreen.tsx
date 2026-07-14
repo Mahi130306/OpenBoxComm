@@ -61,7 +61,7 @@ export function LoadingScreen() {
           style={{ animation: 'ob-pulse 1.6s ease-in-out infinite' }}
         />
         <Image
-          src="/images/OBloader.gif"
+          src="/images/OB72loader.gif"
           alt="Open Box loading"
           width={72}
           height={72}
