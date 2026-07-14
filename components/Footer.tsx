@@ -107,9 +107,9 @@ export function Footer() {
 
   return (
     <footer className="border-t border-border bg-surface">
-      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-12 mb-12">
+        <div className="grid grid-cols-1 gap-y-10 gap-x-8 md:grid-cols-2 lg:grid-cols-12 mb-10 sm:mb-12">
           {/* Brand Section - Spans 3 columns */}
           <div className="lg:col-span-3">
             <div className="mb-6">
@@ -133,7 +133,7 @@ export function Footer() {
             {/* Social Links */}
             <div className="space-y-4">
               <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Connect With Us</p>
-              <div className="flex gap-3">
+              <div className="flex flex-wrap gap-2.5 sm:gap-3">
                 {socialLinks.map((s) => (
                   <a
                     key={s.id}
@@ -211,7 +211,9 @@ export function Footer() {
 
           {/* Legal Continued */}
           <div className="lg:col-span-2">
-            <h3 className="text-sm font-semibold mb-5 text-foreground uppercase tracking-wider opacity-0 pointer-events-none">Legal</h3>
+            {/* Spacer header only reserved at the lg breakpoint, where this sits beside the first Legal column.
+                Hidden below lg so it doesn't eat vertical space while stacked on mobile/tablet. */}
+            <h3 className="hidden lg:block text-sm font-semibold mb-5 text-foreground uppercase tracking-wider opacity-0 pointer-events-none">Legal</h3>
             <ul className="space-y-3 text-sm">
               {legalLinks.slice(4).map((l) => (
                 <li key={l.href}>
@@ -228,7 +230,7 @@ export function Footer() {
         <div className="h-px bg-gradient-to-r from-border via-border to-border mb-8"></div>
 
         {/* Bottom Bar */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-muted-foreground">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6 text-xs text-muted-foreground text-center md:text-left">
           <div>
             <p>© {new Date().getFullYear()} Open Box. All rights reserved.</p>
           </div>
