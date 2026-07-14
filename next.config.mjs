@@ -81,6 +81,11 @@ const nextConfig = {
         source: '/a63d11d22e28485ea9e0da8f7fa62387.txt',
         headers: [{ key: 'Content-Type', value: 'text/plain' }],
       },
+      // Ensure llms.txt is served as plain text
+      {
+        source: '/llms.txt',
+        headers: [{ key: 'Content-Type', value: 'text/plain; charset=utf-8' }],
+      },
     ]
   },
 

@@ -231,8 +231,12 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6 text-xs text-muted-foreground text-center md:text-left">
-          <div>
+          <div className="flex flex-col sm:flex-row items-center gap-x-2 gap-y-1">
             <p>© {new Date().getFullYear()} Open Box. All rights reserved.</p>
+            <span className="hidden sm:inline text-muted-foreground/30">•</span>
+            <p suppressHydrationWarning>
+              Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
+            </p>
           </div>
 
           <div className="flex items-center gap-4">

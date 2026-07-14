@@ -9,7 +9,7 @@ import { ServerMemberPill } from '@/components/ServerMemberPill'
 
 // Server logo map
 const SERVER_LOGOS: Record<string, string> = {
-  jn: '/images/OBloader.gif',
+  jn: '/images/jn.png',
   dev: '/images/dev.png',
   gg: '/images/gg.png',
 }
