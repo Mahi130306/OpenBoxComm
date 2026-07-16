@@ -8,7 +8,7 @@ const updates: Update[] = [
     type: 'community',
     date: '2026-07-14',
     description: 'Open Box is now on WhatsApp Channels and Reddit. Follow along for updates, highlights, and community news.',
-    href: '/join',
+    href: '/join?tab=socials',
     isNew: true,
   },
   {
