@@ -7,17 +7,15 @@ import { MasterCalendar } from '@/components/MasterCalendar'
 import { CTASection } from '@/components/CTASection'
 import ServerNodeGraph from "@/components/ServerNodeGraph";
 import { ArrowRight, Sparkles } from 'lucide-react'
-import { generatePageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = generatePageMetadata({
+export const metadata: Metadata = {
   title: 'Home',
   description: 'Join Open Box, a free, no-gatekeeping community network for gamers, students, and creators. Explore our Discord servers, attend events, and connect with peers.',
   keywords: ['Open Box', 'Discord community', 'gamers', 'students', 'creators', 'networking', 'gaming', 'development'],
-  path: '/',
-  imageUrl: '/images/og-default.png',
-  imageAlt: 'Open Box Community Network',
-})
-
+  alternates: { canonical: '/' },
+  // No openGraph or twitter here on purpose — this inherits directly
+  // from the root layout's openGraph/twitter config.
+}
 
 export default function Home() {
   return (
@@ -64,32 +62,6 @@ export default function Home() {
           </div> */}
         </div>
       </section>
-
-      {/* <section className="border-b border-border py-24">
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.85fr_1.15fr] lg:px-8">
-          <div className="flex flex-col justify-center">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-cyan-300">How it works</p>
-            <h2 className="mb-5">Find a room, say hello, start....</h2>
-            <p className="text-lg text-muted-foreground">
-              Pick the server that matches your mood, introduce yourself with what you are making, and jump into events, docs, or project channels when you need momentum.
-            </p>
-            <div className="mt-8 grid gap-3 text-sm text-muted-foreground">
-              <p><span className="font-semibold text-foreground">1.</span> Browse live and upcoming servers.</p>
-              <p><span className="font-semibold text-foreground">2.</span> Join the Discord and share what you are doing.</p>
-              <p><span className="font-semibold text-foreground">3.</span> Use events, docs, and blog posts to keep moving.</p>
-            </div>
-          </div>
-          <div className="aspect-video overflow-hidden rounded-lg border border-border bg-surface shadow-2xl shadow-cyan-950/20">
-            <iframe
-              className="h-full w-full"
-              //src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-              title="Open Box community intro"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            />
-          </div>
-        </div>
-      </section> */}
 
       {/* Find Your Fit - Quiz */}
       <Quiz />
