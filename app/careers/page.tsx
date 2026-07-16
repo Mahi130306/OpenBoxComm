@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Briefcase, Mail, Megaphone, Users, MapPin, Clock, ArrowRight, Sparkles, TrendingUp, HelpCircle } from 'lucide-react'
+import { Briefcase, Mail, Megaphone, Users, MapPin, Clock, ArrowRight, Sparkles, TrendingUp, HelpCircle, Layers, Heart, Sparkle } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Careers — Open Box',
@@ -10,81 +10,116 @@ export const metadata: Metadata = {
 export default function CareersPage() {
   const roles = [
     {
-      id: 'social-media-specialist',
+      id: 'social-media',
       title: 'Social Media Specialist / Manager',
       department: 'Content & Community',
       type: 'Part-time / Remote (India)',
       icon: Megaphone,
-      accentColor: 'bg-cyan-500',
-      tagline: 'Connect with our audience and bring the Open Box vibe to the world.',
+      accentBg: 'bg-cyan-500',
+      accentText: 'text-cyan-500',
+      tagline: 'Connect with our audience and bring the Open Box vibe to the world across Instagram, X, and Discord.',
+      subRoles: [
+        'Content Creator/Reels Producer (Instagram/TikTok short-form)',
+        'Community Manager (Discord engagement, member support)',
+        'Social Strategist (content calendar, analytics, growth)'
+      ],
       responsibilities: [
-        'Plan, create, and schedule engaging post, reels, and shorts across Instagram, YouTube, X (Twitter), and Discord.',
-        'Create customized graphics and edit short-form videos to promote server events, tournaments, and community blogs.',
-        'Engage actively with community members by replying to comments, initiating discussions, and building brand identity.',
-        'Collaborate with Discord server leads to live-tweet or promote major server events, gaming tournaments, and tech sessions.'
+        'Manage 2-3 platforms (Instagram, X, Discord) to maintain an active and vibrant online brand presence.',
+        'Create 2-3 reels/posts weekly, producing engaging and high-quality short-form visual and text content.',
+        'Engage with our active community, reply to comments, start discussions, and respond to DMs promptly.',
+        'Track key metrics, analyze audience behavior, and report on performance monthly.',
+        'Collaborate with marketing on campaigns to cross-promote community events, blogs, and launches.'
       ],
       requirements: [
         'Deep understanding of Discord culture, gaming trends, and Indian internet/meme culture.',
-        'Proficiency with design & editing tools such as Canva, Figma, Photoshop, Premiere Pro, or CapCut.',
-        'Exceptional copy-writing and creative writing skills with a witty and conversational brand voice.',
-        'Prior experience managing active social media accounts or community channels with verifiable engagement.'
+        'Strong skills in video editing (CapCut, Premiere, etc.) and graphic creation (Figma, Canva).',
+        'Excellent copywriting ability with a witty, conversational, and welcoming tone of voice.',
+        'Prior experience running active social channels or managing online communities.'
       ]
     },
     {
-      id: 'growth-marketing-specialist',
+      id: 'marketing',
       title: 'Growth & Marketing Specialist',
       department: 'Strategy & Growth',
       type: 'Part-time / Remote (India)',
       icon: TrendingUp,
-      accentColor: 'bg-teal-500',
-      tagline: 'Scale the community network and form strategic community partnerships.',
+      accentBg: 'bg-blue-500',
+      accentText: 'text-blue-500',
+      tagline: 'Scale the community network, execute high-impact acquisition campaigns, and manage sponsor partnerships.',
+      subRoles: [
+        'Growth/Performance Marketer (campaigns, funnels, paid ads)',
+        'Brand Marketer (positioning, partnerships, storytelling)',
+        'Partnerships Manager (sponsor outreach, collabs)'
+      ],
       responsibilities: [
-        'Design and execute growth campaigns to increase member acquisition and active participation across our servers (Junction, Dev, GG).',
-        'Identify and secure strategic collaborations with other Indian tech/gaming communities, college clubs, and student creators.',
-        'Track, analyze, and report key community metrics (invite conversion, member retention, event attendance, and referral programs).',
-        'Contribute to on-page and off-page marketing efforts (SEO, online directories, content distribution) to increase organic web traffic.'
+        'Develop and execute data-driven strategies for user acquisition to grow our Discord servers and platform reach.',
+        'Lead multi-channel campaign execution across email, social, and paid advertising to drive event registrations.',
+        'Manage end-to-end partnerships with sponsors, colleges, tech organizations, and student creators.',
+        'Perform thorough analytics and reporting on marketing channels to optimize conversion rates and ROI.',
+        'Provide comprehensive event marketing support to maximize turnout for gaming tournaments and workshops.'
       ],
       requirements: [
-        'Strong passion for community-led growth (CLG) and growth-hacking techniques.',
-        'Data-driven mindset with basic knowledge of Discord Server Insights, Google Analytics, or similar reporting tools.',
-        'Outstanding written and verbal outreach/pitching skills; highly comfortable talking to external partners.',
-        'High level of self-motivation and capability to work independently in a remote environment.'
+        'Strong passion for community-led growth (CLG) and scaling interactive online platforms.',
+        'Analytical mindset with hands-on experience using Google Analytics, Discord Insights, or CRM tools.',
+        'Exceptional written and spoken outreach skills, with confidence pitching to prospective sponsors.',
+        'Proactive self-starter attitude, capable of running campaigns independently.'
       ]
+    }
+  ]
+
+  const faqs = [
+    {
+      q: 'How does the application process look like?',
+      a: 'After you email your resume/portfolio to carrers@openboxcomm.in, our team will review your application. If there is a potential fit, we will schedule a brief 15-20 minute chat on Discord to get to know you, followed by a final interview.'
+    },
+    {
+      q: 'Are these paid roles or volunteer roles?',
+      a: 'These are paid, part-time contract positions. Compensation is competitive and based on experience, skill level, and weekly commitment.'
+    },
+    {
+      q: 'What is the expected weekly hourly commitment?',
+      a: 'Typically, we expect about 10-15 hours per week. Since these roles are remote and asynchronous, you can manage your hours flexibly around your studies or other work.'
+    },
+    {
+      q: 'Can I apply for multiple roles or sub-roles?',
+      a: 'Absolutely! If your skillset spans across content creation and growth marketing, feel free to highlight both in your application email.'
     }
   ]
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-16 lg:px-8">
-      {/* Hero Section - Solid subtle background (no gradient) */}
-      <div className="mb-12 rounded-3xl border border-black/10 bg-cyan-500/[0.04] p-6 shadow-sm dark:border-white/10 dark:bg-cyan-500/[0.06] sm:p-10 lg:p-16 overflow-hidden relative">
-        <div className="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 left-0 -ml-16 -mb-16 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
+      {/* Hero Section - Clean solid colored background */}
+      <div className="mb-12 rounded-3xl border border-black/10 bg-slate-50 p-6 shadow-sm dark:border-white/10 dark:bg-zinc-900/50 sm:p-10 lg:p-16 overflow-hidden relative">
+        <div className="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-cyan-500/5 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 left-0 -ml-16 -mb-16 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl pointer-events-none" />
 
         <div className="relative z-10">
           <div className="flex items-center gap-2 mb-4">
             <Sparkles className="h-5 w-5 shrink-0 text-cyan-500" />
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-cyan-600 dark:text-cyan-300 sm:text-sm">We are Hiring</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-cyan-600 dark:text-cyan-400 sm:text-sm">Careers at Open Box</p>
           </div>
           <h1 className="mb-4 text-3xl font-extrabold tracking-tight text-foreground w-full break-words sm:text-5xl lg:text-6xl">
-            Build the future of <span className="text-cyan-500 dark:text-cyan-400">online communities</span>.
+            Build the future of <span className="text-cyan-500">online communities</span>.
           </h1>
           <p className="max-w-3xl text-sm text-muted-foreground/95 leading-relaxed sm:text-base lg:text-lg">
-            At Open Box, we believe that great things happen when people come together. We provide high-signal, welcoming spaces for gaming, development, learning, and connection. Come help us build and grow the ultimate Discord-centric community platform in India.
+            At Open Box, we build high-signal, high-vibe spaces for gaming, development, learning, and connection. Our mission is to make community-building accessible, highly interactive, and incredibly fun. Come help us build and scale India&apos;s ultimate Discord-centric community platform.
           </p>
         </div>
       </div>
 
       <div className="grid gap-16 lg:grid-cols-12 mb-16">
-        {/* Left Side: Openings */}
+        {/* Left Side: Active Openings and Details */}
         <div className="lg:col-span-8 space-y-12">
-          <section>
+
+          {/* Active Openings Grid */}
+          <section id="openings">
             <div className="flex items-center gap-3 mb-6">
               <Briefcase className="h-6 w-6 text-cyan-500" />
               <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">Active Openings</h2>
             </div>
 
             <p className="text-muted-foreground mb-8">
-              We are currently seeking passionate contributors for the following remote roles. If you love Discord, online communities, and are eager to make an impact, we want to hear from you!
+              Explore our current open positions. Each role carries several focus areas (sub-roles) inside — choose the one that aligns best with your core strengths!
             </p>
 
             <div className="space-y-8">
@@ -92,15 +127,14 @@ export default function CareersPage() {
                 <div
                   key={role.id}
                   id={role.id}
-                  className="group relative overflow-hidden rounded-2xl border border-border bg-surface/50 p-6 transition-all hover:border-cyan-500/50 hover:shadow-xl scroll-mt-24"
+                  className="group relative overflow-hidden rounded-2xl border border-border bg-surface/40 p-6 transition-all hover:border-cyan-500/30 hover:shadow-lg scroll-mt-24"
                 >
-                  {/* Decorative corner accent - Solid color (no gradient) */}
-                  <div className={`absolute top-0 right-0 h-1.5 w-24 ${role.accentColor}`} />
+                  {/* Solid accent top border bar */}
+                  <div className={`absolute top-0 right-0 left-0 h-1 ${role.accentBg}`} />
 
-                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-6">
+                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-6 pt-2">
                     <div className="flex items-center gap-3.5">
-                      {/* Icon background - Solid color (no gradient) */}
-                      <div className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl ${role.accentColor} text-white shadow-md`}>
+                      <div className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl ${role.accentBg} text-white shadow-sm`}>
                         <role.icon className="h-6 w-6" />
                       </div>
                       <div>
@@ -121,9 +155,24 @@ export default function CareersPage() {
                     </div>
                   </div>
 
-                  <p className="text-sm text-foreground/80 font-medium mb-6 italic border-l-2 border-blue-500/30 pl-3">
+                  <p className="text-sm text-foreground/80 font-medium mb-6 italic border-l-2 border-cyan-500/30 pl-3">
                     &ldquo;{role.tagline}&rdquo;
                   </p>
+
+                  {/* Sub-Roles / Specializations section */}
+                  <div className="mb-6 rounded-xl bg-slate-50 p-4 dark:bg-zinc-900/40 border border-border">
+                    <h4 className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-2.5 flex items-center gap-1.5">
+                      <Layers className="h-3.5 w-3.5 text-cyan-500" /> Included Sub-Roles / Specializations:
+                    </h4>
+                    <ul className="space-y-1.5 text-sm text-foreground/90 font-medium pl-1">
+                      {role.subRoles.map((sub, sIdx) => (
+                        <li key={sIdx} className="flex items-center gap-2">
+                          <span className="h-1.5 w-1.5 rounded-full bg-cyan-500 shrink-0" />
+                          <span>{sub}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
 
                   <div className="space-y-6">
                     <div>
@@ -142,7 +191,7 @@ export default function CareersPage() {
 
                     <div>
                       <h4 className="text-sm font-bold text-foreground mb-3 flex items-center gap-1.5">
-                        <span className="h-1 w-1.5 bg-cyan-500 rounded-full" /> Qualifications & Skills
+                        <span className="h-1 w-1.5 bg-cyan-500 rounded-full" /> Requirements & Qualifications
                       </h4>
                       <ul className="grid gap-2.5 text-sm text-muted-foreground pl-3">
                         {role.requirements.map((req, index) => (
@@ -155,19 +204,84 @@ export default function CareersPage() {
                     </div>
                   </div>
 
-                  <div className="mt-8 pt-6 border-t border-border flex justify-between items-center">
+                  <div className="mt-8 pt-6 border-t border-border flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
                     <span className="text-xs text-muted-foreground font-medium">To apply, email your portfolio to carrers@openboxcomm.in</span>
                     <a
                       href={`mailto:carrers@openboxcomm.in?subject=Application for ${role.title}`}
                       className="inline-flex items-center gap-1.5 text-sm font-bold text-cyan-500 hover:text-cyan-400 group-hover:translate-x-1 transition-all duration-150"
                     >
-                      Apply Now <ArrowRight className="h-4 w-4" />
+                      Apply for this role <ArrowRight className="h-4 w-4" />
                     </a>
                   </div>
                 </div>
               ))}
             </div>
           </section>
+
+          {/* Team Culture Snippet (Why Join Us) */}
+          <section className="rounded-3xl border border-border bg-slate-50 p-6 dark:bg-zinc-900/40">
+            <div className="flex items-center gap-3 mb-4">
+              <Heart className="h-6 w-6 text-red-500" />
+              <h2 className="text-xl font-bold tracking-tight text-foreground sm:text-2xl">Our Culture & Why Join Us</h2>
+            </div>
+            <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
+              We are a close-knit group of community builders, gamers, and tech enthusiasts. We operate on high trust, high autonomy, and absolute transparency. Here is what you can expect when you join:
+            </p>
+            <div className="grid gap-6 sm:grid-cols-2">
+              <div className="p-4 rounded-2xl bg-surface border border-border">
+                <h3 className="text-sm font-bold text-foreground mb-1 flex items-center gap-1.5">
+                  <Sparkle className="h-4 w-4 text-cyan-500" /> Complete Creative Freedom
+                </h3>
+                <p className="text-xs text-muted-foreground leading-relaxed">
+                  Have a wild idea for a video format, partnership, or community campaign? We trust your creative instinct and will give you the full support to execute it.
+                </p>
+              </div>
+              <div className="p-4 rounded-2xl bg-surface border border-border">
+                <h3 className="text-sm font-bold text-foreground mb-1 flex items-center gap-1.5">
+                  <Sparkle className="h-4 w-4 text-cyan-500" /> High-vibe Collaboration
+                </h3>
+                <p className="text-xs text-muted-foreground leading-relaxed">
+                  Work directly with server leads, content creators, and the core development team in a flat hierarchy where everyone is accessible.
+                </p>
+              </div>
+              <div className="p-4 rounded-2xl bg-surface border border-border">
+                <h3 className="text-sm font-bold text-foreground mb-1 flex items-center gap-1.5">
+                  <Sparkle className="h-4 w-4 text-cyan-500" /> Real Impact
+                </h3>
+                <p className="text-xs text-muted-foreground leading-relaxed">
+                  Your work will shape how thousands of active developers, gamers, and community members in India interact, learn, and grow every day.
+                </p>
+              </div>
+              <div className="p-4 rounded-2xl bg-surface border border-border">
+                <h3 className="text-sm font-bold text-foreground mb-1 flex items-center gap-1.5">
+                  <Sparkle className="h-4 w-4 text-cyan-500" /> Fully Remote & Async
+                </h3>
+                <p className="text-xs text-muted-foreground leading-relaxed">
+                  We care about the quality of output, not hours spent sitting at a desk. Work asynchronously from anywhere in India with flexible scheduling.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* FAQ Section */}
+          <section>
+            <div className="flex items-center gap-3 mb-6">
+              <HelpCircle className="h-6 w-6 text-cyan-500" />
+              <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">Frequently Asked Questions</h2>
+            </div>
+            <div className="space-y-4">
+              {faqs.map((faq, idx) => (
+                <div key={idx} className="rounded-2xl border border-border bg-surface p-5">
+                  <h4 className="font-bold text-base text-foreground mb-2 flex items-start gap-2">
+                    <span className="text-cyan-500 font-extrabold">Q:</span>
+                    <span>{faq.q}</span>
+                  </h4>
+                  <p className="text-sm text-muted-foreground pl-5 leading-relaxed">{faq.a}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
         </div>
 
         {/* Right Side: How to Apply / Sidebar info */}
@@ -233,57 +347,13 @@ export default function CareersPage() {
               </div>
             </div>
 
-            {/* Why Join Us Card */}
-            <div className="rounded-3xl border border-border bg-surface p-6 shadow-sm">
-              <div className="flex items-center gap-2.5 mb-5">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-500/10 text-blue-500">
-                  <Users className="h-5 w-5" />
-                </div>
-                <h3 className="text-xl font-bold tracking-tight text-foreground">Why Join Open Box?</h3>
-              </div>
-
-              <div className="space-y-4">
-                {[
-                  {
-                    title: 'Impact at Scale',
-                    desc: 'Your creative campaigns and social media work will directly reach thousands of active community members across India.'
-                  },
-                  {
-                    title: '100% Remote & Flexible',
-                    desc: 'Work from anywhere in India at times that suit you. We prioritize high-quality results over rigid schedules.'
-                  },
-                  {
-                    title: 'Creative Autonomy',
-                    desc: 'Have a cool idea for a meme, video format, or growth campaign? We will give you the resources and freedom to bring it to life.'
-                  }
-                ].map((item, idx) => (
-                  <div key={idx} className="flex gap-3">
-                    <span className="text-blue-500 text-lg font-bold shrink-0 mt-0.5">0{idx + 1}.</span>
-                    <div>
-                      <h4 className="font-bold text-sm text-foreground mb-0.5">{item.title}</h4>
-                      <p className="text-xs text-muted-foreground leading-relaxed">{item.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* FAQ card */}
-            <div className="rounded-3xl border border-border bg-surface p-6 shadow-sm">
-              <div className="flex items-center gap-2.5 mb-4">
-                <HelpCircle className="h-5 w-5 text-muted-foreground" />
-                <h4 className="font-bold text-sm text-foreground">Frequently Asked Questions</h4>
-              </div>
-              <div className="space-y-3.5 text-xs">
-                <div>
-                  <p className="font-semibold text-foreground/90 mb-1">Are these paid roles?</p>
-                  <p className="text-muted-foreground">Yes, we provide competitive part-time compensation based on your experience and skill level.</p>
-                </div>
-                <div>
-                  <p className="font-semibold text-foreground/90 mb-1">What is the selection process?</p>
-                  <p className="text-muted-foreground">After reviewing your email, we will schedule a brief Discord call to chat about your experience and alignment.</p>
-                </div>
-              </div>
+            {/* Quick Contact Support info */}
+            <div className="rounded-3xl border border-border bg-surface p-6 shadow-sm text-xs text-muted-foreground leading-relaxed">
+              <h4 className="font-bold text-sm text-foreground mb-2">Have questions about openings?</h4>
+              <p className="mb-3">Feel free to drop us a line at the same email address if you need any clarification about the roles or the process before applying.</p>
+              <a href="mailto:carrers@openboxcomm.in" className="text-cyan-500 font-bold hover:underline">
+                Ask a question
+              </a>
             </div>
 
           </div>
