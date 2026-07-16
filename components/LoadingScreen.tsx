@@ -57,8 +57,8 @@ export function LoadingScreen() {
       {/* Glow ring behind the gif */}
       <div className="relative flex items-center justify-center">
         <div
-          className="absolute h-24 w-24 rounded-full bg-indigo-500/20 blur-xl"
-          style={{ animation: 'ob-pulse 1.6s ease-in-out infinite' }}
+        // className="absolute h-24 w-24 rounded-full bg-indigo-500/20 blur-xl"
+        // style={{ animation: 'ob-pulse 1.6s ease-in-out infinite' }}
         />
         <Image
           src="/images/OB72loader.gif"
