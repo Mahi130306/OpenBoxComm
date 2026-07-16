@@ -51,10 +51,10 @@ function getSupportStripText(sponsors: Sponsor[]) {
 
 function getServerAccent(server: string): string {
   switch (server) {
-    case 'Dev': return 'from-emerald-500 to-green-400'
-    case 'GG':  return 'from-rose-500 to-red-400'
-    case 'Jn.': return 'from-amber-400 to-rose-400'
-    default:    return 'from-cyan-500 to-blue-500'
+    case 'Dev': return 'bg-emerald-500'
+    case 'GG':  return 'bg-rose-500'
+    case 'Jn.': return 'bg-amber-500'
+    default:    return 'bg-cyan-500'
   }
 }
 
@@ -223,7 +223,7 @@ export default function EventsPage() {
                 >
                   {/* Top gradient accent bar */}
                   <div
-                    className={`h-0.5 w-full bg-gradient-to-r ${accent} opacity-70 transition-opacity duration-300 group-hover:opacity-100`}
+                    className={`h-0.5 w-full ${accent} opacity-70 transition-opacity duration-300 group-hover:opacity-100`}
                   />
 
                   {/* Top strip — always rendered for visual consistency */}
@@ -264,7 +264,7 @@ export default function EventsPage() {
                     <div className="mb-4 flex items-start gap-4">
                       {/* Calendar widget */}
                       <div className="flex shrink-0 flex-col items-center overflow-hidden rounded-xl border border-border bg-background shadow-sm">
-                        <div className={`w-full bg-gradient-to-r ${accent} px-3 py-0.5 text-center`}>
+                        <div className={`w-full ${accent} px-3 py-0.5 text-center`}>
                           <span className="text-[9px] font-bold uppercase tracking-widest text-black/70">
                             {dateBadge.month}
                           </span>

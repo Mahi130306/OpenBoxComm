@@ -26,7 +26,7 @@ export default function GlobalError({ error, reset }: ErrorPageProps) {
           {isNetworkError ? '⚡' : '500'}
         </span>
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.07] to-rose-400/[0.08] px-8 py-6">
+          <div className="rounded-2xl border border-white/10 bg-white/[0.07] px-8 py-6">
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-rose-300 mb-2">
               {isNetworkError ? 'Connection Error' : 'Server Error'}
             </p>

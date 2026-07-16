@@ -227,7 +227,7 @@ export function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="h-px bg-gradient-to-r from-border via-border to-border mb-8"></div>
+        <div className="h-px bg-border mb-8"></div>
 
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6 text-xs text-muted-foreground text-center md:text-left">

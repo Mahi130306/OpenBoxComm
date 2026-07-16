@@ -48,10 +48,6 @@ export function LoadingScreen() {
       {/* Scanline texture, CLI feel */}
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.04]"
-        style={{
-          backgroundImage:
-            'repeating-linear-gradient(0deg, currentColor 0px, currentColor 1px, transparent 1px, transparent 3px)',
-        }}
       />
 
       {/* Glow ring behind the gif */}

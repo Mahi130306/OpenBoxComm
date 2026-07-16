@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function FAQPage() {
   return (
     <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
-      <div className="mb-10 rounded-lg border border-white/10 bg-gradient-to-br from-white/[0.08] to-cyan-400/[0.05] p-8">
+      <div className="mb-10 rounded-lg border border-white/10 bg-white/[0.08] p-8">
         <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-cyan-300">Help center</p>
         <h1 className="mb-4">FAQ</h1>
         <p className="max-w-2xl text-muted-foreground">

@@ -60,7 +60,7 @@ export function EventContentTabs({
             >
               {/* Step number */}
               <div
-                className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br ${accentClass} text-xs font-extrabold text-black/75 shadow-md`}
+                className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-lg ${accentClass} text-xs font-extrabold text-black/75 shadow-md`}
               >
                 {index + 1}
               </div>
@@ -69,7 +69,7 @@ export function EventContentTabs({
               </p>
               {/* Left accent line on hover */}
               <div
-                className={`absolute inset-y-0 left-0 w-0.5 bg-gradient-to-b ${accentClass} opacity-0 transition-opacity group-hover:opacity-70`}
+                className={`absolute inset-y-0 left-0 w-0.5 ${accentClass} opacity-0 transition-opacity group-hover:opacity-70`}
               />
             </div>
           ))
@@ -156,7 +156,7 @@ export function EventContentTabs({
               >
                 <div className="flex items-center gap-2.5">
                   <div
-                    className={`flex h-7 w-7 items-center justify-center rounded-lg bg-gradient-to-br ${accentClass}`}
+                    className={`flex h-7 w-7 items-center justify-center rounded-lg ${accentClass}`}
                   >
                     <Icon className="h-3.5 w-3.5 text-black/75" />
                   </div>
