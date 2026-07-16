@@ -61,8 +61,8 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        heading: ["Syne", "sans-serif"],
-        body: ["Inter", "sans-serif"],
+        heading: ["var(--font-syne)", "sans-serif"],
+        body: ["var(--font-inter)", "sans-serif"],
       },
       keyframes: {
         "accordion-down": {

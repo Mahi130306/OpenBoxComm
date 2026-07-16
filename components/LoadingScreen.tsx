@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import { logger } from '@/lib/logger'
@@ -55,12 +56,13 @@ export function LoadingScreen() {
           className="absolute h-24 w-24 rounded-full bg-indigo-500/20 blur-xl"
           style={{ animation: 'ob-pulse 1.6s ease-in-out infinite' }}
         />
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/images/OBloader.gif"
+        <Image
+          src="/images/OB72loader.gif"
           alt="Open Box loading"
           width={72}
           height={72}
+          priority
+          unoptimized
           className="relative rounded-xl"
         />
       </div>

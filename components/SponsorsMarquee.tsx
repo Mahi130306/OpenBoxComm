@@ -1,4 +1,5 @@
 import type { Key } from 'react'
+import Image from 'next/image'
 import { ExternalLink } from 'lucide-react'
 import type { Sponsor } from '@/lib/community-data'
 
@@ -83,11 +84,15 @@ function SingleSponsorBanner({ sponsor }: { sponsor: Sponsor }) {
       </p>
       <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex items-center gap-5">
-          <img
-            src={sponsor.logo}
-            alt={sponsor.name}
-            className="h-12 w-auto max-w-[140px] object-contain"
-          />
+          <div className="relative h-12 w-[140px] shrink-0">
+            <Image
+              src={sponsor.logo}
+              alt={sponsor.name}
+              fill
+              sizes="140px"
+              className="object-contain"
+            />
+          </div>
           <div>
             <div className="mb-1 flex flex-wrap items-center gap-2">
               <p className="text-lg font-bold">{sponsor.name}</p>
@@ -136,11 +141,15 @@ function SponsorCard({ sponsor }: { sponsor: Sponsor; key?: Key }) {
       rel="noopener noreferrer"
       className="group flex min-w-[260px] shrink-0 items-center gap-4 rounded-xl border border-yellow-500/20 bg-background/50 px-5 py-4 transition-colors hover:border-yellow-500/40 hover:bg-background/80"
     >
-      <img
-        src={sponsor.logo}
-        alt={sponsor.name}
-        className="h-10 w-auto max-w-[120px] object-contain grayscale transition-all group-hover:grayscale-0"
-      />
+      <div className="relative h-10 w-[120px] shrink-0">
+        <Image
+          src={sponsor.logo}
+          alt={sponsor.name}
+          fill
+          sizes="120px"
+          className="object-contain grayscale transition-all group-hover:grayscale-0"
+        />
+      </div>
       <div className="min-w-0">
         <div className="mb-1 flex items-center gap-2">
           <p className="truncate text-sm font-semibold">{sponsor.name}</p>

@@ -88,7 +88,7 @@ export function AskSuggestToggle() {
 
                 <div className="mt-8 flex flex-wrap gap-4">
                     <Button asChild className="rounded-full">
-                        <a href={process.env.NEXT_PUBLIC_DISCORD_INVITE_MAIN} target="_blank" rel="noopener noreferrer">
+                        <a href="https://discord.gg/7ZWckKU89J" target="_blank" rel="noopener noreferrer">
                             Join the Junction Server
                             <ArrowRight className="ml-2 h-4 w-4" />
                         </a>

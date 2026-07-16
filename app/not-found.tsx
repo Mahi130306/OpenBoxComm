@@ -20,9 +20,12 @@ export default function NotFound() {
         </div>
       </div>
 
-      <p className="mb-8 max-w-md text-muted-foreground">
+      <p className="mb-4 max-w-md text-muted-foreground">
         This page doesn&apos;t exist or may have been moved. Double-check the URL, or head back to the home page.
       </p>
+      <div className="mb-8 text-center italic text-muted-foreground">
+        Please head back into box
+      </div>
 
       <div className="flex flex-wrap justify-center gap-3">
         <Link

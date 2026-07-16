@@ -142,7 +142,7 @@ export default async function ServerPage({
             )} */}
 
             {/* Events */}
-            <section>
+            {/* <section>
               <h2 className="mb-4 !text-2xl">Upcoming Events</h2>
               {serverEvents.length === 0 ? (
                 <div className="rounded-xl border border-dashed border-border bg-surface px-6 py-8 text-center text-muted-foreground">
@@ -162,7 +162,7 @@ export default async function ServerPage({
                   ))}
                 </div>
               )}
-            </section>
+            </section> */}
           </div>
 
           {/* Sidebar */}

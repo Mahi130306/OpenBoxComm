@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation'
+import Image from 'next/image'
 import Link from 'next/link'
 import {
   CalendarClock,
@@ -180,11 +181,15 @@ export default async function EventDetailPage({
                     rel="noopener noreferrer"
                     className="group flex flex-col items-center gap-2 rounded-xl border border-border bg-muted/30 px-5 py-3.5 transition-all hover:bg-muted/60"
                   >
-                    <img
-                      src={heroSponsor.logo}
-                      alt={heroSponsor.name}
-                      className="h-9 w-auto max-w-[130px] object-contain grayscale transition-all group-hover:grayscale-0"
-                    />
+                    <div className="relative h-9 w-[130px] shrink-0">
+                      <Image
+                        src={heroSponsor.logo}
+                        alt={heroSponsor.name}
+                        fill
+                        sizes="130px"
+                        className="object-contain grayscale transition-all group-hover:grayscale-0"
+                      />
+                    </div>
                     <span className="flex items-center gap-1 text-xs text-muted-foreground transition-colors group-hover:text-foreground">
                       <ExternalLink className="h-3 w-3" />
                       Visit {heroSponsor.name}

@@ -3,6 +3,15 @@ import { Update } from '@/types'
 
 const updates: Update[] = [
   {
+    id: 'new-socials-whatsapp-reddit',
+    title: 'Now on WhatsApp & Reddit',
+    type: 'community',
+    date: '2026-07-14',
+    description: 'Open Box is now on WhatsApp Channels and Reddit. Follow along for updates, highlights, and community news.',
+    href: '/join?tab=socials',
+    isNew: true,
+  },
+  {
     id: 'welcome-to-open-box',
     title: 'Welcome to Open Box',
     type: 'announcement',
@@ -38,6 +47,7 @@ const updates: Update[] = [
     href: '/blogs/ob-gg-gaming-server-beta',
     isNew: true,
   },
+
 ]
 
 export async function GET() {

@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useMemo, useState } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import {
   ArrowRight,
@@ -236,11 +237,15 @@ export default function EventsPage() {
                               className="flex h-6 w-6 items-center justify-center rounded-full border border-border bg-background"
                               title={s.name}
                             >
-                              <img
-                                src={s.logo}
-                                alt={s.name}
-                                className="h-3.5 w-3.5 object-contain grayscale transition-all group-hover:grayscale-0"
-                              />
+                              <span className="relative h-3.5 w-3.5 shrink-0 block">
+                                <Image
+                                  src={s.logo}
+                                  alt={s.name}
+                                  fill
+                                  sizes="14px"
+                                  className="object-contain grayscale transition-all group-hover:grayscale-0"
+                                />
+                              </span>
                             </span>
                           ))}
                         </div>
