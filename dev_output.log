@@ -5,19 +5,54 @@
 ▲ Next.js 16.2.10 (Turbopack)
 - Local:         http://localhost:3000
 - Network:       http://192.168.0.2:3000
-✓ Ready in 529ms
+✓ Ready in 633ms
 
-○ Compiling / ...
- GET / 200 in 10.5s (next.js: 7.7s, proxy.ts: 246ms, application-code: 2.5s)
- GET /api/whats-new 200 in 979ms (next.js: 912ms, proxy.ts: 54ms, application-code: 13ms)
- GET /api/discord-members?code=xHD4PRxauw 200 in 1209ms (next.js: 828ms, proxy.ts: 54ms, application-code: 327ms)
- GET /api/discord-members?code=etnc7ZpDKT 200 in 1194ms (next.js: 792ms, proxy.ts: 55ms, application-code: 346ms)
- GET /api/discord-members?code=nF48vqYwEk 200 in 1319ms (next.js: 766ms, proxy.ts: 53ms, application-code: 501ms)
- GET /servers 200 in 1062ms (next.js: 993ms, proxy.ts: 7ms, application-code: 63ms)
- GET /api/discord-members?code=xHD4PRxauw 200 in 37ms (next.js: 10ms, proxy.ts: 19ms, application-code: 7ms)
- GET /api/discord-members?code=nF48vqYwEk 200 in 45ms (next.js: 18ms, proxy.ts: 21ms, application-code: 7ms)
- GET /api/discord-members?code=etnc7ZpDKT 200 in 71ms (next.js: 38ms, proxy.ts: 20ms, application-code: 12ms)
- GET /api/discord-members?code=xHD4PRxauw 200 in 65ms (next.js: 16ms, proxy.ts: 41ms, application-code: 8ms)
- GET /api/discord-members?code=nF48vqYwEk 200 in 50ms (next.js: 21ms, proxy.ts: 18ms, application-code: 12ms)
- GET /api/discord-members?code=etnc7ZpDKT 200 in 56ms (next.js: 31ms, proxy.ts: 15ms, application-code: 9ms)
- GET /blogs 200 in 1075ms (next.js: 1000ms, proxy.ts: 6ms, application-code: 69ms)
+○ Compiling /carrers ...
+ GET /carrers 200 in 16.0s (next.js: 12.0s, proxy.ts: 278ms, application-code: 3.8s)
+ GET /api/whats-new 200 in 1488ms (next.js: 1435ms, proxy.ts: 12ms, application-code: 40ms)
+Error: Route "/carrers/[slug]" used `params.slug`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at RoleDetailPage (app/carrers/[slug]/page.tsx:242:33)
+  240 |
+  241 | export default function RoleDetailPage({ params }: { params: { slug: string } }) {
+> 242 |     const role = getRole(params.slug)
+      |                                 ^
+  243 |
+  244 |     if (!role) {
+  245 |         notFound()
+Error: Route "/carrers/[slug]" used `params.slug`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at Module.generateMetadata (app/carrers/[slug]/page.tsx:227:33)
+  225 |
+  226 | export async function generateMetadata({ params }: { params: { slug: string } }): Promise...
+> 227 |     const role = getRole(params.slug)
+      |                                 ^
+  228 |     if (!role) return { title: 'Role Not Found' }
+  229 |
+  230 |     return {
+ GET /carrers/content-creator 200 in 3.2s (next.js: 2.9s, proxy.ts: 30ms, generate-params: 1354ms, application-code: 219ms)
+ GET /carrers 200 in 553ms (next.js: 9ms, proxy.ts: 9ms, application-code: 535ms)
+ GET /api/whats-new 200 in 38ms (next.js: 13ms, proxy.ts: 8ms, application-code: 18ms)
+Error: Route "/carrers/[slug]" used `params.slug`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at RoleDetailPage (app/carrers/[slug]/page.tsx:242:33)
+  240 |
+  241 | export default function RoleDetailPage({ params }: { params: { slug: string } }) {
+> 242 |     const role = getRole(params.slug)
+      |                                 ^
+  243 |
+  244 |     if (!role) {
+  245 |         notFound()
+Error: Route "/carrers/[slug]" used `params.slug`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at Module.generateMetadata (app/carrers/[slug]/page.tsx:227:33)
+  225 |
+  226 | export async function generateMetadata({ params }: { params: { slug: string } }): Promise...
+> 227 |     const role = getRole(params.slug)
+      |                                 ^
+  228 |     if (!role) return { title: 'Role Not Found' }
+  229 |
+  230 |     return {
+ GET /carrers/content-creator 404 in 369ms (next.js: 47ms, proxy.ts: 7ms, generate-params: 34ms, application-code: 315ms)
+ GET /api/whats-new 200 in 28ms (next.js: 9ms, proxy.ts: 7ms, application-code: 13ms)
+✓ Compiled in 380ms
+ GET /carrers 200 in 501ms (next.js: 6ms, proxy.ts: 8ms, application-code: 488ms)
+ GET /api/whats-new 200 in 53ms (next.js: 16ms, proxy.ts: 10ms, application-code: 26ms)
+ GET /carrers/content-creator 200 in 699ms (next.js: 56ms, proxy.ts: 7ms, generate-params: 37ms, application-code: 635ms)
+ GET /api/whats-new 200 in 38ms (next.js: 12ms, proxy.ts: 10ms, application-code: 15ms)
