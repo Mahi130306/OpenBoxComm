@@ -11,7 +11,7 @@ import { ArrowRight, Sparkles } from 'lucide-react'
 export const metadata: Metadata = {
   title: 'Home',
   description: 'Join Open Box, a free, no-gatekeeping community network for gamers, students, and creators. Explore our Discord servers, attend events, and connect with peers.',
-  keywords: ['Open Box', 'Discord community', 'gamers', 'students', 'creators', 'networking', 'gaming', 'development'],
+  keywords: ['Open Box', 'Openbox', 'openbox.in', 'Discord community', 'gamers', 'students', 'creators', 'networking', 'gaming', 'development'],
   alternates: { canonical: '/' },
   // No openGraph or twitter here on purpose — this inherits directly
   // from the root layout's openGraph/twitter config.
