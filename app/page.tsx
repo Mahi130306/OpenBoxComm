@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description: 'Join Open Box, a free, no-gatekeeping community network for gamers, students, and creators. Explore our Discord servers, attend events, and connect with peers.',
   keywords: ['Open Box', 'Discord community', 'gamers', 'students', 'creators', 'networking', 'gaming', 'development'],
   alternates: { canonical: '/' },
-  // No openGraph or twitter here on purpose — this inherits directly
+  // No openGraph or twitter here on purpose - this inherits directly
   // from the root layout's openGraph/twitter config.
 }
 
@@ -54,7 +54,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Hero Abstract Graphic — right column */}
+          {/* Hero Abstract Graphic - right column */}
           {/* <div className="flex items-center justify-center lg:justify-end">
             <div className="flex items-center justify-center w-full h-full">
               <ServerNodeGraph />

@@ -195,7 +195,7 @@ More content.
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Policy Name — Open Box',
+  title: 'Policy Name - Open Box',
   description: 'Description for search results.',
 }
 
@@ -300,10 +300,10 @@ Delete the folder (e.g., `app/legal/my-page/`) and update navigation.
 **Master Data File:** [`lib/community-data.ts`](lib/community-data.ts)
 
 Arrays in file:
-- `blogs` — Blog posts
-- `events` — Community events
-- `docs` — Documentation metadata
-- `servers` — Discord servers
-- `team` — Team members
+- `blogs` - Blog posts
+- `events` - Community events
+- `docs` - Documentation metadata
+- `servers` - Discord servers
+- `team` - Team members
 
 All arrays use consistent object structures with `slug`, `title`, and descriptive fields.

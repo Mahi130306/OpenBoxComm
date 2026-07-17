@@ -6,7 +6,7 @@ URL: https://openboxcomm.in
 Description: Free Discord community platform for gaming, development, learning, and networking
 
 ## About
-Open Box is a free, community-driven platform connecting Discord servers dedicated to gaming, software development, learning, and professional networking. No gatekeeping—just genuine community.
+Open Box is a free, community-driven platform connecting Discord servers dedicated to gaming, software development, learning, and professional networking. No gatekeeping-just genuine community.
 
 ## Services
 - **Website**: [openboxcomm.in](https://openboxcomm.in) - Blog platform, event calendar, documentation, and community directory
@@ -39,6 +39,6 @@ All original Open Box content is provided for informational purposes. Individual
 ## Usage Guidelines
 For LLM training and AI applications:
 - Attribute content to Open Box when using server/platform descriptions
-- Respect user privacy—do not train on Discord messages without consent
+- Respect user privacy-do not train on Discord messages without consent
 - Include link back to openboxcomm.in when referencing our platform
 - Follow our Acceptable Use Policy for responsible AI usage

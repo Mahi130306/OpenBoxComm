@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Community Rules — Open Box',
-  description: 'Community Rules for all Open Box spaces — Discord servers, website, events, and affiliated platforms.',
+  title: 'Community Rules - Open Box',
+  description: 'Community Rules for all Open Box spaces - Discord servers, website, events, and affiliated platforms.',
 }
 
 export default function CommunityRulesPage() {
@@ -13,7 +13,7 @@ export default function CommunityRulesPage() {
       <p className="text-sm text-muted-foreground mb-8">Last updated: 07/07/2026</p>
 
       <p>
-        These rules apply to <strong>all Open Box spaces</strong> — the website at{' '}
+        These rules apply to <strong>all Open Box spaces</strong> - the website at{' '}
         <strong>openboxcomm.in</strong>, all Discord servers (JN, Dev, GG, Study, Connect, and any
         future servers), our official social media accounts on X, Instagram, and YouTube, all events (online,
         IRL, and hybrid), and any other platform or service we operate now or in the future. Joining or
@@ -32,14 +32,14 @@ export default function CommunityRulesPage() {
           <u><a href="https://www.indiacode.nic.in/bitstream/123456789/13116/1/it_act_2000_updated.pdf" target="_blank" rel="noopener noreferrer">
             Information Technology Act, 2000
           </a>:</u>{' '}
-          — India&apos;s primary cyber law dealing with cybercrimes, electronic records, and intermediary
+          - India&apos;s primary cyber law dealing with cybercrimes, electronic records, and intermediary
           liability.
         </li>
         <li>
           <u><a href="https://www.indiacode.nic.in/bitstream/123456789/2362/1/201232.pdf" target="_blank" rel="noopener noreferrer">
             POCSO Act, 2012
           </a>:</u>{' '}
-          — protects children from sexual offences, abuse, and exploitation.
+          - protects children from sexual offences, abuse, and exploitation.
         </li>
         <li>
           <u><a href="https://www.indiacode.nic.in/bitstream/123456789/15240/1/constitution_of_india.pdf" target="_blank" rel="noopener noreferrer">
@@ -52,7 +52,7 @@ export default function CommunityRulesPage() {
           <u><a href="https://www.indiacode.nic.in/bitstream/123456789/15240/1/constitution_of_india.pdf" target="_blank" rel="noopener noreferrer">
             Article 14 of the Constitution of India
           </a>:</u>{' '}
-          — guarantees the right to equality and equal protection before the law, which underpins our
+          - guarantees the right to equality and equal protection before the law, which underpins our
           commitment to a non-discriminatory community.
         </li>
       </ul>
@@ -81,7 +81,7 @@ export default function CommunityRulesPage() {
       <ul>
         <li>Keep content relevant to the channel, server, or context in which it is posted.</li>
         <li>
-          NSFW content — including explicit, sexual, violent, or gory material — is <strong>strictly
+          NSFW content - including explicit, sexual, violent, or gory material - is <strong>strictly
             banned</strong> across all Open Box spaces. Distribution of obscene material may be punishable
           under the{' '}
           <u><a href="https://www.indiacode.nic.in/bitstream/123456789/13116/1/it_act_2000_updated.pdf" target="_blank" rel="noopener noreferrer">
@@ -123,7 +123,7 @@ export default function CommunityRulesPage() {
       <ul>
         <li>Do not share personal information (phone numbers, addresses, Aadhaar, etc.) of yourself or others without explicit consent on any platform.</li>
         <li>
-          Doxxing — intentionally publishing private information of others — results in an immediate permanent
+          Doxxing - intentionally publishing private information of others - results in an immediate permanent
           ban and may be reported under the{' '}
           <u><a href="https://www.indiacode.nic.in/bitstream/123456789/20168/1/2023_Act_22_Digital_Personal_Data_Protection_Act.pdf" target="_blank" rel="noopener noreferrer">
             DPDP Act, 2023
@@ -139,8 +139,8 @@ export default function CommunityRulesPage() {
 
       <h2>6. Events</h2>
       <p>
-        All participants at Open Box events — online on Discord, live on YouTube or X, or in person at an IRL
-        meetup — are expected to follow these rules in full. For full details, refer to our{' '}
+        All participants at Open Box events - online on Discord, live on YouTube or X, or in person at an IRL
+        meetup - are expected to follow these rules in full. For full details, refer to our{' '}
         <u><Link href="/legal/event-policy" className="hover:text-foreground transition-colors">Event Policy</Link></u>.
       </p>
 
@@ -153,7 +153,7 @@ export default function CommunityRulesPage() {
 
       <h2>8. Moderator Authority</h2>
       <ul>
-        <li>Moderator decisions are final. Do not argue with moderators publicly — use the designated appeal channels.</li>
+        <li>Moderator decisions are final. Do not argue with moderators publicly - use the designated appeal channels.</li>
         <li>Do not attempt to bypass moderation actions using alternate accounts on any platform.</li>
         <li>Impersonating moderators, staff, or the Open Box brand is an immediate permanent ban.</li>
       </ul>

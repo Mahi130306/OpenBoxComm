@@ -1,7 +1,7 @@
 'use client'
 
 /**
- * SecurityGuard — client-side inspection deterrent
+ * SecurityGuard - client-side inspection deterrent
  * ──────────────────────────────────────────────────
  * Mounts once in the root layout. Adds multiple layers of deterrence:
  *

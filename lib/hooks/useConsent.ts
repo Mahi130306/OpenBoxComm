@@ -1,12 +1,12 @@
 /**
- * useConsent — React hook for consent state management
+ * useConsent - React hook for consent state management
  *
  * Returns:
- *   hasConsented  — true if user has accepted or rejected (banner should hide)
- *   consentAction — the stored action, or null
- *   accept()      — record 'accept' consent
- *   reject()      — record 'reject' consent
- *   dismiss()     — record 'dismiss' (session-only, no localStorage)
+ *   hasConsented  - true if user has accepted or rejected (banner should hide)
+ *   consentAction - the stored action, or null
+ *   accept()      - record 'accept' consent
+ *   reject()      - record 'reject' consent
+ *   dismiss()     - record 'dismiss' (session-only, no localStorage)
  */
 
 'use client'

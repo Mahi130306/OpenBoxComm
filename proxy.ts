@@ -1,14 +1,14 @@
 /**
- * proxy.ts — Open Box Edge Security Layer (Next.js 16 middleware)
+ * proxy.ts - Open Box Edge Security Layer (Next.js 16 middleware)
  * ───────────────────────────────────────────────────────────────
  * Runs at the CDN edge before any request reaches the app.
  *
  * Blocks:
- *   /.git/**          — git internals (CRITICAL)
- *   /.env*            — environment files
- *   /node_modules/**  — dependencies
- *   *.map             — source maps
- *   config/lock files — project internals
+ *   /.git/**          - git internals (CRITICAL)
+ *   /.env*            - environment files
+ *   /node_modules/**  - dependencies
+ *   *.map             - source maps
+ *   config/lock files - project internals
  *
  * Also injects security response headers on every route.
  */

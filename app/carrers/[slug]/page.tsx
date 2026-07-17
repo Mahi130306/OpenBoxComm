@@ -222,7 +222,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     if (!role) return { title: 'Role Not Found' }
 
     return {
-        title: `${role.title} — Open Box Careers`,
+        title: `${role.title} - Open Box Careers`,
         description: role.tagline,
         alternates: { canonical: `/careers/${role.id}` },
     }

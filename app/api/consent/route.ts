@@ -4,9 +4,9 @@
  * Server-side consent audit log endpoint.
  *
  * Complies with:
- *   • IT Act, 2000 §43A — Body corporate must maintain reasonable security
- *   • DPDP Act, 2023 §6 — Consent must be recorded with verifiable evidence
- *   • IT (Intermediary Guidelines) Rules, 2021 — Retention of consent records
+ *   • IT Act, 2000 §43A - Body corporate must maintain reasonable security
+ *   • DPDP Act, 2023 §6 - Consent must be recorded with verifiable evidence
+ *   • IT (Intermediary Guidelines) Rules, 2021 - Retention of consent records
  *
  * What is logged (stdout / Vercel log drain / server log file):
  *   [OB:CONSENT] {ISO timestamp IST} | action=accept | visitorId=xxx | tc=2025-06-06 | pp=2025-06-06 | ua=... | ref=...

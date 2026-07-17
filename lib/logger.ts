@@ -60,7 +60,7 @@ function persist(entry: LogEntry): void {
     const raw = localStorage.getItem(STORAGE_KEY)
     const logs: LogEntry[] = raw ? JSON.parse(raw) : []
     logs.push(entry)
-    // Ring buffer — keep last MAX_ENTRIES
+    // Ring buffer - keep last MAX_ENTRIES
     if (logs.length > MAX_ENTRIES) logs.splice(0, logs.length - MAX_ENTRIES)
     localStorage.setItem(STORAGE_KEY, JSON.stringify(logs))
   } catch {

@@ -169,7 +169,7 @@ export function EventContentTabs({
                 />
               </button>
 
-              {/* Accordion body — animate via max-height */}
+              {/* Accordion body - animate via max-height */}
               <div
                 className={`transition-all duration-300 ease-in-out ${
                   isOpen ? 'max-h-[2000px] opacity-100' : 'max-h-0 overflow-hidden opacity-0'

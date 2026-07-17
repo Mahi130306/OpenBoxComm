@@ -127,7 +127,7 @@ export default function SupportClient() {
 
   const phantomPerks = [
     'Everything in Legend (All 13)',
-    'Exclusive OP Supporter role — rare, visible on supporter wall',
+    'Exclusive OP Supporter role - rare, visible on supporter wall',
     '12–16% off paid OB events + priority spot',
     'Monthly voice hangout with OB founders',
     'First dibs + discount when OB merch drops',
@@ -529,19 +529,19 @@ export default function SupportClient() {
                       >
                         <td className="p-4 font-bold text-zinc-800 dark:text-zinc-200">{feat.name}</td>
                         <td className="p-4 text-center">
-                          {feat.npc ? <Check className="mx-auto h-4 w-4 text-zinc-500" /> : <span className="text-zinc-300 dark:text-zinc-700">—</span>}
+                          {feat.npc ? <Check className="mx-auto h-4 w-4 text-zinc-500" /> : <span className="text-zinc-300 dark:text-zinc-700">-</span>}
                         </td>
                         <td className="p-4 text-center">
-                          {feat.rookie ? <Check className="mx-auto h-4 w-4 text-orange-500" /> : <span className="text-zinc-300 dark:text-zinc-700">—</span>}
+                          {feat.rookie ? <Check className="mx-auto h-4 w-4 text-orange-500" /> : <span className="text-zinc-300 dark:text-zinc-700">-</span>}
                         </td>
                         <td className="p-4 text-center">
-                          {feat.goat ? <Check className="mx-auto h-4 w-4 text-emerald-500" /> : <span className="text-zinc-300 dark:text-zinc-700">—</span>}
+                          {feat.goat ? <Check className="mx-auto h-4 w-4 text-emerald-500" /> : <span className="text-zinc-300 dark:text-zinc-700">-</span>}
                         </td>
                         <td className="p-4 text-center">
-                          {feat.legend ? <Check className="mx-auto h-4 w-4 text-amber-500" /> : <span className="text-zinc-300 dark:text-zinc-700">—</span>}
+                          {feat.legend ? <Check className="mx-auto h-4 w-4 text-amber-500" /> : <span className="text-zinc-300 dark:text-zinc-700">-</span>}
                         </td>
                         <td className="p-4 text-center">
-                          {feat.op ? <Check className="mx-auto h-4 w-4 text-purple-500" /> : <span className="text-zinc-300 dark:text-zinc-700">—</span>}
+                          {feat.op ? <Check className="mx-auto h-4 w-4 text-purple-500" /> : <span className="text-zinc-300 dark:text-zinc-700">-</span>}
                         </td>
                       </tr>
                     ))}

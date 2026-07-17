@@ -4,7 +4,7 @@ import { FAQSearch } from '@/components/FAQSearch'
 import { Button } from '@/components/ui/button'
 
 export const metadata: Metadata = {
-  title: 'FAQ — Help Centre',
+  title: 'FAQ - Help Centre',
   description: 'Frequently asked questions about Open Box communities, Discord servers, and more.',
   alternates: { canonical: '/help/faq' },
 }

@@ -1,9 +1,9 @@
 /**
- * Open Box — Consent Logger
+ * Open Box - Consent Logger
  * ─────────────────────────
  * Records user consent decisions (accept / reject / dismiss) to:
- *   1. localStorage  — instant client-side retrieval
- *   2. POST /api/consent — server-side audit log (stdout / log drain)
+ *   1. localStorage  - instant client-side retrieval
+ *   2. POST /api/consent - server-side audit log (stdout / log drain)
  *
  * Complies with:
  *   • IT Act, 2000 §43A
@@ -17,7 +17,7 @@
 export type ConsentAction = 'accept' | 'reject' | 'dismiss'
 
 export interface ConsentRecord {
-  /** Anonymous UUID — never tied to personal identity */
+  /** Anonymous UUID - never tied to personal identity */
   visitorId: string
   /** User's decision */
   action: ConsentAction
@@ -117,7 +117,7 @@ export async function recordConsent(action: ConsentAction): Promise<void> {
     try {
       localStorage.setItem(CONSENT_KEY, JSON.stringify(record))
     } catch {
-      // Quota exceeded or private browsing — ignore
+      // Quota exceeded or private browsing - ignore
     }
   }
 
@@ -131,7 +131,7 @@ export async function recordConsent(action: ConsentAction): Promise<void> {
       keepalive: true,
     })
   } catch {
-    // Network failure — consent is still stored client-side
+    // Network failure - consent is still stored client-side
   }
 }
 

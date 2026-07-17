@@ -146,7 +146,7 @@ export default async function ServerPage({
               <h2 className="mb-4 !text-2xl">Upcoming Events</h2>
               {serverEvents.length === 0 ? (
                 <div className="rounded-xl border border-dashed border-border bg-surface px-6 py-8 text-center text-muted-foreground">
-                  No upcoming events — check back soon.
+                  No upcoming events - check back soon.
                 </div>
               ) : (
                 <div className="space-y-3">

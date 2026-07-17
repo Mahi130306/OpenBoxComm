@@ -97,7 +97,7 @@ export default function EventsPage() {
 
   return (
     <div className="relative min-h-screen overflow-hidden">
-      {/* Ambient glows — visible in dark, very subtle in light */}
+      {/* Ambient glows - visible in dark, very subtle in light */}
       <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 left-1/4 h-[600px] w-[600px] rounded-full bg-cyan-500/5 blur-[120px] dark:bg-cyan-500/8" />
         <div className="absolute top-60 right-1/4 h-[400px] w-[400px] rounded-full bg-violet-500/4 blur-[100px] dark:bg-violet-500/6" />
@@ -226,7 +226,7 @@ export default function EventsPage() {
                     className={`h-0.5 w-full bg-gradient-to-r ${accent} opacity-70 transition-opacity duration-300 group-hover:opacity-100`}
                   />
 
-                  {/* Top strip — always rendered for visual consistency */}
+                  {/* Top strip - always rendered for visual consistency */}
                   <div className="flex items-center gap-3 border-b border-border px-5 py-3">
                     {supporters.length > 0 ? (
                       <>

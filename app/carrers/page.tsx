@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Briefcase, Mail, Megaphone, Users, MapPin, Clock, ArrowRight, Sparkles, TrendingUp, HelpCircle, Layers, Heart, Sparkle } from 'lucide-react'
 
 export const metadata: Metadata = {
-    title: 'Careers — Open Box',
+    title: 'Careers - Open Box',
     description: 'Join the team building the future of Indian Discord communities. Discover active openings for Social Media and Marketing roles at Open Box.',
     alternates: { canonical: '/careers' },
 }

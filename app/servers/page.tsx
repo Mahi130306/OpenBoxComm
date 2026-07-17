@@ -8,7 +8,7 @@ import { LayoutGrid, ArrowRight } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Servers',
-  description: 'Browse all Open Box Discord servers — from gaming and development to study groups and networking. Free to join.',
+  description: 'Browse all Open Box Discord servers - from gaming and development to study groups and networking. Free to join.',
   alternates: { canonical: '/servers' },
 }
 

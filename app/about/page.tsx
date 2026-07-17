@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'About Open Box',
-  description: 'Learn about Open Box — a people-focused network of communities for gamers, students, and creators. Free and open to everyone.',
+  description: 'Learn about Open Box - a people-focused network of communities for gamers, students, and creators. Free and open to everyone.',
   alternates: { canonical: '/about' },
 }
 
@@ -109,7 +109,7 @@ export default function AboutPage() {
             {/* <div className="rounded-3xl bg-violet-600 p-8 text-white shadow-xl shadow-violet-600/20">
                 <h3 className="text-xl font-bold mb-3">Join our journey</h3>
                 <p className="text-violet-100 mb-6 text-sm leading-relaxed">
-                    Open Box is more than just a set of servers — it&apos;s a collective of passionate people building together.
+                    Open Box is more than just a set of servers - it&apos;s a collective of passionate people building together.
                 </p>
                 <Link href="/join">
                     <button className="w-full rounded-xl bg-white px-4 py-3 text-sm font-bold text-violet-600 transition-transform hover:scale-[1.02] active:scale-[0.98]">

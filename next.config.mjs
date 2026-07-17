@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 
-// Stable identifier for this build — used by UpdateBanner to detect new deploys.
+// Stable identifier for this build - used by UpdateBanner to detect new deploys.
 // On Vercel this is the deployment ID; locally it falls back to Date.now().
 const BUILD_ID =
   process.env.NEXT_PUBLIC_BUILD_ID ||

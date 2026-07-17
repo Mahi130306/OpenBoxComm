@@ -73,7 +73,7 @@ export default async function EventDetailPage({
 
   return (
     <div className="relative min-h-screen w-full overflow-x-hidden pb-24">
-      {/* Ambient glow — dark mode only, invisible in light */}
+      {/* Ambient glow - dark mode only, invisible in light */}
       <div
         aria-hidden
         className={`pointer-events-none absolute -top-32 left-1/3 h-[600px] w-[600px] rounded-full bg-gradient-to-br ${glowDark} via-transparent to-transparent blur-[140px] dark:opacity-100 opacity-0`}
@@ -101,7 +101,7 @@ export default async function EventDetailPage({
 
           <div className="p-6 sm:p-8 lg:p-12">
             {/*
-              Mobile:  stack vertically — badges → title → desc → date/loc → calendar
+              Mobile:  stack vertically - badges → title → desc → date/loc → calendar
               Desktop: left content + right calendar (side by side)
             */}
             <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between">
@@ -217,7 +217,7 @@ export default async function EventDetailPage({
           </div>
         </div>
 
-        {/* ── Registration card (mobile — above content) ───────────────── */}
+        {/* ── Registration card (mobile - above content) ───────────────── */}
         <div className="mb-8 lg:hidden">
           <RegistrationCard
             event={event}
@@ -266,7 +266,7 @@ export default async function EventDetailPage({
           </aside>
         </div>
 
-        {/* ── Server card (mobile — below content) ────────────────────── */}
+        {/* ── Server card (mobile - below content) ────────────────────── */}
         <div className="mt-8 lg:hidden">
           <ServerCard event={event} accentClass={accentClass} />
         </div>

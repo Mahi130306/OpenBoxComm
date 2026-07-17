@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Terms & Conditions — Open Box',
+  title: 'Terms & Conditions - Open Box',
   description: 'Terms and Conditions for using the Open Box platform, website, Discord servers, and community services.',
 }
 
@@ -14,7 +14,7 @@ export default function TermsAndConditionsPage() {
 
       <p>
         Welcome to <strong>Open Box</strong> (&quot;we&quot;, &quot;our&quot;, &quot;us&quot;). These Terms &amp; Conditions govern your
-        access to and use of all Open Box platforms — including <strong>openboxcomm.in</strong>, all Discord
+        access to and use of all Open Box platforms - including <strong>openboxcomm.in</strong>, all Discord
         servers (JN, Dev, GG, Study, Connect, and any future servers), our social media accounts on
         X, Instagram, and YouTube, all events we organise, and any other services we operate now or in the
         future (collectively, the &quot;Platform&quot;). By accessing or using any part of the Platform, you agree to
@@ -108,7 +108,7 @@ export default function TermsAndConditionsPage() {
 
       <h2>5. Intellectual Property</h2>
       <p>
-        All content on the Platform — including logos, server identities, text, graphics, and software — is
+        All content on the Platform - including logos, server identities, text, graphics, and software - is
         the property of Open Box or its licensors and is protected under the{' '}
         <u><a href="https://www.indiacode.nic.in/bitstream/123456789/1367/1/a1957-14.pdf" target="_blank" rel="noopener noreferrer">
           Copyright Act, 1957
@@ -127,8 +127,8 @@ export default function TermsAndConditionsPage() {
 
       <h2>7. Events</h2>
       <p>
-        Participation in Open Box events — online workshops, IRL meetups, hackathons, contests, and live
-        streams — is subject to our <u><Link href="/legal/event-policy" className="hover:text-foreground transition-colors">Event Policy</Link></u>, which forms part of these
+        Participation in Open Box events - online workshops, IRL meetups, hackathons, contests, and live
+        streams - is subject to our <u><Link href="/legal/event-policy" className="hover:text-foreground transition-colors">Event Policy</Link></u>, which forms part of these
         Terms.
       </p>
 
