@@ -6,6 +6,7 @@ import { Search, ArrowRight } from 'lucide-react'
 import { Input } from '@/components/ui/input'
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
+import { cn } from '@/lib/utils'
 
 interface Blog {
   slug: string
@@ -39,6 +40,13 @@ export function BlogSearch({ initialBlogs }: BlogSearchProps) {
     })
   }, [debouncedQuery, initialBlogs])
 
+  const newestPostSlug = useMemo(() => {
+    if (filteredBlogs.length === 0) return null
+    // Sort descending by date to find the newest blog post
+    const sorted = [...filteredBlogs].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    return sorted[0]?.slug
+  }, [filteredBlogs])
+
   return (
     <div>
       <div className="relative mb-8 max-w-2xl">
@@ -61,16 +69,29 @@ export function BlogSearch({ initialBlogs }: BlogSearchProps) {
         <div className="grid gap-6 md:grid-cols-3">
           {filteredBlogs.map((post, i) => {
             const href = `/blogs/${post.slug}`
+            const isNewest = post.slug === newestPostSlug
 
             return (
               <Card
                 key={post.slug}
-                className="flex flex-col border-border bg-surface transition-all hover:-translate-y-1 hover:shadow-lg hover:border-pink-500/30 animate-in fade-in slide-in-from-bottom-4 duration-500 fill-mode-both"
+                className={cn(
+                  "flex flex-col bg-surface transition-all hover:-translate-y-1 hover:shadow-lg duration-500 fill-mode-both animate-in fade-in slide-in-from-bottom-4",
+                  isNewest
+                    ? "border-2 border-cyan-500 shadow-md shadow-cyan-500/15 dark:border-cyan-400 dark:shadow-cyan-400/15 hover:border-cyan-600 dark:hover:border-cyan-300"
+                    : "border border-border hover:border-cyan-500/30"
+                )}
                 style={{ animationDelay: `${100 + i * 50}ms` }}
               >
                 <CardHeader>
                   <div className="mb-4 flex items-center justify-between gap-2">
-                    <Badge variant="secondary">{post.server}</Badge>
+                    <div className="flex items-center gap-2 flex-wrap">
+                      <Badge variant="secondary">{post.server}</Badge>
+                      {isNewest && (
+                        <Badge variant="default" className="bg-cyan-500 hover:bg-cyan-600 text-black border-none text-[10px] uppercase tracking-wider font-bold h-5 px-1.5">
+                          Newest
+                        </Badge>
+                      )}
+                    </div>
                     <span className="text-xs text-muted-foreground">{post.readTime}</span>
                   </div>
                   <CardTitle className="text-2xl">{post.title}</CardTitle>

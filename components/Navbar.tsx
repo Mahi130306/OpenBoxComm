@@ -246,6 +246,9 @@ export function Navbar() {
               <Link href="/doc" className="text-sm font-medium hover:text-muted-foreground transition-colors">
                 Docs
               </Link>
+              <Link href="/compress" className="text-sm font-medium hover:text-muted-foreground transition-colors">
+                Compress
+              </Link>
             </div>
 
             <div className="hidden md:flex md:items-center md:space-x-2">
@@ -316,6 +319,7 @@ export function Navbar() {
               {/* <Link href="/events" className="block py-2 text-sm font-medium hover:text-muted-foreground">Events</Link> */}
               <Link href="/blogs" className="block py-2 text-sm font-medium hover:text-muted-foreground">Blogs</Link>
               <Link href="/doc" className="block py-2 text-sm font-medium hover:text-muted-foreground">Docs</Link>
+              <Link href="/compress" className="block py-2 text-sm font-medium hover:text-muted-foreground">Compress</Link>
               {/* <Link href="/join" className="block py-2 text-sm font-bold text-cyan-500">Join Community</Link> */}
               <Link href="/support" className="flex items-center gap-1.5 py-2 text-sm font-medium hover:text-muted-foreground">
                 <Heart className="h-4 w-4" /> Support </Link>

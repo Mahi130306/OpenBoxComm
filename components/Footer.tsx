@@ -163,6 +163,7 @@ export function Footer() {
                 // { label: 'Events', href: '/events' },
                 { label: 'Blogs', href: '/blogs' },
                 { label: 'Docs', href: '/doc' },
+                { label: 'Compressor', href: '/compress' },
               ].map((l) => (
                 <li key={l.href}>
                   <Link href={l.href} className="text-muted-foreground hover:text-cyan-500 transition-colors duration-150">
