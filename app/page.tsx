@@ -10,11 +10,59 @@ import { ArrowRight, Sparkles } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Home',
-  description: 'Join Open Box, a free, no-gatekeeping community network for gamers, students, and creators. Explore our Discord servers, attend events, and connect with peers.',
-  keywords: ['Open Box', 'Openbox', 'openbox.in', 'Discord community', 'gamers', 'students', 'creators', 'networking', 'gaming', 'development'],
+  description: 'OpenBox is a free multi-server Discord community for developers, engineers, gamers, students, and creators in tech. No applications. No gatekeeping. Just find your community and jump in.',
+  keywords: [
+    // Brand
+    'OpenBox',
+    'OpenBox community',
+    'openboxcomm',
+    'openboxcomm.in',
+    'OB Junction',
+    'OB Dev',
+    'OB GG',
+    // 'OB Stack',
+    // 'OB Grid',
+    // 'OB Casual',
+
+    // Core identity
+    'free Discord community',
+    'multi-server Discord',
+    'Discord community India',
+    'Discord server India',
+    'tech community India',
+    'online community for developers',
+
+    // Audiences
+    'developers',
+    'engineers',
+    'builders',
+    'gamers',
+    'students',
+    'creators',
+    'tech students India',
+    'college students Discord',
+    'engineering students community',
+
+    // Use cases
+    'developer community Discord',
+    'gaming Discord server India',
+    'study Discord server',
+    'networking Discord for developers',
+    'career community for developers',
+    'open source community India',
+    'hackathon community India',
+    'tech events India',
+
+    // Long tail
+    'free Discord server for developers India',
+    'Discord for computer science students',
+    'best Discord communities India',
+    'developer community no gatekeeping',
+    'join tech community India',
+    'Discord for engineers India',
+    'gaming and dev community India',
+  ],
   alternates: { canonical: '/' },
-  // No openGraph or twitter here on purpose — this inherits directly
-  // from the root layout's openGraph/twitter config.
 }
 
 export default function Home() {
@@ -54,7 +102,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Hero Abstract Graphic — right column */}
+          {/* Hero Abstract Graphic - right column */}
           {/* <div className="flex items-center justify-center lg:justify-end">
             <div className="flex items-center justify-center w-full h-full">
               <ServerNodeGraph />

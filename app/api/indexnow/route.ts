@@ -5,7 +5,7 @@ const BASE_URL = 'https://openboxcomm.in'
 const INDEXNOW_KEY = 'a63d11d22e28485ea9e0da8f7fa62387'
 const KEY_LOCATION = `${BASE_URL}/${INDEXNOW_KEY}.txt`
 
-// All URLs to submit — keep in sync with app/sitemap.ts
+// All URLs to submit - keep in sync with app/sitemap.ts
 const URLS = [
   `${BASE_URL}/`,
   `${BASE_URL}/about`,

@@ -1,4 +1,4 @@
-// Blog.tsx — in-page content sections
+// Blog.tsx - in-page content sections
 // slug → array of paragraphs (each string = one <p> block)
 
 export const blogContents: Record<string, string[]> = {

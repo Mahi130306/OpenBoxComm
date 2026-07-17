@@ -123,11 +123,10 @@ export function EventContentTabs({
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`flex flex-1 items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition-all duration-200 ${
-                  isActive
+                className={`flex flex-1 items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition-all duration-200 ${isActive
                     ? 'bg-background text-foreground shadow-sm'
                     : 'text-muted-foreground hover:text-foreground'
-                }`}
+                  }`}
               >
                 <Icon className="h-4 w-4" />
                 {tab.label}
@@ -163,17 +162,15 @@ export function EventContentTabs({
                   <span className="text-sm font-semibold text-foreground">{tab.label}</span>
                 </div>
                 <ChevronDown
-                  className={`h-4 w-4 text-muted-foreground transition-transform duration-200 ${
-                    isOpen ? 'rotate-180' : ''
-                  }`}
+                  className={`h-4 w-4 text-muted-foreground transition-transform duration-200 ${isOpen ? 'rotate-180' : ''
+                    }`}
                 />
               </button>
 
-              {/* Accordion body — animate via max-height */}
+              {/* Accordion body - animate via max-height */}
               <div
-                className={`transition-all duration-300 ease-in-out ${
-                  isOpen ? 'max-h-[2000px] opacity-100' : 'max-h-0 overflow-hidden opacity-0'
-                }`}
+                className={`transition-all duration-300 ease-in-out ${isOpen ? 'max-h-[2000px] opacity-100' : 'max-h-0 overflow-hidden opacity-0'
+                  }`}
               >
                 <div className="border-t border-border px-5 pb-5 pt-4">
                   {tabContent[tab.id]}

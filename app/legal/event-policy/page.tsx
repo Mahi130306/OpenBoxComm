@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Event Policy — Open Box',
-  description: 'Event Policy for Open Box — rules, conduct, cancellations, and terms for all Open Box events.',
+  title: 'Event Policy - Open Box',
+  description: 'Event Policy for Open Box - rules, conduct, cancellations, and terms for all Open Box events.',
 }
 
 export default function EventPolicyPage() {
@@ -14,7 +14,7 @@ export default function EventPolicyPage() {
 
       <p>
         This Event Policy applies to all events organised or co-hosted by Open Box across any of our
-        platforms — including online events announced on <strong>openboxcomm.in</strong>, across our Discord
+        platforms - including online events announced on <strong>openboxcomm.in</strong>, across our Discord
         servers, our social media accounts on X, Instagram, and YouTube, and any in-person events we run. By registering for or participating in any Open Box event,
         you agree to this policy, our <Link href="/legal/community-rules" className="underline hover:text-foreground transition-colors">Community Rules</Link>, our{' '}
         <Link href="/legal/acceptable-use-policy" className="underline hover:text-foreground transition-colors">Acceptable Use Policy</Link>, and our{' '}
@@ -23,10 +23,10 @@ export default function EventPolicyPage() {
 
       <h2>1. Types of Events</h2>
       <ul>
-        <li><strong>Online Workshops</strong> — virtual sessions covering development, building, career, and tech topics</li>
-        <li><strong>In-Person Meetups</strong> — community gatherings in Indian cities</li>
-        <li><strong>Hackathons &amp; Contests</strong> — timed competitive events with defined rules and judging</li>
-        <li><strong>Live Streams</strong> — sessions on YouTube, X, or Discord Stage channels</li>
+        <li><strong>Online Workshops</strong> - virtual sessions covering development, building, career, and tech topics</li>
+        <li><strong>In-Person Meetups</strong> - community gatherings in Indian cities</li>
+        <li><strong>Hackathons &amp; Contests</strong> - timed competitive events with defined rules and judging</li>
+        <li><strong>Live Streams</strong> - sessions on YouTube, X, or Discord Stage channels</li>
       </ul>
 
       <h2>2. Registration &amp; Eligibility</h2>
@@ -40,7 +40,7 @@ export default function EventPolicyPage() {
 
       <h2>3. Code of Conduct at Events</h2>
       <p>
-        All participants — online or in-person — must follow our <Link href="/legal/community-rules" className="underline hover:text-foreground transition-colors">Community Rules</Link>.
+        All participants - online or in-person - must follow our <Link href="/legal/community-rules" className="underline hover:text-foreground transition-colors">Community Rules</Link>.
       </p>
       <ul>
         <li>Harassment, discrimination, or disruptive behaviour results in immediate removal and potential permanent ban</li>
@@ -92,7 +92,7 @@ export default function EventPolicyPage() {
 
       <h2>7. Photography &amp; Media</h2>
       <p>
-        Open Box may capture photos, videos, or audio at events for use across our website, Discord, X, Instagram, and YouTube. 
+        Open Box may capture photos, videos, or audio at events for use across our website, Discord, X, Instagram, and YouTube.
         By participating, you consent unless you opt out in writing before the event begins.
       </p>
 

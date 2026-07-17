@@ -206,7 +206,7 @@ export default function ServerNodeGraph() {
         aria-label="Live node graph showing OpenBox servers connected to the Junction hub"
       />
 
-      {/* Tooltip — rendered outside canvas, fixed positioned */}
+      {/* Tooltip - rendered outside canvas, fixed positioned */}
       <div
         ref={tipRef}
         style={{ display: "none", position: "fixed", zIndex: 100, pointerEvents: "none" }}

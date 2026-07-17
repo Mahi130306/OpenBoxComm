@@ -30,12 +30,12 @@ export function UpdateBanner() {
     try {
       sessionStorage.setItem(SESSION_KEY, '1')
     } catch {
-      // sessionStorage unavailable (private mode edge case) — silently ignore
+      // sessionStorage unavailable (private mode edge case) - silently ignore
     }
   }
 
   const poll = async () => {
-    // Skip if tab is hidden — no need to poll in background
+    // Skip if tab is hidden - no need to poll in background
     if (document.visibilityState !== 'visible') return
 
     // Skip if user already dismissed this session
@@ -60,7 +60,7 @@ export function UpdateBanner() {
         if (intervalRef.current) clearInterval(intervalRef.current)
       }
     } catch {
-      // Network error — silently ignore
+      // Network error - silently ignore
     }
   }
 

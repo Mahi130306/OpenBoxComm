@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Copyright & DMCA Policy — Open Box',
+  title: 'Copyright & DMCA Policy - Open Box',
   description: 'How Open Box handles copyright infringement claims under Indian law and the DMCA.',
 }
 
@@ -13,7 +13,7 @@ export default function DmcaPolicyPage() {
 
       <p>
         Open Box respects intellectual property rights and expects all users and community members to do the
-        same. This policy applies across the entire Open Box umbrella — including <strong>openboxcomm.in</strong>,
+        same. This policy applies across the entire Open Box umbrella - including <strong>openboxcomm.in</strong>,
         all Discord servers, our social media accounts on X, Instagram, and YouTube, and any other platforms we operate.
       </p>
       <p>It is governed by the following laws:</p>
@@ -22,13 +22,13 @@ export default function DmcaPolicyPage() {
           <a href="https://www.indiacode.nic.in/bitstream/123456789/1367/1/a1957-14.pdf" target="_blank" rel="noopener noreferrer">
             Copyright Act, 1957
           </a>{' '}
-          — protects intellectual property rights in creative works.
+          - protects intellectual property rights in creative works.
         </li>
         <li>
           <a href="https://www.indiacode.nic.in/bitstream/123456789/13116/1/it_act_2000_updated.pdf" target="_blank" rel="noopener noreferrer">
             Information Technology Act, 2000
           </a>{' '}
-          — India&apos;s primary cyber law with safe harbour protections for intermediaries.
+          - India&apos;s primary cyber law with safe harbour protections for intermediaries.
         </li>
       </ul>
 
@@ -80,7 +80,7 @@ export default function DmcaPolicyPage() {
 
       <h2>6. Open Box Intellectual Property</h2>
       <p>
-        All Open Box logos, branding, and original content are protected under the Copyright Act, 1957. 
+        All Open Box logos, branding, and original content are protected under the Copyright Act, 1957.
         For brand usage guidelines, see our <a href="/legal/acceptable-use-policy">Acceptable Use Policy</a>.
       </p>
 

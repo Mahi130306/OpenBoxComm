@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Acceptable Use Policy — Open Box',
-  description: 'Acceptable Use Policy for Open Box — permitted uses, prohibited conduct, and brand usage guidelines.',
+  title: 'Acceptable Use Policy - Open Box',
+  description: 'Acceptable Use Policy for Open Box - permitted uses, prohibited conduct, and brand usage guidelines.',
 }
 
 export default function AcceptableUsePolicyPage() {
@@ -13,7 +13,7 @@ export default function AcceptableUsePolicyPage() {
       <p className="text-sm text-muted-foreground mb-8">Last updated: 07/07/2026</p>
 
       <p>
-        This Acceptable Use Policy (&quot;AUP&quot;) governs how you may use any Open Box platform — including the
+        This Acceptable Use Policy (&quot;AUP&quot;) governs how you may use any Open Box platform - including the
         website at <strong>openboxcomm.in</strong>, all Discord servers, official social media accounts, all events, and
         any other service operated under the Open Box brand. This AUP forms part of our{' '}
         <Link href="/legal/terms-and-conditions" className="underline hover:text-foreground transition-colors">Terms &amp; Conditions</Link>.

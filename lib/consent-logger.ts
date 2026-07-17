@@ -1,9 +1,9 @@
 /**
- * Open Box — Consent Logger
+ * Open Box - Consent Logger
  * ─────────────────────────
  * Records user consent decisions (accept / reject / dismiss) to:
- *   1. localStorage  — instant client-side retrieval
- *   2. POST /api/consent — server-side audit log (stdout / log drain)
+ *   1. localStorage  - instant client-side retrieval
+ *   2. POST /api/consent - server-side audit log (stdout / log drain)
  *
  * Complies with:
  *   • IT Act, 2000 §43A
@@ -17,7 +17,7 @@
 export type ConsentAction = 'accept' | 'reject' | 'dismiss'
 
 export interface ConsentRecord {
-  /** Anonymous UUID — never tied to personal identity */
+  /** Anonymous UUID - never tied to personal identity */
   visitorId: string
   /** User's decision */
   action: ConsentAction
@@ -40,10 +40,10 @@ export interface ConsentRecord {
 // ── Constants ────────────────────────────────────────────────────────────────
 
 /** Keep in sync with the actual last-updated dates on the legal pages */
-export const TC_VERSION  = '2025-06-06'
-export const PP_VERSION  = '2025-06-06'
+export const TC_VERSION = '2025-06-06'
+export const PP_VERSION = '2025-06-06'
 
-const CONSENT_KEY    = 'ob-consent'
+const CONSENT_KEY = 'ob-consent'
 const VISITOR_ID_KEY = 'ob-visitor-id'
 
 // ── Visitor ID (anonymous, persistent per browser) ────────────────────────────
@@ -101,15 +101,15 @@ export async function recordConsent(action: ConsentAction): Promise<void> {
   const now = new Date()
 
   const record: ConsentRecord = {
-    visitorId:    getOrCreateVisitorId(),
+    visitorId: getOrCreateVisitorId(),
     action,
-    tcVersion:    TC_VERSION,
-    ppVersion:    PP_VERSION,
-    timestamp:    now.toISOString(),
+    tcVersion: TC_VERSION,
+    ppVersion: PP_VERSION,
+    timestamp: now.toISOString(),
     timestampIST: toIST(now),
-    userAgent:    navigator.userAgent,
-    referrer:     document.referrer || '(direct)',
-    pageUrl:      window.location.href,
+    userAgent: navigator.userAgent,
+    referrer: document.referrer || '(direct)',
+    pageUrl: window.location.href,
   }
 
   // Persist to localStorage only for accept / reject (dismiss is session-only)
@@ -117,21 +117,21 @@ export async function recordConsent(action: ConsentAction): Promise<void> {
     try {
       localStorage.setItem(CONSENT_KEY, JSON.stringify(record))
     } catch {
-      // Quota exceeded or private browsing — ignore
+      // Quota exceeded or private browsing - ignore
     }
   }
 
   // Fire-and-forget server audit log
   try {
     await fetch('/api/consent', {
-      method:  'POST',
+      method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body:    JSON.stringify(record),
+      body: JSON.stringify(record),
       // keepalive lets the request outlive page navigation
       keepalive: true,
     })
   } catch {
-    // Network failure — consent is still stored client-side
+    // Network failure - consent is still stored client-side
   }
 }
 

@@ -13,7 +13,7 @@ export const eventDetailsMap: Record<string, EventDetails> = {
       'Prepare a 1-sentence description of what you aim to ship or improve tonight.'
     ],
     rules: [
-      'Focus on building during the 45-minute sprint — minimize distractions.',
+      'Focus on building during the 45-minute sprint - minimize distractions.',
       'Be constructive and supportive during feedback and show-and-tell rounds.',
       'No spamming or hard selling your product; focus on sharing tech and design.'
     ]
@@ -55,7 +55,7 @@ export const eventDetailsMap: Record<string, EventDetails> = {
     ],
     rules: [
       'What is shared in the circle stays in the circle (strict NDAs/trust).',
-      'Give actionable, honest, and kind feedback — focus on helping the founder succeed.',
+      'Give actionable, honest, and kind feedback - focus on helping the founder succeed.',
       'Listen actively without getting defensive about your own project.'
     ]
   },
@@ -81,7 +81,7 @@ export const eventDetailsMap: Record<string, EventDetails> = {
       'Bring your student ID card for verification at the entrance.'
     ],
     rules: [
-      'All code must be written during the event — no pre-built projects allowed (templates/scaffolding are fine).',
+      'All code must be written during the event - no pre-built projects allowed (templates/scaffolding are fine).',
       'Be respectful of the physical venue and clean up after your team.',
       'Collaborate and support other teams; no hostile competition.'
     ]

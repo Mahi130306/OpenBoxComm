@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy — Open Box',
-  description: 'Privacy Policy for Open Box — how we collect, use, and protect your personal data under the DPDP Act 2023.',
+  title: 'Privacy Policy - Open Box',
+  description: 'Privacy Policy for Open Box - how we collect, use, and protect your personal data under the DPDP Act 2023.',
 }
 
 export default function PrivacyPolicyPage() {
@@ -14,7 +14,7 @@ export default function PrivacyPolicyPage() {
 
       <p>
         Open Box (&quot;we&quot;, &quot;our&quot;, &quot;us&quot;) is committed to protecting your personal data. This Privacy Policy
-        explains how we collect, use, store, and protect your information across the Open Box umbrella —
+        explains how we collect, use, store, and protect your information across the Open Box umbrella -
         including <strong>openboxcomm.in</strong>, our Discord servers (JN, Dev, GG, Study, Connect),
         our social media presence on X, Instagram, and YouTube, and any events or services we operate.
       </p>
@@ -24,20 +24,20 @@ export default function PrivacyPolicyPage() {
           <u><a href="https://www.indiacode.nic.in/bitstream/123456789/20168/1/2023_Act_22_Digital_Personal_Data_Protection_Act.pdf" target="_blank" rel="noopener noreferrer">
             Digital Personal Data Protection Act, 2023 (DPDP Act)
           </a>:</u>
-           India&apos;s data protection law governing how personal data is collected, processed, and safeguarded.
+          India&apos;s data protection law governing how personal data is collected, processed, and safeguarded.
         </li>
         <li>
           <u><a href="https://www.indiacode.nic.in/bitstream/123456789/13116/1/it_act_2000_updated.pdf" target="_blank" rel="noopener noreferrer">
             Information Technology Act, 2000
           </a>:</u>{' '}
-           India&apos;s primary cyber law covering electronic records, data protection, and intermediary
+          India&apos;s primary cyber law covering electronic records, data protection, and intermediary
           liability.
         </li>
         <li>
           <u><a href="https://www.indiacode.nic.in/bitstream/123456789/15240/1/constitution_of_india.pdf" target="_blank" rel="noopener noreferrer">
             Article 21 of the Constitution of India
           </a>:</u>{' '}
-           guarantees the right to life and personal liberty, which the Supreme Court in{' '}
+          guarantees the right to life and personal liberty, which the Supreme Court in{' '}
           <em>K.S. Puttaswamy v. Union of India (2017)</em> held includes the fundamental right to privacy.
         </li>
       </ul>
@@ -70,7 +70,7 @@ export default function PrivacyPolicyPage() {
         <li>Account details: username, email address (via Discord OAuth)</li>
         <li>Content you post: messages, comments, blog contributions, event submissions on the website</li>
         <li>Support communications sent to any of our contact emails</li>
-        <li>Payment information for Patreon, UPI, or other payment channels (processed by the respective payment provider — we do not store card or UPI details directly)</li>
+        <li>Payment information for Patreon, UPI, or other payment channels (processed by the respective payment provider - we do not store card or UPI details directly)</li>
         <li>Event registrations: name, email, and any other details required for a specific event</li>
       </ul>
 
@@ -79,7 +79,7 @@ export default function PrivacyPolicyPage() {
         <li>IP address and approximate location (country/region)</li>
         <li>Browser type, device type, operating system</li>
         <li>Pages visited, time spent, referring URLs</li>
-        <li>Cookies and similar technologies — including those set by Google Tag Manager and Google Analytics for aggregate, anonymous traffic analysis (see our <u><Link href="/legal/cookie-policy" className="hover:text-foreground transition-colors">Cookie Policy</Link></u>)</li>
+        <li>Cookies and similar technologies - including those set by Google Tag Manager and Google Analytics for aggregate, anonymous traffic analysis (see our <u><Link href="/legal/cookie-policy" className="hover:text-foreground transition-colors">Cookie Policy</Link></u>)</li>
       </ul>
 
       <h3>2.3 Information from Third-Party Platforms</h3>
@@ -121,14 +121,14 @@ export default function PrivacyPolicyPage() {
       <h2>4. Data Sharing &amp; Transfers</h2>
       <p>We do <strong>not</strong> sell your personal data. We may share data with:</p>
       <ul>
-        <li><strong>Google LLC</strong> — Google Tag Manager (GTM-5B33KBB4) and Google Analytics (G-58P0FR4M2T) are used to collect anonymous, aggregated traffic statistics. Data is processed in accordance with <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google&apos;s Privacy Policy</a>. You can opt out via <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">Google Analytics Opt-out</a>.</li>
-        <li><strong>Discord Inc.</strong> — authentication and community platform</li>
-        <li><strong>Supabase Inc.</strong> — database and authentication backend</li>
-        <li><strong>Patreon Inc.</strong> — donation processing</li>
-        <li><strong>Other payment processors</strong> — for UPI or future payment channels, as applicable</li>
-        <li><strong>Event co-organisers</strong> — limited data shared only as necessary to run a specific event, disclosed at registration</li>
-        <li><strong>Social media platforms (X, Instagram, YouTube)</strong> — interactions on these platforms are subject to their respective privacy policies; we do not share your data with them beyond what is inherent in operating official accounts</li>
-        <li><strong>Law enforcement</strong> — when required by Indian courts or government authorities under lawful orders</li>
+        <li><strong>Google LLC</strong> - Google Tag Manager (GTM-5B33KBB4) and Google Analytics (G-58P0FR4M2T) are used to collect anonymous, aggregated traffic statistics. Data is processed in accordance with <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google&apos;s Privacy Policy</a>. You can opt out via <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">Google Analytics Opt-out</a>.</li>
+        <li><strong>Discord Inc.</strong> - authentication and community platform</li>
+        <li><strong>Supabase Inc.</strong> - database and authentication backend</li>
+        <li><strong>Patreon Inc.</strong> - donation processing</li>
+        <li><strong>Other payment processors</strong> - for UPI or future payment channels, as applicable</li>
+        <li><strong>Event co-organisers</strong> - limited data shared only as necessary to run a specific event, disclosed at registration</li>
+        <li><strong>Social media platforms (X, Instagram, YouTube)</strong> - interactions on these platforms are subject to their respective privacy policies; we do not share your data with them beyond what is inherent in operating official accounts</li>
+        <li><strong>Law enforcement</strong> - when required by Indian courts or government authorities under lawful orders</li>
       </ul>
       <p>
         Cross-border data transfers comply with applicable safeguards under the{' '}

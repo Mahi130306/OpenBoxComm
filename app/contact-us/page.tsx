@@ -6,10 +6,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge'
 
 export const metadata: Metadata = {
-  title: 'Contact Us — Open Box',
+  title: 'Contact Us - Open Box',
   description: 'Get in touch with the Open Box team. Reach us by email, Discord, or through our contact form.',
   openGraph: {
-    title: 'Contact Us — Open Box',
+    title: 'Contact Us - Open Box',
     description: 'Get in touch with the Open Box team via email, Discord, or our contact form.',
   },
   alternates: { canonical: '/contact-us' },
@@ -29,8 +29,8 @@ export default function ContactUsPage() {
       {/* Hero Section */}
       <div className="mb-12 rounded-2xl border border-black/10 bg-gradient-to-br from-black/[0.04] to-indigo-400/[0.08] p-8 shadow-sm dark:border-white/10 dark:from-white/[0.08] dark:to-indigo-400/[0.05] sm:p-12">
         <div className="flex items-center gap-3 mb-4">
-            <Send className="h-8 w-8 text-indigo-500" />
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-indigo-600 dark:text-indigo-300">Get in touch</p>
+          <Send className="h-8 w-8 text-indigo-500" />
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-indigo-600 dark:text-indigo-300">Get in touch</p>
         </div>
         <h1 className="mb-4 text-4xl font-extrabold tracking-tight text-foreground lg:text-5xl">Contact Us</h1>
         <p className="max-w-2xl text-lg text-muted-foreground/90">
@@ -90,32 +90,32 @@ export default function ContactUsPage() {
         <aside className="space-y-6">
           <Card className="border-border bg-surface shadow-md border-t-4 border-t-indigo-500">
             <CardHeader>
-                <div className="flex items-center justify-between">
-                    <CardTitle className="text-xl">Join Discord</CardTitle>
-                    <Badge variant="secondary" className="bg-green-500/10 text-green-600 dark:text-green-400 border-none">
-                        Fastest Response
-                    </Badge>
-                </div>
+              <div className="flex items-center justify-between">
+                <CardTitle className="text-xl">Join Discord</CardTitle>
+                <Badge variant="secondary" className="bg-green-500/10 text-green-600 dark:text-green-400 border-none">
+                  Fastest Response
+                </Badge>
+              </div>
               <CardDescription>
                 The primary hub for our community and support.
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
-                {/* <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-indigo-500 to-violet-600 shadow-lg shadow-indigo-500/20">
+              {/* <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-indigo-500 to-violet-600 shadow-lg shadow-indigo-500/20">
                     <MessageSquare className="h-8 w-8 text-white" />
                 </div> */}
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                    Drop a message in the <code className="rounded bg-muted px-1.5 py-0.5 text-xs font-mono font-bold text-foreground">#help</code> channel. Our staff and community members are active throughout the day.
-                </p>
-                <Button asChild size="lg" className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold">
-                    <a
-                        href="https://discord.gg/7ZWckKU89J"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Jump into Discord
-                    </a>
-                </Button>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Drop a message in the <code className="rounded bg-muted px-1.5 py-0.5 text-xs font-mono font-bold text-foreground">#help</code> channel. Our staff and community members are active throughout the day.
+              </p>
+              <Button asChild size="lg" className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold">
+                <a
+                  href="https://discord.gg/7ZWckKU89J"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Jump into Discord
+                </a>
+              </Button>
             </CardContent>
           </Card>
 

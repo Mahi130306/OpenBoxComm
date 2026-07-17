@@ -29,9 +29,9 @@ function getEventSupporters(event: Event) {
 function getShortDate(dateStr: string) {
   const date = new Date(dateStr)
   return {
-    month:   date.toLocaleDateString('en-US', { month:   'short'   }).toUpperCase(),
-    day:     date.toLocaleDateString('en-US', { day:     '2-digit' }),
-    weekday: date.toLocaleDateString('en-US', { weekday: 'short'   }),
+    month: date.toLocaleDateString('en-US', { month: 'short' }).toUpperCase(),
+    day: date.toLocaleDateString('en-US', { day: '2-digit' }),
+    weekday: date.toLocaleDateString('en-US', { weekday: 'short' }),
   }
 }
 
@@ -52,25 +52,25 @@ function getSupportStripText(sponsors: Sponsor[]) {
 function getServerAccent(server: string): string {
   switch (server) {
     case 'Dev': return 'from-emerald-500 to-green-400'
-    case 'GG':  return 'from-rose-500 to-red-400'
+    case 'GG': return 'from-rose-500 to-red-400'
     case 'Jn.': return 'from-amber-400 to-rose-400'
-    default:    return 'from-cyan-500 to-blue-500'
+    default: return 'from-cyan-500 to-blue-500'
   }
 }
 
 function getServerShadow(server: string): string {
   switch (server) {
     case 'Dev': return 'hover:shadow-emerald-500/10 dark:hover:shadow-emerald-500/20'
-    case 'GG':  return 'hover:shadow-rose-500/10 dark:hover:shadow-rose-500/20'
+    case 'GG': return 'hover:shadow-rose-500/10 dark:hover:shadow-rose-500/20'
     case 'Jn.': return 'hover:shadow-amber-400/10 dark:hover:shadow-amber-400/20'
-    default:    return 'hover:shadow-cyan-500/10 dark:hover:shadow-cyan-500/20'
+    default: return 'hover:shadow-cyan-500/10 dark:hover:shadow-cyan-500/20'
   }
 }
 
 export default function EventsPage() {
   const [filterServer, setFilterServer] = useState('All')
-  const [filterType,   setFilterType]   = useState('all')
-  const [mounted,      setMounted]      = useState(false)
+  const [filterType, setFilterType] = useState('all')
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => setMounted(true), [])
 
@@ -79,8 +79,8 @@ export default function EventsPage() {
       const matchesServer = filterServer === 'All' || event.server === filterServer
       const matchesType =
         filterType === 'all' ||
-        (filterType === 'online'  && !event.isOffline) ||
-        (filterType === 'offline' &&  event.isOffline)
+        (filterType === 'online' && !event.isOffline) ||
+        (filterType === 'offline' && event.isOffline)
       return matchesServer && matchesType
     })
   }, [filterServer, filterType])
@@ -88,16 +88,16 @@ export default function EventsPage() {
   const formatDate = (dateStr: string) =>
     new Date(dateStr).toLocaleDateString('en-US', {
       weekday: 'short', month: 'short', day: 'numeric',
-      hour: 'numeric',  minute: '2-digit',
+      hour: 'numeric', minute: '2-digit',
     })
 
-  const totalEvents   = events.length
-  const onlineEvents  = events.filter((e) => !e.isOffline).length
-  const offlineEvents = events.filter((e) =>  e.isOffline).length
+  const totalEvents = events.length
+  const onlineEvents = events.filter((e) => !e.isOffline).length
+  const offlineEvents = events.filter((e) => e.isOffline).length
 
   return (
     <div className="relative min-h-screen overflow-hidden">
-      {/* Ambient glows — visible in dark, very subtle in light */}
+      {/* Ambient glows - visible in dark, very subtle in light */}
       <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 left-1/4 h-[600px] w-[600px] rounded-full bg-cyan-500/5 blur-[120px] dark:bg-cyan-500/8" />
         <div className="absolute top-60 right-1/4 h-[400px] w-[400px] rounded-full bg-violet-500/4 blur-[100px] dark:bg-violet-500/6" />
@@ -127,22 +127,22 @@ export default function EventsPage() {
           {/* Stats row */}
           {totalEvents > 0 && (
             <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-            {[
-      { icon: Zap,   label: `${totalEvents} events`,    sub: 'scheduled'    },
-      { icon: Wifi,  label: `${onlineEvents} online`,   sub: 'from anywhere' },
-      { icon: Globe, label: `${offlineEvents} offline`, sub: 'in person'    },
-    ].map((stat) => (
-      <div
-        key={stat.label}
-        className="flex items-center gap-2.5 rounded-xl border border-border bg-muted/40 px-4 py-2.5"
-      >
-        <stat.icon className="h-4 w-4 text-cyan-500 dark:text-cyan-400" />
-        <div className="text-left">
-          <p className="text-sm font-bold text-foreground">{stat.label}</p>
-          <p className="text-[11px] text-muted-foreground">{stat.sub}</p>
-        </div>
-      </div>
-    ))}
+              {[
+                { icon: Zap, label: `${totalEvents} events`, sub: 'scheduled' },
+                { icon: Wifi, label: `${onlineEvents} online`, sub: 'from anywhere' },
+                { icon: Globe, label: `${offlineEvents} offline`, sub: 'in person' },
+              ].map((stat) => (
+                <div
+                  key={stat.label}
+                  className="flex items-center gap-2.5 rounded-xl border border-border bg-muted/40 px-4 py-2.5"
+                >
+                  <stat.icon className="h-4 w-4 text-cyan-500 dark:text-cyan-400" />
+                  <div className="text-left">
+                    <p className="text-sm font-bold text-foreground">{stat.label}</p>
+                    <p className="text-[11px] text-muted-foreground">{stat.sub}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           )}
         </div>
@@ -156,11 +156,10 @@ export default function EventsPage() {
                 <button
                   key={server}
                   onClick={() => setFilterServer(server)}
-                  className={`rounded-lg px-3.5 py-1.5 text-sm font-semibold transition-all duration-200 ${
-                    filterServer === server
+                  className={`rounded-lg px-3.5 py-1.5 text-sm font-semibold transition-all duration-200 ${filterServer === server
                       ? 'bg-foreground text-background shadow-sm'
                       : 'border border-border bg-muted/40 text-muted-foreground hover:border-border/80 hover:bg-muted/70 hover:text-foreground'
-                  }`}
+                    }`}
                 >
                   {server}
                 </button>
@@ -173,11 +172,10 @@ export default function EventsPage() {
               <button
                 key={type}
                 onClick={() => setFilterType(type)}
-                className={`rounded-lg px-3.5 py-1.5 text-sm font-semibold capitalize transition-all duration-200 ${
-                  filterType === type
+                className={`rounded-lg px-3.5 py-1.5 text-sm font-semibold capitalize transition-all duration-200 ${filterType === type
                     ? 'bg-foreground text-background shadow-sm'
                     : 'border border-border bg-muted/40 text-muted-foreground hover:border-border/80 hover:bg-muted/70 hover:text-foreground'
-                }`}
+                  }`}
               >
                 {type}
               </button>
@@ -210,8 +208,8 @@ export default function EventsPage() {
           <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
             {filteredEvents.map((event, index) => {
               const supporters = getEventSupporters(event)
-              const dateBadge  = getShortDate(event.date)
-              const accent     = getServerAccent(event.server)
+              const dateBadge = getShortDate(event.date)
+              const accent = getServerAccent(event.server)
               const shadowClass = getServerShadow(event.server)
 
               return (
@@ -226,7 +224,7 @@ export default function EventsPage() {
                     className={`h-0.5 w-full bg-gradient-to-r ${accent} opacity-70 transition-opacity duration-300 group-hover:opacity-100`}
                   />
 
-                  {/* Top strip — always rendered for visual consistency */}
+                  {/* Top strip - always rendered for visual consistency */}
                   <div className="flex items-center gap-3 border-b border-border px-5 py-3">
                     {supporters.length > 0 ? (
                       <>

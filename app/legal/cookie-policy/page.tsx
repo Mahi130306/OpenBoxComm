@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Cookie Policy — Open Box',
-  description: 'Cookie Policy for Open Box — how we use cookies and similar tracking technologies.',
+  title: 'Cookie Policy - Open Box',
+  description: 'Cookie Policy for Open Box - how we use cookies and similar tracking technologies.',
 }
 
 export default function CookiePolicyPage() {
@@ -33,8 +33,8 @@ export default function CookiePolicyPage() {
         These cookies are essential for the Platform to function. They do not store any personally identifiable information.
       </p>
       <ul>
-        <li><strong>ob-auth:</strong> Session authentication token — Duration: Session</li>
-        <li><strong>ob-theme:</strong> Your preferred colour theme (dark/light) — Duration: Persistent (1 year)</li>
+        <li><strong>ob-auth:</strong> Session authentication token - Duration: Session</li>
+        <li><strong>ob-theme:</strong> Your preferred colour theme (dark/light) - Duration: Persistent (1 year)</li>
       </ul>
 
       <h3>2.2 Functional Cookies &amp; localStorage</h3>
@@ -52,9 +52,9 @@ export default function CookiePolicyPage() {
       <h3>2.4 Third-Party Cookies</h3>
       <p>Services we use may set their own cookies:</p>
       <ul>
-        <li><strong>Discord</strong> — for OAuth authentication</li>
-        <li><strong>Patreon</strong> — for donation widgets</li>
-        <li><strong>YouTube</strong> — for embedded videos (privacy-enhanced mode)</li>
+        <li><strong>Discord</strong> - for OAuth authentication</li>
+        <li><strong>Patreon</strong> - for donation widgets</li>
+        <li><strong>YouTube</strong> - for embedded videos (privacy-enhanced mode)</li>
       </ul>
 
       <h2>3. Your Choices</h2>

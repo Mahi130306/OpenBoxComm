@@ -26,18 +26,18 @@ export function generateStaticParams() {
 function getServerAccent(slug: string): string {
   switch (slug) {
     case 'dev': return 'from-emerald-500 to-green-400'
-    case 'gg':  return 'from-rose-500 to-red-400'
-    case 'jn':  return 'from-amber-400 to-rose-400'
-    default:    return 'from-cyan-500 to-blue-500'
+    case 'gg': return 'from-rose-500 to-red-400'
+    case 'jn': return 'from-amber-400 to-rose-400'
+    default: return 'from-cyan-500 to-blue-500'
   }
 }
 
 function getServerGlowDark(slug: string): string {
   switch (slug) {
     case 'dev': return 'dark:from-emerald-500/8'
-    case 'gg':  return 'dark:from-rose-500/8'
-    case 'jn':  return 'dark:from-amber-400/8'
-    default:    return 'dark:from-cyan-500/8'
+    case 'gg': return 'dark:from-rose-500/8'
+    case 'jn': return 'dark:from-amber-400/8'
+    default: return 'dark:from-cyan-500/8'
   }
 }
 
@@ -51,29 +51,29 @@ export default async function EventDetailPage({
   if (!event) notFound()
 
   const accentClass = getServerAccent(event.serverSlug)
-  const glowDark    = getServerGlowDark(event.serverSlug)
+  const glowDark = getServerGlowDark(event.serverSlug)
 
   const date = new Date(event.date)
 
   const formattedDate = date.toLocaleDateString('en-US', {
     weekday: 'long',
-    month:   'long',
-    day:     'numeric',
-    year:    'numeric',
-    hour:    'numeric',
-    minute:  '2-digit',
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric',
+    hour: 'numeric',
+    minute: '2-digit',
   })
-  const shortDay     = date.toLocaleDateString('en-US', { day:     '2-digit' })
-  const shortMonth   = date.toLocaleDateString('en-US', { month:   'short'   }).toUpperCase()
-  const shortWeekday = date.toLocaleDateString('en-US', { weekday: 'long'    })
+  const shortDay = date.toLocaleDateString('en-US', { day: '2-digit' })
+  const shortMonth = date.toLocaleDateString('en-US', { month: 'short' }).toUpperCase()
+  const shortWeekday = date.toLocaleDateString('en-US', { weekday: 'long' })
 
-  const sponsors   = event.sponsors ?? []
+  const sponsors = event.sponsors ?? []
   const heroSponsor = sponsors.length === 1 ? sponsors[0] : null
   const details = getEventDetails(event.id)
 
   return (
     <div className="relative min-h-screen w-full overflow-x-hidden pb-24">
-      {/* Ambient glow — dark mode only, invisible in light */}
+      {/* Ambient glow - dark mode only, invisible in light */}
       <div
         aria-hidden
         className={`pointer-events-none absolute -top-32 left-1/3 h-[600px] w-[600px] rounded-full bg-gradient-to-br ${glowDark} via-transparent to-transparent blur-[140px] dark:opacity-100 opacity-0`}
@@ -101,7 +101,7 @@ export default async function EventDetailPage({
 
           <div className="p-6 sm:p-8 lg:p-12">
             {/*
-              Mobile:  stack vertically — badges → title → desc → date/loc → calendar
+              Mobile:  stack vertically - badges → title → desc → date/loc → calendar
               Desktop: left content + right calendar (side by side)
             */}
             <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between">
@@ -126,11 +126,10 @@ export default async function EventDetailPage({
                   </span>
 
                   <span
-                    className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-semibold ${
-                      event.ticketStatus === 'free'
+                    className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-semibold ${event.ticketStatus === 'free'
                         ? 'border-emerald-500/30 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400'
                         : 'border-amber-500/30 bg-amber-500/10 text-amber-600 dark:text-amber-400'
-                    }`}
+                      }`}
                   >
                     <Ticket className="h-3 w-3" />
                     {event.ticketStatus === 'free' ? 'Free Access' : `Paid · ${event.price}`}
@@ -217,7 +216,7 @@ export default async function EventDetailPage({
           </div>
         </div>
 
-        {/* ── Registration card (mobile — above content) ───────────────── */}
+        {/* ── Registration card (mobile - above content) ───────────────── */}
         <div className="mb-8 lg:hidden">
           <RegistrationCard
             event={event}
@@ -266,7 +265,7 @@ export default async function EventDetailPage({
           </aside>
         </div>
 
-        {/* ── Server card (mobile — below content) ────────────────────── */}
+        {/* ── Server card (mobile - below content) ────────────────────── */}
         <div className="mt-8 lg:hidden">
           <ServerCard event={event} accentClass={accentClass} />
         </div>

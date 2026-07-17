@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Refund Policy — Open Box',
-  description: 'Refund Policy for Open Box — how we handle refund requests for Patreon, UPI, and other payment channels.',
+  title: 'Refund Policy - Open Box',
+  description: 'Refund Policy for Open Box - how we handle refund requests for Patreon, UPI, and other payment channels.',
 }
 
 export default function RefundPolicyPage() {
@@ -14,14 +14,14 @@ export default function RefundPolicyPage() {
 
       <p>
         This Refund Policy applies to any financial contributions or payments made to Open Box across any of
-        our platforms — including Patreon memberships, paid event registrations on{' '}
+        our platforms - including Patreon memberships, paid event registrations on{' '}
         <strong>tickets.openboxcomm.in</strong>, UPI payments, and any other payment channels we introduce. It is
         governed by the{' '}
         <a href="https://www.indiacode.nic.in/bitstream/123456789/15256/1/consumer_protection_act_2019.pdf" target="_blank" rel="noopener noreferrer">
           Consumer Protection Act, 2019
         </a>{' '}
-        — which ensures consumer rights and provides remedies against unfair trade practices and deficient
-        services — and applicable Indian regulations.
+        - which ensures consumer rights and provides remedies against unfair trade practices and deficient
+        services - and applicable Indian regulations.
       </p>
 
       <div
@@ -34,7 +34,7 @@ export default function RefundPolicyPage() {
         }}
       >
         <strong>ℹ️ Nature of Contributions:</strong> Open Box is a free, open community. Payments made via
-        Patreon are voluntary donations or memberships to support the community — they do not constitute
+        Patreon are voluntary donations or memberships to support the community - they do not constitute
         payment for a specific product or service. Paid event registrations and supporter tiers, where
         applicable, are governed by the terms presented at the time of purchase.
       </div>
@@ -111,9 +111,9 @@ export default function RefundPolicyPage() {
         consumer rights have been violated, you may approach:
       </p>
       <ul>
-        <li><strong>District Consumer Disputes Redressal Commission</strong> — for claims up to ₹50 lakhs</li>
-        <li><strong>State Consumer Disputes Redressal Commission</strong> — for claims between ₹50 lakhs and ₹2 crores</li>
-        <li><strong>National Consumer Disputes Redressal Commission</strong> — for claims above ₹2 crores</li>
+        <li><strong>District Consumer Disputes Redressal Commission</strong> - for claims up to ₹50 lakhs</li>
+        <li><strong>State Consumer Disputes Redressal Commission</strong> - for claims between ₹50 lakhs and ₹2 crores</li>
+        <li><strong>National Consumer Disputes Redressal Commission</strong> - for claims above ₹2 crores</li>
         <li>
           <strong>National Consumer Helpline:</strong>{' '}
           <a href="https://consumerhelpline.gov.in" target="_blank" rel="noopener noreferrer">consumerhelpline.gov.in</a>{' '}

@@ -12,15 +12,15 @@ This document outlines all performance and SEO optimizations implemented in Open
 
 Core Web Vitals are three key metrics that Google uses to measure user experience:
 
-1. **LCP (Largest Contentful Paint)** — How fast the largest visible element loads
+1. **LCP (Largest Contentful Paint)** - How fast the largest visible element loads
    - Target: < 2.5 seconds
    - Optimization: Image optimization, lazy loading, CDN usage
 
-2. **FID (First Input Delay)** — Response time to user input
+2. **FID (First Input Delay)** - Response time to user input
    - Target: < 100 milliseconds
    - Optimization: Code splitting, async JavaScript, efficient event handlers
 
-3. **CLS (Cumulative Layout Shift)** — Visual stability during loading
+3. **CLS (Cumulative Layout Shift)** - Visual stability during loading
    - Target: < 0.1
    - Optimization: Reserved image dimensions, stable fonts, avoid DOM mutations
 
@@ -127,18 +127,18 @@ Test JSON-LD markup at: https://search.google.com/test/rich-results
 ### Implemented Meta Tags
 
 All pages automatically get:
-- `og:title` — Page title for sharing
-- `og:description` — Page summary
-- `og:image` — Social media preview image (1200x630px)
-- `og:url` — Canonical URL
-- `og:site_name` — Brand name
-- `twitter:card` — Card type (summary_large_image)
-- `twitter:creator` — Creator handle
+- `og:title` - Page title for sharing
+- `og:description` - Page summary
+- `og:image` - Social media preview image (1200x630px)
+- `og:url` - Canonical URL
+- `og:site_name` - Brand name
+- `twitter:card` - Card type (summary_large_image)
+- `twitter:creator` - Creator handle
 
 ### Example Sharing Preview
 
 When you share "https://openboxcomm.in" on Twitter or Facebook:
-- **Title:** Open Box — Community for Everyone
+- **Title:** Open Box - Community for Everyone
 - **Description:** A community network with multiple Discord servers...
 - **Image:** 1200x630px preview image
 
@@ -146,10 +146,10 @@ When you share "https://openboxcomm.in" on Twitter or Facebook:
 
 ```tsx
 export const metadata: Metadata = {
-  title: 'Events — Open Box',
+  title: 'Events - Open Box',
   description: 'Explore Open Box events...',
   openGraph: {
-    title: 'Events — Open Box',
+    title: 'Events - Open Box',
     description: 'Explore upcoming Open Box events...',
     type: 'website',
     url: '/events',
@@ -162,7 +162,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Events — Open Box',
+    title: 'Events - Open Box',
     description: 'Explore upcoming Open Box events...',
     images: ['/images/og-events.png'],
   },
@@ -179,10 +179,10 @@ export const metadata: Metadata = {
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 ```
 
-- `index` — Allow Google to index the page
-- `follow` — Allow Google to follow links
-- `max-image-preview:large` — Show large image previews in search results
-- `max-snippet:-1` — No limit on snippet length
+- `index` - Allow Google to index the page
+- `follow` - Allow Google to follow links
+- `max-image-preview:large` - Show large image previews in search results
+- `max-snippet:-1` - No limit on snippet length
 
 ### Canonical Tags
 
@@ -246,16 +246,16 @@ Use `sizes` prop to tell the browser which image size to request:
 
 ### Tools & Services
 
-1. **Google PageSpeed Insights** — https://pagespeed.web.dev
+1. **Google PageSpeed Insights** - https://pagespeed.web.dev
    - Measures Core Web Vitals
    - Provides optimization recommendations
 
-2. **Google Search Console** — https://search.google.com/search-console
+2. **Google Search Console** - https://search.google.com/search-console
    - Monitor indexing status
    - View search performance
    - Check Core Web Vitals metrics
 
-3. **Lighthouse** — Built into Chrome DevTools (F12 → Lighthouse)
+3. **Lighthouse** - Built into Chrome DevTools (F12 → Lighthouse)
    - Audits performance, accessibility, SEO
    - Generates detailed reports
 
