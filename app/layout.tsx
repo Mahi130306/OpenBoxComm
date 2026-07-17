@@ -32,11 +32,11 @@ const BASE_URL = 'https://openboxcomm.in'
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: 'Open Box - Community for Everyone',
-    template: '%s - Open Box',
+    default: 'Open Box — Community for Everyone',
+    template: '%s — Open Box',
   },
-  description: 'A community network with multiple Discord servers. Join Open Box to build, learn, game, and connect - free, no gatekeeping.',
-  keywords: ['Open Box', 'Discord community', 'gaming server', 'developer community', 'ob development', 'od gaming', 'ob dev', 'ob gg', 'study group', 'networking', 'free community', 'the best Discord community', 'the best tech community', 'open box community', 'open box comm', 'OB', 'ob', 'ob.net.in', 'obcomm', 'obcomm.in', 'obcommunity', 'obcommunity.in', 'obcommunity.net', 'openboxcommunity.in', 'openboxcommunity.net', 'openboxcommunity.org', 'obcommunity.org', 'obcommunity.org.in', 'openboxcommunity.org.in', 'the open box community', 'openboxcommunity.org.in'],
+  description: 'A community network with multiple Discord servers. Join Open Box to build, learn, game, and connect — free, no gatekeeping.',
+  keywords: ['Open Box', 'Discord community', 'gaming server', 'developer community', 'study group', 'networking', 'free community', 'the best Discord community', 'the best tech community', 'open box community', 'open box comm', 'OB', 'ob', 'ob.net.in', 'obcomm', 'obcomm.in', 'obcommunity', 'obcommunity.in', 'obcommunity.net', 'openboxcommunity.in', 'openboxcommunity.net', 'openboxcommunity.org', 'obcommunity.org', 'obcommunity.org.in', 'openboxcommunity.org.in', 'the open box community', 'openboxcommunity.org.in'],
   authors: [{ name: 'Open Box', url: BASE_URL }],
   creator: 'Open Box',
   icons: {
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     shortcut: '/images/OB.png',
   },
   openGraph: {
-    title: 'Open Box - Community for Everyone',
+    title: 'Open Box — Community for Everyone',
     description: 'A community network with multiple Discord servers. Join for gaming, development, learning, and networking.',
     url: BASE_URL,
     siteName: 'Open Box',
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Open Box - Community for Everyone',
+    title: 'Open Box — Community for Everyone',
     description: 'A community network with multiple Discord servers. Join for gaming, development, learning, and networking.',
     images: ['/images/og-default.png'],
     site: '@Openboxcomm',

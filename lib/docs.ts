@@ -8,7 +8,7 @@ export type DocData = {
 }
 
 export const docContents: Record<string, DocData> = {
-  // docs.ts - full content for every doc page
+  // docs.ts — full content for every doc page
 
   // export const docsContent: Record<string, { sections: { title: string; content: string }[] }> = {
 
@@ -47,7 +47,7 @@ export const docContents: Record<string, DocData> = {
     sections: [
       {
         title: 'Creating a Discord Account',
-        content: 'Go to discord.com and sign up for a free account. You need a valid email address. Discord is the platform Open Box runs on - you do not need a separate account for the Open Box website to participate in the community.',
+        content: 'Go to discord.com and sign up for a free account. You need a valid email address. Discord is the platform Open Box runs on — you do not need a separate account for the Open Box website to participate in the community.',
       },
       {
         title: 'Joining the Server',
@@ -67,7 +67,7 @@ export const docContents: Record<string, DocData> = {
       },
       {
         title: 'Joining Other Servers',
-        content: 'Each Open Box server has its own invite link. You can find them all at openboxcomm.in/servers or in the #our-servers channel in Junction. Joining multiple servers uses the same Discord account - no separate signup needed.',
+        content: 'Each Open Box server has its own invite link. You can find them all at openboxcomm.in/servers or in the #our-servers channel in Junction. Joining multiple servers uses the same Discord account — no separate signup needed.',
       },
     ],
   },
@@ -82,7 +82,7 @@ export const docContents: Record<string, DocData> = {
       {
         title: 'Content Standards',
         content:
-          'Keep content relevant to the channel or context. NSFW content - explicit, sexual, violent, or gory material - is strictly banned. Do not share content that glorifies self-harm, suicide, or violence. Misinformation, deliberate disinformation, political campaigning, and communally sensitive content are not permitted on any Open Box platform.',
+          'Keep content relevant to the channel or context. NSFW content — explicit, sexual, violent, or gory material — is strictly banned. Do not share content that glorifies self-harm, suicide, or violence. Misinformation, deliberate disinformation, political campaigning, and communally sensitive content are not permitted on any Open Box platform.',
       },
       {
         title: 'No Spam or Unsolicited Promotion',
@@ -97,12 +97,12 @@ export const docContents: Record<string, DocData> = {
       {
         title: 'Privacy',
         content:
-          'Do not share personal information - phone numbers, addresses, Aadhaar, etc. - of yourself or others without explicit consent. Doxxing results in an immediate permanent ban and may be reported under the DPDP Act, 2023. Do not record, screenshot, or share private conversations without all parties\' consent.',
+          'Do not share personal information — phone numbers, addresses, Aadhaar, etc. — of yourself or others without explicit consent. Doxxing results in an immediate permanent ban and may be reported under the DPDP Act, 2023. Do not record, screenshot, or share private conversations without all parties\' consent.',
       },
       {
         title: 'Events',
         content:
-          'All participants at Open Box events - on Discord, live on YouTube or X, or at IRL meetups - must follow these rules in full. Events may have additional rules covering teams, submissions, deadlines, or judging. Read the event post and follow organizer instructions. For full details, refer to the Events Policy at /legal/event-policy.',
+          'All participants at Open Box events — on Discord, live on YouTube or X, or at IRL meetups — must follow these rules in full. Events may have additional rules covering teams, submissions, deadlines, or judging. Read the event post and follow organizer instructions. For full details, refer to the Events Policy at /legal/event-policy.',
       },
       {
         title: 'Social Media',
@@ -112,7 +112,7 @@ export const docContents: Record<string, DocData> = {
       {
         title: 'Moderator Authority',
         content:
-          'Moderator decisions are final. Do not argue with moderators publicly - use the designated appeal channels. Do not attempt to bypass moderation actions using alternate accounts. Impersonating moderators, staff, or the Open Box brand results in an immediate permanent ban.',
+          'Moderator decisions are final. Do not argue with moderators publicly — use the designated appeal channels. Do not attempt to bypass moderation actions using alternate accounts. Impersonating moderators, staff, or the Open Box brand results in an immediate permanent ban.',
       },
       {
         title: 'Appeals',
@@ -135,27 +135,27 @@ export const docContents: Record<string, DocData> = {
       },
       {
         title: 'Junction / JN',
-        content: 'OB Junction - the main entry server and front door of the Open Box community. Where new members land and general conversation happens.',
+        content: 'OB Junction — the main entry server and front door of the Open Box community. Where new members land and general conversation happens.',
       },
       {
         title: 'Dev',
-        content: 'OB Dev - the server for builders, developers, and anyone writing code or working on technical projects.',
+        content: 'OB Dev — the server for builders, developers, and anyone writing code or working on technical projects.',
       },
       {
         title: 'GG',
-        content: 'OB GG - the gaming server. Currently in beta. For gaming chat, finding players, and community tournaments.',
+        content: 'OB GG — the gaming server. Currently in beta. For gaming chat, finding players, and community tournaments.',
       },
       {
         title: 'Study',
-        content: 'OB Study - the study and accountability server. Currently in alpha.',
+        content: 'OB Study — the study and accountability server. Currently in alpha.',
       },
       {
         title: 'Connect',
-        content: 'OB Connect - the networking and careers server. For sharing opportunities, finding collaborators, and professional growth.',
+        content: 'OB Connect — the networking and careers server. For sharing opportunities, finding collaborators, and professional growth.',
       },
       {
         title: 'Kernel',
-        content: 'OB Kernel - the private staff server. Not publicly accessible.',
+        content: 'OB Kernel — the private staff server. Not publicly accessible.',
       },
       {
         title: 'Tiers',
@@ -176,7 +176,7 @@ export const docContents: Record<string, DocData> = {
       {
         title: 'What Are Server Boosts?',
         content:
-          'Discord Server Boosts are a way for members to directly support Open Box and unlock perks for the entire community. When you boost, you spend one of your Nitro boost slots on the Open Box server. Every boost counts toward the server\'s overall boost level, which unlocks better features for everyone - not just the person who boosted.',
+          'Discord Server Boosts are a way for members to directly support Open Box and unlock perks for the entire community. When you boost, you spend one of your Nitro boost slots on the Open Box server. Every boost counts toward the server\'s overall boost level, which unlocks better features for everyone — not just the person who boosted.',
       },
       {
         title: 'Boost Levels and What They Unlock',
@@ -201,12 +201,12 @@ export const docContents: Record<string, DocData> = {
       {
         title: 'Boosts vs Patreon Support',
         content:
-          'Boosts directly improve the server experience for every member on Discord. Patreon support funds the infrastructure - hosting, domain, tooling, and operations. Both matter. If you want to do more than boost, check out the support tiers at openboxcomm.in/support. Every contribution, big or small, keeps Open Box free and running.',
+          'Boosts directly improve the server experience for every member on Discord. Patreon support funds the infrastructure — hosting, domain, tooling, and operations. Both matter. If you want to do more than boost, check out the support tiers at openboxcomm.in/support. Every contribution, big or small, keeps Open Box free and running.',
       },
       {
         title: 'Current Boost Status',
         content:
-          'You can see the live boost count at the top of the member list on any Open Box Discord server. The goal is Level 2. Once we hit that, screen share quality goes up for everyone in voice channels - which means better dev sessions, game streams, and live events.',
+          'You can see the live boost count at the top of the member list on any Open Box Discord server. The goal is Level 2. Once we hit that, screen share quality goes up for everyone in voice channels — which means better dev sessions, game streams, and live events.',
       },
       {
         title: 'Questions?',
@@ -233,7 +233,7 @@ export const docContents: Record<string, DocData> = {
       },
       // {
       //   title: 'How to Share a Project',
-      //   content: 'Post a short description, a link or screenshot, and what kind of feedback you are looking for - or just that you wanted to share it. You do not need a finished product. Works in progress are welcome.',
+      //   content: 'Post a short description, a link or screenshot, and what kind of feedback you are looking for — or just that you wanted to share it. You do not need a finished product. Works in progress are welcome.',
       // },
       {
         title: 'Asking for Help',
@@ -320,7 +320,7 @@ export const docContents: Record<string, DocData> = {
     sections: [
       {
         title: 'How Open Box Is Structured',
-        content: 'Open Box is not one server - it is a group of servers under one umbrella. OB Junction is the main entry point and the hub that connects everything. The other servers are focused communities that you join based on what you want to do.',
+        content: 'Open Box is not one server — it is a group of servers under one umbrella. OB Junction is the main entry point and the hub that connects everything. The other servers are focused communities that you join based on what you want to do.',
       },
       {
         title: 'OB Junction',
@@ -336,7 +336,7 @@ export const docContents: Record<string, DocData> = {
       },
       {
         title: 'OB Study',
-        content: 'The study and accountability server. Currently in alpha. Built for people who want a focused space to learn, track goals, and stay consistent. Still taking shape - join and help build it.',
+        content: 'The study and accountability server. Currently in alpha. Built for people who want a focused space to learn, track goals, and stay consistent. Still taking shape — join and help build it.',
       },
       {
         title: 'OB Connect',
@@ -344,7 +344,7 @@ export const docContents: Record<string, DocData> = {
       },
       {
         title: 'Joining Multiple Servers',
-        content: 'You can be in all of them at once. They all use the same Discord account. Rules are consistent across servers - what gets you removed from one can get you removed from others.',
+        content: 'You can be in all of them at once. They all use the same Discord account. Rules are consistent across servers — what gets you removed from one can get you removed from others.',
       },
     ],
   },
@@ -369,7 +369,7 @@ export const docContents: Record<string, DocData> = {
       },
       {
         title: 'AI-Generated Content',
-        content: 'AI tools are allowed. If you are sharing AI-generated work as your own in a context where that matters - like a competition, a review request, or a showcase - say so. Nobody is going to penalise you for using tools. Misrepresentation is the problem.',
+        content: 'AI tools are allowed. If you are sharing AI-generated work as your own in a context where that matters — like a competition, a review request, or a showcase — say so. Nobody is going to penalise you for using tools. Misrepresentation is the problem.',
       },
       {
         title: 'Links and Promotion',
@@ -413,7 +413,7 @@ export const docContents: Record<string, DocData> = {
     sections: [
       {
         title: 'What Open Box Offers',
-        content: 'Open Box is a community that runs across Discord and the web. The core is the Discord servers. The website ties everything together - docs, blogs, events, and what is coming next.',
+        content: 'Open Box is a community that runs across Discord and the web. The core is the Discord servers. The website ties everything together — docs, blogs, events, and what is coming next.',
       },
       {
         title: 'Discord Servers',
@@ -429,7 +429,7 @@ export const docContents: Record<string, DocData> = {
       },
       {
         title: 'Tiers',
-        content: 'Supporter tiers - NPC, Rookie, GOAT, and Legend - are available through Patreon. Higher tiers come with perks across the servers. The community is free at every level; tiers are for people who want to support and get more.',
+        content: 'Supporter tiers — NPC, Rookie, GOAT, and Legend — are available through Patreon. Higher tiers come with perks across the servers. The community is free at every level; tiers are for people who want to support and get more.',
       },
       {
         title: 'Coming Soon: Tickets Site',
@@ -454,11 +454,11 @@ export const docContents: Record<string, DocData> = {
       },
       {
         title: 'Self-Assignable Roles',
-        content: 'Some roles are self-assignable through reaction role menus in the #roles channel. These are usually interest or identity roles - things like your primary language, the games you play, or what you are studying.',
+        content: 'Some roles are self-assignable through reaction role menus in the #roles channel. These are usually interest or identity roles — things like your primary language, the games you play, or what you are studying.',
       },
       {
         title: 'Earned Roles',
-        content: 'Some roles are earned through participation - joining events, contributing to the community, or being active over time. These are assigned by the moderation team and are not automated.',
+        content: 'Some roles are earned through participation — joining events, contributing to the community, or being active over time. These are assigned by the moderation team and are not automated.',
       },
       {
         title: 'Tier Roles',
@@ -491,7 +491,7 @@ export const docContents: Record<string, DocData> = {
       },
       {
         title: 'Your Tickets Dashboard',
-        content: 'Once you log in at tickets.openboxcomm.in, your dashboard shows all your tickets - past and upcoming. You can see event details, your registration status, and any team or submission information tied to that ticket.',
+        content: 'Once you log in at tickets.openboxcomm.in, your dashboard shows all your tickets — past and upcoming. You can see event details, your registration status, and any team or submission information tied to that ticket.',
       },
       {
         title: 'Discord OAuth Login',
@@ -516,7 +516,7 @@ export const docContents: Record<string, DocData> = {
       },
       {
         title: 'Who the Terms Cover',
-        content: 'The Terms cover everyone who uses any Open Box platform - the website (openboxcomm.in), all Discord servers (Junction, Dev, GG, Study, Connect), social media accounts on X, Instagram, and YouTube, events, and any future services.',
+        content: 'The Terms cover everyone who uses any Open Box platform — the website (openboxcomm.in), all Discord servers (Junction, Dev, GG, Study, Connect), social media accounts on X, Instagram, and YouTube, events, and any future services.',
       },
       {
         title: 'Age Requirement',
@@ -567,7 +567,7 @@ export const docContents: Record<string, DocData> = {
       },
       {
         title: 'Warning System',
-        content: 'Minor violations typically result in a warning first. Repeated or serious violations can result in a temporary mute, a kick, or a ban depending on severity. Some violations - like sharing illegal content or doxxing - result in an immediate permanent ban with no prior warning.',
+        content: 'Minor violations typically result in a warning first. Repeated or serious violations can result in a temporary mute, a kick, or a ban depending on severity. Some violations — like sharing illegal content or doxxing — result in an immediate permanent ban with no prior warning.',
       },
       {
         title: 'Bans',
@@ -705,7 +705,7 @@ export const docContents: Record<string, DocData> = {
       },
       {
         title: 'What We Do Not Accept',
-        content: 'We do not accept unsolicited bots or tools added to the servers without prior approval. We do not accept contributions that come with strings attached - like promotion deals or affiliate arrangements.',
+        content: 'We do not accept unsolicited bots or tools added to the servers without prior approval. We do not accept contributions that come with strings attached — like promotion deals or affiliate arrangements.',
       },
       {
         title: 'Getting Started',

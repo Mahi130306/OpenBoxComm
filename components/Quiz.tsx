@@ -101,7 +101,7 @@ export function Quiz() {
     if (answers[1] === 'gamer') return recommendations.gamer
     if (answers[1] === 'developer') return recommendations.developer
     if (answers[1] === 'learner') return recommendations.learner
-    if (answers[1] === 'explorer') return recommendations.default  // explorer/classic is commented out - fall back to default
+    if (answers[1] === 'explorer') return recommendations.default  // explorer/classic is commented out — fall back to default
     if (answers[2] === 'mentorship') return recommendations.networker
     if (answers[2] === 'browsing') return recommendations.default
     return recommendations.default

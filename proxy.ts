@@ -1,14 +1,14 @@
 /**
- * proxy.ts - Open Box Edge Security Layer (Next.js 16 middleware)
+ * proxy.ts — Open Box Edge Security Layer (Next.js 16 middleware)
  * ───────────────────────────────────────────────────────────────
  * Runs at the CDN edge before any request reaches the app.
  *
  * Blocks:
- *   /.git/**          - git internals (CRITICAL)
- *   /.env*            - environment files
- *   /node_modules/**  - dependencies
- *   *.map             - source maps
- *   config/lock files - project internals
+ *   /.git/**          — git internals (CRITICAL)
+ *   /.env*            — environment files
+ *   /node_modules/**  — dependencies
+ *   *.map             — source maps
+ *   config/lock files — project internals
  *
  * Also injects security response headers on every route.
  */
@@ -32,12 +32,12 @@ const BLOCKED_PATTERNS: RegExp[] = [
 // ── Security headers injected on every response ───────────────────────────────
 function buildSecurityHeaders(): Record<string, string> {
   return {
-    'X-Frame-Options': 'DENY',
-    'X-Content-Type-Options': 'nosniff',
-    'Referrer-Policy': 'strict-origin-when-cross-origin',
-    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload',
-    'X-XSS-Protection': '1; mode=block',
-    'X-DNS-Prefetch-Control': 'on',
+    'X-Frame-Options':            'DENY',
+    'X-Content-Type-Options':     'nosniff',
+    'Referrer-Policy':            'strict-origin-when-cross-origin',
+    'Strict-Transport-Security':  'max-age=31536000; includeSubDomains; preload',
+    'X-XSS-Protection':           '1; mode=block',
+    'X-DNS-Prefetch-Control':     'on',
     'Permissions-Policy':
       'camera=(), microphone=(), geolocation=(), interest-cohort=(), payment=()',
     'Content-Security-Policy': [

@@ -1,12 +1,12 @@
 /**
- * useConsent - React hook for consent state management
+ * useConsent — React hook for consent state management
  *
  * Returns:
- *   hasConsented  - true if user has accepted or rejected (banner should hide)
- *   consentAction - the stored action, or null
- *   accept()      - record 'accept' consent
- *   reject()      - record 'reject' consent
- *   dismiss()     - record 'dismiss' (session-only, no localStorage)
+ *   hasConsented  — true if user has accepted or rejected (banner should hide)
+ *   consentAction — the stored action, or null
+ *   accept()      — record 'accept' consent
+ *   reject()      — record 'reject' consent
+ *   dismiss()     — record 'dismiss' (session-only, no localStorage)
  */
 
 'use client'
@@ -33,8 +33,8 @@ interface UseConsentReturn {
 }
 
 export function useConsent(): UseConsentReturn {
-  const [isReady, setIsReady] = useState(false)
-  const [hasConsented, setHasConsented] = useState(false)
+  const [isReady,       setIsReady]       = useState(false)
+  const [hasConsented,  setHasConsented]  = useState(false)
   const [consentRecord, setConsentRecord] = useState<ConsentRecord | null>(null)
 
   // On mount: read localStorage (client-only)
@@ -60,8 +60,8 @@ export function useConsent(): UseConsentReturn {
     isReady,
     hasConsented,
     consentRecord,
-    accept: () => handleConsent('accept'),
-    reject: () => handleConsent('reject'),
+    accept:  () => handleConsent('accept'),
+    reject:  () => handleConsent('reject'),
     dismiss: () => handleConsent('dismiss'),
   }
 }

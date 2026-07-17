@@ -507,7 +507,7 @@ export const blogs: Blog[] = [
     title: 'DBW: June Week 2 Update',
     server: 'Weekly Update',
     date: '2026-06-29',
-    excerpt: 'Day Before Weekend (dbw) - our weekly Friday update. This week we fixed bugs on the website, prepared for the GG beta expansion, and more.',
+    excerpt: 'Day Before Weekend (dbw) — our weekly Friday update. This week we fixed bugs on the website, prepared for the GG beta expansion, and more.',
     readTime: '3 min read',
     category: 'dbw',
   },
@@ -527,21 +527,21 @@ export const docs = [
   { slug: 'jn-guide', title: 'Jn. Community Guide', description: 'Start here for introductions, sharing projects, and community norms.', section: 'Community' },
   { slug: 'dev-handbook', title: 'Dev Server Handbook', description: 'How to ask for coding help, request reviews, and use project channels.', section: 'Community' },
   { slug: 'gg-event-guide', title: 'GG Event Guide', description: 'Tournament expectations, gaming channels, and collaboration notes.', section: 'Community' },
-  { slug: 'groups', title: 'Groups & Sub-Communities', description: 'How the Open Box servers connect - Dev, GG, Study, and Connect as extensions of Junction.', section: 'Community' },
-  { slug: 'content-standards', title: 'Content Standards', description: 'What good content looks like in Open Box - and what crosses the line.', section: 'Community' },
+  { slug: 'groups', title: 'Groups & Sub-Communities', description: 'How the Open Box servers connect — Dev, GG, Study, and Connect as extensions of Junction.', section: 'Community' },
+  { slug: 'content-standards', title: 'Content Standards', description: 'What good content looks like in Open Box — and what crosses the line.', section: 'Community' },
   { slug: 'privacy-community', title: 'Privacy in the Community', description: 'What to share, what to keep private, display name norms, and how to stay safe in the servers.', section: 'Community' },
 
   // ─── Platform ───────────────────────────────────────────
-  { slug: 'features', title: 'Features Overview', description: 'A tour of what Open Box offers - Discord servers, the website, events, and what is coming next.', section: 'Platform' },
+  { slug: 'features', title: 'Features Overview', description: 'A tour of what Open Box offers — Discord servers, the website, events, and what is coming next.', section: 'Platform' },
   { slug: 'roles', title: 'Roles & Permissions', description: 'How roles work across Open Box servers, how to earn them, and what they unlock.', section: 'Platform' },
   { slug: 'events-tickets', title: 'Events & Tickets', description: 'How Open Box events work, how to register, and how to use tickets.openboxcomm.in.', section: 'Platform' },
   { slug: 'tos-summary', title: 'Terms of Service Summary', description: 'A plain-English summary of the Open Box Terms & Conditions.', section: 'Platform' },
 
   // ─── Support ────────────────────────────────────────────
-  { slug: 'moderation-policy', title: 'Moderation Policy', description: 'How moderation works at Open Box - what moderators do, how decisions are made, and how to appeal.', section: 'Support' },
+  { slug: 'moderation-policy', title: 'Moderation Policy', description: 'How moderation works at Open Box — what moderators do, how decisions are made, and how to appeal.', section: 'Support' },
   { slug: 'reporting', title: 'Reporting & Enforcement', description: 'How to report rule violations, what happens after a report, and how enforcement works.', section: 'Support' },
   { slug: 'troubleshooting', title: 'Troubleshooting', description: 'Common issues and how to fix them. When in doubt, reach the team at support@openboxcomm.in.', section: 'Support' },
-  { slug: 'contact', title: 'Contact & Support', description: 'Every way to reach the Open Box team - email, Discord, and what to expect when you do.', section: 'Support' },
+  { slug: 'contact', title: 'Contact & Support', description: 'Every way to reach the Open Box team — email, Discord, and what to expect when you do.', section: 'Support' },
 
   // ─── Contributing ───────────────────────────────────────
   { slug: 'contributing', title: 'Contributing to the Community', description: 'How to submit suggestions, build tools, contribute bots, and help make Open Box better.', section: 'Contributing' },
@@ -556,7 +556,7 @@ export const teamMembers: TeamMember[] = [
     role: 'Founder',
     bio: 'The Founder of Open Box.',
     avatar: 'https://api.dicebear.com/10.x/initials/svg?seed=Mahi',
-    aboutSection: 'From building a community in school to hosting coding bootcamps and game tournaments for thousands of students, Mahi leads Open Box with a simple belief: everyone deserves a place to belong, learn, and grow. He is a builder at heart, and he loves bringing people together. Whether it’s coding, gaming, creating, or just hanging out - there is a spot for you here.',
+    aboutSection: 'From building a community in school to hosting coding bootcamps and game tournaments for thousands of students, Mahi leads Open Box with a simple belief: everyone deserves a place to belong, learn, and grow. He is a builder at heart, and he loves bringing people together. Whether it’s coding, gaming, creating, or just hanging out — there is a spot for you here.',
     socials: {
       instagram: 'https://instagram.com/openboxcomm',
       github: 'https://github.com/mahi130306',
@@ -579,7 +579,7 @@ export const teamMembers: TeamMember[] = [
   //   slug: 'arjun',
   //   name: 'Arjun',
   //   role: 'Lead Developer',
-  //   bio: 'Arjun architects the technical backbone of Open Box - from bots to dashboards. He thrives on clean code and late-night deploys.',
+  //   bio: 'Arjun architects the technical backbone of Open Box — from bots to dashboards. He thrives on clean code and late-night deploys.',
   //   avatar: 'https://api.dicebear.com/10.x/initials/svg?seed=Arjun',
   //   socials: {
   //     github: 'https://github.com/openboxcomm',

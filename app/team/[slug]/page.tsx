@@ -11,7 +11,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!member) return {}
 
   return {
-    title: `${member.name} - Open Box Team`,
+    title: `${member.name} — Open Box Team`,
     description: member.bio,
     alternates: { canonical: `/team/${slug}` },
   }

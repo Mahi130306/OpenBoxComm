@@ -5,7 +5,7 @@ import { teamMembers } from '@/lib/community-data'
 import { Github, Twitter, Instagram, ArrowUpRight } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Our Team - Open Box',
+  title: 'Our Team — Open Box',
   description:
     'Meet the people behind Open Box. Our team is dedicated to building and supporting a network of inclusive communities.',
   alternates: { canonical: '/team' },

@@ -14,8 +14,8 @@ function getTimeLeft(deadline: string): TimeLeft | null {
   if (diff <= 0) return null
 
   const totalSeconds = Math.floor(diff / 1000)
-  const days = Math.floor(totalSeconds / 86400)
-  const hours = Math.floor((totalSeconds % 86400) / 3600)
+  const days    = Math.floor(totalSeconds / 86400)
+  const hours   = Math.floor((totalSeconds % 86400) / 3600)
   const minutes = Math.floor((totalSeconds % 3600) / 60)
   const seconds = totalSeconds % 60
 
@@ -84,7 +84,7 @@ export function CountdownTimer({ deadline }: CountdownTimerProps) {
             </span>
           </span>
 
-          {/* Separator - skip after last unit */}
+          {/* Separator — skip after last unit */}
           {i < units.length - 1 && (
             <span className="mb-4 text-lg font-bold leading-none text-muted-foreground select-none">
               :

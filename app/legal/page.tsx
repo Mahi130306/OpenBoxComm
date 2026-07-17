@@ -5,7 +5,7 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/componen
 import { Button } from '@/components/ui/button'
 
 export const metadata: Metadata = {
-  title: 'Legal - Open Box',
+  title: 'Legal — Open Box',
   description: 'Legal documents for Open Box: Terms, Privacy Policy, Community Rules, and more.',
   alternates: { canonical: '/legal' },
 }

@@ -1,7 +1,7 @@
 'use client'
 
 /**
- * SecurityGuard - client-side inspection deterrent
+ * SecurityGuard — client-side inspection deterrent
  * ──────────────────────────────────────────────────
  * Mounts once in the root layout. Adds multiple layers of deterrence:
  *
@@ -67,7 +67,7 @@ export function SecurityGuard() {
     }
 
     // ── 3. Silence console in production safely ──────────────────────────────
-    const noop = () => { }
+    const noop = () => {}
     const originalLog = console.log
     const originalWarn = console.warn
     const originalError = console.error
@@ -102,7 +102,7 @@ export function SecurityGuard() {
       console.table = originalTable
       console.dir = originalDir
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   if (!IS_PROD) return null

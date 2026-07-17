@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Terms & Conditions - Open Box',
+  title: 'Terms & Conditions — Open Box',
   description: 'Terms and Conditions for using the Open Box platform, website, Discord servers, and community services.',
 }
 
@@ -14,7 +14,7 @@ export default function TermsAndConditionsPage() {
 
       <p>
         Welcome to <strong>Open Box</strong> (&quot;we&quot;, &quot;our&quot;, &quot;us&quot;). These Terms &amp; Conditions govern your
-        access to and use of all Open Box platforms - including <strong>openboxcomm.in</strong>, all Discord
+        access to and use of all Open Box platforms — including <strong>openboxcomm.in</strong>, all Discord
         servers (JN, Dev, GG, Study, Connect, and any future servers), our social media accounts on
         X, Instagram, and YouTube, all events we organise, and any other services we operate now or in the
         future (collectively, the &quot;Platform&quot;). By accessing or using any part of the Platform, you agree to
@@ -26,40 +26,40 @@ export default function TermsAndConditionsPage() {
           <u><a href="https://www.indiacode.nic.in/bitstream/123456789/2263/1/A1860-45.pdf" target="_blank" rel="noopener noreferrer">
             Indian Penal Code, 1860 (IPC)
           </a>:</u>{' '}
-          covers criminal offences including defamation, obscenity, hate speech, harassment, and incitement.
+           covers criminal offences including defamation, obscenity, hate speech, harassment, and incitement.
         </li>
         <li>
           <u><a href="https://www.indiacode.nic.in/bitstream/123456789/13116/1/it_act_2000_updated.pdf" target="_blank" rel="noopener noreferrer">
             Information Technology Act, 2000
           </a>:</u>{' '}
-          India&apos;s primary cyber law covering electronic records, digital signatures, cybercrimes, and
+           India&apos;s primary cyber law covering electronic records, digital signatures, cybercrimes, and
           intermediary liability.
         </li>
         <li>
           <u><a href="https://www.indiacode.nic.in/bitstream/123456789/20168/1/2023_Act_22_Digital_Personal_Data_Protection_Act.pdf" target="_blank" rel="noopener noreferrer">
             Digital Personal Data Protection Act, 2023 (DPDP Act)
           </a>:</u>{' '}
-          India&apos;s data protection law governing how personal data is collected, processed, and safeguarded.
+           India&apos;s data protection law governing how personal data is collected, processed, and safeguarded.
         </li>
         <li>
           <u><a href="https://www.indiacode.nic.in/bitstream/123456789/1367/1/a1957-14.pdf" target="_blank" rel="noopener noreferrer">
             Copyright Act, 1957
           </a>:</u>{' '}
-          protects intellectual property rights in creative works including text, graphics, software, and
+           protects intellectual property rights in creative works including text, graphics, software, and
           original content.
         </li>
         <li>
           <u><a href="https://www.indiacode.nic.in/bitstream/123456789/15256/1/consumer_protection_act_2019.pdf" target="_blank" rel="noopener noreferrer">
             Consumer Protection Act, 2019
           </a>:</u>{' '}
-          ensures consumer rights and provides remedies against unfair trade practices and deficient
+           ensures consumer rights and provides remedies against unfair trade practices and deficient
           services.
         </li>
         <li>
           <u><a href="https://www.indiacode.nic.in/bitstream/123456789/15240/1/constitution_of_india.pdf" target="_blank" rel="noopener noreferrer">
             Article 19(2) of the Constitution of India
           </a>:</u>{' '}
-          permits reasonable restrictions on free speech in the interests of public order, decency,
+           permits reasonable restrictions on free speech in the interests of public order, decency,
           defamation, and the sovereignty and integrity of India, forming the constitutional basis for content
           moderation.
         </li>
@@ -108,7 +108,7 @@ export default function TermsAndConditionsPage() {
 
       <h2>5. Intellectual Property</h2>
       <p>
-        All content on the Platform - including logos, server identities, text, graphics, and software - is
+        All content on the Platform — including logos, server identities, text, graphics, and software — is
         the property of Open Box or its licensors and is protected under the{' '}
         <u><a href="https://www.indiacode.nic.in/bitstream/123456789/1367/1/a1957-14.pdf" target="_blank" rel="noopener noreferrer">
           Copyright Act, 1957
@@ -127,8 +127,8 @@ export default function TermsAndConditionsPage() {
 
       <h2>7. Events</h2>
       <p>
-        Participation in Open Box events - online workshops, IRL meetups, hackathons, contests, and live
-        streams - is subject to our <u><Link href="/legal/event-policy" className="hover:text-foreground transition-colors">Event Policy</Link></u>, which forms part of these
+        Participation in Open Box events — online workshops, IRL meetups, hackathons, contests, and live
+        streams — is subject to our <u><Link href="/legal/event-policy" className="hover:text-foreground transition-colors">Event Policy</Link></u>, which forms part of these
         Terms.
       </p>
 
@@ -138,7 +138,7 @@ export default function TermsAndConditionsPage() {
         <u><Link href="/legal/refund-policy" className="hover:text-foreground transition-colors">Refund Policy</Link></u>, governed by the{' '}
         <u><a href="https://www.indiacode.nic.in/bitstream/123456789/15256/1/consumer_protection_act_2019.pdf" target="_blank" rel="noopener noreferrer">
           Consumer Protection Act, 2019
-        </a></u>
+        </a></u>  
         .
       </p>
 
