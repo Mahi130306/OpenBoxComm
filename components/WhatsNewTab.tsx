@@ -152,15 +152,19 @@ export function WhatsNewTab() {
                     <p className="text-sm">No updates yet.</p>
                   </div>
                 ) : (
-                  updates.map((update) => (
+                  updates.map((update, index) => (
                     <div
                       key={update.id}
                       onClick={() => {
                         router.push(update.href)
                         setIsOpen(false)
                       }}
-                      className="group p-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 hover:border-primary/30 transition-all cursor-pointer relative overflow-hidden"
-                    >
+                      className={cn(
+                        "group p-4 rounded-xl bg-white/5 hover:bg-white/10 border transition-all cursor-pointer relative overflow-hidden",
+                        index === 0
+                          ? "border-cyan-500 hover:border-cyan-400 shadow-[0_0_10px_rgba(6,182,212,0.15)]"
+                          : "border-white/5 hover:border-primary/30"
+                      )}                    >
                       <div className="flex items-center justify-between mb-2">
                         <div className="flex items-center gap-2">
                           <span className="p-1.5 rounded-lg bg-primary/20 text-primary">

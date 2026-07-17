@@ -51,5 +51,8 @@ const updates: Update[] = [
 ]
 
 export async function GET() {
-  return NextResponse.json(updates)
+  const sortedUpdates = [...updates].sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  )
+  return NextResponse.json(sortedUpdates)
 }
