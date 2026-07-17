@@ -11,8 +11,8 @@ const BASE_URL = 'https://openboxcomm.in'
  * Standard metadata defaults
  */
 export const defaultMetadata = {
-  title: 'Open Box — Community for Everyone',
-  description: 'A community network with multiple Discord servers. Join Open Box to build, learn, game, and connect — free, no gatekeeping.',
+  title: 'Open Box | Community for Everyone',
+  description: 'A community network with multiple Discord servers. Join Open Box to build, learn, game, and connect | free, no gatekeeping.',
   keywords: ['Open Box', 'Discord community', 'gaming', 'development', 'learning', 'networking'],
   baseUrl: BASE_URL,
 }
@@ -45,7 +45,7 @@ export function generatePageMetadata(config: {
     imageHeight = 630,
   } = config
 
-  const fullTitle = `${title} — Open Box`
+  const fullTitle = `${title} | Open Box`
   const canonicalUrl = `${BASE_URL}${path}`
 
   return {
