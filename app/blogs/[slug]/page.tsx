@@ -33,7 +33,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ slu
   const { slug } = await params
   const post = getBlog(slug)
   const content = getBlogContent(slug)
-  
+
   if (!post || (post as any).category === 'dbw') notFound()
 
   return (
@@ -46,9 +46,9 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ slu
           </Link>
         </Button>
       </div>
-      
-      <div className="mb-10 rounded-xl border border-black/10 bg-gradient-to-br from-black/[0.04] to-lime-400/[0.08] p-5 shadow-sm sm:p-8 dark:border-white/10 dark:from-white/[0.08] dark:to-lime-400/[0.06]">
-        <Badge variant="secondary" className="mb-6 bg-lime-500/15 text-lime-700 dark:bg-lime-400/20 dark:text-lime-400 hover:bg-lime-500/25 dark:hover:bg-lime-400/30">
+
+      <div className="mb-10 rounded-xl border border-black/10 bg-gradient-to-br from-black/[0.04] to-pink-400/[0.08] p-5 shadow-sm sm:p-8 dark:border-white/10 dark:from-white/[0.08] dark:to-pink-400/[0.06]">
+        <Badge variant="secondary" className="mb-6 bg-pink-500/15 text-pink-700 dark:bg-pink-400/20 dark:text-pink-400 hover:bg-pink-500/25 dark:hover:bg-pink-400/30">
           {post.server}
         </Badge>
         <h1 className="mb-4 text-2xl font-extrabold tracking-tight text-foreground sm:text-4xl lg:text-5xl">

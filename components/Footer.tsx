@@ -182,6 +182,7 @@ export function Footer() {
                 { label: 'Help Centre', href: '/help' },
                 { label: 'Our Team', href: '/team' },
                 { label: 'Contact Us', href: '/contact-us' },
+                { label: "Carrers", href: "/carrers" },
                 // { label: 'Jn. Server', href: '/servers/jn' },
                 // { label: 'Dev Server', href: '/servers/dev' },
                 // { label: 'GG Server', href: '/servers/gg' },
