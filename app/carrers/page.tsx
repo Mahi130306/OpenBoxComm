@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Mail, Megaphone, MapPin, Clock, ArrowRight, Sparkles, TrendingUp, HelpCircle, Heart, Sparkle } from 'lucide-react'
+import { notFound } from 'next/navigation'
 
 export const metadata: Metadata = {
     title: 'Careers',
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
 }
 
 export default function CareersPage() {
+    notFound()
     const departments = [
         {
             name: 'Social Media',
