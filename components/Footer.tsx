@@ -182,10 +182,7 @@ export function Footer() {
                 { label: 'Help Centre', href: '/help' },
                 { label: 'Our Team', href: '/team' },
                 { label: 'Contact Us', href: '/contact-us' },
-                { label: "Carrers", href: "/carrers" },
-                // { label: 'Jn. Server', href: '/servers/jn' },
-                // { label: 'Dev Server', href: '/servers/dev' },
-                // { label: 'GG Server', href: '/servers/gg' },
+                // { label: "Carrers", href: "/carrers" },
               ].map((l) => (
                 <li key={l.href}>
                   <Link href={l.href} className="text-muted-foreground hover:text-cyan-500 transition-colors duration-150">

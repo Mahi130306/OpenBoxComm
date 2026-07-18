@@ -27,17 +27,18 @@ const BLOCKED_PATTERNS: RegExp[] = [
   /^\/package(-lock)?\.json$/i,
   /^\/tailwind\.config/i,
   /^\/postcss\.config/i,
+  // /^\/careers/i,
 ]
 
 // ── Security headers injected on every response ───────────────────────────────
 function buildSecurityHeaders(): Record<string, string> {
   return {
-    'X-Frame-Options':            'DENY',
-    'X-Content-Type-Options':     'nosniff',
-    'Referrer-Policy':            'strict-origin-when-cross-origin',
-    'Strict-Transport-Security':  'max-age=31536000; includeSubDomains; preload',
-    'X-XSS-Protection':           '1; mode=block',
-    'X-DNS-Prefetch-Control':     'on',
+    'X-Frame-Options': 'DENY',
+    'X-Content-Type-Options': 'nosniff',
+    'Referrer-Policy': 'strict-origin-when-cross-origin',
+    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload',
+    'X-XSS-Protection': '1; mode=block',
+    'X-DNS-Prefetch-Control': 'on',
     'Permissions-Policy':
       'camera=(), microphone=(), geolocation=(), interest-cohort=(), payment=()',
     'Content-Security-Policy': [

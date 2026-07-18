@@ -1,14 +1,16 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Mail, Megaphone, MapPin, Clock, ArrowRight, Sparkles, TrendingUp, HelpCircle, Heart, Sparkle } from 'lucide-react'
+import { notFound } from 'next/navigation'
 
 export const metadata: Metadata = {
-    title: 'Careers',
+    title: 'Careers — Open Box',
     description: 'Join the team building the future of Indian Discord communities. Discover active openings for Social Media and Marketing roles at Open Box.',
     alternates: { canonical: '/careers' },
 }
 
 export default function CareersPage() {
+    notFound()
     const departments = [
         {
             name: 'Social Media',
