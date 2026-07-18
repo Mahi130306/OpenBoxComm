@@ -129,7 +129,7 @@ export default function SupportClient() {
     'Everything in Legend (All 13)',
     'Exclusive OP Supporter role — rare, visible on supporter wall',
     '12–16% off paid OB events + priority spot',
-    'Monthly voice hangout with OB founders',
+    'Monthly voice hangout with OB ',
     'First dibs + discount when OB merch drops',
     'Namedropped in DBW every week*',
   ]
@@ -172,7 +172,7 @@ export default function SupportClient() {
     { name: 'Direct Feedback Channel with Admins', npc: false, rookie: false, goat: true, legend: true, op: true },
     { name: 'Early Event Registration Access', npc: false, rookie: false, goat: true, legend: true, op: true },
     { name: 'Priority Consideration for Staff Teams', npc: false, rookie: false, goat: false, legend: true, op: true },
-    { name: 'Direct Line to Core Founders', npc: false, rookie: false, goat: false, legend: true, op: true },
+    { name: 'Direct Line to Core ', npc: false, rookie: false, goat: false, legend: true, op: true },
     { name: 'Name on Website Credits Section', npc: false, rookie: false, goat: false, legend: true, op: true },
     { name: 'Exclusive OP Supporter Discord Badge', npc: false, rookie: false, goat: false, legend: false, op: true },
     { name: '12-16% Off All Ticketed OpenBox Events', npc: false, rookie: false, goat: false, legend: false, op: true },
@@ -181,7 +181,7 @@ export default function SupportClient() {
   ]
 
   const wallOfFame = [
-    { name: 'Mahi HH', role: 'Core Team / Developer', avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80', tier: 'Core' },
+    { name: 'Rohith', role: 'Co-Founder ', avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80', tier: 'Founder' },
     { name: 'Mahi', role: 'Founder', avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80', tier: 'Founder' },
     { name: 'Zenith', role: 'OP Supporter', avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80', tier: 'OP Supporter' },
     { name: 'Alex', role: 'Legend Supporter', avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80', tier: 'Legend' },

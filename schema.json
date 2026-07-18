@@ -10,7 +10,11 @@
       "language": "TypeScript",
       "styling": "Tailwind CSS v3",
       "uiComponents": "Radix UI + shadcn/ui",
-      "animations": ["Framer Motion", "GSAP", "Three.js"],
+      "animations": [
+        "Framer Motion",
+        "GSAP",
+        "Three.js"
+      ],
       "deployment": "Vercel"
     }
   },
@@ -27,7 +31,7 @@
           "events": "Community events calendar and detailed descriptions (/events/[slug])",
           "servers": "Server directory listing active Discord servers (/servers/[slug])",
           "legal": "Legal policies and guidelines (refund, DMCA, acceptable use, privacy, etc.)",
-          "about": "Mission statement, founders, and community background",
+          "about": "Mission statement,  and community background",
           "(auth)": "Authentication grouping folder for potential Discord login"
         }
       },
@@ -58,55 +62,173 @@
       "description": "Data structure representing a Discord server listing",
       "type": "object",
       "properties": {
-        "slug": { "type": "string", "description": "Unique URL-friendly slug" },
-        "name": { "type": "string", "description": "Name of the Discord server" },
-        "description": { "type": "string", "description": "Short tagline shown on listing cards" },
-        "longDescription": { "type": "string", "description": "Full description for the detail page" },
-        "tags": { "type": "array", "items": { "type": "string" }, "description": "Categorization labels" },
-        "memberCount": { "type": "number", "description": "Discord member count, fetched dynamically" },
-        "isLive": { "type": "boolean", "description": "Whether server is active or 'Coming Soon'" },
-        "accent": { "type": "string", "description": "Tailwind gradient class for server UI highlights" },
-        "channels": { "type": "array", "items": { "type": "string" }, "description": "Primary communication channels list" },
-        "rules": { "type": "array", "items": { "type": "string" }, "description": "Specific server conduct rules" },
-        "inviteEnv": { "type": "string", "description": "Name of the environment variable containing invite link" },
-        "inviteCode": { "type": "string", "description": "Direct invite suffix code" }
+        "slug": {
+          "type": "string",
+          "description": "Unique URL-friendly slug"
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the Discord server"
+        },
+        "description": {
+          "type": "string",
+          "description": "Short tagline shown on listing cards"
+        },
+        "longDescription": {
+          "type": "string",
+          "description": "Full description for the detail page"
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Categorization labels"
+        },
+        "memberCount": {
+          "type": "number",
+          "description": "Discord member count, fetched dynamically"
+        },
+        "isLive": {
+          "type": "boolean",
+          "description": "Whether server is active or 'Coming Soon'"
+        },
+        "accent": {
+          "type": "string",
+          "description": "Tailwind gradient class for server UI highlights"
+        },
+        "channels": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Primary communication channels list"
+        },
+        "rules": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Specific server conduct rules"
+        },
+        "inviteEnv": {
+          "type": "string",
+          "description": "Name of the environment variable containing invite link"
+        },
+        "inviteCode": {
+          "type": "string",
+          "description": "Direct invite suffix code"
+        }
       }
     },
     "Event": {
       "description": "Data structure representing a community event",
       "type": "object",
       "properties": {
-        "id": { "type": "string", "description": "Unique event identifier" },
-        "name": { "type": "string", "description": "Display name of the event" },
-        "server": { "type": "string", "description": "Hosting server name" },
-        "serverSlug": { "type": "string", "description": "Slug matching the hosting server" },
-        "date": { "type": "string", "description": "ISO date-time string of start time" },
-        "deadline": { "type": "string", "description": "ISO date-time string of registration deadline" },
-        "description": { "type": "string", "description": "Full markdown-supported description" },
-        "ticketStatus": { "type": "string", "enum": ["free", "paid"], "description": "Pricing tier" },
-        "price": { "type": "string", "description": "Formatted price (e.g. ₹299)" },
-        "isOffline": { "type": "boolean", "description": "True if offline, false if virtual" },
-        "location": { "type": "string", "description": "Physical venue or Discord channel" },
-        "agenda": { "type": "array", "items": { "type": "string" }, "description": "Hour-by-hour timeline of activities" },
-        "sponsors": { "type": "array", "items": { "$ref": "#/dataSchemas/Sponsor" } }
+        "id": {
+          "type": "string",
+          "description": "Unique event identifier"
+        },
+        "name": {
+          "type": "string",
+          "description": "Display name of the event"
+        },
+        "server": {
+          "type": "string",
+          "description": "Hosting server name"
+        },
+        "serverSlug": {
+          "type": "string",
+          "description": "Slug matching the hosting server"
+        },
+        "date": {
+          "type": "string",
+          "description": "ISO date-time string of start time"
+        },
+        "deadline": {
+          "type": "string",
+          "description": "ISO date-time string of registration deadline"
+        },
+        "description": {
+          "type": "string",
+          "description": "Full markdown-supported description"
+        },
+        "ticketStatus": {
+          "type": "string",
+          "enum": [
+            "free",
+            "paid"
+          ],
+          "description": "Pricing tier"
+        },
+        "price": {
+          "type": "string",
+          "description": "Formatted price (e.g. ₹299)"
+        },
+        "isOffline": {
+          "type": "boolean",
+          "description": "True if offline, false if virtual"
+        },
+        "location": {
+          "type": "string",
+          "description": "Physical venue or Discord channel"
+        },
+        "agenda": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Hour-by-hour timeline of activities"
+        },
+        "sponsors": {
+          "type": "array",
+          "items": {
+            "$ref": "#/dataSchemas/Sponsor"
+          }
+        }
       }
     },
     "Sponsor": {
       "description": "Event sponsors or community partners",
       "type": "object",
       "properties": {
-        "name": { "type": "string" },
-        "logo": { "type": "string", "description": "URL link to partner's logo" },
-        "url": { "type": "string", "description": "Direct website link" },
-        "type": { "type": "string", "enum": ["sponsor", "partner"] },
-        "tagline": { "type": "string", "description": "Partner description" },
+        "name": {
+          "type": "string"
+        },
+        "logo": {
+          "type": "string",
+          "description": "URL link to partner's logo"
+        },
+        "url": {
+          "type": "string",
+          "description": "Direct website link"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "sponsor",
+            "partner"
+          ]
+        },
+        "tagline": {
+          "type": "string",
+          "description": "Partner description"
+        },
         "socials": {
           "type": "object",
           "properties": {
-            "x": { "type": "string" },
-            "instagram": { "type": "string" },
-            "linkedin": { "type": "string" },
-            "youtube": { "type": "string" }
+            "x": {
+              "type": "string"
+            },
+            "instagram": {
+              "type": "string"
+            },
+            "linkedin": {
+              "type": "string"
+            },
+            "youtube": {
+              "type": "string"
+            }
           }
         }
       }
@@ -115,32 +237,79 @@
       "description": "Data structure representing a blog post post-card preview",
       "type": "object",
       "properties": {
-        "slug": { "type": "string", "description": "Unique URL identifier" },
-        "title": { "type": "string", "description": "Blog title" },
-        "server": { "type": "string", "description": "Author tag or category" },
-        "date": { "type": "string", "description": "Publish date YYYY-MM-DD" },
-        "excerpt": { "type": "string", "description": "Short description block" },
-        "readTime": { "type": "string", "description": "Estimated reading duration" },
-        "category": { "type": "string", "description": "Specific grouping label (e.g., dbw)" }
+        "slug": {
+          "type": "string",
+          "description": "Unique URL identifier"
+        },
+        "title": {
+          "type": "string",
+          "description": "Blog title"
+        },
+        "server": {
+          "type": "string",
+          "description": "Author tag or category"
+        },
+        "date": {
+          "type": "string",
+          "description": "Publish date YYYY-MM-DD"
+        },
+        "excerpt": {
+          "type": "string",
+          "description": "Short description block"
+        },
+        "readTime": {
+          "type": "string",
+          "description": "Estimated reading duration"
+        },
+        "category": {
+          "type": "string",
+          "description": "Specific grouping label (e.g., dbw)"
+        }
       }
     },
     "TeamMember": {
-      "description": "Profiles of staff, developers, or founders",
+      "description": "Profiles of staff, developers",
       "type": "object",
       "properties": {
-        "slug": { "type": "string", "description": "URL-friendly path" },
-        "name": { "type": "string", "description": "Full name" },
-        "role": { "type": "string", "description": "Title/Responsibility" },
-        "bio": { "type": "string", "description": "One sentence summary" },
-        "avatar": { "type": "string", "description": "URL to profile avatar" },
-        "aboutSection": { "type": "string", "description": "Full personal description" },
+        "slug": {
+          "type": "string",
+          "description": "URL-friendly path"
+        },
+        "name": {
+          "type": "string",
+          "description": "Full name"
+        },
+        "role": {
+          "type": "string",
+          "description": "Title/Responsibility"
+        },
+        "bio": {
+          "type": "string",
+          "description": "One sentence summary"
+        },
+        "avatar": {
+          "type": "string",
+          "description": "URL to profile avatar"
+        },
+        "aboutSection": {
+          "type": "string",
+          "description": "Full personal description"
+        },
         "socials": {
           "type": "object",
           "properties": {
-            "github": { "type": "string" },
-            "twitter": { "type": "string" },
-            "instagram": { "type": "string" },
-            "linkedin": { "type": "string" }
+            "github": {
+              "type": "string"
+            },
+            "twitter": {
+              "type": "string"
+            },
+            "instagram": {
+              "type": "string"
+            },
+            "linkedin": {
+              "type": "string"
+            }
           }
         }
       }

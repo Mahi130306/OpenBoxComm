@@ -233,7 +233,8 @@ export function Footer() {
             <p>© {new Date().getFullYear()} Open Box. All rights reserved.</p>
             <span className="hidden sm:inline text-muted-foreground/30">•</span>
             <p suppressHydrationWarning>
-              Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
+              Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}{' '}
+              {new Date().toLocaleTimeString('en-US', { hour12: false })}
             </p>
           </div>
 

@@ -26,7 +26,7 @@ Open Box uses a custom high-contrast dark theme by default, with support for lig
 
 ### Server Gradients
 Each sub-community or Discord server has a dedicated gradient color scheme:
-- **Junction [Jn.]**: `from-rose-500 to-amber-300` (Founders, Students & Curiosity)
+- **Junction [Jn.]**: `from-rose-500 to-amber-300` ( Students & Curiosity)
 - **OB Dev**: `from-green-400 to-emerald-600` (Developers & Technical reviews)
 - **OB GG**: `from-red-500 to-rose-700` (Gaming & Tournaments)
 - **OB Study**: `from-violet-400 to-fuchsia-500` (Focused Study Rooms)
