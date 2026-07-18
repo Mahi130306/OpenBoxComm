@@ -1,0 +1,87 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://openboxcomm.in/#organization",
+      "name": "Open Box",
+      "description": "A free community network for gaming, development, learning, and networking.",
+      "url": "https://openboxcomm.in",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://openboxcomm.in/images/OB.png",
+        "width": 512,
+        "height": 512
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://openboxcomm.in/images/og-default.png",
+        "width": 1200,
+        "height": 630
+      },
+      "sameAs": [
+        "https://discord.gg/7ZWckKU89J",
+        "https://www.instagram.com/openboxcomm/",
+        "https://x.com/Openboxcomm",
+        "https://www.youtube.com/@obcommunities-yt"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Support",
+        "email": "admin@openboxcomm.in",
+        "url": "https://openboxcomm.in/contact-us"
+      },
+      "foundingDate": "2021-01-01",
+      "areaServed": "IN",
+      "knowsAbout": [
+        "Gaming",
+        "Software Development",
+        "Community Building",
+        "Networking",
+        "Education"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://openboxcomm.in/#website",
+      "url": "https://openboxcomm.in",
+      "name": "Open Box",
+      "description": "A free community network for gaming, development, learning, and networking.",
+      "publisher": {
+        "@id": "https://openboxcomm.in/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://openboxcomm.in/servers?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://openboxcomm.in/#breadcrumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://openboxcomm.in"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Servers",
+          "item": "https://openboxcomm.in/servers"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Events",
+          "item": "https://openboxcomm.in/events"
+        }
+      ]
+    }
+  ]
+}
