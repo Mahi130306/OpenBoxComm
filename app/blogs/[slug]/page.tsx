@@ -149,6 +149,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ slu
       {author && (
         <div className="mt-16 rounded-xl border border-black/10 bg-zinc-50 dark:bg-zinc-900/50 p-6 dark:border-white/10">
           <div className="flex flex-col gap-6 sm:flex-row sm:items-start">
+            {/* 1. avatar(current) */}
             <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-full border border-border">
               <Image
                 src={author.avatar}
@@ -162,11 +163,23 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ slu
               <span className="text-xs font-bold uppercase tracking-wider text-cyan-500">
                 Author
               </span>
+              {/* 2. name */}
               <h3 className="text-xl font-bold text-foreground mt-0.5">{author.name}</h3>
+              {/* 3. role */}
               <p className="text-sm text-cyan-600 dark:text-cyan-400 font-medium mb-3">{author.role}</p>
               <p className="text-sm leading-relaxed text-muted-foreground mb-4">
                 {author.aboutSection || author.bio}
               </p>
+
+              {/* 4. "view profile -> " (link to /team/[slug]) */}
+              <div className="mb-4">
+                <Link
+                  href={`/team/${author.slug}`}
+                  className="inline-flex items-center text-sm font-bold text-cyan-500 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors"
+                >
+                  view profile -&gt;
+                </Link>
+              </div>
 
               {/* Author socials */}
               <div className="flex gap-3 text-muted-foreground">
