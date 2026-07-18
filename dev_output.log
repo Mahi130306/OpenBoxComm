@@ -13,3 +13,8 @@
  HEAD /carrers/growth-marketer 404 in 1537ms (next.js: 1369ms, proxy.ts: 6ms, application-code: 162ms)
  GET /careers 404 in 186ms (next.js: 12ms, proxy.ts: 6ms, application-code: 168ms)
  GET /api/whats-new 200 in 996ms (next.js: 940ms, proxy.ts: 32ms, application-code: 25ms)
+✓ Compiled in 4.1s
+✓ Compiled in 1130ms
+✓ Compiled in 558ms
+ GET /careers 404 in 2.0s (next.js: 246ms, proxy.ts: 346ms, application-code: 1430ms)
+ GET /api/whats-new 200 in 81ms (next.js: 60ms, proxy.ts: 5ms, application-code: 15ms)
