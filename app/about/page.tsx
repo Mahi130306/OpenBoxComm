@@ -43,7 +43,7 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold mb-6">Our Story</h2>
             <div className="prose prose-invert max-w-none space-y-6">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                We started as a small Discord server for developers sharing side projects. Today, we&apos;ve grown into a network of multiple communities, each serving different facets of the journey from coding to gaming to study groups.
+                We started as a small Discord server for engineering students sharing side projects. Today, we&apos;ve grown into a network of multiple communities, each serving different facets of the journey from coding to gaming to study groups.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Our mission is simple: provide a welcoming, high-signal space where gamers, students, professionals, and creators can find their tribe, share their work, and grow together. no toxicity, just genuine connection and collaboration.
@@ -51,7 +51,7 @@ export default function AboutPage() {
             </div>
           </section>
 
-          <section>
+          {/* <section>
             <h2 className="text-3xl font-bold mb-8">The Server Lineup</h2>
             <div className="grid gap-4 sm:grid-cols-2">
               {servers.map((server, i) => (
@@ -78,7 +78,7 @@ export default function AboutPage() {
                 </Link>
               ))}
             </div>
-          </section>
+          </section> */}
         </div>
 
         {/* Sidebar: Values */}
