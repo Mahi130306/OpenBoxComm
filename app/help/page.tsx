@@ -134,7 +134,7 @@ export default function HelpPage() {
               <h2 className="text-3xl font-bold text-foreground">Get Support</h2>
             </div>
             <div className="grid gap-6 lg:grid-cols-2">
-              <Card className="overflow-hidden border-border bg-surface/50 shadow-md" id='suggestion-box'>
+              <Card className="overflow-hidden border-border bg-surface/50 shadow-md" id='suggestion-box' suppressHydrationWarning={true}>
                 <CardHeader className="bg-muted/30 pb-4">
                   <CardTitle className="text-xl">Ask the Community</CardTitle>
                   <CardDescription>
