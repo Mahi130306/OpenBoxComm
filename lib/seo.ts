@@ -12,7 +12,7 @@ const BASE_URL = 'https://openboxcomm.in'
  */
 export const defaultMetadata = {
   title: 'Open Box | Community for Everyone',
-  description: 'A community network with multiple Discord servers. Join Open Box to build, learn, game, and connect | free, no gatekeeping.',
+  description: 'A community network with multiple Discord servers. Join Open Box to build, learn, game, and connect | free.',
   keywords: ['Open Box', 'Discord community', 'gaming', 'development', 'learning', 'networking'],
   baseUrl: BASE_URL,
 }

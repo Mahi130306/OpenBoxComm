@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     default: 'Open Box — Community for Everyone',
     template: '%s — Open Box',
   },
-  description: 'A community network with multiple Discord servers. Join Open Box to build, learn, game, and connect — free, no gatekeeping.',
+  description: 'A community network with multiple Discord servers. Join Open Box to build, learn, game, and connect — free.',
   keywords: ['Open Box', 'Discord community', 'gaming server', 'developer community', 'study group', 'networking', 'free community', 'the best Discord community', 'the best tech community', 'open box community', 'open box comm', 'OB', 'ob', 'ob.net.in', 'obcomm', 'obcomm.in', 'obcommunity', 'obcommunity.in', 'obcommunity.net', 'openboxcommunity.in', 'openboxcommunity.net', 'openboxcommunity.org', 'obcommunity.org', 'obcommunity.org.in', 'openboxcommunity.org.in', 'the open box community', 'openboxcommunity.org.in'],
   authors: [{ name: 'Open Box', url: BASE_URL }],
   creator: 'Open Box',

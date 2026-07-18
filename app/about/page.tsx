@@ -46,7 +46,7 @@ export default function AboutPage() {
                 We started as a small Discord server for developers sharing side projects. Today, we&apos;ve grown into a network of multiple communities, each serving different facets of the journey from coding to gaming to study groups.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Our mission is simple: provide a welcoming, high-signal space where gamers, students, professionals, and creators can find their tribe, share their work, and grow together. No gatekeeping, no toxicity, just genuine connection and collaboration.
+                Our mission is simple: provide a welcoming, high-signal space where gamers, students, professionals, and creators can find their tribe, share their work, and grow together. no toxicity, just genuine connection and collaboration.
               </p>
             </div>
           </section>
@@ -55,8 +55,8 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold mb-8">The Server Lineup</h2>
             <div className="grid gap-4 sm:grid-cols-2">
               {servers.map((server, i) => (
-                <Link 
-                  key={server.name} 
+                <Link
+                  key={server.name}
                   href="/join"
                   className="group relative overflow-hidden rounded-2xl border border-border bg-surface/50 p-6 transition-all hover:-translate-y-1 hover:border-violet-500/50 hover:shadow-xl"
                 >
@@ -88,7 +88,7 @@ export default function AboutPage() {
               <h2 className="text-2xl font-bold mb-8">Our Values</h2>
               <div className="space-y-8">
                 {[
-                  { icon: Users, title: "Inclusivity", desc: "Open to everyone, regardless of skill level or background. No gatekeeping allowed." },
+                  { icon: Users, title: "Inclusivity", desc: "Open to everyone, regardless of skill level or background." },
                   { icon: Zap, title: "High Signal", desc: "Focus on quality interactions and meaningful content over noise and spam." },
                   { icon: Heart, title: "Community First", desc: "Every decision we make is guided by what's best for the people who call Open Box home." },
                   { icon: CheckCircle2, title: "Respect", desc: "A safe, respectful environment where everyone can express themselves freely." }

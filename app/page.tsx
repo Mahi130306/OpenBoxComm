@@ -34,7 +34,7 @@ export default function Home() {
               Open Doors. Pick Yours.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-              OpenBox is home to multiple communities across gaming, development, study, networking, and more. Free to join. No gatekeeping. Just find the one that fits and jump in.
+              OpenBox is home to multiple communities across gaming, development, study, networking, and more. Free to join. Just find the one that fits and jump in.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-3">
               <Button asChild size="lg">

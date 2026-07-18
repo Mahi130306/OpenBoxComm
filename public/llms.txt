@@ -1,6 +1,6 @@
 # Open Box
 
-> Open Box is a free, multi-server Discord community platform for developers, gamers, and students in India. No gatekeeping, just people who want to build, play, and learn together.
+> Open Box is a free, multi-server Discord community platform for developers, gamers, and students in India. Just people who want to build, play, and learn together.
 
 ## Live Servers
 
