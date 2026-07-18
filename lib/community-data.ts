@@ -56,6 +56,7 @@ export interface Blog {
   excerpt: string
   readTime: string
   category?: 'dbw'
+  authorId?: string
 }
 
 export interface TeamMember {
@@ -469,6 +470,7 @@ export const blogs: Blog[] = [
     date: '2026-06-29',
     excerpt: 'OpenBox has gone from a club side-project to its own independent community. Here is what we are focused on next and what we want to build with you.',
     readTime: '2 min read',
+    authorId: 'mahi-hh',
   },
   {
     slug: 'ob-gg-gaming-server-beta',
@@ -477,6 +479,7 @@ export const blogs: Blog[] = [
     date: '2026-06-29',
     excerpt: 'OB GG is our gaming server. We built it to bring more people into the OpenBox world and give gamers in the community a dedicated home. It is live now in beta.',
     readTime: '2 min read',
+    authorId: 'mahi-hh',
   },
   {
     slug: 'the-new-website',
@@ -485,6 +488,7 @@ export const blogs: Blog[] = [
     date: '2026-06-29',
     excerpt: 'We rebuilt openboxcomm.in from the ground up on Next.js and Vercel. Here is what it does now and what is coming next, including a dedicated ticketing site with Discord login.',
     readTime: '2 min read',
+    authorId: 'rohith',
   },
   {
     slug: 'the-first-website-broke',
@@ -493,6 +497,7 @@ export const blogs: Blog[] = [
     date: '2026-06-29',
     excerpt: 'We shipped our first website fast, felt good about it, and then watched it break in production. A build failure we did not catch for way too long.',
     readTime: '2 min read',
+    authorId: 'rohith',
   },
   {
     slug: 'how-we-started',
@@ -501,6 +506,7 @@ export const blogs: Blog[] = [
     date: '2026-06-29',
     excerpt: 'OpenBox started as part of a college club. Then things changed, we split off, and built something of our own. Here is the honest version of that story.',
     readTime: '2 min read',
+    authorId: 'mahi-hh',
   },
   {
     slug: 'dbw-june-week-2',
@@ -510,6 +516,7 @@ export const blogs: Blog[] = [
     excerpt: 'Day Before Weekend (dbw) — our weekly Friday update. This week we fixed bugs on the website, prepared for the GG beta expansion, and more.',
     readTime: '3 min read',
     category: 'dbw',
+    authorId: 'mahi-hh',
   },
 ]
 

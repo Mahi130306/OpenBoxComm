@@ -5,19 +5,12 @@
 ▲ Next.js 16.2.10 (Turbopack)
 - Local:         http://localhost:3000
 - Network:       http://192.168.0.2:3000
-✓ Ready in 529ms
+✓ Ready in 559ms
 
-○ Compiling / ...
- GET / 200 in 10.5s (next.js: 7.7s, proxy.ts: 246ms, application-code: 2.5s)
- GET /api/whats-new 200 in 979ms (next.js: 912ms, proxy.ts: 54ms, application-code: 13ms)
- GET /api/discord-members?code=xHD4PRxauw 200 in 1209ms (next.js: 828ms, proxy.ts: 54ms, application-code: 327ms)
- GET /api/discord-members?code=etnc7ZpDKT 200 in 1194ms (next.js: 792ms, proxy.ts: 55ms, application-code: 346ms)
- GET /api/discord-members?code=nF48vqYwEk 200 in 1319ms (next.js: 766ms, proxy.ts: 53ms, application-code: 501ms)
- GET /servers 200 in 1062ms (next.js: 993ms, proxy.ts: 7ms, application-code: 63ms)
- GET /api/discord-members?code=xHD4PRxauw 200 in 37ms (next.js: 10ms, proxy.ts: 19ms, application-code: 7ms)
- GET /api/discord-members?code=nF48vqYwEk 200 in 45ms (next.js: 18ms, proxy.ts: 21ms, application-code: 7ms)
- GET /api/discord-members?code=etnc7ZpDKT 200 in 71ms (next.js: 38ms, proxy.ts: 20ms, application-code: 12ms)
- GET /api/discord-members?code=xHD4PRxauw 200 in 65ms (next.js: 16ms, proxy.ts: 41ms, application-code: 8ms)
- GET /api/discord-members?code=nF48vqYwEk 200 in 50ms (next.js: 21ms, proxy.ts: 18ms, application-code: 12ms)
- GET /api/discord-members?code=etnc7ZpDKT 200 in 56ms (next.js: 31ms, proxy.ts: 15ms, application-code: 9ms)
- GET /blogs 200 in 1075ms (next.js: 1000ms, proxy.ts: 6ms, application-code: 69ms)
+○ Compiling /blogs/[slug] ...
+ GET /blogs/where-we-go-from-here 200 in 12.5s (next.js: 9.6s, proxy.ts: 246ms, generate-params: 1127ms, application-code: 2.7s)
+ GET /api/whats-new 200 in 916ms (next.js: 880ms, proxy.ts: 9ms, application-code: 27ms)
+ GET /blogs/where-we-go-from-here 200 in 345ms (next.js: 45ms, proxy.ts: 10ms, generate-params: 28ms, application-code: 290ms)
+ GET /api/whats-new 200 in 23ms (next.js: 7ms, proxy.ts: 6ms, application-code: 10ms)
+ GET /blogs/where-we-go-from-here 200 in 492ms (next.js: 37ms, proxy.ts: 7ms, generate-params: 30ms, application-code: 449ms)
+ GET /api/whats-new 200 in 18ms (next.js: 4ms, proxy.ts: 6ms, application-code: 7ms)
