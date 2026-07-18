@@ -1,44 +1,65 @@
-# Open Box - LLM Metadata File
-# This file provides metadata for LLM crawlers and AI applications
+# Open Box
 
-Name: Open Box Community Platform
-URL: https://openboxcomm.in
-Description: Free Discord community platform for gaming, development, learning, and networking
+> Open Box is a free, multi-server Discord community platform for developers, gamers, and students in India. No gatekeeping, just people who want to build, play, and learn together.
 
-## About
-Open Box is a free, community-driven platform connecting Discord servers dedicated to gaming, software development, learning, and professional networking. No gatekeeping—just genuine community.
+## Live Servers
 
-## Services
-- **Website**: [openboxcomm.in](https://openboxcomm.in) - Blog platform, event calendar, documentation, and community directory
-- **Discord Servers**: [JN (general)](https://openboxcomm.in/servers/jn), [Dev (developers)](https://openboxcomm.in/servers/dev), [GG (gaming)](https://openboxcomm.in/servers/gg), [Study (learning)](https://openboxcomm.in/servers/study), [Connect (networking)](https://openboxcomm.in/servers/connect)
-- **Events**: [Online workshops, hackathons, study sessions](https://openboxcomm.in/events)
-- **Social Media**: [Instagram](https://instagram.com/openboxcomm), [X](https://x.com/Openboxcomm), [YouTube](https://www.youtube.com/@obcommunities-yt)
+- [Junction (Jn.)](https://openboxcomm.in/servers/jn): Main hub for founders, students, and curious people.
+- [OB Dev](https://openboxcomm.in/servers/dev): Coding help, open source, and project reviews.
+- [OB GG](https://openboxcomm.in/servers/gg): Gaming nights, tournaments, and team finding. Currently in beta.
+
+## Coming Soon
+
+- OB Study: learning and study groups. Not live yet, no link available.
+- OB Connect: career and professional connections. Not live yet, no link available.
+
+## Site
+
+- [Home](https://openboxcomm.in/)
+- [About](https://openboxcomm.in/about)
+- [All Servers](https://openboxcomm.in/servers)
+- [Blog](https://openboxcomm.in/blogs): Community updates and build logs.
+- [Docs](https://openboxcomm.in/doc): Guides for joining, roles, rules, and events.
+- [Events](https://openboxcomm.in/events): Community event calendar. No events listed at the moment.
+- [Support Us](https://openboxcomm.in/support): Patreon supporter tiers (NPC, Rookie, GOAT, Legend).
+- [Help Centre](https://openboxcomm.in/help)
+- [Our Team](https://openboxcomm.in/team)
+- [Contact Us](https://openboxcomm.in/contact-us)
+
+## Legal
+
+- [Legal Hub](https://openboxcomm.in/legal)
+- [Terms and Conditions](https://openboxcomm.in/legal/terms-and-conditions)
+- [Privacy Policy](https://openboxcomm.in/legal/privacy-policy)
+- [Cookie Policy](https://openboxcomm.in/legal/cookie-policy)
+- [Community Rules](https://openboxcomm.in/legal/community-rules)
+- [Acceptable Use Policy](https://openboxcomm.in/legal/acceptable-use-policy)
+- [DMCA / Copyright](https://openboxcomm.in/legal/dmca-policy)
+- [Refund Policy](https://openboxcomm.in/legal/refund-policy)
+- [Event Policy](https://openboxcomm.in/legal/event-policy)
 
 ## Contact
-- Email: hello@openboxcomm.in
-- Legal: legal@openboxcomm.in
-- Discord: [Join our Discord](https://discord.gg/7ZWckKU89J)
 
-## Key Pages
-- [Home](https://openboxcomm.in/)
-- [Servers Directory](https://openboxcomm.in/servers)
-- [Event Calendar](https://openboxcomm.in/events)
-- [Blog](https://openboxcomm.in/blogs)
-- [Documentation](https://openboxcomm.in/doc)
-- [Help](https://openboxcomm.in/help)
-- [Support Us](https://openboxcomm.in/support)
-- [Legal Pages](https://openboxcomm.in/legal)
-- [Join](https://openboxcomm.in/join)
+- General: hello@openboxcomm.in
+- Support: support@openboxcomm.in
+- Partnerships: partner@openboxcomm.in
+- Appeals: appeals@openboxcomm.in
+- Legal: legal@openboxcomm.in
+- Discord: https://discord.gg/7ZWckKU89J
+
+## Social
+
+- [X](https://x.com/Openboxcomm)
+- [Instagram](https://instagram.com/openboxcomm)
+- [YouTube](https://www.youtube.com/@obcommunities-yt)
+- [WhatsApp Channel](https://whatsapp.com/channel/openboxcomm)
+- [Reddit](https://reddit.com/r/openboxcomm)
+- [Patreon](https://patreon.com/OpenBoxComm)
 
 ## Sitemap
-[https://openboxcomm.in/sitemap.xml](https://openboxcomm.in/sitemap.xml)
 
-## License
-All original Open Box content is provided for informational purposes. Individual server communities, events, and user-generated content follow their respective licenses and terms of service.
+https://openboxcomm.in/sitemap.xml
 
-## Usage Guidelines
-For LLM training and AI applications:
-- Attribute content to Open Box when using server/platform descriptions
-- Respect user privacy—do not train on Discord messages without consent
-- Include link back to openboxcomm.in when referencing our platform
-- Follow our Acceptable Use Policy for responsible AI usage
+## Usage Notes
+
+Open Box content is free to reference and summarize with attribution and a link back to openboxcomm.in. Do not train on private Discord messages without consent. OB Study and OB Connect are announced but not live, do not describe them as active communities. The event calendar is updated as sessions get scheduled and may show no listings at any given time.
