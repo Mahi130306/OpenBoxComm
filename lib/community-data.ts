@@ -84,13 +84,13 @@ export const servers: Servers[] = [
     longDescription:
       'Jn. is the friendly front door of Open Box. Bring a rough idea, ask for feedback, share your wins, or find people who want to build alongside you.',
     tags: ['community', 'showcase', 'feedback'],
-    memberCount: 1,
+    memberCount: 99,
     isLive: true,
     accent: 'from-rose-500 to-amber-300',
     channels: ['OB Jn FEEDs', 'Notification', 'Forms', 'System'],
     rules: ['Be respectful and welcoming', 'Share context when asking for help', 'Use the right channel', 'Celebrate work in progress'],
     inviteEnv: 'NEXT_PUBLIC_DISCORD_JN_INVITE',
-    inviteCode: 'xHD4PRxauw',
+    inviteCode: '7ZWckKU89J',
   },
   {
     slug: 'dev',
@@ -98,14 +98,14 @@ export const servers: Servers[] = [
     description: 'Technical deep dives, coding help, open source, and project reviews.',
     longDescription:
       'Dev is for bringing devs together. Pair on bugs, review architecture, share resources, and turn scattered notes into working projects.',
-    tags: ['development', 'code', 'open-source', 'Showoff'],
-    memberCount: 1,
+    tags: ['development', 'open-source', 'Showoff'],
+    memberCount: 99,
     isLive: true,
     accent: 'from-green-400 to-emerald-600',
     channels: ['Dev & Projects', 'Knowledge Base', 'Events', 'Career'],
     rules: ['Be helpful', 'Use code blocks', 'Respect others work', 'No spam or low-context promotion'],
     inviteEnv: 'NEXT_PUBLIC_DISCORD_DEV_INVITE',
-    inviteCode: 'nF48vqYwEk',
+    inviteCode: 'H2AmpBrPdW',
   },
   {
     slug: 'gg',
@@ -114,7 +114,7 @@ export const servers: Servers[] = [
     longDescription:
       'GG is where play and building meet. Join casual sessions, organize tournament squads, talk game design, and find collaborators for prototypes.',
     tags: ['gaming', 'tournaments', 'fun', 'flex'],
-    memberCount: 1,
+    memberCount: 99,
     isLive: true,
     accent: 'from-red-500 to-rose-700',
     channels: ['Battle Royal', 'Open world', 'Story line', 'Competitive', 'Casual'],
