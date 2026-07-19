@@ -63,11 +63,9 @@ export default async function ServerPage({
               )}
 
               {/* Info */}
-              <div className="flex-1">
+              <div className="flex-1 text-white dark:text-neutral-200">
                 <div className="mb-3 flex flex-wrap gap-2">
-                  <span
-                    className={`inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r ${server.accent} px-3 py-0.5 text-xs font-bold text-black/80`}
-                  >
+                  <span className="inline-flex items-center gap-1.5 rounded-full bg-white px-3 py-0.5 text-xs font-bold text-black/80">
                     <span className="h-1.5 w-1.5 rounded-full bg-red-500 text-red-500" />
                     LIVE
                   </span>
@@ -77,8 +75,9 @@ export default async function ServerPage({
                     </Badge>
                   ))}
                 </div>
-                <h1 className="mb-2 !text-4xl sm:!text-5xl">{server.name}</h1>
-                <p className="max-w-2xl text-lg ">{server.description}</p>
+                {/* Added font-bold to help it contrast cleanly against the solid background */}
+                <h1 className="mb-2 !text-4xl sm:!text-5xl font-bold">{server.name}</h1>
+                <p className="max-w-2xl text-lg text-white/90 dark:text-neutral-300">{server.description}</p>
               </div>
 
               {/* Members pill */}
