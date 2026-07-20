@@ -327,7 +327,7 @@ export function Navbar() {
 
       {/* Render the fixed toasts completely outside the fixed <nav> block */}
       {darkToast && (
-        <div className="fixed bottom-6 left-1/2 z-[100] w-[90%] max-w-sm -translate-x-1/2 rounded-xl border border-border bg-background/95 p-3.5 text-center shadow-2xl backdrop-blur supports-[backdrop-filter]:bg-background/85 animate-in fade-in slide-in-from-bottom-4 duration-300 md:fixed md:bottom-auto md:top-20 md:left-auto md:right-6 md:translate-x-0 md:w-auto md:max-w-none md:text-left">
+        <div className="fixed top-20 left-1/2 z-[1000] w-[90%] max-w-sm -translate-x-1/2 rounded-xl border border-border bg-background/95 p-3.5 text-center shadow-2xl backdrop-blur supports-[backdrop-filter]:bg-background/85 animate-in fade-in slide-in-from-top-4 duration-300 md:right-6 md:left-auto md:translate-x-0 md:w-auto md:max-w-none md:text-left">
           <span className="text-sm font-bold text-foreground sm:text-base whitespace-normal md:whitespace-nowrap">
             Welcome back to the dark side 👾
           </span>
@@ -335,7 +335,7 @@ export function Navbar() {
       )}
 
       {showSuggestion && (
-        <div className="fixed bottom-6 left-1/2 z-[100] w-[90%] max-w-sm -translate-x-1/2 rounded-xl border border-border bg-background/95 p-4 text-center shadow-2xl backdrop-blur supports-[backdrop-filter]:bg-background/85 animate-in fade-in slide-in-from-bottom-4 duration-300 md:fixed md:bottom-auto md:top-20 md:left-auto md:right-6 md:translate-x-0 md:w-64 md:text-left">
+        <div className="fixed top-20 left-1/2 z-[1000] w-[90%] max-w-sm -translate-x-1/2 rounded-xl border border-border bg-background/95 p-4 text-center shadow-2xl backdrop-blur supports-[backdrop-filter]:bg-background/85 animate-in fade-in slide-in-from-top-4 duration-300 md:right-6 md:left-auto md:translate-x-0 md:w-64 md:text-left">
           <p className="text-sm font-bold text-foreground mb-2">
             System is in light mode? ☀️
           </p>
