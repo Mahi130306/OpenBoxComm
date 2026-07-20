@@ -32,6 +32,8 @@ interface ThemeToggleProps {
   setDarkToast: (val: boolean) => void
   showSuggestion: boolean
   setShowSuggestion: (val: boolean) => void
+  tease: boolean
+  setTease: (val: boolean) => void
 }
 
 function ThemeToggle({
@@ -39,10 +41,11 @@ function ThemeToggle({
   setDarkToast,
   showSuggestion,
   setShowSuggestion,
+  tease,
+  setTease,
 }: ThemeToggleProps) {
   const { theme, setTheme, resolvedTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
-  const [tease, setTease] = useState(false)
 
   useEffect(() => setMounted(true), [])
 
@@ -132,6 +135,7 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [darkToast, setDarkToast] = useState(false)
   const [showSuggestion, setShowSuggestion] = useState(false)
+  const [tease, setTease] = useState(false)
   const pathname = usePathname()
 
   useEffect(() => {
@@ -142,15 +146,40 @@ export function Navbar() {
 
   useEffect(() => {
     setMobileMenuOpen(false)
+    setTease(false)
   }, [pathname])
 
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') setMobileMenuOpen(false)
+      if (e.key === 'Escape') {
+        setMobileMenuOpen(false)
+        setTease(false)
+      }
     }
     document.addEventListener('keydown', handleEsc)
     return () => document.removeEventListener('keydown', handleEsc)
   }, [])
+
+  useEffect(() => {
+    if (darkToast) {
+      setShowSuggestion(false)
+      setTease(false)
+    }
+  }, [darkToast])
+
+  useEffect(() => {
+    if (showSuggestion) {
+      setDarkToast(false)
+      setTease(false)
+    }
+  }, [showSuggestion])
+
+  useEffect(() => {
+    if (tease) {
+      setDarkToast(false)
+      setShowSuggestion(false)
+    }
+  }, [tease])
 
   const handleToggleSuggestion = () => {
     setShowSuggestion(false)
@@ -263,6 +292,8 @@ export function Navbar() {
                 setDarkToast={setDarkToast}
                 showSuggestion={showSuggestion}
                 setShowSuggestion={setShowSuggestion}
+                tease={tease}
+                setTease={setTease}
               />
             </div>
 
@@ -272,6 +303,8 @@ export function Navbar() {
                 setDarkToast={setDarkToast}
                 showSuggestion={showSuggestion}
                 setShowSuggestion={setShowSuggestion}
+                tease={tease}
+                setTease={setTease}
               />
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
