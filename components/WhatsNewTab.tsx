@@ -123,7 +123,7 @@ export function WhatsNewTab() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black/40 backdrop-blur-[2px] z-50"
+              className="fixed inset-0 bg-black/40 backdrop-blur-[2px] z-[1050]"
             />
 
             {/* Panel */}
@@ -133,7 +133,7 @@ export function WhatsNewTab() {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-              className="fixed right-0 top-0 h-full w-full max-w-[320px] bg-background/80 backdrop-blur-xl border-l border-white/10 z-50 shadow-2xl flex flex-col"
+              className="fixed right-0 top-0 h-full w-full max-w-[320px] bg-background/80 backdrop-blur-xl border-l border-white/10 z-[1050] shadow-2xl flex flex-col"
             >
               <div className="p-6 flex items-center justify-between border-b border-white/5">
                 <h2 className="font-syne text-xl font-bold">What's New</h2>

@@ -37,7 +37,7 @@ export function LoadingScreen() {
 
   return (
     <div
-      className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-background"
+      className="fixed inset-0 z-[100000] flex flex-col items-center justify-center bg-background"
       style={{
         opacity: isFading ? 0 : 1,
         transition: 'opacity 0.4s ease',
