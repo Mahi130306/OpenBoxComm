@@ -5,12 +5,11 @@
 ▲ Next.js 16.2.10 (Turbopack)
 - Local:         http://localhost:3000
 - Network:       http://192.168.0.2:3000
-✓ Ready in 559ms
+✓ Ready in 540ms
 
-○ Compiling /blogs/[slug] ...
- GET /blogs/where-we-go-from-here 200 in 12.5s (next.js: 9.6s, proxy.ts: 246ms, generate-params: 1127ms, application-code: 2.7s)
- GET /api/whats-new 200 in 916ms (next.js: 880ms, proxy.ts: 9ms, application-code: 27ms)
- GET /blogs/where-we-go-from-here 200 in 345ms (next.js: 45ms, proxy.ts: 10ms, generate-params: 28ms, application-code: 290ms)
- GET /api/whats-new 200 in 23ms (next.js: 7ms, proxy.ts: 6ms, application-code: 10ms)
- GET /blogs/where-we-go-from-here 200 in 492ms (next.js: 37ms, proxy.ts: 7ms, generate-params: 30ms, application-code: 449ms)
- GET /api/whats-new 200 in 18ms (next.js: 4ms, proxy.ts: 6ms, application-code: 7ms)
+○ Compiling / ...
+ GET / 200 in 10.6s (next.js: 8.0s, proxy.ts: 238ms, application-code: 2.3s)
+ GET /api/whats-new 200 in 785ms (next.js: 728ms, proxy.ts: 36ms, application-code: 21ms)
+ GET /api/discord-members?code=H2AmpBrPdW 404 in 1034ms (next.js: 805ms, proxy.ts: 38ms, application-code: 191ms)
+ GET /api/discord-members?code=etnc7ZpDKT 200 in 1090ms (next.js: 820ms, proxy.ts: 42ms, application-code: 228ms)
+ GET /api/discord-members?code=7ZWckKU89J 200 in 1101ms (next.js: 801ms, proxy.ts: 33ms, application-code: 268ms)
