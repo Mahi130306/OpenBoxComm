@@ -7,6 +7,7 @@ import { MasterCalendar } from '@/components/MasterCalendar'
 import { CTASection } from '@/components/CTASection'
 import ServerNodeGraph from "@/components/ServerNodeGraph";
 import { ArrowRight, Sparkles } from 'lucide-react'
+import { ImportantNoticeMarquee } from '@/components/ImportantNoticeMarquee'
 
 export const metadata: Metadata = {
   title: 'Home',
@@ -20,6 +21,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className="flex flex-col">
+      <ImportantNoticeMarquee />
       <section id="herosection" className="relative overflow-hidden border-b border-border bg-background">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(34,211,238,0.1),transparent_32%),radial-gradient(circle_at_85%_15%,rgba(244,114,182,0.1),transparent_30%),linear-gradient(135deg,rgba(255,255,255,1),rgba(245,245,250,1))] dark:hidden" />
         <div className="absolute inset-0 hidden dark:block bg-[radial-gradient(circle_at_15%_20%,rgba(34,211,238,0.18),transparent_32%),radial-gradient(circle_at_85%_15%,rgba(244,114,182,0.16),transparent_30%),linear-gradient(135deg,rgba(17,17,17,0.2),rgba(10,10,10,1))]" />

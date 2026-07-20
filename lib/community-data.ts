@@ -617,3 +617,17 @@ export function getBlog(slug: string): Blog | undefined {
 export function getTeamMember(slug: string): TeamMember | undefined {
   return teamMembers.find((m) => m.slug === slug)
 }
+
+// ─── Important Notice ──────────────────────────────────────────────────────────
+
+export interface ImportantNotice {
+  text: string
+  linkText: string
+  linkUrl: string
+}
+
+export const importantNotice: ImportantNotice = {
+  text: 'importent notice: the event are being planned to get cancled. ',
+  linkText: 'for more click.',
+  linkUrl: '/events',
+}
