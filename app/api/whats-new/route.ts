@@ -3,11 +3,11 @@ import { Update } from '@/types'
 
 const updates: Update[] = [
   {
-    id: 'new-socials-whatsapp-reddit',
-    title: 'Now on WhatsApp & Reddit',
+    id: 'new-socials-whatsapp',
+    title: 'Now on WhatsApp',
     type: 'community',
-    date: '2026-07-14',
-    description: 'Open Box is now on WhatsApp Channels and Reddit. Follow along for updates, highlights, and community news.',
+    date: '2026-07-21',
+    description: 'Open Box is now on WhatsApp Channels. Follow along for updates, highlights, and community news.',
     href: '/join?tab=socials',
     isNew: true,
   },

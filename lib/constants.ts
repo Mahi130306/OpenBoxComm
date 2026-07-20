@@ -12,7 +12,7 @@ export const INSTAGRAM_URL = process.env.NEXT_PUBLIC_INSTAGRAM_URL || 'https://i
 export const YOUTUBE_URL = process.env.NEXT_PUBLIC_YOUTUBE_URL || 'https://youtube.com/@obcommunities-yt'
 export const X_URL = process.env.NEXT_PUBLIC_X_URL || 'https://x.com/Openboxcomm'
 export const WHATSAPP_URL = process.env.NEXT_PUBLIC_WHATSAPP_URL || 'https://whatsapp.com/channel/0029VbCds3g4CrflAboEyl0V'
-export const REDDIT_URL = process.env.NEXT_PUBLIC_REDDIT_URL || 'https://reddit.com/r/OpenBoxComm/'
+// export const REDDIT_URL = process.env.NEXT_PUBLIC_REDDIT_URL || 'https://reddit.com/r/OpenBoxComm/'
 
 export const NAVIGATION = [
   { label: 'Home', href: '/' },
