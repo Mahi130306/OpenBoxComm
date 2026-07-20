@@ -2,7 +2,34 @@
 // slug → array of paragraphs (each string = one <p> block)
 
 export const blogContents: Record<string, string[]> = {
-
+  'why-we-removed-wick': [
+    'On July 20, 2026, we removed Wick from the Open Box servers. Wick is a moderation bot, and we had been using it for a while. We are writing this because members deserve to know why.',
+    'The short version: Wick was kicking members for having their Discord DMs disabled.',
+    'We noticed something was off when legitimate members were getting flagged and punished without any rule violation. When we dug into the logs, the reason was clear. Wick was treating "DMs disabled" as a suspicious signal and actioning members for it.',
+    'DMs being disabled is not suspicious. It is one of the most common privacy settings on Discord, especially for people who have been spammed or harassed before. A lot of our members, particularly students and newer Discord users, have it turned off by default. Punishing someone for a privacy setting is not moderation. It is the opposite.',
+    'The screenshot below is from our logs on July 20. You can see a member getting kicked with the reason listed as "Account Suspicious" and the detail showing "Dming disabled." That is not a reason to remove someone from a community.',
+    'Beyond the DMs issue, Wick was also applying punishments to members in a way that did not match our moderation policy. Automated systems are useful, but they have to be configured carefully. In this case, the defaults were doing more harm than good.',
+    'We removed Wick the same day we caught this. Any members who were affected and want to come back can reach out at support@openboxcomm.in or appeals@openboxcomm.in. We will sort it.',
+    'Moderation tools are supposed to protect the community, not make it harder for good-faith members to stay in it. We will be more careful about what we run going forward.',
+  ],
+  'why-we-kept-it-free': [
+    'Open Box has been free since the beginning. Not free with a catch, not free until we figure out monetisation. Free as the default, with optional support tiers for people who want to contribute.',
+    'The decision was not complicated. Communities that charge for entry tend to become communities for people who can pay. We did not want that. The whole point was to build something accessible for students and early-career folks in India, and putting a paywall at the door would have killed that immediately.',
+    'There is also a practical reason. When people pay to be somewhere, they expect a return on that. They come in with expectations the community might not meet yet. When people join for free, they come in curious. That is a much better starting energy.',
+    'The supporter tiers exist because running a community has real costs. Hosting, tools, bots, the website, event overhead. NPC, Rookie, GOAT, and Legend are for people who want to chip in and get something back for it. But they are optional, and the community works without them.',
+    'We have never run ads. We have never done a paid promotion. We have never let a brand pay to reach our members. That is not a stance we have to take because we have found other funding. It is just not something we want to do. The servers are for the people in them.',
+    'Free also means we have to be selective about what we build. We cannot throw money at problems. Everything has to earn its place. That pressure has actually been good for us. It keeps the focus on what actually matters to the people here.',
+    'If you want to support Open Box and get some perks in return, the tiers are at openboxcomm.in/support. If you just want to be here, that is also completely fine. You are welcome either way.',
+  ],
+  'what-is-dbw': [
+    'Every Friday, Open Box puts out a weekly update called DBW. Day Before Weekend. It is a short rundown of what happened in the community that week and what is coming up next.',
+    'It started as a simple way to keep people in the loop without making them read through every channel they missed. One post, once a week, covers the key stuff.',
+    'DBW goes out in the "DBW -♾" announcements channel across the servers. It covers Added/Deleted channel(s), Added/Deleted Bot(s), events that ran, anything that shipped, and a heads-up on what is planned for the following week.',
+    'The format is intentionally short. A few sections, a few lines each. If something happened that week and it matters to the community, it is in DBW. If it is not in DBW, it probably was not that important.',
+    'You can follow DBW without being active every day. That is the point. It is the once-a-week read that keeps you connected to what is happening without requiring you to be online constantly.',
+    'The name comes from Friday being the day before the weekend. Simple. We liked it. The infinity symbol in the channel name means it keeps going. Every week, indefinitely.',
+    'If you want to catch up on what you missed, start with the latest DBW. Everything important from that week is in there.',
+  ],
   'where-we-go-from-here': [
     'OpenBox started as a side project inside a college club. It is its own thing now, with its own domain, its own servers, its own community, and a website that actually works. That is further than we expected to get this fast, and we are not done.',
     'The honest answer to where we go from here is: we build what the community needs, in the order it needs it.',

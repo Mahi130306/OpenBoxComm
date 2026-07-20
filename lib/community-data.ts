@@ -57,6 +57,8 @@ export interface Blog {
   readTime: string
   category?: 'dbw'
   authorId?: string
+  hasImage?: boolean
+  imageAlt?: string
 }
 
 export interface TeamMember {
@@ -436,6 +438,36 @@ export const events: Event[] = [
 
 export const blogs: Blog[] = [
   {
+    slug: 'why-we-removed-wick',
+    title: 'Why We Removed Wick',
+    server: 'OB Team',
+    date: '2026-07-20',
+    excerpt: 'Wick was kicking members for having their DMs disabled and punishing people without a real reason. Here is what we found and why we pulled it.',
+    readTime: '2 min read',
+    hasImage: true,
+    imageAlt: 'Wick bot log showing a member kicked for DMs disabled',
+    authorId: 'mahi-hh',
+  },
+  {
+    slug: 'why-we-kept-it-free',
+    title: 'Why We Kept It Free',
+    server: 'OB Team',
+    date: '2026-07-19',
+    excerpt: 'Open Box has been free since day one. Not free with a catch. Here is the actual reasoning behind that decision and what it means for how we build.',
+    readTime: '2 min read',
+    authorId: 'rohith',
+  },
+
+  {
+    slug: 'what-is-dbw',
+    title: 'What Is DBW',
+    server: 'OB JN',
+    date: '2026-07-19',
+    excerpt: 'Every Friday we put out a weekly update called DBW — Day Before Weekend. Here is what it covers, why it exists, and where to find it.',
+    readTime: '2 min read',
+    authorId: 'rohith',
+  },
+  {
     slug: 'where-we-go-from-here',
     title: 'Where We Go From Here',
     server: 'OB Team',
@@ -627,7 +659,7 @@ export interface ImportantNotice {
 }
 
 export const importantNotice: ImportantNotice = {
-  text: 'importent notice: the event are being planned to get cancled. ',
+  text: 'importent notice: we removed a bot named wick from the servers. ',
   linkText: 'for more click.',
-  linkUrl: '/events',
+  linkUrl: '/blogs/why-we-removed-wick',
 }

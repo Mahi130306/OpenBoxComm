@@ -12,7 +12,7 @@ export function ImportantNoticeMarquee() {
   return (
     <div className="w-full overflow-hidden bg-zinc-950 border-b border-zinc-800 py-2.5 text-xs sm:text-sm font-medium text-zinc-300 select-none">
       <div className="relative flex overflow-x-hidden">
-        <div className="animate-marquee flex whitespace-nowrap gap-16 w-max hover:[animation-play-state:paused]">
+        <div className="animate-marquee flex whitespace-nowrap gap-16 w-max hover:[animation-play-state:paused]" style={{ animationDuration: '60s' }}>
           {repeats.map((index) => (
             <div key={index} className="flex items-center gap-1.5 shrink-0">
               <span className="inline-block h-1.5 w-1.5 rounded-full bg-cyan-500 shrink-0" />
