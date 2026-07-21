@@ -42,7 +42,7 @@ export default function ServersPage() {
               href={`/servers/${server.slug}`}
               className="group relative flex flex-col overflow-hidden rounded-2xl border border-border bg-surface/50 shadow-sm transition-all hover:-translate-y-1 hover:border-cyan-500/40 hover:shadow-lg"
             >
-              <div className={`h-1 bg-gradient-to-r ${server.accent}`} />
+              <div className={`h-1 ${server.slug === 'jn' ? 'bg-black/90 dark:bg-white' : `bg-gradient-to-r ${server.accent}`}`} />
               <div className="flex flex-col flex-1 p-5">
                 <div className="flex items-start justify-between mb-3">
                   <h3 className="text-md font-bold text-foreground">{server.name}</h3>
