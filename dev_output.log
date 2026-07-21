@@ -5,11 +5,13 @@
 ▲ Next.js 16.2.10 (Turbopack)
 - Local:         http://localhost:3000
 - Network:       http://192.168.0.2:3000
-✓ Ready in 540ms
+✓ Ready in 511ms
 
-○ Compiling / ...
- GET / 200 in 10.6s (next.js: 8.0s, proxy.ts: 238ms, application-code: 2.3s)
- GET /api/whats-new 200 in 785ms (next.js: 728ms, proxy.ts: 36ms, application-code: 21ms)
- GET /api/discord-members?code=H2AmpBrPdW 404 in 1034ms (next.js: 805ms, proxy.ts: 38ms, application-code: 191ms)
- GET /api/discord-members?code=etnc7ZpDKT 200 in 1090ms (next.js: 820ms, proxy.ts: 42ms, application-code: 228ms)
- GET /api/discord-members?code=7ZWckKU89J 200 in 1101ms (next.js: 801ms, proxy.ts: 33ms, application-code: 268ms)
+○ Compiling /blogs/[slug] ...
+ HEAD /blogs/why-we-kept-it-free 200 in 8.3s (next.js: 6.5s, proxy.ts: 218ms, generate-params: 577ms, application-code: 1554ms)
+ GET /blogs/why-we-kept-it-free 200 in 374ms (next.js: 53ms, proxy.ts: 16ms, generate-params: 29ms, application-code: 305ms)
+ GET /api/whats-new 200 in 596ms (next.js: 555ms, proxy.ts: 12ms, application-code: 29ms)
+ GET /doc/getting-started 200 in 2.4s (next.js: 2.1s, proxy.ts: 16ms, generate-params: 1228ms, application-code: 277ms)
+ GET /api/whats-new 200 in 45ms (next.js: 12ms, proxy.ts: 23ms, application-code: 10ms)
+ GET /legal/privacy-policy 200 in 1460ms (next.js: 955ms, proxy.ts: 6ms, application-code: 499ms)
+ GET /api/whats-new 200 in 15ms (next.js: 3ms, proxy.ts: 5ms, application-code: 7ms)

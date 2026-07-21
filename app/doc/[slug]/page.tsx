@@ -7,6 +7,7 @@ import { Badge } from '@/components/ui/badge'
 import { getDocContent } from '@/lib/docs'
 import { docs } from '@/lib/community-data'
 import { TableOfContents } from '@/components/TableOfContents'
+import { TTSPlayer } from '@/components/TTSPlayer'
 
 export async function generateStaticParams() {
   return docs.map((doc) => ({ slug: doc.slug }))
@@ -33,6 +34,11 @@ export default async function DocPage({ params }: { params: Promise<{ slug: stri
   const docContent = getDocContent(slug)
   if (!docContent) notFound()
   const headings = docContent.sections.map(s => s.title)
+
+  // Combine title, description, and sections content for text-to-speech synthesis
+  const ttsText = `${docMeta.title}. ${docMeta.description || ''}. ${
+    docContent.sections.map((s) => `${s.title}: ${s.content}`).join(' ')
+  }`
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-10 sm:py-16 sm:px-6 lg:px-8">
@@ -67,6 +73,8 @@ export default async function DocPage({ params }: { params: Promise<{ slug: stri
               <p className="text-base text-muted-foreground/90 sm:text-lg leading-relaxed">{docMeta.description}</p>
             )}
           </div>
+
+          <TTSPlayer text={ttsText} themeColor="teal" />
 
           <div className="space-y-10">
             {docContent.sections.map((section) => (

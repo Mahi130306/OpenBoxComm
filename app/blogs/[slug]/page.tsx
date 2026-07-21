@@ -6,6 +6,7 @@ import { ArrowLeft, Github, Twitter, Instagram, Linkedin, Calendar, Clock } from
 import { Badge } from '@/components/ui/badge'
 import { blogs, getBlog, getTeamMember } from '@/lib/community-data'
 import { getBlogContent } from '@/lib/Blog'
+import { TTSPlayer } from '@/components/TTSPlayer'
 
 export function generateStaticParams() {
   return blogs
@@ -107,6 +108,9 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ slu
     },
   }
 
+  // Combine title, excerpt and paragraphs for text-to-speech synthesis
+  const ttsText = `${post.title}. ${post.excerpt}. ${content ? content.join(' ') : ''}`
+
   return (
     <article className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
       <script
@@ -164,6 +168,8 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ slu
       <p className="mb-10 border-l-2 border-pink-500 pl-5 text-xl font-medium leading-snug text-foreground/90">
         {post.excerpt}
       </p>
+
+      <TTSPlayer text={ttsText} themeColor="cyan" />
 
       <div className="space-y-6 text-lg leading-8 text-foreground/80">
         {content ? (

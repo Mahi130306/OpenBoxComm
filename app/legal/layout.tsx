@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
 import { ChevronRight } from 'lucide-react'
+import { TTSPlayer } from '@/components/TTSPlayer'
 
 const legalPages = [
   { href: '/legal/terms-and-conditions', label: 'Terms & Conditions' },
@@ -84,6 +85,9 @@ export default function LegalLayout({ children }: { children: ReactNode }) {
           prose-li:text-muted-foreground/90 prose-li:text-lg
           prose-a:text-violet-500 prose-a:no-underline hover:prose-a:underline
           [&_article]:bg-surface/30 [&_article]:p-8 [&_article]:md:p-12 [&_article]:rounded-3xl [&_article]:border [&_article]:border-border/50">
+          <div className="mb-4">
+            <TTSPlayer selector="main article" themeColor="blue" />
+          </div>
           {children}
         </main>
       </div>
