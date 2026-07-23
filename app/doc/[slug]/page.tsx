@@ -61,11 +61,16 @@ export default async function DocPage({ params }: { params: Promise<{ slug: stri
 
         <article className="order-1 min-w-0 lg:order-2">
           <div className="mb-8 rounded-3xl border border-black/10 bg-gradient-to-br from-black/[0.04] to-lime-400/[0.08] p-8 shadow-sm dark:border-white/10 dark:from-white/[0.08] dark:to-lime-400/[0.05] sm:p-10">
-            {docMeta.section && (
-              <Badge variant="secondary" className="mb-4 bg-lime-500/10 text-lime-600 dark:text-lime-400 border-none font-bold">
-                {docMeta.section}
-              </Badge>
-            )}
+            <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
+              {docMeta.section ? (
+                <Badge variant="secondary" className="bg-lime-500/10 text-lime-600 dark:text-lime-400 border-none font-bold">
+                  {docMeta.section}
+                </Badge>
+              ) : (
+                <div />
+              )}
+              <TTSPlayer text={ttsText} themeColor="teal" />
+            </div>
             <h1 className="mb-4 text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
               {docMeta.title}
             </h1>
@@ -73,8 +78,6 @@ export default async function DocPage({ params }: { params: Promise<{ slug: stri
               <p className="text-base text-muted-foreground/90 sm:text-lg leading-relaxed">{docMeta.description}</p>
             )}
           </div>
-
-          <TTSPlayer text={ttsText} themeColor="teal" />
 
           <div className="space-y-10">
             {docContent.sections.map((section) => (

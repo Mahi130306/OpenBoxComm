@@ -85,10 +85,12 @@ export default function LegalLayout({ children }: { children: ReactNode }) {
           prose-li:text-muted-foreground/90 prose-li:text-lg
           prose-a:text-violet-500 prose-a:no-underline hover:prose-a:underline
           [&_article]:bg-surface/30 [&_article]:p-8 [&_article]:md:p-12 [&_article]:rounded-3xl [&_article]:border [&_article]:border-border/50">
-          <div className="mb-4">
-            <TTSPlayer selector="main article" themeColor="blue" />
+          <div className="relative">
+            <div className="absolute right-4 top-4 z-10 md:right-8 md:top-8">
+              <TTSPlayer selector="main article" themeColor="blue" />
+            </div>
+            {children}
           </div>
-          {children}
         </main>
       </div>
     </div>

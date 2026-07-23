@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
-import { Play, Pause, Square, Volume2, ChevronDown, Settings } from 'lucide-react'
+import { Volume2, Pause, Play, Settings, X, ChevronDown } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 interface TTSPlayerProps {
@@ -20,52 +20,51 @@ export function TTSPlayer({
   const [rate, setRate] = useState(1)
   const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([])
   const [selectedVoice, setSelectedVoice] = useState<string>('')
-  const [showSettings, setShowSettings] = useState(false)
+  const [showModal, setShowModal] = useState(false)
   const [speechSupported, setSpeechSupported] = useState(false)
 
   const synthRef = useRef<SpeechSynthesis | null>(null)
   const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null)
 
-  // Define colors based on the design system guidelines (flat, solid colors)
-  const colorClasses = {
+  const themeColors = {
     cyan: {
       text: 'text-cyan-600 dark:text-cyan-400',
-      bg: 'bg-cyan-500/10 hover:bg-cyan-500/20',
-      border: 'border-cyan-500/30',
-      accentBg: 'bg-cyan-500 text-black',
-      badge: 'bg-cyan-500/10 text-cyan-600 dark:text-cyan-400',
+      textHover: 'hover:text-cyan-500',
+      bgActive: 'bg-cyan-500/10 text-cyan-500',
+      border: 'border-cyan-500/20',
+      rangeAccent: 'accent-cyan-500',
     },
     blue: {
       text: 'text-blue-600 dark:text-blue-400',
-      bg: 'bg-blue-500/10 hover:bg-blue-500/20',
-      border: 'border-blue-500/30',
-      accentBg: 'bg-blue-500 text-white',
-      badge: 'bg-blue-500/10 text-blue-600 dark:text-blue-400',
+      textHover: 'hover:text-blue-500',
+      bgActive: 'bg-blue-500/10 text-blue-500',
+      border: 'border-blue-500/20',
+      rangeAccent: 'accent-blue-500',
     },
     teal: {
       text: 'text-teal-600 dark:text-teal-400',
-      bg: 'bg-teal-500/10 hover:bg-teal-500/20',
-      border: 'border-teal-500/30',
-      accentBg: 'bg-teal-500 text-black',
-      badge: 'bg-teal-500/10 text-teal-600 dark:text-teal-400',
+      textHover: 'hover:text-teal-500',
+      bgActive: 'bg-teal-500/10 text-teal-500',
+      border: 'border-teal-500/20',
+      rangeAccent: 'accent-teal-500',
     },
     emerald: {
       text: 'text-emerald-600 dark:text-emerald-400',
-      bg: 'bg-emerald-500/10 hover:bg-emerald-500/20',
-      border: 'border-emerald-500/30',
-      accentBg: 'bg-emerald-500 text-black',
-      badge: 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400',
+      textHover: 'hover:text-emerald-500',
+      bgActive: 'bg-emerald-500/10 text-emerald-500',
+      border: 'border-emerald-500/20',
+      rangeAccent: 'accent-emerald-500',
     },
     gray: {
       text: 'text-muted-foreground',
-      bg: 'bg-muted hover:bg-muted/80',
+      textHover: 'hover:text-foreground',
+      bgActive: 'bg-muted text-foreground',
       border: 'border-border',
-      accentBg: 'bg-foreground text-background',
-      badge: 'bg-muted text-muted-foreground',
+      rangeAccent: 'accent-foreground',
     },
   }
 
-  const colors = colorClasses[themeColor]
+  const color = themeColors[themeColor]
 
   useEffect(() => {
     if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
@@ -75,14 +74,12 @@ export function TTSPlayer({
       const updateVoices = () => {
         if (!synthRef.current) return
         const availableVoices = synthRef.current.getVoices()
-        // Prioritize English voices but fall back to all if none
         const englishVoices = availableVoices.filter((v) =>
           v.lang.toLowerCase().startsWith('en')
         )
         const voiceList = englishVoices.length > 0 ? englishVoices : availableVoices
         setVoices(voiceList)
 
-        // Select a default voice (prefer Google English or Microsoft English if available)
         const defaultVoice =
           voiceList.find((v) => v.name.includes('Google') || v.name.includes('Natural')) ||
           voiceList[0]
@@ -104,22 +101,11 @@ export function TTSPlayer({
     }
   }, [])
 
-  // Cancel speech on unmount or navigation
-  useEffect(() => {
-    return () => {
-      if (synthRef.current) {
-        synthRef.current.cancel()
-      }
-    }
-  }, [])
-
   const getSpeakText = (): string => {
     if (text) return text
     if (selector && typeof document !== 'undefined') {
       const container = document.querySelector(selector)
       if (container) {
-        // Create a clone to clean up text if necessary, or just extract headings and paragraphs
-        // We only want textual contents, excluding button texts, code blocks, or nested widgets if any
         const paragraphsAndHeadings = Array.from(
           container.querySelectorAll('h1, h2, h3, h4, p, li')
         )
@@ -135,7 +121,7 @@ export function TTSPlayer({
     return ''
   }
 
-  const handlePlayPause = () => {
+  const handleTogglePlay = () => {
     if (!synthRef.current || !speechSupported) return
 
     if (isPlaying) {
@@ -155,16 +141,13 @@ export function TTSPlayer({
       const utterance = new SpeechSynthesisUtterance(speakText)
       utteranceRef.current = utterance
 
-      // Set voice
       const voice = voices.find((v) => v.name === selectedVoice)
       if (voice) {
         utterance.voice = voice
       }
 
-      // Set rate
       utterance.rate = rate
 
-      // Listeners
       utterance.onend = () => {
         setIsPlaying(false)
         setIsPaused(false)
@@ -172,7 +155,7 @@ export function TTSPlayer({
 
       utterance.onerror = (e) => {
         if (e.error !== 'interrupted') {
-          console.error('SpeechSynthesisUtterance error:', e)
+          console.error('TTS synthesis error:', e)
           setIsPlaying(false)
           setIsPaused(false)
         }
@@ -189,115 +172,90 @@ export function TTSPlayer({
     synthRef.current.cancel()
     setIsPlaying(false)
     setIsPaused(false)
+    setShowModal(false)
   }
 
-  // Update speech speed rate immediately if speaking
   useEffect(() => {
     if (isPlaying && synthRef.current && utteranceRef.current) {
-      // Dynamic speed update may require re-starting utterance in some browsers,
-      // but standard synthesis allows setting rate. If it's supported, we update it.
-      // Alternatively, we can let user stop and restart, but let's update rate on ref
       utteranceRef.current.rate = rate
     }
   }, [rate, isPlaying])
 
-  if (!speechSupported) {
-    return null // Native TTS not supported on device/browser
-  }
+  if (!speechSupported) return null
 
   return (
-    <div className={cn(
-      "mb-8 rounded-2xl border bg-surface p-4 shadow-sm",
-      colors.border
-    )}>
-      <div className="flex flex-wrap items-center justify-between gap-4">
-        {/* Playback Controls */}
-        <div className="flex items-center gap-3">
+    <div className="relative inline-flex items-center gap-2">
+      {/* Mini Speaker trigger / Play-Pause Button */}
+      <button
+        onClick={handleTogglePlay}
+        className={cn(
+          "inline-flex h-9 w-9 items-center justify-center rounded-lg border transition-all",
+          isPlaying
+            ? cn("border-transparent font-semibold shadow-sm", color.bgActive)
+            : "border-border text-muted-foreground hover:bg-muted hover:text-foreground"
+        )}
+        title={isPlaying ? (isPaused ? "Resume Reading" : "Pause Reading") : "Listen to this page"}
+        aria-label={isPlaying ? (isPaused ? "Resume Reading" : "Pause Reading") : "Listen to this page"}
+      >
+        {!isPlaying ? (
+          <Volume2 className="h-4 w-4" />
+        ) : isPaused ? (
+          <Play className="h-4 w-4 fill-current" />
+        ) : (
+          <Pause className="h-4 w-4 fill-current animate-pulse" />
+        )}
+      </button>
+
+      {/* Settings / Stop gear buttons are visible only when initialized */}
+      {isPlaying && (
+        <>
           <button
-            onClick={handlePlayPause}
+            onClick={() => setShowModal(!showModal)}
             className={cn(
-              "flex h-12 w-12 items-center justify-center rounded-xl font-bold transition-all",
-              colors.accentBg
+              "inline-flex h-9 w-9 items-center justify-center rounded-lg border border-border text-muted-foreground transition-colors hover:bg-muted hover:text-foreground",
+              showModal && "bg-muted"
             )}
-            aria-label={isPlaying && !isPaused ? 'Pause' : 'Play text to speech'}
-          >
-            {isPlaying && !isPaused ? (
-              <Pause className="h-5 w-5 fill-current" />
-            ) : (
-              <Play className="h-5 w-5 fill-current translate-x-[1px]" />
-            )}
-          </button>
-
-          {isPlaying && (
-            <button
-              onClick={handleStop}
-              className={cn(
-                "flex h-10 w-10 items-center justify-center rounded-lg border border-border transition-colors hover:bg-muted",
-                colors.text
-              )}
-              aria-label="Stop text to speech"
-            >
-              <Square className="h-4 w-4 fill-current" />
-            </button>
-          )}
-
-          <div className="flex flex-col">
-            <span className="text-sm font-bold text-foreground">
-              {isPlaying ? (isPaused ? 'Paused' : 'Listening...') : 'Listen to this article'}
-            </span>
-            <span className="text-xs text-muted-foreground flex items-center gap-1">
-              <Volume2 className="h-3.5 w-3.5" /> Native Device TTS
-            </span>
-          </div>
-        </div>
-
-        {/* Speed and Voice Panel Toggle */}
-        <div className="flex items-center gap-2">
-          {/* Quick speed adjustment */}
-          <div className="flex items-center rounded-lg border border-border p-1 bg-background">
-            {[1, 1.25, 1.5, 2].map((speed) => (
-              <button
-                key={speed}
-                onClick={() => setRate(speed)}
-                className={cn(
-                  "rounded px-2 py-1 text-xs font-bold transition-colors",
-                  rate === speed
-                    ? colors.badge
-                    : "text-muted-foreground hover:text-foreground"
-                )}
-              >
-                {speed}x
-              </button>
-            ))}
-          </div>
-
-          <button
-            onClick={() => setShowSettings(!showSettings)}
-            className={cn(
-              "flex h-10 w-10 items-center justify-center rounded-lg border border-border transition-colors hover:bg-muted text-muted-foreground hover:text-foreground",
-              showSettings && "bg-muted"
-            )}
+            title="TTS Settings"
             aria-label="TTS Settings"
           >
             <Settings className="h-4 w-4" />
           </button>
-        </div>
-      </div>
 
-      {/* Settings Dropdown/Drawer (inline) */}
-      {showSettings && (
-        <div className="mt-4 border-t border-border/50 pt-4 animate-in fade-in slide-in-from-top-2 duration-200">
-          <div className="grid gap-4 sm:grid-cols-2">
+          <button
+            onClick={handleStop}
+            className="inline-flex h-9 px-2.5 items-center justify-center rounded-lg border border-border text-xs font-bold text-red-500 hover:bg-red-500/10 transition-colors"
+            title="Stop listening"
+          >
+            Stop
+          </button>
+        </>
+      )}
+
+      {/* Floating Small Settings Modal */}
+      {showModal && isPlaying && (
+        <div className="absolute top-11 left-0 z-50 w-72 rounded-xl border border-border bg-background p-4 shadow-xl animate-in fade-in slide-in-from-top-1 duration-150">
+          <div className="flex items-center justify-between mb-3 border-b border-border/50 pb-2">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Voice Options</h4>
+            <button
+              onClick={() => setShowModal(false)}
+              className="rounded-md p-1 text-muted-foreground hover:bg-muted hover:text-foreground transition-colors"
+              aria-label="Close TTS Settings"
+            >
+              <X className="h-3.5 w-3.5" />
+            </button>
+          </div>
+
+          <div className="space-y-4">
             <div>
-              <label htmlFor="voice-select" className="block text-xs font-bold uppercase tracking-wider text-muted-foreground mb-1.5">
-                Voice Selection
+              <label htmlFor="modal-voice-select" className="block text-[10px] font-bold uppercase tracking-wider text-muted-foreground/80 mb-1">
+                Select Voice
               </label>
               <div className="relative">
                 <select
-                  id="voice-select"
+                  id="modal-voice-select"
                   value={selectedVoice}
                   onChange={(e) => setSelectedVoice(e.target.value)}
-                  className="w-full appearance-none rounded-lg border border-border bg-background px-3 py-2 text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-ring pr-10"
+                  className="w-full appearance-none rounded-lg border border-border bg-background px-2.5 py-1.5 text-xs text-foreground focus:outline-none focus:ring-1 focus:ring-ring pr-8"
                 >
                   {voices.map((voice) => (
                     <option key={voice.name} value={voice.name}>
@@ -305,24 +263,34 @@ export function TTSPlayer({
                     </option>
                   ))}
                 </select>
-                <ChevronDown className="absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground pointer-events-none" />
+                <ChevronDown className="absolute right-2.5 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-muted-foreground pointer-events-none" />
               </div>
             </div>
 
             <div>
-              <label htmlFor="speed-slider" className="block text-xs font-bold uppercase tracking-wider text-muted-foreground mb-1.5">
-                Speed: {rate}x
-              </label>
+              <div className="flex justify-between items-center mb-1">
+                <label htmlFor="modal-speed-slider" className="block text-[10px] font-bold uppercase tracking-wider text-muted-foreground/80">
+                  Speed Rate
+                </label>
+                <span className="text-xs font-bold text-foreground">{rate}x</span>
+              </div>
               <input
-                id="speed-slider"
+                id="modal-speed-slider"
                 type="range"
                 min="0.5"
                 max="2.5"
                 step="0.25"
                 value={rate}
                 onChange={(e) => setRate(parseFloat(e.target.value))}
-                className="w-full accent-cyan-500"
+                className={cn("w-full h-1 bg-muted rounded-lg appearance-none cursor-pointer", color.rangeAccent)}
               />
+              <div className="flex justify-between text-[9px] text-muted-foreground/60 mt-1">
+                <span>0.5x</span>
+                <span>1.0x</span>
+                <span>1.5x</span>
+                <span>2.0x</span>
+                <span>2.5x</span>
+              </div>
             </div>
           </div>
         </div>

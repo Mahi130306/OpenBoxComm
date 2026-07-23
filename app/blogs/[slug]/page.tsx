@@ -162,14 +162,15 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ slu
             <Clock className="h-3.5 w-3.5" />
             {post.readTime}
           </span>
+          <span className="flex items-center gap-1.5 pl-2 border-l border-border/60">
+            <TTSPlayer text={ttsText} themeColor="cyan" />
+          </span>
         </div>
       </header>
 
       <p className="mb-10 border-l-2 border-pink-500 pl-5 text-xl font-medium leading-snug text-foreground/90">
         {post.excerpt}
       </p>
-
-      <TTSPlayer text={ttsText} themeColor="cyan" />
 
       <div className="space-y-6 text-lg leading-8 text-foreground/80">
         {content ? (
