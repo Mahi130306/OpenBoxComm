@@ -7,6 +7,7 @@ import { Badge } from '@/components/ui/badge'
 import { getDocContent } from '@/lib/docs'
 import { docs } from '@/lib/community-data'
 import { TableOfContents } from '@/components/TableOfContents'
+import { TTSPlayer } from '@/components/TTSPlayer'
 
 export async function generateStaticParams() {
   return docs.map((doc) => ({ slug: doc.slug }))
@@ -53,13 +54,18 @@ export default async function DocPage({ params }: { params: Promise<{ slug: stri
           </div>
         </aside>
 
-        <article className="order-1 min-w-0 lg:order-2">
+        <article className="order-1 min-w-0 lg:order-2 tts-doc-content">
           <div className="mb-8 rounded-3xl border border-black/10 bg-gradient-to-br from-black/[0.04] to-lime-400/[0.08] p-8 shadow-sm dark:border-white/10 dark:from-white/[0.08] dark:to-lime-400/[0.05] sm:p-10">
-            {docMeta.section && (
-              <Badge variant="secondary" className="mb-4 bg-lime-500/10 text-lime-600 dark:text-lime-400 border-none font-bold">
-                {docMeta.section}
-              </Badge>
-            )}
+            <div className="flex flex-wrap items-center justify-between gap-4 mb-4 no-tts">
+              {docMeta.section ? (
+                <Badge variant="secondary" className="bg-lime-500/10 text-lime-600 dark:text-lime-400 border-none font-bold">
+                  {docMeta.section}
+                </Badge>
+              ) : (
+                <div />
+              )}
+              <TTSPlayer selector=".tts-doc-content" themeColor="teal" />
+            </div>
             <h1 className="mb-4 text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
               {docMeta.title}
             </h1>
