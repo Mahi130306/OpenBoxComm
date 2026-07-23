@@ -18,6 +18,7 @@ import { CountdownTimer } from '@/components/CountdownTimer'
 import { EventCTAButton } from '@/components/EventCTAButton'
 import { SponsorsMarquee, getSponsorGroupLabel } from '@/components/SponsorsMarquee'
 import { EventContentTabs } from '@/components/EventContentTabs'
+import { TTSPlayer } from '@/components/TTSPlayer'
 
 export function generateStaticParams() {
   return events.map((event) => ({ id: event.id }))
@@ -72,11 +73,11 @@ export default async function EventDetailPage({
   const details = getEventDetails(event.id)
 
   return (
-    <div className="relative min-h-screen w-full overflow-x-hidden pb-24">
+    <div className="relative min-h-screen w-full overflow-x-hidden pb-24 tts-event-content">
       {/* Ambient glow — dark mode only, invisible in light */}
       <div
         aria-hidden
-        className={`pointer-events-none absolute -top-32 left-1/3 h-[600px] w-[600px] rounded-full bg-gradient-to-br ${glowDark} via-transparent to-transparent blur-[140px] dark:opacity-100 opacity-0`}
+        className={`pointer-events-none absolute -top-32 left-1/3 h-[600px] w-[600px] rounded-full bg-gradient-to-br ${glowDark} via-transparent to-transparent blur-[140px] dark:opacity-100 opacity-0 no-tts`}
       />
 
       <div className="relative mx-auto max-w-7xl px-4 pt-6 sm:px-6 lg:px-8">
@@ -86,7 +87,7 @@ export default async function EventDetailPage({
           asChild
           variant="ghost"
           size="sm"
-          className="-ml-2 mb-6 gap-1.5 text-muted-foreground hover:text-foreground"
+          className="-ml-2 mb-6 gap-1.5 text-muted-foreground hover:text-foreground no-tts"
         >
           <Link href="/events">
             <ChevronLeft className="h-4 w-4" />
@@ -97,7 +98,7 @@ export default async function EventDetailPage({
         {/* ── Hero card ───────────────────────────────────────────────── */}
         <div className="mb-8 overflow-hidden rounded-3xl border border-border bg-card shadow-sm">
           {/* Server accent bar */}
-          <div className={`h-1 w-full bg-gradient-to-r ${accentClass}`} />
+          <div className={`h-1 w-full bg-gradient-to-r ${accentClass} no-tts`} />
 
           <div className="p-6 sm:p-8 lg:p-12">
             {/*
@@ -110,7 +111,7 @@ export default async function EventDetailPage({
               <div className="flex-1 space-y-5 min-w-0">
 
                 {/* Badges */}
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 items-center no-tts">
                   <span
                     className={`inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r ${accentClass} px-3 py-1 text-xs font-bold text-black/75`}
                   >
@@ -141,6 +142,10 @@ export default async function EventDetailPage({
                       ✦ {getSponsorGroupLabel(sponsors)}
                     </span>
                   )}
+
+                  <span className="inline-flex items-center gap-1.5 pl-2 border-l border-border/60">
+                    <TTSPlayer selector=".tts-event-content" themeColor={event.serverSlug === 'jn' ? 'emerald' : event.serverSlug === 'dev' ? 'teal' : 'cyan'} />
+                  </span>
                 </div>
 
                 {/* Title */}
@@ -171,7 +176,7 @@ export default async function EventDetailPage({
               </div>
 
               {/* ── Right: calendar block + sponsor (desktop only) ──── */}
-              <div className="flex shrink-0 flex-row items-center gap-4 lg:flex-col lg:items-end">
+              <div className="flex shrink-0 flex-row items-center gap-4 lg:flex-col lg:items-end no-tts">
                 {/* Calendar widget */}
                 <div className="overflow-hidden rounded-2xl border border-border bg-background shadow-lg">
                   <div className={`bg-gradient-to-r ${accentClass} px-8 py-1.5 text-center`}>
@@ -218,7 +223,7 @@ export default async function EventDetailPage({
         </div>
 
         {/* ── Registration card (mobile — above content) ───────────────── */}
-        <div className="mb-8 lg:hidden">
+        <div className="mb-8 lg:hidden no-tts">
           <RegistrationCard
             event={event}
             formattedDate={formattedDate}
@@ -240,14 +245,14 @@ export default async function EventDetailPage({
             />
 
             {sponsors.length > 0 && (
-              <div className="mt-8 w-full overflow-hidden">
+              <div className="mt-8 w-full overflow-hidden no-tts">
                 <SponsorsMarquee sponsors={sponsors} />
               </div>
             )}
           </div>
 
           {/* Right: sticky sidebar (desktop only) */}
-          <aside className="hidden lg:block">
+          <aside className="hidden lg:block no-tts">
             <div className="sticky top-24 space-y-5">
               <RegistrationCard
                 event={event}
@@ -267,7 +272,7 @@ export default async function EventDetailPage({
         </div>
 
         {/* ── Server card (mobile — below content) ────────────────────── */}
-        <div className="mt-8 lg:hidden">
+        <div className="mt-8 lg:hidden no-tts">
           <ServerCard event={event} accentClass={accentClass} />
         </div>
       </div>
