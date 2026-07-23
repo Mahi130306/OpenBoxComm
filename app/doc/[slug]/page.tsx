@@ -35,11 +35,6 @@ export default async function DocPage({ params }: { params: Promise<{ slug: stri
   if (!docContent) notFound()
   const headings = docContent.sections.map(s => s.title)
 
-  // Combine title, description, and sections content for text-to-speech synthesis
-  const ttsText = `${docMeta.title}. ${docMeta.description || ''}. ${
-    docContent.sections.map((s) => `${s.title}: ${s.content}`).join(' ')
-  }`
-
   return (
     <div className="mx-auto max-w-7xl px-4 py-10 sm:py-16 sm:px-6 lg:px-8">
       <div className="mb-6">
@@ -59,9 +54,9 @@ export default async function DocPage({ params }: { params: Promise<{ slug: stri
           </div>
         </aside>
 
-        <article className="order-1 min-w-0 lg:order-2">
+        <article className="order-1 min-w-0 lg:order-2 tts-doc-content">
           <div className="mb-8 rounded-3xl border border-black/10 bg-gradient-to-br from-black/[0.04] to-lime-400/[0.08] p-8 shadow-sm dark:border-white/10 dark:from-white/[0.08] dark:to-lime-400/[0.05] sm:p-10">
-            <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
+            <div className="flex flex-wrap items-center justify-between gap-4 mb-4 no-tts">
               {docMeta.section ? (
                 <Badge variant="secondary" className="bg-lime-500/10 text-lime-600 dark:text-lime-400 border-none font-bold">
                   {docMeta.section}
@@ -69,7 +64,7 @@ export default async function DocPage({ params }: { params: Promise<{ slug: stri
               ) : (
                 <div />
               )}
-              <TTSPlayer text={ttsText} themeColor="teal" />
+              <TTSPlayer selector=".tts-doc-content" themeColor="teal" />
             </div>
             <h1 className="mb-4 text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
               {docMeta.title}

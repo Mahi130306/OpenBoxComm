@@ -108,9 +108,6 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ slu
     },
   }
 
-  // Combine title, excerpt and paragraphs for text-to-speech synthesis
-  const ttsText = `${post.title}. ${post.excerpt}. ${content ? content.join(' ') : ''}`
-
   return (
     <article className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
       <script
@@ -126,58 +123,60 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ slu
         All posts
       </Link>
 
-      <header className="mb-10 border-b border-border/50 pb-8">
-        <Badge
-          variant="secondary"
-          className="mb-5 border-none bg-pink-500/10 text-pink-600 hover:bg-pink-500/20 dark:bg-pink-500/20 dark:text-pink-400"
-        >
-          {post.server}
-        </Badge>
+      <div className="tts-blog-content">
+        <header className="mb-10 border-b border-border/50 pb-8">
+          <Badge
+            variant="secondary"
+            className="mb-5 border-none bg-pink-500/10 text-pink-600 hover:bg-pink-500/20 dark:bg-pink-500/20 dark:text-pink-400"
+          >
+            {post.server}
+          </Badge>
 
-        <h1 className="mb-6 text-3xl font-extrabold leading-[1.1] tracking-tight text-foreground sm:text-5xl">
-          {post.title}
-        </h1>
+          <h1 className="mb-6 text-3xl font-extrabold leading-[1.1] tracking-tight text-foreground sm:text-5xl">
+            {post.title}
+          </h1>
 
-        <div className="flex flex-wrap items-center gap-x-5 gap-y-3">
-          {author && (
-            <Link
-              href={`/team/${author.slug}`}
-              className="flex items-center gap-2.5 text-sm font-semibold text-foreground transition-colors hover:text-pink-500"
-            >
-              <span className="relative flex h-8 w-8 shrink-0 items-center justify-center overflow-hidden rounded-full border border-border bg-pink-500/10 text-xs font-bold text-pink-600 dark:text-pink-400">
-                {author.avatar ? (
-                  <Image src={author.avatar} alt={author.name} fill sizes="32px" className="object-cover" />
-                ) : (
-                  initials(author.name)
-                )}
-              </span>
-              {author.name}
-            </Link>
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-3 no-tts">
+            {author && (
+              <Link
+                href={`/team/${author.slug}`}
+                className="flex items-center gap-2.5 text-sm font-semibold text-foreground transition-colors hover:text-pink-500"
+              >
+                <span className="relative flex h-8 w-8 shrink-0 items-center justify-center overflow-hidden rounded-full border border-border bg-pink-500/10 text-xs font-bold text-pink-600 dark:text-pink-400">
+                  {author.avatar ? (
+                    <Image src={author.avatar} alt={author.name} fill sizes="32px" className="object-cover" />
+                  ) : (
+                    initials(author.name)
+                  )}
+                </span>
+                {author.name}
+              </Link>
+            )}
+            <span className="flex items-center gap-1.5 text-sm text-muted-foreground">
+              <Calendar className="h-3.5 w-3.5" />
+              <time dateTime={post.date}>{formattedPublishDate}</time>
+            </span>
+            <span className="flex items-center gap-1.5 text-sm text-muted-foreground">
+              <Clock className="h-3.5 w-3.5" />
+              {post.readTime}
+            </span>
+            <span className="flex items-center gap-1.5 pl-2 border-l border-border/60">
+              <TTSPlayer selector=".tts-blog-content" themeColor="cyan" />
+            </span>
+          </div>
+        </header>
+
+        <p className="mb-10 border-l-2 border-pink-500 pl-5 text-xl font-medium leading-snug text-foreground/90">
+          {post.excerpt}
+        </p>
+
+        <div className="space-y-6 text-lg leading-8 text-foreground/80">
+          {content ? (
+            content.map((paragraph, index) => <p key={index}>{paragraph}</p>)
+          ) : (
+            <p className="text-muted-foreground">Content coming soon.</p>
           )}
-          <span className="flex items-center gap-1.5 text-sm text-muted-foreground">
-            <Calendar className="h-3.5 w-3.5" />
-            <time dateTime={post.date}>{formattedPublishDate}</time>
-          </span>
-          <span className="flex items-center gap-1.5 text-sm text-muted-foreground">
-            <Clock className="h-3.5 w-3.5" />
-            {post.readTime}
-          </span>
-          <span className="flex items-center gap-1.5 pl-2 border-l border-border/60">
-            <TTSPlayer text={ttsText} themeColor="cyan" />
-          </span>
         </div>
-      </header>
-
-      <p className="mb-10 border-l-2 border-pink-500 pl-5 text-xl font-medium leading-snug text-foreground/90">
-        {post.excerpt}
-      </p>
-
-      <div className="space-y-6 text-lg leading-8 text-foreground/80">
-        {content ? (
-          content.map((paragraph, index) => <p key={index}>{paragraph}</p>)
-        ) : (
-          <p className="text-muted-foreground">Content coming soon.</p>
-        )}
       </div>
 
       {author && (
