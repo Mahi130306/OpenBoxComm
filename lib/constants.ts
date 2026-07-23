@@ -4,7 +4,7 @@ export const SITE_URL = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:300
 
 export const DISCORD_INVITE_MAIN = process.env.NEXT_PUBLIC_DISCORD_INVITE_MAIN || 'https://discord.gg/7ZWckKU89J'
 export const DISCORD_JN_INVITE = process.env.NEXT_PUBLIC_DISCORD_JN_INVITE || 'https://discord.gg/7ZWckKU89J'
-export const DISCORD_DEV_INVITE = process.env.NEXT_PUBLIC_DISCORD_DEV_INVITE || 'https://discord.gg/H2AmpBrPdW'
+export const DISCORD_DEV_INVITE = process.env.NEXT_PUBLIC_DISCORD_DEV_INVITE || 'https://discord.gg/nF48vqYwEk'
 export const DISCORD_GG_INVITE = process.env.NEXT_PUBLIC_DISCORD_GG_INVITE || 'https://discord.gg/etnc7ZpDKT'
 
 export const PATREON_URL = process.env.NEXT_PUBLIC_PATREON_URL || 'https://patreon.com/OpenBoxComm'
