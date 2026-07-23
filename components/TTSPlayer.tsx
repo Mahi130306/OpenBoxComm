@@ -280,11 +280,11 @@ export function TTSPlayer({
         <Volume2 className={cn("h-4 w-4", isPlaying && "animate-pulse")} />
       </button>
 
-      {/* 2. Floating Sticky Control Bar (only visible when TTS is active, stays sticky when scrolled or auto scrolled) */}
+      {/* 2. Floating Sticky Control Bar at the TOP (Z-index hierarchy compliant, positioned below navbar at top-20) */}
       {isPlaying && (
         <div
           className={cn(
-            "fixed bottom-6 right-6 md:right-10 z-[9999] flex items-center gap-2 rounded-2xl border border-border/80 bg-background/95 backdrop-blur-md p-2.5 shadow-2xl animate-in slide-in-from-bottom-4 duration-300",
+            "fixed top-20 right-4 md:right-10 z-[9999] flex items-center gap-2 rounded-2xl border border-border/80 bg-background/95 backdrop-blur-md p-2.5 shadow-2xl animate-in slide-in-from-top-4 duration-300 max-w-[calc(100vw-2rem)]",
             "text-foreground"
           )}
         >
@@ -296,7 +296,7 @@ export function TTSPlayer({
               themeColor === 'teal' ? 'bg-teal-500' :
               themeColor === 'emerald' ? 'bg-emerald-500' : 'bg-foreground'
             )} />
-            <span className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground hidden sm:inline">
+            <span className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground hidden xs:inline">
               Reading
             </span>
           </div>
@@ -305,7 +305,7 @@ export function TTSPlayer({
           <button
             onClick={handleTogglePlay}
             className={cn(
-              "inline-flex h-9 w-9 items-center justify-center rounded-lg transition-all",
+              "inline-flex h-10 w-10 sm:h-9 sm:w-9 items-center justify-center rounded-lg transition-all",
               color.bgActive
             )}
             title={isPaused ? "Resume Reading" : "Pause Reading"}
@@ -322,7 +322,7 @@ export function TTSPlayer({
           <button
             onClick={() => setShowModal(!showModal)}
             className={cn(
-              "inline-flex h-9 w-9 items-center justify-center rounded-lg border border-border text-muted-foreground transition-colors hover:bg-muted hover:text-foreground",
+              "inline-flex h-10 w-10 sm:h-9 sm:w-9 items-center justify-center rounded-lg border border-border text-muted-foreground transition-colors hover:bg-muted hover:text-foreground",
               showModal && "bg-muted"
             )}
             title="TTS Settings"
@@ -334,16 +334,16 @@ export function TTSPlayer({
           {/* Stop (Square) Button */}
           <button
             onClick={handleStop}
-            className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-border text-red-500 hover:bg-red-500/10 transition-colors"
+            className="inline-flex h-10 w-10 sm:h-9 sm:w-9 items-center justify-center rounded-lg border border-border text-red-500 hover:bg-red-500/10 transition-colors"
             title="Stop listening"
             aria-label="Stop listening"
           >
             <Square className="h-4 w-4 fill-current" />
           </button>
 
-          {/* Settings Popover (positioned above the floating bar) */}
+          {/* Settings Popover (positioned below the floating top bar) */}
           {showModal && (
-            <div className="absolute bottom-16 right-0 z-50 w-72 rounded-xl border border-border bg-background p-4 shadow-xl animate-in fade-in slide-in-from-bottom-1 duration-150">
+            <div className="absolute top-16 right-0 z-[10000] w-72 max-w-[85vw] rounded-xl border border-border bg-background p-4 shadow-xl animate-in fade-in slide-in-from-top-1 duration-150">
               <div className="flex items-center justify-between mb-3 border-b border-border/50 pb-2">
                 <h4 className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Voice Options</h4>
                 <button
