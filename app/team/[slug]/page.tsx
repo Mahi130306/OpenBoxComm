@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { getTeamMember } from '@/lib/community-data'
 import { Button } from '@/components/ui/button'
-import { Github, Twitter, ArrowLeft, Instagram } from 'lucide-react'
+import { Github, Twitter, ArrowLeft, Instagram, Linkedin } from 'lucide-react'
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
@@ -67,6 +67,13 @@ export default async function TeamMemberPage({ params }: { params: Promise<{ slu
               <Button asChild variant="outline" size="icon" className="rounded-full">
                 <a href={member.socials.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                   <Instagram className="h-5 w-5" />
+                </a>
+              </Button>
+            )}
+            {member.socials?.linkedin && (
+              <Button asChild variant="outline" size="icon" className="rounded-full">
+                <a href={member.socials.linkedin} target="_blank" rel="noopener noreferrer" aria-label="Linkedin">
+                  <Linkedin className="h-5 w-5" />
                 </a>
               </Button>
             )}

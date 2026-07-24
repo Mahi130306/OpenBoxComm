@@ -46,7 +46,7 @@ const WhatsAppIcon = () => (
 
 // ── Creator config ────────────────────────────────────────────────────────────
 const CREATOR_NAME = 'Mahi HH'
-const CREATOR_HREF = '/team/Mahi HH'
+const CREATOR_HREF = '/team/mahi-hh'
 
 export function Footer() {
   const socialLinks = [
