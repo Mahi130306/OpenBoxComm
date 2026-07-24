@@ -107,7 +107,7 @@ export const servers: Servers[] = [
     channels: ['Dev & Projects', 'Knowledge Base', 'Events', 'Career'],
     rules: ['Be helpful', 'Use code blocks', 'Respect others work', 'No spam or low-context promotion'],
     inviteEnv: 'NEXT_PUBLIC_DISCORD_DEV_INVITE',
-    inviteCode: 'H2AmpBrPdW',
+    inviteCode: 'nF48vqYwEk',
   },
   {
     slug: 'gg',

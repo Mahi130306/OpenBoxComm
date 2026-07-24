@@ -49,7 +49,7 @@ export default async function ServerPage({
                 <div
                   className={`relative h-24 w-24 flex-shrink-0 overflow-hidden rounded-2xl bg-gradient-to-br ${server.accent} p-px shadow-2xl`}
                 >
-                  <div className="h-full w-full overflow-hidden rounded-2xl bg-background/80">
+                  <div className="relative h-full w-full overflow-hidden rounded-2xl bg-background/80">
                     <Image
                       src={logoSrc}
                       alt={`${server.name} server logo`}

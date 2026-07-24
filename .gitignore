@@ -25,3 +25,5 @@ coverage/
 
 work.md
 taskDev.md
+dev_output.log
+dev_error.log
